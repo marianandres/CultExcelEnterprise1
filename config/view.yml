@@ -1,0 +1,2471 @@
+all:
+  favicon: ico/favicon.ico
+  meta:
+    - charset="UTF-8"
+    - name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"
+    - name="description" content="Portal Empresarial De Eventos"
+    - name="author" content="Andres Felipe Alvarez & Mariana Lopez "
+  stylesheet:
+    - font-awesome.min.css
+    - main.css
+  javascript:
+    - main.js  
+
+   
+homepage:
+  index:
+    title: HomePage | Cult Excel
+    stylesheet:
+      - asset/css/bootstrap.css
+      - style.css        
+      - responsive.css
+      - animate.css
+      - colors/red.css
+    javascript:
+      - jquery-2.1.1.min.js
+      - jquery.migrate.js
+      - modernizrr.js
+      - asset/js/bootstrap.min.js
+      - jquery.fitvids.js
+      - owl.carousel.min.js
+      - nivo-lightbox.min.js
+      - jquery.isotope.min.js
+      - jquery.appear.js
+      - count-to.js
+      - jquery.textillate.js
+      - jquery.lettering.js
+      - jquery.easypiechart.min.js
+      - jquery.nicescroll.min.js
+      - jquery.parallax.js
+      - mediaelement-and-player.js  
+      - script.js
+      - main.js
+
+contact:
+  index:
+    title: Contactenos | Cult Excel
+    stylesheet:
+      - asset/css/bootstrap.css
+      - style.css        
+      - responsive.css
+      - animate.css
+      - colors/red.css
+    javascript:
+      - jquery-2.1.1.min.js
+      - jquery.migrate.js
+      - modernizrr.js
+      - asset/js/bootstrap.min.js
+      - jquery.fitvids.js
+      - owl.carousel.min.js
+      - nivo-lightbox.min.js
+      - jquery.isotope.min.js
+      - jquery.appear.js
+      - count-to.js
+      - jquery.textillate.js
+      - jquery.lettering.js
+      - jquery.easypiechart.min.js
+      - jquery.nicescroll.min.js
+      - jquery.parallax.js
+      - mediaelement-and-player.js
+      - script.js
+      - index.js
+      - main.js
+    
+        
+shfSecurity:
+  index:
+    title: Login | Cult Excel
+    stylesheet:
+       - asset/css/bootstrap.css
+       - signin.css
+      #- shfSecurity/parallaxmap.css
+
+    javascript:
+      - main.js
+       
+  noPermission:
+    title: Acceso Restringido | Cult Excel
+    javascript:
+      - main.js
+      
+
+default:
+  index:
+    title: Inicio | Cult Excel
+    stylesheet:
+      - asset/css/bootstrap.css
+      - style.css        
+      - responsive.css
+      - animate.css
+      - colors/red.css
+    javascript:
+      - jquery-2.1.1.min.js
+      - jquery.migrate.js
+      - modernizrr.js
+      - asset/js/bootstrap.min.js
+      - jquery.fitvids.js
+      - owl.carousel.min.js
+      - nivo-lightbox.min.js
+      - jquery.isotope.min.js
+      - jquery.appear.js
+      - count-to.js
+      - jquery.textillate.js
+      - jquery.lettering.js
+      - jquery.easypiechart.min.js
+      - jquery.nicescroll.min.js
+      - jquery.parallax.js
+      - mediaelement-and-player.js  
+      - script.js
+      - index.js
+      - main.js
+
+eventos:    
+  insert:
+    title: Registra tu Evento | Cult Excel
+    stylesheet:
+      - asset/css/bootstrap.css
+      - style.css        
+      - responsive.css
+      - animate.css
+      - colors/red.css
+      - fileinput.css
+      - editor/editor.css
+    javascript:    
+      - jquery-2.1.1.min.js
+      - jquery.migrate.js
+      - modernizrr.js
+      - asset/js/bootstrap.min.js
+      - jquery.fitvids.js
+      - owl.carousel.min.js
+      - nivo-lightbox.min.js
+      - jquery.isotope.min.js
+      - jquery.appear.js
+      - count-to.js
+      - jquery.textillate.js
+      - jquery.lettering.js
+      - jquery.easypiechart.min.js
+      - jquery.nicescroll.min.js
+      - jquery.parallax.js
+      - mediaelement-and-player.js  
+      - script.js
+      - index.js
+      - fileinput.js
+      - editor/tinyeditor.js
+      - main.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/bootstrap-validator/js/bootstrapValidator.min.js
+      - panel/assets/js/pages/form-validation.js
+      
+admin:
+  index:
+    title: Admin Panel | Cult Excel 
+    stylesheet:
+      #<!-- Base Css Files -->
+      - panel/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css
+      - panel/assets/libs/bootstrap/css/bootstrap.min.css
+      - panel/assets/libs/font-awesome/css/font-awesome.min.css
+      - panel/assets/libs/fontello/css/fontello.css
+      - panel/assets/libs/animate-css/animate.min.css
+      - panel/assets/libs/nifty-modal/css/component.css
+      - panel/assets/libs/magnific-popup/magnific-popup.css
+      - panel/assets/libs/ios7-switch/ios7-switch.css
+      - panel/assets/libs/pace/pace.css
+      - panel/assets/libs/sortable/sortable-theme-bootstrap.css
+      - panel/assets/libs/bootstrap-datepicker/css/datepicker.css
+      - panel/assets/libs/jquery-icheck/skins/all.css
+      #<!-- Code Highlighter for Demo -->
+      - panel/assets/libs/prettify/github.css
+      #<!-- Extra CSS Libraries Start -->
+      - panel/assets/libs/rickshaw/rickshaw.min.css
+      - panel/assets/libs/morrischart/morris.css
+      - panel/assets/libs/jquery-jvectormap/css/jquery-jvectormap-1.2.2.css
+      - panel/assets/libs/jquery-clock/clock.css
+      - panel/assets/libs/bootstrap-calendar/css/bic_calendar.css
+      - panel/assets/libs/sortable/sortable-theme-bootstrap.css
+      - panel/assets/libs/jquery-weather/simpleweather.css
+      - panel/assets/libs/bootstrap-xeditable/css/bootstrap-editable.css
+      - panel/assets/css/style.css
+      #<!-- Extra CSS Libraries End -->
+      - panel/assets/css/style-responsive.css
+    javascript:
+      #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      - panel/assets/libs/jquery/jquery-1.11.1.min.js
+      - panel/assets/libs/bootstrap/js/bootstrap.min.js
+      - panel/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js
+      - panel/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js
+      - panel/assets/libs/jquery-detectmobile/detect.js
+      - panel/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js
+      - panel/assets/libs/ios7-switch/ios7.switch.js
+      - panel/assets/libs/fastclick/fastclick.js
+      - panel/assets/libs/jquery-blockui/jquery.blockUI.js
+      - panel/assets/libs/bootstrap-bootbox/bootbox.min.js
+      - panel/assets/libs/jquery-slimscroll/jquery.slimscroll.js
+      - panel/assets/libs/jquery-sparkline/jquery-sparkline.js
+      - panel/assets/libs/nifty-modal/js/classie.js
+      - panel/assets/libs/nifty-modal/js/modalEffects.js
+      - panel/assets/libs/sortable/sortable.min.js
+      - panel/assets/libs/bootstrap-fileinput/bootstrap.file-input.js
+      - panel/assets/libs/bootstrap-select/bootstrap-select.min.js
+      - panel/assets/libs/bootstrap-select2/select2.min.js
+      - panel/assets/libs/magnific-popup/jquery.magnific-popup.min.js
+      - panel/assets/libs/pace/pace.min.js
+      - panel/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js
+      - panel/assets/libs/jquery-icheck/icheck.min.js
+      #<!-- Demo Specific JS Libraries -->
+      - panel/assets/libs/prettify/prettify.js
+      - panel/assets/js/init.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/d3/d3.v3.js
+      - panel/assets/libs/rickshaw/rickshaw.min.js
+      - panel/assets/libs/raphael/raphael-min.js
+      - panel/assets/libs/morrischart/morris.min.js
+      - panel/assets/libs/jquery-knob/jquery.knob.js
+      - panel/assets/libs/jquery-jvectormap/js/jquery-jvectormap-1.2.2.min.js
+      - panel/assets/libs/jquery-jvectormap/js/jquery-jvectormap-us-aea-en.js
+      - panel/assets/libs/jquery-clock/clock.js
+      - panel/assets/libs/jquery-easypiechart/jquery.easypiechart.min.js
+      - panel/assets/libs/jquery-weather/jquery.simpleWeather-2.6.min.js
+      - panel/assets/libs/bootstrap-xeditable/js/bootstrap-editable.min.js
+      - panel/assets/libs/bootstrap-calendar/js/bic_calendar.min.js
+      - panel/assets/js/apps/calculator.js
+      - panel/assets/js/apps/todo.js
+      - panel/assets/js/apps/notes.js
+      - panel/assets/js/pages/index.js
+      - index.js
+      - main.js
+        
+usuario:
+  index:
+    title: Admin. Usuarios | Cult Excel
+    stylesheet:
+      #<!-- Base Css Files -->
+      - panel/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css
+      - panel/assets/libs/bootstrap/css/bootstrap.min.css
+      - panel/assets/libs/font-awesome/css/font-awesome.min.css
+      - panel/assets/libs/fontello/css/fontello.css
+      - panel/assets/libs/animate-css/animate.min.css
+      - panel/assets/libs/nifty-modal/css/component.css
+      - panel/assets/libs/magnific-popup/magnific-popup.css 
+      - panel/assets/libs/ios7-switch/ios7-switch.css
+      - panel/assets/libs/pace/pace.css
+      - panel/assets/libs/sortable/sortable-theme-bootstrap.css
+      - panel/assets/libs/bootstrap-datepicker/css/datepicker.css
+      - panel/assets/libs/jquery-icheck/skins/all.css
+      #<!-- Code Highlighter for Demo -->
+      - panel/assets/libs/prettify/github.css       
+      #<!-- Extra CSS Libraries Start -->
+      - panel/assets/libs/jquery-datatables/css/dataTables.bootstrap.css
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/css/dataTables.tableTools.css
+      - panel/assets/css/style.css
+      #<!-- Extra CSS Libraries End -->
+      - panel/assets/css/style-responsive.css
+    javascript:
+      #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      - panel/assets/libs/jquery/jquery-1.11.1.min.js
+      - panel/assets/libs/bootstrap/js/bootstrap.min.js
+      - panel/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js
+      - panel/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js
+      - panel/assets/libs/jquery-detectmobile/detect.js
+      - panel/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js
+      - panel/assets/libs/ios7-switch/ios7.switch.js
+      - panel/assets/libs/fastclick/fastclick.js
+      - panel/assets/libs/jquery-blockui/jquery.blockUI.js
+      - panel/assets/libs/bootstrap-bootbox/bootbox.min.js
+      - panel/assets/libs/jquery-slimscroll/jquery.slimscroll.js
+      - panel/assets/libs/jquery-sparkline/jquery-sparkline.js
+      - panel/assets/libs/nifty-modal/js/classie.js
+      - panel/assets/libs/nifty-modal/js/modalEffects.js
+      - panel/assets/libs/sortable/sortable.min.js
+      - panel/assets/libs/bootstrap-fileinput/bootstrap.file-input.js
+      - panel/assets/libs/bootstrap-select/bootstrap-select.min.js
+      - panel/assets/libs/bootstrap-select2/select2.min.js
+      - panel/assets/libs/magnific-popup/jquery.magnific-popup.min.js
+      - panel/assets/libs/pace/pace.min.js
+      - panel/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js
+      - panel/assets/libs/jquery-icheck/icheck.min.js
+      #<!-- Demo Specific JS Libraries -->
+      - panel/assets/libs/prettify/prettify.js
+      - panel/assets/js/init.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/jquery-datatables/js/jquery.dataTables.min.js
+      - panel/assets/libs/jquery-datatables/js/dataTables.bootstrap.js
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js
+      - panel/assets/js/pages/datatables.js
+      - index.js
+      - main.js
+
+  edit:
+    title: Actualizar Usuario | Cult Excel
+    stylesheet:
+      #<!-- Base Css Files -->
+      - panel/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css
+      - panel/assets/libs/bootstrap/css/bootstrap.min.css
+      - panel/assets/libs/font-awesome/css/font-awesome.min.css
+      - panel/assets/libs/fontello/css/fontello.css
+      - panel/assets/libs/animate-css/animate.min.css
+      - panel/assets/libs/nifty-modal/css/component.css
+      - panel/assets/libs/magnific-popup/magnific-popup.css 
+      - panel/assets/libs/ios7-switch/ios7-switch.css
+      - panel/assets/libs/pace/pace.css
+      - panel/assets/libs/sortable/sortable-theme-bootstrap.css
+      - panel/assets/libs/bootstrap-datepicker/css/datepicker.css
+      - panel/assets/libs/jquery-icheck/skins/all.css
+      #<!-- Code Highlighter for Demo -->
+      - panel/assets/libs/prettify/github.css
+      #<!-- Extra CSS Libraries Start -->
+      - panel/assets/libs/bootstrap-validator/css/bootstrapValidator.min.css
+      #<!-- Extra CSS Libraries Start -->
+      - panel/assets/libs/jquery-datatables/css/dataTables.bootstrap.css
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/css/dataTables.tableTools.css
+      - panel/assets/css/style.css
+      #<!-- Extra CSS Libraries End -->
+      - panel/assets/css/style-responsive.css
+    javascript:
+      #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      - panel/assets/libs/jquery/jquery-1.11.1.min.js
+      - panel/assets/libs/bootstrap/js/bootstrap.min.js
+      - panel/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js
+      - panel/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js
+      - panel/assets/libs/jquery-detectmobile/detect.js
+      - panel/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js
+      - panel/assets/libs/ios7-switch/ios7.switch.js
+      - panel/assets/libs/fastclick/fastclick.js
+      - panel/assets/libs/jquery-blockui/jquery.blockUI.js
+      - panel/assets/libs/bootstrap-bootbox/bootbox.min.js
+      - panel/assets/libs/jquery-slimscroll/jquery.slimscroll.js
+      - panel/assets/libs/jquery-sparkline/jquery-sparkline.js
+      - panel/assets/libs/nifty-modal/js/classie.js
+      - panel/assets/libs/nifty-modal/js/modalEffects.js
+      - panel/assets/libs/sortable/sortable.min.js
+      - panel/assets/libs/bootstrap-fileinput/bootstrap.file-input.js
+      - panel/assets/libs/bootstrap-select/bootstrap-select.min.js
+      - panel/assets/libs/bootstrap-select2/select2.min.js
+      - panel/assets/libs/magnific-popup/jquery.magnific-popup.min.js
+      - panel/assets/libs/pace/pace.min.js
+      - panel/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js
+      - panel/assets/libs/jquery-icheck/icheck.min.js
+      #<!-- Demo Specific JS Libraries -->
+      - panel/assets/libs/prettify/prettify.js
+      - panel/assets/js/init.js
+#      - panel/assets/js/pages/form-validation.js
+#      - panel/assets/libs/bootstrap-validator/js/bootstrapValidator.min.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/jquery-datatables/js/jquery.dataTables.min.js
+      - panel/assets/libs/jquery-datatables/js/dataTables.bootstrap.js
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js
+      - panel/assets/js/pages/datatables.js
+      - index.js
+      - main.js
+  insert:
+    title: Registrar Usuario | Cult Excel
+    stylesheet:
+      #<!-- Base Css Files -->
+      - panel/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css
+      - panel/assets/libs/bootstrap/css/bootstrap.min.css
+      - panel/assets/libs/font-awesome/css/font-awesome.min.css
+      - panel/assets/libs/fontello/css/fontello.css
+      - panel/assets/libs/animate-css/animate.min.css
+      - panel/assets/libs/nifty-modal/css/component.css
+      - panel/assets/libs/magnific-popup/magnific-popup.css 
+      - panel/assets/libs/ios7-switch/ios7-switch.css
+      - panel/assets/libs/pace/pace.css
+      - panel/assets/libs/sortable/sortable-theme-bootstrap.css
+      - panel/assets/libs/bootstrap-datepicker/css/datepicker.css
+      - panel/assets/libs/jquery-icheck/skins/all.css
+      #<!-- Code Highlighter for Demo -->
+      - panel/assets/libs/prettify/github.css       
+      #<!-- Extra CSS Libraries Start -->
+      - panel/assets/libs/jquery-datatables/css/dataTables.bootstrap.css
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/css/dataTables.tableTools.css
+      - panel/assets/css/style.css
+      #<!-- Extra CSS Libraries End -->
+      - panel/assets/css/style-responsive.css
+    javascript:
+      #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      - panel/assets/libs/jquery/jquery-1.11.1.min.js
+      - panel/assets/libs/bootstrap/js/bootstrap.min.js
+      - panel/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js
+      - panel/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js
+      - panel/assets/libs/jquery-detectmobile/detect.js
+      - panel/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js
+      - panel/assets/libs/ios7-switch/ios7.switch.js
+      - panel/assets/libs/fastclick/fastclick.js
+      - panel/assets/libs/jquery-blockui/jquery.blockUI.js
+      - panel/assets/libs/bootstrap-bootbox/bootbox.min.js
+      - panel/assets/libs/jquery-slimscroll/jquery.slimscroll.js
+      - panel/assets/libs/jquery-sparkline/jquery-sparkline.js
+      - panel/assets/libs/nifty-modal/js/classie.js
+      - panel/assets/libs/nifty-modal/js/modalEffects.js
+      - panel/assets/libs/sortable/sortable.min.js
+      - panel/assets/libs/bootstrap-fileinput/bootstrap.file-input.js
+      - panel/assets/libs/bootstrap-select/bootstrap-select.min.js
+      - panel/assets/libs/bootstrap-select2/select2.min.js
+      - panel/assets/libs/magnific-popup/jquery.magnific-popup.min.js
+      - panel/assets/libs/pace/pace.min.js
+      - panel/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js
+      - panel/assets/libs/jquery-icheck/icheck.min.js
+      #<!-- Demo Specific JS Libraries -->
+      - panel/assets/libs/prettify/prettify.js
+      - panel/assets/js/init.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/jquery-datatables/js/jquery.dataTables.min.js
+      - panel/assets/libs/jquery-datatables/js/dataTables.bootstrap.js
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js
+      - panel/assets/js/pages/datatables.js
+      - index.js
+      - main.js
+      
+credencial:
+  index:
+    title: Credenciales | Cult Excel
+    stylesheet:
+      #<!-- Base Css Files -->
+      - panel/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css
+      - panel/assets/libs/bootstrap/css/bootstrap.min.css
+      - panel/assets/libs/font-awesome/css/font-awesome.min.css
+      - panel/assets/libs/fontello/css/fontello.css
+      - panel/assets/libs/animate-css/animate.min.css
+      - panel/assets/libs/nifty-modal/css/component.css
+      - panel/assets/libs/magnific-popup/magnific-popup.css 
+      - panel/assets/libs/ios7-switch/ios7-switch.css
+      - panel/assets/libs/pace/pace.css
+      - panel/assets/libs/sortable/sortable-theme-bootstrap.css
+      - panel/assets/libs/bootstrap-datepicker/css/datepicker.css
+      - panel/assets/libs/jquery-icheck/skins/all.css
+      #<!-- Code Highlighter for Demo -->
+      - panel/assets/libs/prettify/github.css       
+      #<!-- Extra CSS Libraries Start -->
+      - panel/assets/libs/jquery-datatables/css/dataTables.bootstrap.css
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/css/dataTables.tableTools.css
+      - panel/assets/css/style.css
+      #<!-- Extra CSS Libraries End -->
+      - panel/assets/css/style-responsive.css
+    javascript:
+      #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      - panel/assets/libs/jquery/jquery-1.11.1.min.js
+      - panel/assets/libs/bootstrap/js/bootstrap.min.js
+      - panel/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js
+      - panel/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js
+      - panel/assets/libs/jquery-detectmobile/detect.js
+      - panel/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js
+      - panel/assets/libs/ios7-switch/ios7.switch.js
+      - panel/assets/libs/fastclick/fastclick.js
+      - panel/assets/libs/jquery-blockui/jquery.blockUI.js
+      - panel/assets/libs/bootstrap-bootbox/bootbox.min.js
+      - panel/assets/libs/jquery-slimscroll/jquery.slimscroll.js
+      - panel/assets/libs/jquery-sparkline/jquery-sparkline.js
+      - panel/assets/libs/nifty-modal/js/classie.js
+      - panel/assets/libs/nifty-modal/js/modalEffects.js
+      - panel/assets/libs/sortable/sortable.min.js
+      - panel/assets/libs/bootstrap-fileinput/bootstrap.file-input.js
+      - panel/assets/libs/bootstrap-select/bootstrap-select.min.js
+      - panel/assets/libs/bootstrap-select2/select2.min.js
+      - panel/assets/libs/magnific-popup/jquery.magnific-popup.min.js
+      - panel/assets/libs/pace/pace.min.js
+      - panel/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js
+      - panel/assets/libs/jquery-icheck/icheck.min.js
+      #<!-- Demo Specific JS Libraries -->
+      - panel/assets/libs/prettify/prettify.js
+      - panel/assets/js/init.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/jquery-datatables/js/jquery.dataTables.min.js
+      - panel/assets/libs/jquery-datatables/js/dataTables.bootstrap.js
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js
+      - panel/assets/js/pages/datatables.js
+      - index.js
+      - main.js
+  edit:
+    title: Actualizar Credencial | Cult Excel
+    stylesheet:
+      #<!-- Base Css Files -->
+      - panel/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css
+      - panel/assets/libs/bootstrap/css/bootstrap.min.css
+      - panel/assets/libs/font-awesome/css/font-awesome.min.css
+      - panel/assets/libs/fontello/css/fontello.css
+      - panel/assets/libs/animate-css/animate.min.css
+      - panel/assets/libs/nifty-modal/css/component.css
+      - panel/assets/libs/magnific-popup/magnific-popup.css 
+      - panel/assets/libs/ios7-switch/ios7-switch.css
+      - panel/assets/libs/pace/pace.css
+      - panel/assets/libs/sortable/sortable-theme-bootstrap.css
+      - panel/assets/libs/bootstrap-datepicker/css/datepicker.css
+      - panel/assets/libs/jquery-icheck/skins/all.css
+      #<!-- Code Highlighter for Demo -->
+      - panel/assets/libs/prettify/github.css       
+      #<!-- Extra CSS Libraries Start -->
+      - panel/assets/libs/jquery-datatables/css/dataTables.bootstrap.css
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/css/dataTables.tableTools.css
+      - panel/assets/css/style.css
+      #<!-- Extra CSS Libraries End -->
+      - panel/assets/css/style-responsive.css
+    javascript:
+      #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      - panel/assets/libs/jquery/jquery-1.11.1.min.js
+      - panel/assets/libs/bootstrap/js/bootstrap.min.js
+      - panel/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js
+      - panel/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js
+      - panel/assets/libs/jquery-detectmobile/detect.js
+      - panel/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js
+      - panel/assets/libs/ios7-switch/ios7.switch.js
+      - panel/assets/libs/fastclick/fastclick.js
+      - panel/assets/libs/jquery-blockui/jquery.blockUI.js
+      - panel/assets/libs/bootstrap-bootbox/bootbox.min.js
+      - panel/assets/libs/jquery-slimscroll/jquery.slimscroll.js
+      - panel/assets/libs/jquery-sparkline/jquery-sparkline.js
+      - panel/assets/libs/nifty-modal/js/classie.js
+      - panel/assets/libs/nifty-modal/js/modalEffects.js
+      - panel/assets/libs/sortable/sortable.min.js
+      - panel/assets/libs/bootstrap-fileinput/bootstrap.file-input.js
+      - panel/assets/libs/bootstrap-select/bootstrap-select.min.js
+      - panel/assets/libs/bootstrap-select2/select2.min.js
+      - panel/assets/libs/magnific-popup/jquery.magnific-popup.min.js
+      - panel/assets/libs/pace/pace.min.js
+      - panel/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js
+      - panel/assets/libs/jquery-icheck/icheck.min.js
+      #<!-- Demo Specific JS Libraries -->
+      - panel/assets/libs/prettify/prettify.js
+      - panel/assets/js/init.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/jquery-datatables/js/jquery.dataTables.min.js
+      - panel/assets/libs/jquery-datatables/js/dataTables.bootstrap.js
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js
+      - panel/assets/js/pages/datatables.js
+      - index.js
+      - main.js
+  insert:
+    title: Registrar Credencial | Cult Excel
+    stylesheet:
+      #<!-- Base Css Files -->
+      - panel/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css
+      - panel/assets/libs/bootstrap/css/bootstrap.min.css
+      - panel/assets/libs/font-awesome/css/font-awesome.min.css
+      - panel/assets/libs/fontello/css/fontello.css
+      - panel/assets/libs/animate-css/animate.min.css
+      - panel/assets/libs/nifty-modal/css/component.css
+      - panel/assets/libs/magnific-popup/magnific-popup.css 
+      - panel/assets/libs/ios7-switch/ios7-switch.css
+      - panel/assets/libs/pace/pace.css
+      - panel/assets/libs/sortable/sortable-theme-bootstrap.css
+      - panel/assets/libs/bootstrap-datepicker/css/datepicker.css
+      - panel/assets/libs/jquery-icheck/skins/all.css
+      #<!-- Code Highlighter for Demo -->
+      - panel/assets/libs/prettify/github.css       
+      #<!-- Extra CSS Libraries Start -->
+      - panel/assets/libs/jquery-datatables/css/dataTables.bootstrap.css
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/css/dataTables.tableTools.css
+      - panel/assets/css/style.css
+      #<!-- Extra CSS Libraries End -->
+      - panel/assets/css/style-responsive.css
+    javascript:
+      #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      - panel/assets/libs/jquery/jquery-1.11.1.min.js
+      - panel/assets/libs/bootstrap/js/bootstrap.min.js
+      - panel/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js
+      - panel/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js
+      - panel/assets/libs/jquery-detectmobile/detect.js
+      - panel/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js
+      - panel/assets/libs/ios7-switch/ios7.switch.js
+      - panel/assets/libs/fastclick/fastclick.js
+      - panel/assets/libs/jquery-blockui/jquery.blockUI.js
+      - panel/assets/libs/bootstrap-bootbox/bootbox.min.js
+      - panel/assets/libs/jquery-slimscroll/jquery.slimscroll.js
+      - panel/assets/libs/jquery-sparkline/jquery-sparkline.js
+      - panel/assets/libs/nifty-modal/js/classie.js
+      - panel/assets/libs/nifty-modal/js/modalEffects.js
+      - panel/assets/libs/sortable/sortable.min.js
+      - panel/assets/libs/bootstrap-fileinput/bootstrap.file-input.js
+      - panel/assets/libs/bootstrap-select/bootstrap-select.min.js
+      - panel/assets/libs/bootstrap-select2/select2.min.js
+      - panel/assets/libs/magnific-popup/jquery.magnific-popup.min.js
+      - panel/assets/libs/pace/pace.min.js
+      - panel/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js
+      - panel/assets/libs/jquery-icheck/icheck.min.js
+      #<!-- Demo Specific JS Libraries -->
+      - panel/assets/libs/prettify/prettify.js
+      - panel/assets/js/init.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/jquery-datatables/js/jquery.dataTables.min.js
+      - panel/assets/libs/jquery-datatables/js/dataTables.bootstrap.js
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js
+      - panel/assets/js/pages/datatables.js
+      - index.js
+      - main.js
+
+bitacora:
+  index:
+    title: Bitacora | Cult Excel
+    stylesheet:
+      #<!-- Base Css Files -->
+      - panel/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css
+      - panel/assets/libs/bootstrap/css/bootstrap.min.css
+      - panel/assets/libs/font-awesome/css/font-awesome.min.css
+      - panel/assets/libs/fontello/css/fontello.css
+      - panel/assets/libs/animate-css/animate.min.css
+      - panel/assets/libs/nifty-modal/css/component.css
+      - panel/assets/libs/magnific-popup/magnific-popup.css 
+      - panel/assets/libs/ios7-switch/ios7-switch.css
+      - panel/assets/libs/pace/pace.css
+      - panel/assets/libs/sortable/sortable-theme-bootstrap.css
+      - panel/assets/libs/bootstrap-datepicker/css/datepicker.css
+      - panel/assets/libs/jquery-icheck/skins/all.css
+      #<!-- Code Highlighter for Demo -->
+      - panel/assets/libs/prettify/github.css       
+      #<!-- Extra CSS Libraries Start -->
+      - panel/assets/libs/jquery-datatables/css/dataTables.bootstrap.css
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/css/dataTables.tableTools.css
+      - panel/assets/css/style.css
+      #<!-- Extra CSS Libraries End -->
+      - panel/assets/css/style-responsive.css
+    javascript:
+      #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      - panel/assets/libs/jquery/jquery-1.11.1.min.js
+      - panel/assets/libs/bootstrap/js/bootstrap.min.js
+      - panel/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js
+      - panel/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js
+      - panel/assets/libs/jquery-detectmobile/detect.js
+      - panel/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js
+      - panel/assets/libs/ios7-switch/ios7.switch.js
+      - panel/assets/libs/fastclick/fastclick.js
+      - panel/assets/libs/jquery-blockui/jquery.blockUI.js
+      - panel/assets/libs/bootstrap-bootbox/bootbox.min.js
+      - panel/assets/libs/jquery-slimscroll/jquery.slimscroll.js
+      - panel/assets/libs/jquery-sparkline/jquery-sparkline.js
+      - panel/assets/libs/nifty-modal/js/classie.js
+      - panel/assets/libs/nifty-modal/js/modalEffects.js
+      - panel/assets/libs/sortable/sortable.min.js
+      - panel/assets/libs/bootstrap-fileinput/bootstrap.file-input.js
+      - panel/assets/libs/bootstrap-select/bootstrap-select.min.js
+      - panel/assets/libs/bootstrap-select2/select2.min.js
+      - panel/assets/libs/magnific-popup/jquery.magnific-popup.min.js
+      - panel/assets/libs/pace/pace.min.js
+      - panel/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js
+      - panel/assets/libs/jquery-icheck/icheck.min.js
+      #<!-- Demo Specific JS Libraries -->
+      - panel/assets/libs/prettify/prettify.js
+      - panel/assets/js/init.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/jquery-datatables/js/jquery.dataTables.min.js
+      - panel/assets/libs/jquery-datatables/js/dataTables.bootstrap.js
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js
+      - panel/assets/js/pages/datatables.js
+      - index.js
+      - main.js
+
+evento:
+  index:
+    title: Eventos | Cult Excel
+    stylesheet:
+      #<!-- Base Css Files -->
+      - panel/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css
+      - panel/assets/libs/bootstrap/css/bootstrap.min.css
+      - panel/assets/libs/font-awesome/css/font-awesome.min.css
+      - panel/assets/libs/fontello/css/fontello.css
+      - panel/assets/libs/animate-css/animate.min.css
+      - panel/assets/libs/nifty-modal/css/component.css
+      - panel/assets/libs/magnific-popup/magnific-popup.css 
+      - panel/assets/libs/ios7-switch/ios7-switch.css
+      - panel/assets/libs/pace/pace.css
+      - panel/assets/libs/sortable/sortable-theme-bootstrap.css
+      - panel/assets/libs/bootstrap-datepicker/css/datepicker.css
+      - panel/assets/libs/jquery-icheck/skins/all.css
+      #<!-- Code Highlighter for Demo -->
+      - panel/assets/libs/prettify/github.css       
+      #<!-- Extra CSS Libraries Start -->
+      - panel/assets/libs/jquery-datatables/css/dataTables.bootstrap.css
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/css/dataTables.tableTools.css
+      - panel/assets/css/style.css
+      #<!-- Extra CSS Libraries End -->
+      - panel/assets/css/style-responsive.css
+    javascript:
+      #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      - panel/assets/libs/jquery/jquery-1.11.1.min.js
+      - panel/assets/libs/bootstrap/js/bootstrap.min.js
+      - panel/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js
+      - panel/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js
+      - panel/assets/libs/jquery-detectmobile/detect.js
+      - panel/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js
+      - panel/assets/libs/ios7-switch/ios7.switch.js
+      - panel/assets/libs/fastclick/fastclick.js
+      - panel/assets/libs/jquery-blockui/jquery.blockUI.js
+      - panel/assets/libs/bootstrap-bootbox/bootbox.min.js
+      - panel/assets/libs/jquery-slimscroll/jquery.slimscroll.js
+      - panel/assets/libs/jquery-sparkline/jquery-sparkline.js
+      - panel/assets/libs/nifty-modal/js/classie.js
+      - panel/assets/libs/nifty-modal/js/modalEffects.js
+      - panel/assets/libs/sortable/sortable.min.js
+      - panel/assets/libs/bootstrap-fileinput/bootstrap.file-input.js
+      - panel/assets/libs/bootstrap-select/bootstrap-select.min.js
+      - panel/assets/libs/bootstrap-select2/select2.min.js
+      - panel/assets/libs/magnific-popup/jquery.magnific-popup.min.js
+      - panel/assets/libs/pace/pace.min.js
+      - panel/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js
+      - panel/assets/libs/jquery-icheck/icheck.min.js
+      #<!-- Demo Specific JS Libraries -->
+      - panel/assets/libs/prettify/prettify.js
+      - panel/assets/js/init.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/jquery-datatables/js/jquery.dataTables.min.js
+      - panel/assets/libs/jquery-datatables/js/dataTables.bootstrap.js
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js
+      - panel/assets/js/pages/datatables.js
+      - index.js
+      - main.js
+
+registrar:
+  index:
+    title: Registrate | Cult Excel
+    stylesheet:
+      - register.css
+      - asset/css/bootstrap.css
+      - style.css        
+      - responsive.css
+      - animate.css
+      - colors/red.css
+    javascript:
+      - jquery-2.1.1.min.js
+      - jquery.migrate.js
+      - modernizrr.js
+      - asset/js/bootstrap.min.js
+      - jquery.fitvids.js
+      - owl.carousel.min.js
+      - nivo-lightbox.min.js
+      - jquery.isotope.min.js
+      - jquery.appear.js
+      - count-to.js
+      - jquery.textillate.js
+      - jquery.lettering.js
+      - jquery.easypiechart.min.js
+      - jquery.nicescroll.min.js
+      - jquery.parallax.js
+      - mediaelement-and-player.js
+      - script.js
+      - main.js
+  insert:
+    title: Registrate | Cult Excel
+    stylesheet:
+      - register.css
+      - asset/css/bootstrap.css
+      - style.css        
+      - responsive.css
+      - animate.css
+      - colors/red.css
+      - assets/libs/bootstrap-validator/css/bootstrapValidator.min.css
+    javascript:
+      - jquery-2.1.1.min.js
+      - jquery.migrate.js
+      - modernizrr.js
+      - asset/js/bootstrap.min.js
+      - jquery.fitvids.js
+      - owl.carousel.min.js
+      - nivo-lightbox.min.js
+      - jquery.isotope.min.js
+      - jquery.appear.js
+      - count-to.js
+      - jquery.textillate.js
+      - jquery.lettering.js
+      - jquery.easypiechart.min.js
+      - jquery.nicescroll.min.js
+      - jquery.parallax.js
+      - mediaelement-and-player.js
+      - script.js
+      - main.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/bootstrap-validator/js/bootstrapValidator.min.js
+      - panel/assets/js/pages/form-validation.js
+
+      
+categoria:
+  index:
+    title: Categoria | Cult Excel
+    stylesheet:
+      #<!-- Base Css Files -->
+      - panel/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css
+      - panel/assets/libs/bootstrap/css/bootstrap.min.css
+      - panel/assets/libs/font-awesome/css/font-awesome.min.css
+      - panel/assets/libs/fontello/css/fontello.css
+      - panel/assets/libs/animate-css/animate.min.css
+      - panel/assets/libs/nifty-modal/css/component.css
+      - panel/assets/libs/magnific-popup/magnific-popup.css 
+      - panel/assets/libs/ios7-switch/ios7-switch.css
+      - panel/assets/libs/pace/pace.css
+      - panel/assets/libs/sortable/sortable-theme-bootstrap.css
+      - panel/assets/libs/bootstrap-datepicker/css/datepicker.css
+      - panel/assets/libs/jquery-icheck/skins/all.css
+      #<!-- Code Highlighter for Demo -->
+      - panel/assets/libs/prettify/github.css       
+      #<!-- Extra CSS Libraries Start -->
+      - panel/assets/libs/jquery-datatables/css/dataTables.bootstrap.css
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/css/dataTables.tableTools.css
+      - panel/assets/css/style.css
+      #<!-- Extra CSS Libraries End -->
+      - panel/assets/css/style-responsive.css
+    javascript:
+      #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      - panel/assets/libs/jquery/jquery-1.11.1.min.js
+      - panel/assets/libs/bootstrap/js/bootstrap.min.js
+      - panel/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js
+      - panel/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js
+      - panel/assets/libs/jquery-detectmobile/detect.js
+      - panel/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js
+      - panel/assets/libs/ios7-switch/ios7.switch.js
+      - panel/assets/libs/fastclick/fastclick.js
+      - panel/assets/libs/jquery-blockui/jquery.blockUI.js
+      - panel/assets/libs/bootstrap-bootbox/bootbox.min.js
+      - panel/assets/libs/jquery-slimscroll/jquery.slimscroll.js
+      - panel/assets/libs/jquery-sparkline/jquery-sparkline.js
+      - panel/assets/libs/nifty-modal/js/classie.js
+      - panel/assets/libs/nifty-modal/js/modalEffects.js
+      - panel/assets/libs/sortable/sortable.min.js
+      - panel/assets/libs/bootstrap-fileinput/bootstrap.file-input.js
+      - panel/assets/libs/bootstrap-select/bootstrap-select.min.js
+      - panel/assets/libs/bootstrap-select2/select2.min.js
+      - panel/assets/libs/magnific-popup/jquery.magnific-popup.min.js
+      - panel/assets/libs/pace/pace.min.js
+      - panel/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js
+      - panel/assets/libs/jquery-icheck/icheck.min.js
+      #<!-- Demo Specific JS Libraries -->
+      - panel/assets/libs/prettify/prettify.js
+      - panel/assets/js/init.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/jquery-datatables/js/jquery.dataTables.min.js
+      - panel/assets/libs/jquery-datatables/js/dataTables.bootstrap.js
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js
+      - panel/assets/js/pages/datatables.js
+      - index.js
+      - main.js
+
+  edit:
+    title: Actualizar Categoria | Cult Excel
+    stylesheet:
+      #<!-- Base Css Files -->
+      - panel/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css
+      - panel/assets/libs/bootstrap/css/bootstrap.min.css
+      - panel/assets/libs/font-awesome/css/font-awesome.min.css
+      - panel/assets/libs/fontello/css/fontello.css
+      - panel/assets/libs/animate-css/animate.min.css
+      - panel/assets/libs/nifty-modal/css/component.css
+      - panel/assets/libs/magnific-popup/magnific-popup.css 
+      - panel/assets/libs/ios7-switch/ios7-switch.css
+      - panel/assets/libs/pace/pace.css
+      - panel/assets/libs/sortable/sortable-theme-bootstrap.css
+      - panel/assets/libs/bootstrap-datepicker/css/datepicker.css
+      - panel/assets/libs/jquery-icheck/skins/all.css
+      #<!-- Code Highlighter for Demo -->
+      - panel/assets/libs/prettify/github.css       
+      #<!-- Extra CSS Libraries Start -->
+      - panel/assets/libs/jquery-datatables/css/dataTables.bootstrap.css
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/css/dataTables.tableTools.css
+      - panel/assets/css/style.css
+      #<!-- Extra CSS Libraries End -->
+      - panel/assets/css/style-responsive.css
+    javascript:
+      #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      - panel/assets/libs/jquery/jquery-1.11.1.min.js
+      - panel/assets/libs/bootstrap/js/bootstrap.min.js
+      - panel/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js
+      - panel/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js
+      - panel/assets/libs/jquery-detectmobile/detect.js
+      - panel/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js
+      - panel/assets/libs/ios7-switch/ios7.switch.js
+      - panel/assets/libs/fastclick/fastclick.js
+      - panel/assets/libs/jquery-blockui/jquery.blockUI.js
+      - panel/assets/libs/bootstrap-bootbox/bootbox.min.js
+      - panel/assets/libs/jquery-slimscroll/jquery.slimscroll.js
+      - panel/assets/libs/jquery-sparkline/jquery-sparkline.js
+      - panel/assets/libs/nifty-modal/js/classie.js
+      - panel/assets/libs/nifty-modal/js/modalEffects.js
+      - panel/assets/libs/sortable/sortable.min.js
+      - panel/assets/libs/bootstrap-fileinput/bootstrap.file-input.js
+      - panel/assets/libs/bootstrap-select/bootstrap-select.min.js
+      - panel/assets/libs/bootstrap-select2/select2.min.js
+      - panel/assets/libs/magnific-popup/jquery.magnific-popup.min.js
+      - panel/assets/libs/pace/pace.min.js
+      - panel/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js
+      - panel/assets/libs/jquery-icheck/icheck.min.js
+      #<!-- Demo Specific JS Libraries -->
+      - panel/assets/libs/prettify/prettify.js
+      - panel/assets/js/init.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/jquery-datatables/js/jquery.dataTables.min.js
+      - panel/assets/libs/jquery-datatables/js/dataTables.bootstrap.js
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js
+      - panel/assets/js/pages/datatables.js
+      - index.js
+      - main.js
+  insert:
+    title: Registrar Categoria | Cult Excel
+    stylesheet:
+      #<!-- Base Css Files -->
+      - panel/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css
+      - panel/assets/libs/bootstrap/css/bootstrap.min.css
+      - panel/assets/libs/font-awesome/css/font-awesome.min.css
+      - panel/assets/libs/fontello/css/fontello.css
+      - panel/assets/libs/animate-css/animate.min.css
+      - panel/assets/libs/nifty-modal/css/component.css
+      - panel/assets/libs/magnific-popup/magnific-popup.css 
+      - panel/assets/libs/ios7-switch/ios7-switch.css
+      - panel/assets/libs/pace/pace.css
+      - panel/assets/libs/sortable/sortable-theme-bootstrap.css
+      - panel/assets/libs/bootstrap-datepicker/css/datepicker.css
+      - panel/assets/libs/jquery-icheck/skins/all.css
+      #<!-- Code Highlighter for Demo -->
+      - panel/assets/libs/prettify/github.css       
+      #<!-- Extra CSS Libraries Start -->
+      - panel/assets/libs/jquery-datatables/css/dataTables.bootstrap.css
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/css/dataTables.tableTools.css
+      - panel/assets/css/style.css
+      #<!-- Extra CSS Libraries End -->
+      - panel/assets/css/style-responsive.css
+    javascript:
+      #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      - panel/assets/libs/jquery/jquery-1.11.1.min.js
+      - panel/assets/libs/bootstrap/js/bootstrap.min.js
+      - panel/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js
+      - panel/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js
+      - panel/assets/libs/jquery-detectmobile/detect.js
+      - panel/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js
+      - panel/assets/libs/ios7-switch/ios7.switch.js
+      - panel/assets/libs/fastclick/fastclick.js
+      - panel/assets/libs/jquery-blockui/jquery.blockUI.js
+      - panel/assets/libs/bootstrap-bootbox/bootbox.min.js
+      - panel/assets/libs/jquery-slimscroll/jquery.slimscroll.js
+      - panel/assets/libs/jquery-sparkline/jquery-sparkline.js
+      - panel/assets/libs/nifty-modal/js/classie.js
+      - panel/assets/libs/nifty-modal/js/modalEffects.js
+      - panel/assets/libs/sortable/sortable.min.js
+      - panel/assets/libs/bootstrap-fileinput/bootstrap.file-input.js
+      - panel/assets/libs/bootstrap-select/bootstrap-select.min.js
+      - panel/assets/libs/bootstrap-select2/select2.min.js
+      - panel/assets/libs/magnific-popup/jquery.magnific-popup.min.js
+      - panel/assets/libs/pace/pace.min.js
+      - panel/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js
+      - panel/assets/libs/jquery-icheck/icheck.min.js
+      #<!-- Demo Specific JS Libraries -->
+      - panel/assets/libs/prettify/prettify.js
+      - panel/assets/js/init.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/jquery-datatables/js/jquery.dataTables.min.js
+      - panel/assets/libs/jquery-datatables/js/dataTables.bootstrap.js
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js
+      - panel/assets/js/pages/datatables.js
+      - index.js
+      - main.js
+      
+datosusuario:
+  index:
+    title: Datos De Usuario | Cult Excel
+    stylesheet:
+      #<!-- Base Css Files -->
+      - panel/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css
+      - panel/assets/libs/bootstrap/css/bootstrap.min.css
+      - panel/assets/libs/font-awesome/css/font-awesome.min.css
+      - panel/assets/libs/fontello/css/fontello.css
+      - panel/assets/libs/animate-css/animate.min.css
+      - panel/assets/libs/nifty-modal/css/component.css
+      - panel/assets/libs/magnific-popup/magnific-popup.css 
+      - panel/assets/libs/ios7-switch/ios7-switch.css
+      - panel/assets/libs/pace/pace.css
+      - panel/assets/libs/sortable/sortable-theme-bootstrap.css
+      - panel/assets/libs/bootstrap-datepicker/css/datepicker.css
+      - panel/assets/libs/jquery-icheck/skins/all.css
+      #<!-- Code Highlighter for Demo -->
+      - panel/assets/libs/prettify/github.css       
+      #<!-- Extra CSS Libraries Start -->
+      - panel/assets/libs/jquery-datatables/css/dataTables.bootstrap.css
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/css/dataTables.tableTools.css
+      - panel/assets/css/style.css
+      #<!-- Extra CSS Libraries End -->
+      - panel/assets/css/style-responsive.css
+    javascript:
+      #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      - panel/assets/libs/jquery/jquery-1.11.1.min.js
+      - panel/assets/libs/bootstrap/js/bootstrap.min.js
+      - panel/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js
+      - panel/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js
+      - panel/assets/libs/jquery-detectmobile/detect.js
+      - panel/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js
+      - panel/assets/libs/ios7-switch/ios7.switch.js
+      - panel/assets/libs/fastclick/fastclick.js
+      - panel/assets/libs/jquery-blockui/jquery.blockUI.js
+      - panel/assets/libs/bootstrap-bootbox/bootbox.min.js
+      - panel/assets/libs/jquery-slimscroll/jquery.slimscroll.js
+      - panel/assets/libs/jquery-sparkline/jquery-sparkline.js
+      - panel/assets/libs/nifty-modal/js/classie.js
+      - panel/assets/libs/nifty-modal/js/modalEffects.js
+      - panel/assets/libs/sortable/sortable.min.js
+      - panel/assets/libs/bootstrap-fileinput/bootstrap.file-input.js
+      - panel/assets/libs/bootstrap-select/bootstrap-select.min.js
+      - panel/assets/libs/bootstrap-select2/select2.min.js
+      - panel/assets/libs/magnific-popup/jquery.magnific-popup.min.js
+      - panel/assets/libs/pace/pace.min.js
+      - panel/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js
+      - panel/assets/libs/jquery-icheck/icheck.min.js
+      #<!-- Demo Specific JS Libraries -->
+      - panel/assets/libs/prettify/prettify.js
+      - panel/assets/js/init.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/jquery-datatables/js/jquery.dataTables.min.js
+      - panel/assets/libs/jquery-datatables/js/dataTables.bootstrap.js
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js
+      - panel/assets/js/pages/datatables.js
+      - index.js
+      - main.js
+
+  edit:
+    title: Actualizar Datos De Usuario | Cult Excel
+    stylesheet:
+      #<!-- Base Css Files -->
+      - panel/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css
+      - panel/assets/libs/bootstrap/css/bootstrap.min.css
+      - panel/assets/libs/font-awesome/css/font-awesome.min.css
+      - panel/assets/libs/fontello/css/fontello.css
+      - panel/assets/libs/animate-css/animate.min.css
+      - panel/assets/libs/nifty-modal/css/component.css
+      - panel/assets/libs/magnific-popup/magnific-popup.css 
+      - panel/assets/libs/ios7-switch/ios7-switch.css
+      - panel/assets/libs/pace/pace.css
+      - panel/assets/libs/sortable/sortable-theme-bootstrap.css
+      - panel/assets/libs/bootstrap-datepicker/css/datepicker.css
+      - panel/assets/libs/jquery-icheck/skins/all.css
+      #<!-- Code Highlighter for Demo -->
+      - panel/assets/libs/prettify/github.css       
+      #<!-- Extra CSS Libraries Start -->
+      - panel/assets/libs/jquery-datatables/css/dataTables.bootstrap.css
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/css/dataTables.tableTools.css
+      - panel/assets/css/style.css
+      #<!-- Extra CSS Libraries End -->
+      - panel/assets/css/style-responsive.css
+    javascript:
+      #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      - panel/assets/libs/jquery/jquery-1.11.1.min.js
+      - panel/assets/libs/bootstrap/js/bootstrap.min.js
+      - panel/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js
+      - panel/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js
+      - panel/assets/libs/jquery-detectmobile/detect.js
+      - panel/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js
+      - panel/assets/libs/ios7-switch/ios7.switch.js
+      - panel/assets/libs/fastclick/fastclick.js
+      - panel/assets/libs/jquery-blockui/jquery.blockUI.js
+      - panel/assets/libs/bootstrap-bootbox/bootbox.min.js
+      - panel/assets/libs/jquery-slimscroll/jquery.slimscroll.js
+      - panel/assets/libs/jquery-sparkline/jquery-sparkline.js
+      - panel/assets/libs/nifty-modal/js/classie.js
+      - panel/assets/libs/nifty-modal/js/modalEffects.js
+      - panel/assets/libs/sortable/sortable.min.js
+      - panel/assets/libs/bootstrap-fileinput/bootstrap.file-input.js
+      - panel/assets/libs/bootstrap-select/bootstrap-select.min.js
+      - panel/assets/libs/bootstrap-select2/select2.min.js
+      - panel/assets/libs/magnific-popup/jquery.magnific-popup.min.js
+      - panel/assets/libs/pace/pace.min.js
+      - panel/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js
+      - panel/assets/libs/jquery-icheck/icheck.min.js
+      #<!-- Demo Specific JS Libraries -->
+      - panel/assets/libs/prettify/prettify.js
+      - panel/assets/js/init.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/jquery-datatables/js/jquery.dataTables.min.js
+      - panel/assets/libs/jquery-datatables/js/dataTables.bootstrap.js
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js
+      - panel/assets/js/pages/datatables.js
+      - index.js
+      - main.js
+  insert:
+    title: Registrar Datos De Usuario | Cult Excel
+    stylesheet:
+      #<!-- Base Css Files -->
+      - panel/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css
+      - panel/assets/libs/bootstrap/css/bootstrap.min.css
+      - panel/assets/libs/font-awesome/css/font-awesome.min.css
+      - panel/assets/libs/fontello/css/fontello.css
+      - panel/assets/libs/animate-css/animate.min.css
+      - panel/assets/libs/nifty-modal/css/component.css
+      - panel/assets/libs/magnific-popup/magnific-popup.css 
+      - panel/assets/libs/ios7-switch/ios7-switch.css
+      - panel/assets/libs/pace/pace.css
+      - panel/assets/libs/sortable/sortable-theme-bootstrap.css
+      - panel/assets/libs/bootstrap-datepicker/css/datepicker.css
+      - panel/assets/libs/jquery-icheck/skins/all.css
+      #<!-- Code Highlighter for Demo -->
+      - panel/assets/libs/prettify/github.css       
+      #<!-- Extra CSS Libraries Start -->
+      - panel/assets/libs/jquery-datatables/css/dataTables.bootstrap.css
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/css/dataTables.tableTools.css
+      - panel/assets/css/style.css
+      #<!-- Extra CSS Libraries End -->
+      - panel/assets/css/style-responsive.css
+    javascript:
+      #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      - panel/assets/libs/jquery/jquery-1.11.1.min.js
+      - panel/assets/libs/bootstrap/js/bootstrap.min.js
+      - panel/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js
+      - panel/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js
+      - panel/assets/libs/jquery-detectmobile/detect.js
+      - panel/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js
+      - panel/assets/libs/ios7-switch/ios7.switch.js
+      - panel/assets/libs/fastclick/fastclick.js
+      - panel/assets/libs/jquery-blockui/jquery.blockUI.js
+      - panel/assets/libs/bootstrap-bootbox/bootbox.min.js
+      - panel/assets/libs/jquery-slimscroll/jquery.slimscroll.js
+      - panel/assets/libs/jquery-sparkline/jquery-sparkline.js
+      - panel/assets/libs/nifty-modal/js/classie.js
+      - panel/assets/libs/nifty-modal/js/modalEffects.js
+      - panel/assets/libs/sortable/sortable.min.js
+      - panel/assets/libs/bootstrap-fileinput/bootstrap.file-input.js
+      - panel/assets/libs/bootstrap-select/bootstrap-select.min.js
+      - panel/assets/libs/bootstrap-select2/select2.min.js
+      - panel/assets/libs/magnific-popup/jquery.magnific-popup.min.js
+      - panel/assets/libs/pace/pace.min.js
+      - panel/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js
+      - panel/assets/libs/jquery-icheck/icheck.min.js
+      #<!-- Demo Specific JS Libraries -->
+      - panel/assets/libs/prettify/prettify.js
+      - panel/assets/js/init.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/jquery-datatables/js/jquery.dataTables.min.js
+      - panel/assets/libs/jquery-datatables/js/dataTables.bootstrap.js
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js
+      - panel/assets/js/pages/datatables.js
+      - index.js
+      - main.js       
+
+usuarioCredencial:
+  index:
+    title: Usuario Credencial | Cult Excel
+    stylesheet:
+      #<!-- Base Css Files -->
+      - panel/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css
+      - panel/assets/libs/bootstrap/css/bootstrap.min.css
+      - panel/assets/libs/font-awesome/css/font-awesome.min.css
+      - panel/assets/libs/fontello/css/fontello.css
+      - panel/assets/libs/animate-css/animate.min.css
+      - panel/assets/libs/nifty-modal/css/component.css
+      - panel/assets/libs/magnific-popup/magnific-popup.css 
+      - panel/assets/libs/ios7-switch/ios7-switch.css
+      - panel/assets/libs/pace/pace.css
+      - panel/assets/libs/sortable/sortable-theme-bootstrap.css
+      - panel/assets/libs/bootstrap-datepicker/css/datepicker.css
+      - panel/assets/libs/jquery-icheck/skins/all.css
+      #<!-- Code Highlighter for Demo -->
+      - panel/assets/libs/prettify/github.css       
+      #<!-- Extra CSS Libraries Start -->
+      - panel/assets/libs/jquery-datatables/css/dataTables.bootstrap.css
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/css/dataTables.tableTools.css
+      - panel/assets/css/style.css
+      #<!-- Extra CSS Libraries End -->
+      - panel/assets/css/style-responsive.css
+    javascript:
+      #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      - panel/assets/libs/jquery/jquery-1.11.1.min.js
+      - panel/assets/libs/bootstrap/js/bootstrap.min.js
+      - panel/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js
+      - panel/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js
+      - panel/assets/libs/jquery-detectmobile/detect.js
+      - panel/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js
+      - panel/assets/libs/ios7-switch/ios7.switch.js
+      - panel/assets/libs/fastclick/fastclick.js
+      - panel/assets/libs/jquery-blockui/jquery.blockUI.js
+      - panel/assets/libs/bootstrap-bootbox/bootbox.min.js
+      - panel/assets/libs/jquery-slimscroll/jquery.slimscroll.js
+      - panel/assets/libs/jquery-sparkline/jquery-sparkline.js
+      - panel/assets/libs/nifty-modal/js/classie.js
+      - panel/assets/libs/nifty-modal/js/modalEffects.js
+      - panel/assets/libs/sortable/sortable.min.js
+      - panel/assets/libs/bootstrap-fileinput/bootstrap.file-input.js
+      - panel/assets/libs/bootstrap-select/bootstrap-select.min.js
+      - panel/assets/libs/bootstrap-select2/select2.min.js
+      - panel/assets/libs/magnific-popup/jquery.magnific-popup.min.js
+      - panel/assets/libs/pace/pace.min.js
+      - panel/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js
+      - panel/assets/libs/jquery-icheck/icheck.min.js
+      #<!-- Demo Specific JS Libraries -->
+      - panel/assets/libs/prettify/prettify.js
+      - panel/assets/js/init.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/jquery-datatables/js/jquery.dataTables.min.js
+      - panel/assets/libs/jquery-datatables/js/dataTables.bootstrap.js
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js
+      - panel/assets/js/pages/datatables.js
+      - index.js
+      - main.js
+
+  edit:
+    title: Actualizar Usuario credencial | Cult Excel
+    stylesheet:
+      #<!-- Base Css Files -->
+      - panel/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css
+      - panel/assets/libs/bootstrap/css/bootstrap.min.css
+      - panel/assets/libs/font-awesome/css/font-awesome.min.css
+      - panel/assets/libs/fontello/css/fontello.css
+      - panel/assets/libs/animate-css/animate.min.css
+      - panel/assets/libs/nifty-modal/css/component.css
+      - panel/assets/libs/magnific-popup/magnific-popup.css 
+      - panel/assets/libs/ios7-switch/ios7-switch.css
+      - panel/assets/libs/pace/pace.css
+      - panel/assets/libs/sortable/sortable-theme-bootstrap.css
+      - panel/assets/libs/bootstrap-datepicker/css/datepicker.css
+      - panel/assets/libs/jquery-icheck/skins/all.css
+      #<!-- Code Highlighter for Demo -->
+      - panel/assets/libs/prettify/github.css       
+      #<!-- Extra CSS Libraries Start -->
+      - panel/assets/libs/jquery-datatables/css/dataTables.bootstrap.css
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/css/dataTables.tableTools.css
+      - panel/assets/css/style.css
+      #<!-- Extra CSS Libraries End -->
+      - panel/assets/css/style-responsive.css
+    javascript:
+      #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      - panel/assets/libs/jquery/jquery-1.11.1.min.js
+      - panel/assets/libs/bootstrap/js/bootstrap.min.js
+      - panel/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js
+      - panel/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js
+      - panel/assets/libs/jquery-detectmobile/detect.js
+      - panel/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js
+      - panel/assets/libs/ios7-switch/ios7.switch.js
+      - panel/assets/libs/fastclick/fastclick.js
+      - panel/assets/libs/jquery-blockui/jquery.blockUI.js
+      - panel/assets/libs/bootstrap-bootbox/bootbox.min.js
+      - panel/assets/libs/jquery-slimscroll/jquery.slimscroll.js
+      - panel/assets/libs/jquery-sparkline/jquery-sparkline.js
+      - panel/assets/libs/nifty-modal/js/classie.js
+      - panel/assets/libs/nifty-modal/js/modalEffects.js
+      - panel/assets/libs/sortable/sortable.min.js
+      - panel/assets/libs/bootstrap-fileinput/bootstrap.file-input.js
+      - panel/assets/libs/bootstrap-select/bootstrap-select.min.js
+      - panel/assets/libs/bootstrap-select2/select2.min.js
+      - panel/assets/libs/magnific-popup/jquery.magnific-popup.min.js
+      - panel/assets/libs/pace/pace.min.js
+      - panel/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js
+      - panel/assets/libs/jquery-icheck/icheck.min.js
+      #<!-- Demo Specific JS Libraries -->
+      - panel/assets/libs/prettify/prettify.js
+      - panel/assets/js/init.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/jquery-datatables/js/jquery.dataTables.min.js
+      - panel/assets/libs/jquery-datatables/js/dataTables.bootstrap.js
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js
+      - panel/assets/js/pages/datatables.js
+      - index.js
+      - main.js
+  insert:
+    title: Registrar Usuario Categoria | Cult Excel
+    stylesheet:
+      #<!-- Base Css Files -->
+      - panel/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css
+      - panel/assets/libs/bootstrap/css/bootstrap.min.css
+      - panel/assets/libs/font-awesome/css/font-awesome.min.css
+      - panel/assets/libs/fontello/css/fontello.css
+      - panel/assets/libs/animate-css/animate.min.css
+      - panel/assets/libs/nifty-modal/css/component.css
+      - panel/assets/libs/magnific-popup/magnific-popup.css 
+      - panel/assets/libs/ios7-switch/ios7-switch.css
+      - panel/assets/libs/pace/pace.css
+      - panel/assets/libs/sortable/sortable-theme-bootstrap.css
+      - panel/assets/libs/bootstrap-datepicker/css/datepicker.css
+      - panel/assets/libs/jquery-icheck/skins/all.css
+      #<!-- Code Highlighter for Demo -->
+      - panel/assets/libs/prettify/github.css       
+      #<!-- Extra CSS Libraries Start -->
+      - panel/assets/libs/jquery-datatables/css/dataTables.bootstrap.css
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/css/dataTables.tableTools.css
+      - panel/assets/css/style.css
+      #<!-- Extra CSS Libraries End -->
+      - panel/assets/css/style-responsive.css
+    javascript:
+      #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      - panel/assets/libs/jquery/jquery-1.11.1.min.js
+      - panel/assets/libs/bootstrap/js/bootstrap.min.js
+      - panel/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js
+      - panel/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js
+      - panel/assets/libs/jquery-detectmobile/detect.js
+      - panel/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js
+      - panel/assets/libs/ios7-switch/ios7.switch.js
+      - panel/assets/libs/fastclick/fastclick.js
+      - panel/assets/libs/jquery-blockui/jquery.blockUI.js
+      - panel/assets/libs/bootstrap-bootbox/bootbox.min.js
+      - panel/assets/libs/jquery-slimscroll/jquery.slimscroll.js
+      - panel/assets/libs/jquery-sparkline/jquery-sparkline.js
+      - panel/assets/libs/nifty-modal/js/classie.js
+      - panel/assets/libs/nifty-modal/js/modalEffects.js
+      - panel/assets/libs/sortable/sortable.min.js
+      - panel/assets/libs/bootstrap-fileinput/bootstrap.file-input.js
+      - panel/assets/libs/bootstrap-select/bootstrap-select.min.js
+      - panel/assets/libs/bootstrap-select2/select2.min.js
+      - panel/assets/libs/magnific-popup/jquery.magnific-popup.min.js
+      - panel/assets/libs/pace/pace.min.js
+      - panel/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js
+      - panel/assets/libs/jquery-icheck/icheck.min.js
+      #<!-- Demo Specific JS Libraries -->
+      - panel/assets/libs/prettify/prettify.js
+      - panel/assets/js/init.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/jquery-datatables/js/jquery.dataTables.min.js
+      - panel/assets/libs/jquery-datatables/js/dataTables.bootstrap.js
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js
+      - panel/assets/js/pages/datatables.js
+      - index.js
+      - main.js
+      
+localidad:
+  index:
+    title: Localidad | Cult Excel
+    stylesheet:
+      #<!-- Base Css Files -->
+      - panel/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css
+      - panel/assets/libs/bootstrap/css/bootstrap.min.css
+      - panel/assets/libs/font-awesome/css/font-awesome.min.css
+      - panel/assets/libs/fontello/css/fontello.css
+      - panel/assets/libs/animate-css/animate.min.css
+      - panel/assets/libs/nifty-modal/css/component.css
+      - panel/assets/libs/magnific-popup/magnific-popup.css 
+      - panel/assets/libs/ios7-switch/ios7-switch.css
+      - panel/assets/libs/pace/pace.css
+      - panel/assets/libs/sortable/sortable-theme-bootstrap.css
+      - panel/assets/libs/bootstrap-datepicker/css/datepicker.css
+      - panel/assets/libs/jquery-icheck/skins/all.css
+      #<!-- Code Highlighter for Demo -->
+      - panel/assets/libs/prettify/github.css       
+      #<!-- Extra CSS Libraries Start -->
+      - panel/assets/libs/jquery-datatables/css/dataTables.bootstrap.css
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/css/dataTables.tableTools.css
+      - panel/assets/css/style.css
+      #<!-- Extra CSS Libraries End -->
+      - panel/assets/css/style-responsive.css
+    javascript:
+      #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      - panel/assets/libs/jquery/jquery-1.11.1.min.js
+      - panel/assets/libs/bootstrap/js/bootstrap.min.js
+      - panel/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js
+      - panel/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js
+      - panel/assets/libs/jquery-detectmobile/detect.js
+      - panel/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js
+      - panel/assets/libs/ios7-switch/ios7.switch.js
+      - panel/assets/libs/fastclick/fastclick.js
+      - panel/assets/libs/jquery-blockui/jquery.blockUI.js
+      - panel/assets/libs/bootstrap-bootbox/bootbox.min.js
+      - panel/assets/libs/jquery-slimscroll/jquery.slimscroll.js
+      - panel/assets/libs/jquery-sparkline/jquery-sparkline.js
+      - panel/assets/libs/nifty-modal/js/classie.js
+      - panel/assets/libs/nifty-modal/js/modalEffects.js
+      - panel/assets/libs/sortable/sortable.min.js
+      - panel/assets/libs/bootstrap-fileinput/bootstrap.file-input.js
+      - panel/assets/libs/bootstrap-select/bootstrap-select.min.js
+      - panel/assets/libs/bootstrap-select2/select2.min.js
+      - panel/assets/libs/magnific-popup/jquery.magnific-popup.min.js
+      - panel/assets/libs/pace/pace.min.js
+      - panel/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js
+      - panel/assets/libs/jquery-icheck/icheck.min.js
+      #<!-- Demo Specific JS Libraries -->
+      - panel/assets/libs/prettify/prettify.js
+      - panel/assets/js/init.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/jquery-datatables/js/jquery.dataTables.min.js
+      - panel/assets/libs/jquery-datatables/js/dataTables.bootstrap.js
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js
+      - panel/assets/js/pages/datatables.js
+      - index.js
+      - main.js
+
+  edit:
+    title: Actualizar Localidad | PortalWeb
+    stylesheet:
+      - admin/bower_components/metisMenu/dist/metisMenu.min.css
+      - admin/dist/css/timeline.css
+      - admin/dist/css/sb-admin-2.css
+      - admin/bower_components/morrisjs/morris.css
+    javascript:
+      - admin/bower_components/jquery/dist/jquery.min.js
+      - admin/bower_components/bootstrap/dist/js/bootstrap.min.js
+      - admin/bower_components/metisMenu/dist/metisMenu.min.js
+      - admin/bower_components/raphael/raphael-min.js
+      - admin/dist/js/sb-admin-2.js
+  insert:
+    title: Registrar Localidad | PortalWeb
+    stylesheet:
+      - admin/bower_components/metisMenu/dist/metisMenu.min.css
+      - admin/dist/css/timeline.css
+      - admin/dist/css/sb-admin-2.css
+      - admin/bower_components/morrisjs/morris.css
+    javascript:
+      - admin/bower_components/jquery/dist/jquery.min.js
+      - admin/bower_components/bootstrap/dist/js/bootstrap.min.js
+      - admin/bower_components/metisMenu/dist/metisMenu.min.js
+      - admin/bower_components/raphael/raphael-min.js
+      - admin/dist/js/sb-admin-2.js            
+
+recordarMe:
+  index:
+    title: Recordar Me | Cult Excel
+    stylesheet:
+      #<!-- Base Css Files -->
+      - panel/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css
+      - panel/assets/libs/bootstrap/css/bootstrap.min.css
+      - panel/assets/libs/font-awesome/css/font-awesome.min.css
+      - panel/assets/libs/fontello/css/fontello.css
+      - panel/assets/libs/animate-css/animate.min.css
+      - panel/assets/libs/nifty-modal/css/component.css
+      - panel/assets/libs/magnific-popup/magnific-popup.css 
+      - panel/assets/libs/ios7-switch/ios7-switch.css
+      - panel/assets/libs/pace/pace.css
+      - panel/assets/libs/sortable/sortable-theme-bootstrap.css
+      - panel/assets/libs/bootstrap-datepicker/css/datepicker.css
+      - panel/assets/libs/jquery-icheck/skins/all.css
+      #<!-- Code Highlighter for Demo -->
+      - panel/assets/libs/prettify/github.css       
+      #<!-- Extra CSS Libraries Start -->
+      - panel/assets/libs/jquery-datatables/css/dataTables.bootstrap.css
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/css/dataTables.tableTools.css
+      - panel/assets/css/style.css
+      #<!-- Extra CSS Libraries End -->
+      - panel/assets/css/style-responsive.css
+    javascript:
+      #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      - panel/assets/libs/jquery/jquery-1.11.1.min.js
+      - panel/assets/libs/bootstrap/js/bootstrap.min.js
+      - panel/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js
+      - panel/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js
+      - panel/assets/libs/jquery-detectmobile/detect.js
+      - panel/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js
+      - panel/assets/libs/ios7-switch/ios7.switch.js
+      - panel/assets/libs/fastclick/fastclick.js
+      - panel/assets/libs/jquery-blockui/jquery.blockUI.js
+      - panel/assets/libs/bootstrap-bootbox/bootbox.min.js
+      - panel/assets/libs/jquery-slimscroll/jquery.slimscroll.js
+      - panel/assets/libs/jquery-sparkline/jquery-sparkline.js
+      - panel/assets/libs/nifty-modal/js/classie.js
+      - panel/assets/libs/nifty-modal/js/modalEffects.js
+      - panel/assets/libs/sortable/sortable.min.js
+      - panel/assets/libs/bootstrap-fileinput/bootstrap.file-input.js
+      - panel/assets/libs/bootstrap-select/bootstrap-select.min.js
+      - panel/assets/libs/bootstrap-select2/select2.min.js
+      - panel/assets/libs/magnific-popup/jquery.magnific-popup.min.js
+      - panel/assets/libs/pace/pace.min.js
+      - panel/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js
+      - panel/assets/libs/jquery-icheck/icheck.min.js
+      #<!-- Demo Specific JS Libraries -->
+      - panel/assets/libs/prettify/prettify.js
+      - panel/assets/js/init.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/jquery-datatables/js/jquery.dataTables.min.js
+      - panel/assets/libs/jquery-datatables/js/dataTables.bootstrap.js
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js
+      - panel/assets/js/pages/datatables.js
+      - index.js
+      - main.js
+
+  edit:
+    title: Actualizar Recordar Me | PortalWeb
+    stylesheet:
+      #<!-- Base Css Files -->
+      - panel/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css
+      - panel/assets/libs/bootstrap/css/bootstrap.min.css
+      - panel/assets/libs/font-awesome/css/font-awesome.min.css
+      - panel/assets/libs/fontello/css/fontello.css
+      - panel/assets/libs/animate-css/animate.min.css
+      - panel/assets/libs/nifty-modal/css/component.css
+      - panel/assets/libs/magnific-popup/magnific-popup.css 
+      - panel/assets/libs/ios7-switch/ios7-switch.css
+      - panel/assets/libs/pace/pace.css
+      - panel/assets/libs/sortable/sortable-theme-bootstrap.css
+      - panel/assets/libs/bootstrap-datepicker/css/datepicker.css
+      - panel/assets/libs/jquery-icheck/skins/all.css
+      #<!-- Code Highlighter for Demo -->
+      - panel/assets/libs/prettify/github.css       
+      #<!-- Extra CSS Libraries Start -->
+      - panel/assets/libs/jquery-datatables/css/dataTables.bootstrap.css
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/css/dataTables.tableTools.css
+      - panel/assets/css/style.css
+      #<!-- Extra CSS Libraries End -->
+      - panel/assets/css/style-responsive.css
+    javascript:
+      #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      - panel/assets/libs/jquery/jquery-1.11.1.min.js
+      - panel/assets/libs/bootstrap/js/bootstrap.min.js
+      - panel/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js
+      - panel/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js
+      - panel/assets/libs/jquery-detectmobile/detect.js
+      - panel/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js
+      - panel/assets/libs/ios7-switch/ios7.switch.js
+      - panel/assets/libs/fastclick/fastclick.js
+      - panel/assets/libs/jquery-blockui/jquery.blockUI.js
+      - panel/assets/libs/bootstrap-bootbox/bootbox.min.js
+      - panel/assets/libs/jquery-slimscroll/jquery.slimscroll.js
+      - panel/assets/libs/jquery-sparkline/jquery-sparkline.js
+      - panel/assets/libs/nifty-modal/js/classie.js
+      - panel/assets/libs/nifty-modal/js/modalEffects.js
+      - panel/assets/libs/sortable/sortable.min.js
+      - panel/assets/libs/bootstrap-fileinput/bootstrap.file-input.js
+      - panel/assets/libs/bootstrap-select/bootstrap-select.min.js
+      - panel/assets/libs/bootstrap-select2/select2.min.js
+      - panel/assets/libs/magnific-popup/jquery.magnific-popup.min.js
+      - panel/assets/libs/pace/pace.min.js
+      - panel/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js
+      - panel/assets/libs/jquery-icheck/icheck.min.js
+      #<!-- Demo Specific JS Libraries -->
+      - panel/assets/libs/prettify/prettify.js
+      - panel/assets/js/init.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/jquery-datatables/js/jquery.dataTables.min.js
+      - panel/assets/libs/jquery-datatables/js/dataTables.bootstrap.js
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js
+      - panel/assets/js/pages/datatables.js
+      - index.js
+      - main.js
+  insert:
+    title: Registrar Recordar Me | PortalWeb
+    stylesheet:
+      #<!-- Base Css Files -->
+      - panel/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css
+      - panel/assets/libs/bootstrap/css/bootstrap.min.css
+      - panel/assets/libs/font-awesome/css/font-awesome.min.css
+      - panel/assets/libs/fontello/css/fontello.css
+      - panel/assets/libs/animate-css/animate.min.css
+      - panel/assets/libs/nifty-modal/css/component.css
+      - panel/assets/libs/magnific-popup/magnific-popup.css 
+      - panel/assets/libs/ios7-switch/ios7-switch.css
+      - panel/assets/libs/pace/pace.css
+      - panel/assets/libs/sortable/sortable-theme-bootstrap.css
+      - panel/assets/libs/bootstrap-datepicker/css/datepicker.css
+      - panel/assets/libs/jquery-icheck/skins/all.css
+      #<!-- Code Highlighter for Demo -->
+      - panel/assets/libs/prettify/github.css       
+      #<!-- Extra CSS Libraries Start -->
+      - panel/assets/libs/jquery-datatables/css/dataTables.bootstrap.css
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/css/dataTables.tableTools.css
+      - panel/assets/css/style.css
+      #<!-- Extra CSS Libraries End -->
+      - panel/assets/css/style-responsive.css
+    javascript:
+      #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      - panel/assets/libs/jquery/jquery-1.11.1.min.js
+      - panel/assets/libs/bootstrap/js/bootstrap.min.js
+      - panel/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js
+      - panel/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js
+      - panel/assets/libs/jquery-detectmobile/detect.js
+      - panel/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js
+      - panel/assets/libs/ios7-switch/ios7.switch.js
+      - panel/assets/libs/fastclick/fastclick.js
+      - panel/assets/libs/jquery-blockui/jquery.blockUI.js
+      - panel/assets/libs/bootstrap-bootbox/bootbox.min.js
+      - panel/assets/libs/jquery-slimscroll/jquery.slimscroll.js
+      - panel/assets/libs/jquery-sparkline/jquery-sparkline.js
+      - panel/assets/libs/nifty-modal/js/classie.js
+      - panel/assets/libs/nifty-modal/js/modalEffects.js
+      - panel/assets/libs/sortable/sortable.min.js
+      - panel/assets/libs/bootstrap-fileinput/bootstrap.file-input.js
+      - panel/assets/libs/bootstrap-select/bootstrap-select.min.js
+      - panel/assets/libs/bootstrap-select2/select2.min.js
+      - panel/assets/libs/magnific-popup/jquery.magnific-popup.min.js
+      - panel/assets/libs/pace/pace.min.js
+      - panel/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js
+      - panel/assets/libs/jquery-icheck/icheck.min.js
+      #<!-- Demo Specific JS Libraries -->
+      - panel/assets/libs/prettify/prettify.js
+      - panel/assets/js/init.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/jquery-datatables/js/jquery.dataTables.min.js
+      - panel/assets/libs/jquery-datatables/js/dataTables.bootstrap.js
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js
+      - panel/assets/js/pages/datatables.js
+      - index.js
+      - main.js           
+           
+organizacion:
+  index:
+    title: Organizacion | Cult Excel
+    stylesheet:
+      #<!-- Base Css Files -->
+      - panel/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css
+      - panel/assets/libs/bootstrap/css/bootstrap.min.css
+      - panel/assets/libs/font-awesome/css/font-awesome.min.css
+      - panel/assets/libs/fontello/css/fontello.css
+      - panel/assets/libs/animate-css/animate.min.css
+      - panel/assets/libs/nifty-modal/css/component.css
+      - panel/assets/libs/magnific-popup/magnific-popup.css 
+      - panel/assets/libs/ios7-switch/ios7-switch.css
+      - panel/assets/libs/pace/pace.css
+      - panel/assets/libs/sortable/sortable-theme-bootstrap.css
+      - panel/assets/libs/bootstrap-datepicker/css/datepicker.css
+      - panel/assets/libs/jquery-icheck/skins/all.css
+      #<!-- Code Highlighter for Demo -->
+      - panel/assets/libs/prettify/github.css       
+      #<!-- Extra CSS Libraries Start -->
+      - panel/assets/libs/jquery-datatables/css/dataTables.bootstrap.css
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/css/dataTables.tableTools.css
+      - panel/assets/css/style.css
+      #<!-- Extra CSS Libraries End -->
+      - panel/assets/css/style-responsive.css
+    javascript:
+      #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      - panel/assets/libs/jquery/jquery-1.11.1.min.js
+      - panel/assets/libs/bootstrap/js/bootstrap.min.js
+      - panel/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js
+      - panel/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js
+      - panel/assets/libs/jquery-detectmobile/detect.js
+      - panel/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js
+      - panel/assets/libs/ios7-switch/ios7.switch.js
+      - panel/assets/libs/fastclick/fastclick.js
+      - panel/assets/libs/jquery-blockui/jquery.blockUI.js
+      - panel/assets/libs/bootstrap-bootbox/bootbox.min.js
+      - panel/assets/libs/jquery-slimscroll/jquery.slimscroll.js
+      - panel/assets/libs/jquery-sparkline/jquery-sparkline.js
+      - panel/assets/libs/nifty-modal/js/classie.js
+      - panel/assets/libs/nifty-modal/js/modalEffects.js
+      - panel/assets/libs/sortable/sortable.min.js
+      - panel/assets/libs/bootstrap-fileinput/bootstrap.file-input.js
+      - panel/assets/libs/bootstrap-select/bootstrap-select.min.js
+      - panel/assets/libs/bootstrap-select2/select2.min.js
+      - panel/assets/libs/magnific-popup/jquery.magnific-popup.min.js
+      - panel/assets/libs/pace/pace.min.js
+      - panel/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js
+      - panel/assets/libs/jquery-icheck/icheck.min.js
+      #<!-- Demo Specific JS Libraries -->
+      - panel/assets/libs/prettify/prettify.js
+      - panel/assets/js/init.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/jquery-datatables/js/jquery.dataTables.min.js
+      - panel/assets/libs/jquery-datatables/js/dataTables.bootstrap.js
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js
+      - panel/assets/js/pages/datatables.js
+      - index.js
+      - main.js
+
+  edit:
+    title: Actualizar Organizacion | PortalWeb
+    stylesheet:
+      - admin/bower_components/metisMenu/dist/metisMenu.min.css
+      - admin/dist/css/timeline.css
+      - admin/dist/css/sb-admin-2.css
+      - admin/bower_components/morrisjs/morris.css
+    javascript:
+      - admin/bower_components/jquery/dist/jquery.min.js
+      - admin/bower_components/bootstrap/dist/js/bootstrap.min.js
+      - admin/bower_components/metisMenu/dist/metisMenu.min.js
+      - admin/bower_components/raphael/raphael-min.js
+      - admin/dist/js/sb-admin-2.js
+  insert:
+    title: Registrar Organizacion | PortalWeb
+    stylesheet:
+      - admin/bower_components/metisMenu/dist/metisMenu.min.css
+      - admin/dist/css/timeline.css
+      - admin/dist/css/sb-admin-2.css
+      - admin/bower_components/morrisjs/morris.css
+    javascript:
+      - admin/bower_components/jquery/dist/jquery.min.js
+      - admin/bower_components/bootstrap/dist/js/bootstrap.min.js
+      - admin/bower_components/metisMenu/dist/metisMenu.min.js
+      - admin/bower_components/raphael/raphael-min.js
+      - admin/dist/js/sb-admin-2.js            
+                        
+tipoDocumento:
+  index:
+    title: tipo Documento | Cult Excel
+    stylesheet:
+      #<!-- Base Css Files -->
+      - panel/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css
+      - panel/assets/libs/bootstrap/css/bootstrap.min.css
+      - panel/assets/libs/font-awesome/css/font-awesome.min.css
+      - panel/assets/libs/fontello/css/fontello.css
+      - panel/assets/libs/animate-css/animate.min.css
+      - panel/assets/libs/nifty-modal/css/component.css
+      - panel/assets/libs/magnific-popup/magnific-popup.css 
+      - panel/assets/libs/ios7-switch/ios7-switch.css
+      - panel/assets/libs/pace/pace.css
+      - panel/assets/libs/sortable/sortable-theme-bootstrap.css
+      - panel/assets/libs/bootstrap-datepicker/css/datepicker.css
+      - panel/assets/libs/jquery-icheck/skins/all.css
+      #<!-- Code Highlighter for Demo -->
+      - panel/assets/libs/prettify/github.css       
+      #<!-- Extra CSS Libraries Start -->
+      - panel/assets/libs/jquery-datatables/css/dataTables.bootstrap.css
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/css/dataTables.tableTools.css
+      - panel/assets/css/style.css
+      #<!-- Extra CSS Libraries End -->
+      - panel/assets/css/style-responsive.css
+    javascript:
+      #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      - panel/assets/libs/jquery/jquery-1.11.1.min.js
+      - panel/assets/libs/bootstrap/js/bootstrap.min.js
+      - panel/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js
+      - panel/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js
+      - panel/assets/libs/jquery-detectmobile/detect.js
+      - panel/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js
+      - panel/assets/libs/ios7-switch/ios7.switch.js
+      - panel/assets/libs/fastclick/fastclick.js
+      - panel/assets/libs/jquery-blockui/jquery.blockUI.js
+      - panel/assets/libs/bootstrap-bootbox/bootbox.min.js
+      - panel/assets/libs/jquery-slimscroll/jquery.slimscroll.js
+      - panel/assets/libs/jquery-sparkline/jquery-sparkline.js
+      - panel/assets/libs/nifty-modal/js/classie.js
+      - panel/assets/libs/nifty-modal/js/modalEffects.js
+      - panel/assets/libs/sortable/sortable.min.js
+      - panel/assets/libs/bootstrap-fileinput/bootstrap.file-input.js
+      - panel/assets/libs/bootstrap-select/bootstrap-select.min.js
+      - panel/assets/libs/bootstrap-select2/select2.min.js
+      - panel/assets/libs/magnific-popup/jquery.magnific-popup.min.js
+      - panel/assets/libs/pace/pace.min.js
+      - panel/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js
+      - panel/assets/libs/jquery-icheck/icheck.min.js
+      #<!-- Demo Specific JS Libraries -->
+      - panel/assets/libs/prettify/prettify.js
+      - panel/assets/js/init.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/jquery-datatables/js/jquery.dataTables.min.js
+      - panel/assets/libs/jquery-datatables/js/dataTables.bootstrap.js
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js
+      - panel/assets/js/pages/datatables.js
+      - index.js
+      - main.js
+
+  edit:
+    title: Actualizar tipo Documento | PortalWeb
+    stylesheet:
+      - admin/bower_components/metisMenu/dist/metisMenu.min.css
+      - admin/dist/css/timeline.css
+      - admin/dist/css/sb-admin-2.css
+      - admin/bower_components/morrisjs/morris.css
+    javascript:
+      - admin/bower_components/jquery/dist/jquery.min.js
+      - admin/bower_components/bootstrap/dist/js/bootstrap.min.js
+      - admin/bower_components/metisMenu/dist/metisMenu.min.js
+      - admin/bower_components/raphael/raphael-min.js
+      - admin/dist/js/sb-admin-2.js
+  insert:
+    title: Registrar tipo Documento | PortalWeb
+    stylesheet:
+      - admin/bower_components/metisMenu/dist/metisMenu.min.css
+      - admin/dist/css/timeline.css
+      - admin/dist/css/sb-admin-2.css
+      - admin/bower_components/morrisjs/morris.css
+    javascript:
+      - admin/bower_components/jquery/dist/jquery.min.js
+      - admin/bower_components/bootstrap/dist/js/bootstrap.min.js
+      - admin/bower_components/metisMenu/dist/metisMenu.min.js
+      - admin/bower_components/raphael/raphael-min.js
+      - admin/dist/js/sb-admin-2.js            
+                        
+detallePqrs:
+  index:
+    title: Detalle PQRS | Cult Excel
+    stylesheet:
+      #<!-- Base Css Files -->
+      - panel/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css
+      - panel/assets/libs/bootstrap/css/bootstrap.min.css
+      - panel/assets/libs/font-awesome/css/font-awesome.min.css
+      - panel/assets/libs/fontello/css/fontello.css
+      - panel/assets/libs/animate-css/animate.min.css
+      - panel/assets/libs/nifty-modal/css/component.css
+      - panel/assets/libs/magnific-popup/magnific-popup.css 
+      - panel/assets/libs/ios7-switch/ios7-switch.css
+      - panel/assets/libs/pace/pace.css
+      - panel/assets/libs/sortable/sortable-theme-bootstrap.css
+      - panel/assets/libs/bootstrap-datepicker/css/datepicker.css
+      - panel/assets/libs/jquery-icheck/skins/all.css
+      #<!-- Code Highlighter for Demo -->
+      - panel/assets/libs/prettify/github.css       
+      #<!-- Extra CSS Libraries Start -->
+      - panel/assets/libs/jquery-datatables/css/dataTables.bootstrap.css
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/css/dataTables.tableTools.css
+      - panel/assets/css/style.css
+      #<!-- Extra CSS Libraries End -->
+      - panel/assets/css/style-responsive.css
+    javascript:
+      #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      - panel/assets/libs/jquery/jquery-1.11.1.min.js
+      - panel/assets/libs/bootstrap/js/bootstrap.min.js
+      - panel/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js
+      - panel/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js
+      - panel/assets/libs/jquery-detectmobile/detect.js
+      - panel/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js
+      - panel/assets/libs/ios7-switch/ios7.switch.js
+      - panel/assets/libs/fastclick/fastclick.js
+      - panel/assets/libs/jquery-blockui/jquery.blockUI.js
+      - panel/assets/libs/bootstrap-bootbox/bootbox.min.js
+      - panel/assets/libs/jquery-slimscroll/jquery.slimscroll.js
+      - panel/assets/libs/jquery-sparkline/jquery-sparkline.js
+      - panel/assets/libs/nifty-modal/js/classie.js
+      - panel/assets/libs/nifty-modal/js/modalEffects.js
+      - panel/assets/libs/sortable/sortable.min.js
+      - panel/assets/libs/bootstrap-fileinput/bootstrap.file-input.js
+      - panel/assets/libs/bootstrap-select/bootstrap-select.min.js
+      - panel/assets/libs/bootstrap-select2/select2.min.js
+      - panel/assets/libs/magnific-popup/jquery.magnific-popup.min.js
+      - panel/assets/libs/pace/pace.min.js
+      - panel/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js
+      - panel/assets/libs/jquery-icheck/icheck.min.js
+      #<!-- Demo Specific JS Libraries -->
+      - panel/assets/libs/prettify/prettify.js
+      - panel/assets/js/init.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/jquery-datatables/js/jquery.dataTables.min.js
+      - panel/assets/libs/jquery-datatables/js/dataTables.bootstrap.js
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js
+      - panel/assets/js/pages/datatables.js
+      - index.js
+      - main.js
+
+  edit:
+    title: Actualizar Detalle PQRS | cult Excel
+    stylesheet:
+      - admin/bower_components/metisMenu/dist/metisMenu.min.css
+      - admin/dist/css/timeline.css
+      - admin/dist/css/sb-admin-2.css
+      - admin/bower_components/morrisjs/morris.css
+    javascript:
+      - admin/bower_components/jquery/dist/jquery.min.js
+      - admin/bower_components/bootstrap/dist/js/bootstrap.min.js
+      - admin/bower_components/metisMenu/dist/metisMenu.min.js
+      - admin/bower_components/raphael/raphael-min.js
+      - admin/dist/js/sb-admin-2.js
+  insert:
+    title: Registrar Detalle PQRS | Cult Excel
+    stylesheet:
+      - admin/bower_components/metisMenu/dist/metisMenu.min.css
+      - admin/dist/css/timeline.css
+      - admin/dist/css/sb-admin-2.css
+      - admin/bower_components/morrisjs/morris.css
+    javascript:
+      - admin/bower_components/jquery/dist/jquery.min.js
+      - admin/bower_components/bootstrap/dist/js/bootstrap.min.js
+      - admin/bower_components/metisMenu/dist/metisMenu.min.js
+      - admin/bower_components/raphael/raphael-min.js
+      - admin/dist/js/sb-admin-2.js
+      
+estadoPqrs:
+  index:
+    title: Estado Pqrs | Cult Excel
+    stylesheet:
+      #<!-- Base Css Files -->
+      - panel/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css
+      - panel/assets/libs/bootstrap/css/bootstrap.min.css
+      - panel/assets/libs/font-awesome/css/font-awesome.min.css
+      - panel/assets/libs/fontello/css/fontello.css
+      - panel/assets/libs/animate-css/animate.min.css
+      - panel/assets/libs/nifty-modal/css/component.css
+      - panel/assets/libs/magnific-popup/magnific-popup.css 
+      - panel/assets/libs/ios7-switch/ios7-switch.css
+      - panel/assets/libs/pace/pace.css
+      - panel/assets/libs/sortable/sortable-theme-bootstrap.css
+      - panel/assets/libs/bootstrap-datepicker/css/datepicker.css
+      - panel/assets/libs/jquery-icheck/skins/all.css
+      #<!-- Code Highlighter for Demo -->
+      - panel/assets/libs/prettify/github.css       
+      #<!-- Extra CSS Libraries Start -->
+      - panel/assets/libs/jquery-datatables/css/dataTables.bootstrap.css
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/css/dataTables.tableTools.css
+      - panel/assets/css/style.css
+      #<!-- Extra CSS Libraries End -->
+      - panel/assets/css/style-responsive.css
+    javascript:
+      #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      - panel/assets/libs/jquery/jquery-1.11.1.min.js
+      - panel/assets/libs/bootstrap/js/bootstrap.min.js
+      - panel/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js
+      - panel/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js
+      - panel/assets/libs/jquery-detectmobile/detect.js
+      - panel/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js
+      - panel/assets/libs/ios7-switch/ios7.switch.js
+      - panel/assets/libs/fastclick/fastclick.js
+      - panel/assets/libs/jquery-blockui/jquery.blockUI.js
+      - panel/assets/libs/bootstrap-bootbox/bootbox.min.js
+      - panel/assets/libs/jquery-slimscroll/jquery.slimscroll.js
+      - panel/assets/libs/jquery-sparkline/jquery-sparkline.js
+      - panel/assets/libs/nifty-modal/js/classie.js
+      - panel/assets/libs/nifty-modal/js/modalEffects.js
+      - panel/assets/libs/sortable/sortable.min.js
+      - panel/assets/libs/bootstrap-fileinput/bootstrap.file-input.js
+      - panel/assets/libs/bootstrap-select/bootstrap-select.min.js
+      - panel/assets/libs/bootstrap-select2/select2.min.js
+      - panel/assets/libs/magnific-popup/jquery.magnific-popup.min.js
+      - panel/assets/libs/pace/pace.min.js
+      - panel/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js
+      - panel/assets/libs/jquery-icheck/icheck.min.js
+      #<!-- Demo Specific JS Libraries -->
+      - panel/assets/libs/prettify/prettify.js
+      - panel/assets/js/init.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/jquery-datatables/js/jquery.dataTables.min.js
+      - panel/assets/libs/jquery-datatables/js/dataTables.bootstrap.js
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js
+      - panel/assets/js/pages/datatables.js
+      - index.js
+      - main.js
+
+  edit:
+    title: Actualizar Estado Pqrs | PortalWeb
+    stylesheet:
+      - admin/bower_components/metisMenu/dist/metisMenu.min.css
+      - admin/dist/css/timeline.css
+      - admin/dist/css/sb-admin-2.css
+      - admin/bower_components/morrisjs/morris.css
+    javascript:
+      - admin/bower_components/jquery/dist/jquery.min.js
+      - admin/bower_components/bootstrap/dist/js/bootstrap.min.js
+      - admin/bower_components/metisMenu/dist/metisMenu.min.js
+      - admin/bower_components/raphael/raphael-min.js
+      - admin/dist/js/sb-admin-2.js
+  insert:
+    title: Registrar Estado Pqrs | PortalWeb
+    stylesheet:
+      - admin/bower_components/metisMenu/dist/metisMenu.min.css
+      - admin/dist/css/timeline.css
+      - admin/dist/css/sb-admin-2.css
+      - admin/bower_components/morrisjs/morris.css
+    javascript:
+      - admin/bower_components/jquery/dist/jquery.min.js
+      - admin/bower_components/bootstrap/dist/js/bootstrap.min.js
+      - admin/bower_components/metisMenu/dist/metisMenu.min.js
+      - admin/bower_components/raphael/raphael-min.js
+      - admin/dist/js/sb-admin-2.js      
+                        
+eventoPatrocinador:
+  index:
+    title: Evento Patrocinador | Cult Excel
+    stylesheet:
+      #<!-- Base Css Files -->
+      - panel/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css
+      - panel/assets/libs/bootstrap/css/bootstrap.min.css
+      - panel/assets/libs/font-awesome/css/font-awesome.min.css
+      - panel/assets/libs/fontello/css/fontello.css
+      - panel/assets/libs/animate-css/animate.min.css
+      - panel/assets/libs/nifty-modal/css/component.css
+      - panel/assets/libs/magnific-popup/magnific-popup.css 
+      - panel/assets/libs/ios7-switch/ios7-switch.css
+      - panel/assets/libs/pace/pace.css
+      - panel/assets/libs/sortable/sortable-theme-bootstrap.css
+      - panel/assets/libs/bootstrap-datepicker/css/datepicker.css
+      - panel/assets/libs/jquery-icheck/skins/all.css
+      #<!-- Code Highlighter for Demo -->
+      - panel/assets/libs/prettify/github.css       
+      #<!-- Extra CSS Libraries Start -->
+      - panel/assets/libs/jquery-datatables/css/dataTables.bootstrap.css
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/css/dataTables.tableTools.css
+      - panel/assets/css/style.css
+      #<!-- Extra CSS Libraries End -->
+      - panel/assets/css/style-responsive.css
+    javascript:
+      #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      - panel/assets/libs/jquery/jquery-1.11.1.min.js
+      - panel/assets/libs/bootstrap/js/bootstrap.min.js
+      - panel/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js
+      - panel/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js
+      - panel/assets/libs/jquery-detectmobile/detect.js
+      - panel/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js
+      - panel/assets/libs/ios7-switch/ios7.switch.js
+      - panel/assets/libs/fastclick/fastclick.js
+      - panel/assets/libs/jquery-blockui/jquery.blockUI.js
+      - panel/assets/libs/bootstrap-bootbox/bootbox.min.js
+      - panel/assets/libs/jquery-slimscroll/jquery.slimscroll.js
+      - panel/assets/libs/jquery-sparkline/jquery-sparkline.js
+      - panel/assets/libs/nifty-modal/js/classie.js
+      - panel/assets/libs/nifty-modal/js/modalEffects.js
+      - panel/assets/libs/sortable/sortable.min.js
+      - panel/assets/libs/bootstrap-fileinput/bootstrap.file-input.js
+      - panel/assets/libs/bootstrap-select/bootstrap-select.min.js
+      - panel/assets/libs/bootstrap-select2/select2.min.js
+      - panel/assets/libs/magnific-popup/jquery.magnific-popup.min.js
+      - panel/assets/libs/pace/pace.min.js
+      - panel/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js
+      - panel/assets/libs/jquery-icheck/icheck.min.js
+      #<!-- Demo Specific JS Libraries -->
+      - panel/assets/libs/prettify/prettify.js
+      - panel/assets/js/init.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/jquery-datatables/js/jquery.dataTables.min.js
+      - panel/assets/libs/jquery-datatables/js/dataTables.bootstrap.js
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js
+      - panel/assets/js/pages/datatables.js
+      - index.js
+      - main.js
+
+  edit:
+    title: Actualizar Evento Patrocinador | Cult Excel
+    stylesheet:
+      - admin/bower_components/metisMenu/dist/metisMenu.min.css
+      - admin/dist/css/timeline.css
+      - admin/dist/css/sb-admin-2.css
+      - admin/bower_components/morrisjs/morris.css
+    javascript:
+      - admin/bower_components/jquery/dist/jquery.min.js
+      - admin/bower_components/bootstrap/dist/js/bootstrap.min.js
+      - admin/bower_components/metisMenu/dist/metisMenu.min.js
+      - admin/bower_components/raphael/raphael-min.js
+      - admin/dist/js/sb-admin-2.js
+  insert:
+    title: Registrar Evento Patrocinador | Cult Excel
+    stylesheet:
+      - admin/bower_components/metisMenu/dist/metisMenu.min.css
+      - admin/dist/css/timeline.css
+      - admin/dist/css/sb-admin-2.css
+      - admin/bower_components/morrisjs/morris.css
+    javascript:
+      - admin/bower_components/jquery/dist/jquery.min.js
+      - admin/bower_components/bootstrap/dist/js/bootstrap.min.js
+      - admin/bower_components/metisMenu/dist/metisMenu.min.js
+      - admin/bower_components/raphael/raphael-min.js
+      - admin/dist/js/sb-admin-2.js
+      
+patrocinador:
+  index:
+    title: Patrocinador | Cult Excel
+    stylesheet:
+      #<!-- Base Css Files -->
+      - panel/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css
+      - panel/assets/libs/bootstrap/css/bootstrap.min.css
+      - panel/assets/libs/font-awesome/css/font-awesome.min.css
+      - panel/assets/libs/fontello/css/fontello.css
+      - panel/assets/libs/animate-css/animate.min.css
+      - panel/assets/libs/nifty-modal/css/component.css
+      - panel/assets/libs/magnific-popup/magnific-popup.css 
+      - panel/assets/libs/ios7-switch/ios7-switch.css
+      - panel/assets/libs/pace/pace.css
+      - panel/assets/libs/sortable/sortable-theme-bootstrap.css
+      - panel/assets/libs/bootstrap-datepicker/css/datepicker.css
+      - panel/assets/libs/jquery-icheck/skins/all.css
+      #<!-- Code Highlighter for Demo -->
+      - panel/assets/libs/prettify/github.css       
+      #<!-- Extra CSS Libraries Start -->
+      - panel/assets/libs/jquery-datatables/css/dataTables.bootstrap.css
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/css/dataTables.tableTools.css
+      - panel/assets/css/style.css
+      #<!-- Extra CSS Libraries End -->
+      - panel/assets/css/style-responsive.css
+    javascript:
+      #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      - panel/assets/libs/jquery/jquery-1.11.1.min.js
+      - panel/assets/libs/bootstrap/js/bootstrap.min.js
+      - panel/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js
+      - panel/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js
+      - panel/assets/libs/jquery-detectmobile/detect.js
+      - panel/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js
+      - panel/assets/libs/ios7-switch/ios7.switch.js
+      - panel/assets/libs/fastclick/fastclick.js
+      - panel/assets/libs/jquery-blockui/jquery.blockUI.js
+      - panel/assets/libs/bootstrap-bootbox/bootbox.min.js
+      - panel/assets/libs/jquery-slimscroll/jquery.slimscroll.js
+      - panel/assets/libs/jquery-sparkline/jquery-sparkline.js
+      - panel/assets/libs/nifty-modal/js/classie.js
+      - panel/assets/libs/nifty-modal/js/modalEffects.js
+      - panel/assets/libs/sortable/sortable.min.js
+      - panel/assets/libs/bootstrap-fileinput/bootstrap.file-input.js
+      - panel/assets/libs/bootstrap-select/bootstrap-select.min.js
+      - panel/assets/libs/bootstrap-select2/select2.min.js
+      - panel/assets/libs/magnific-popup/jquery.magnific-popup.min.js
+      - panel/assets/libs/pace/pace.min.js
+      - panel/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js
+      - panel/assets/libs/jquery-icheck/icheck.min.js
+      #<!-- Demo Specific JS Libraries -->
+      - panel/assets/libs/prettify/prettify.js
+      - panel/assets/js/init.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/jquery-datatables/js/jquery.dataTables.min.js
+      - panel/assets/libs/jquery-datatables/js/dataTables.bootstrap.js
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js
+      - panel/assets/js/pages/datatables.js
+      - index.js
+      - main.js
+
+  edit:
+    title: Actualizar Patrocinador | PortalWeb
+    stylesheet:
+      - admin/bower_components/metisMenu/dist/metisMenu.min.css
+      - admin/dist/css/timeline.css
+      - admin/dist/css/sb-admin-2.css
+      - admin/bower_components/morrisjs/morris.css
+    javascript:
+      - admin/bower_components/jquery/dist/jquery.min.js
+      - admin/bower_components/bootstrap/dist/js/bootstrap.min.js
+      - admin/bower_components/metisMenu/dist/metisMenu.min.js
+      - admin/bower_components/raphael/raphael-min.js
+      - admin/dist/js/sb-admin-2.js
+  insert:
+    title: Registrar Patrocinador | PortalWeb
+    stylesheet:
+      - admin/bower_components/metisMenu/dist/metisMenu.min.css
+      - admin/dist/css/timeline.css
+      - admin/dist/css/sb-admin-2.css
+      - admin/bower_components/morrisjs/morris.css
+    javascript:
+      - admin/bower_components/jquery/dist/jquery.min.js
+      - admin/bower_components/bootstrap/dist/js/bootstrap.min.js
+      - admin/bower_components/metisMenu/dist/metisMenu.min.js
+      - admin/bower_components/raphael/raphael-min.js
+      - admin/dist/js/sb-admin-2.js  
+
+pqrs:
+  index:
+    title: PQRS | Cult Excel
+    stylesheet:
+      #<!-- Base Css Files -->
+      - panel/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css
+      - panel/assets/libs/bootstrap/css/bootstrap.min.css
+      - panel/assets/libs/font-awesome/css/font-awesome.min.css
+      - panel/assets/libs/fontello/css/fontello.css
+      - panel/assets/libs/animate-css/animate.min.css
+      - panel/assets/libs/nifty-modal/css/component.css
+      - panel/assets/libs/magnific-popup/magnific-popup.css 
+      - panel/assets/libs/ios7-switch/ios7-switch.css
+      - panel/assets/libs/pace/pace.css
+      - panel/assets/libs/sortable/sortable-theme-bootstrap.css
+      - panel/assets/libs/bootstrap-datepicker/css/datepicker.css
+      - panel/assets/libs/jquery-icheck/skins/all.css
+      #<!-- Code Highlighter for Demo -->
+      - panel/assets/libs/prettify/github.css       
+      #<!-- Extra CSS Libraries Start -->
+      - panel/assets/libs/jquery-datatables/css/dataTables.bootstrap.css
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/css/dataTables.tableTools.css
+      - panel/assets/css/style.css
+      #<!-- Extra CSS Libraries End -->
+      - panel/assets/css/style-responsive.css
+    javascript:
+      #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      - panel/assets/libs/jquery/jquery-1.11.1.min.js
+      - panel/assets/libs/bootstrap/js/bootstrap.min.js
+      - panel/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js
+      - panel/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js
+      - panel/assets/libs/jquery-detectmobile/detect.js
+      - panel/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js
+      - panel/assets/libs/ios7-switch/ios7.switch.js
+      - panel/assets/libs/fastclick/fastclick.js
+      - panel/assets/libs/jquery-blockui/jquery.blockUI.js
+      - panel/assets/libs/bootstrap-bootbox/bootbox.min.js
+      - panel/assets/libs/jquery-slimscroll/jquery.slimscroll.js
+      - panel/assets/libs/jquery-sparkline/jquery-sparkline.js
+      - panel/assets/libs/nifty-modal/js/classie.js
+      - panel/assets/libs/nifty-modal/js/modalEffects.js
+      - panel/assets/libs/sortable/sortable.min.js
+      - panel/assets/libs/bootstrap-fileinput/bootstrap.file-input.js
+      - panel/assets/libs/bootstrap-select/bootstrap-select.min.js
+      - panel/assets/libs/bootstrap-select2/select2.min.js
+      - panel/assets/libs/magnific-popup/jquery.magnific-popup.min.js
+      - panel/assets/libs/pace/pace.min.js
+      - panel/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js
+      - panel/assets/libs/jquery-icheck/icheck.min.js
+      #<!-- Demo Specific JS Libraries -->
+      - panel/assets/libs/prettify/prettify.js
+      - panel/assets/js/init.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/jquery-datatables/js/jquery.dataTables.min.js
+      - panel/assets/libs/jquery-datatables/js/dataTables.bootstrap.js
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js
+      - panel/assets/js/pages/datatables.js
+      - index.js
+      - main.js
+
+  edit:
+    title: Actualizar PQRS | PortalWeb
+    stylesheet:
+      - admin/bower_components/metisMenu/dist/metisMenu.min.css
+      - admin/dist/css/timeline.css
+      - admin/dist/css/sb-admin-2.css
+      - admin/bower_components/morrisjs/morris.css
+    javascript:
+      - admin/bower_components/jquery/dist/jquery.min.js
+      - admin/bower_components/bootstrap/dist/js/bootstrap.min.js
+      - admin/bower_components/metisMenu/dist/metisMenu.min.js
+      - admin/bower_components/raphael/raphael-min.js
+      - admin/dist/js/sb-admin-2.js
+  insert:
+    title: Registrar PQRS | PortalWeb
+    stylesheet:
+      - admin/bower_components/metisMenu/dist/metisMenu.min.css
+      - admin/dist/css/timeline.css
+      - admin/dist/css/sb-admin-2.css
+      - admin/bower_components/morrisjs/morris.css
+    javascript:
+      - admin/bower_components/jquery/dist/jquery.min.js
+      - admin/bower_components/bootstrap/dist/js/bootstrap.min.js
+      - admin/bower_components/metisMenu/dist/metisMenu.min.js
+      - admin/bower_components/raphael/raphael-min.js
+      - admin/dist/js/sb-admin-2.js 
+      
+tarifa:
+  index:
+    title: Tarifa | Cult Excel
+    stylesheet:
+      #<!-- Base Css Files -->
+      - panel/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css
+      - panel/assets/libs/bootstrap/css/bootstrap.min.css
+      - panel/assets/libs/font-awesome/css/font-awesome.min.css
+      - panel/assets/libs/fontello/css/fontello.css
+      - panel/assets/libs/animate-css/animate.min.css
+      - panel/assets/libs/nifty-modal/css/component.css
+      - panel/assets/libs/magnific-popup/magnific-popup.css 
+      - panel/assets/libs/ios7-switch/ios7-switch.css
+      - panel/assets/libs/pace/pace.css
+      - panel/assets/libs/sortable/sortable-theme-bootstrap.css
+      - panel/assets/libs/bootstrap-datepicker/css/datepicker.css
+      - panel/assets/libs/jquery-icheck/skins/all.css
+      #<!-- Code Highlighter for Demo -->
+      - panel/assets/libs/prettify/github.css       
+      #<!-- Extra CSS Libraries Start -->
+      - panel/assets/libs/jquery-datatables/css/dataTables.bootstrap.css
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/css/dataTables.tableTools.css
+      - panel/assets/css/style.css
+      #<!-- Extra CSS Libraries End -->
+      - panel/assets/css/style-responsive.css
+    javascript:
+      #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      - panel/assets/libs/jquery/jquery-1.11.1.min.js
+      - panel/assets/libs/bootstrap/js/bootstrap.min.js
+      - panel/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js
+      - panel/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js
+      - panel/assets/libs/jquery-detectmobile/detect.js
+      - panel/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js
+      - panel/assets/libs/ios7-switch/ios7.switch.js
+      - panel/assets/libs/fastclick/fastclick.js
+      - panel/assets/libs/jquery-blockui/jquery.blockUI.js
+      - panel/assets/libs/bootstrap-bootbox/bootbox.min.js
+      - panel/assets/libs/jquery-slimscroll/jquery.slimscroll.js
+      - panel/assets/libs/jquery-sparkline/jquery-sparkline.js
+      - panel/assets/libs/nifty-modal/js/classie.js
+      - panel/assets/libs/nifty-modal/js/modalEffects.js
+      - panel/assets/libs/sortable/sortable.min.js
+      - panel/assets/libs/bootstrap-fileinput/bootstrap.file-input.js
+      - panel/assets/libs/bootstrap-select/bootstrap-select.min.js
+      - panel/assets/libs/bootstrap-select2/select2.min.js
+      - panel/assets/libs/magnific-popup/jquery.magnific-popup.min.js
+      - panel/assets/libs/pace/pace.min.js
+      - panel/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js
+      - panel/assets/libs/jquery-icheck/icheck.min.js
+      #<!-- Demo Specific JS Libraries -->
+      - panel/assets/libs/prettify/prettify.js
+      - panel/assets/js/init.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/jquery-datatables/js/jquery.dataTables.min.js
+      - panel/assets/libs/jquery-datatables/js/dataTables.bootstrap.js
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js
+      - panel/assets/js/pages/datatables.js
+      - index.js
+      - main.js
+
+  edit:
+    title: Actualizar Tarifa | PortalWeb
+    stylesheet:
+      - admin/bower_components/metisMenu/dist/metisMenu.min.css
+      - admin/dist/css/timeline.css
+      - admin/dist/css/sb-admin-2.css
+      - admin/bower_components/morrisjs/morris.css
+    javascript:
+      - admin/bower_components/jquery/dist/jquery.min.js
+      - admin/bower_components/bootstrap/dist/js/bootstrap.min.js
+      - admin/bower_components/metisMenu/dist/metisMenu.min.js
+      - admin/bower_components/raphael/raphael-min.js
+      - admin/dist/js/sb-admin-2.js
+  insert:
+    title: Registrar Tarifa | PortalWeb
+    stylesheet:
+      - admin/bower_components/metisMenu/dist/metisMenu.min.css
+      - admin/dist/css/timeline.css
+      - admin/dist/css/sb-admin-2.css
+      - admin/bower_components/morrisjs/morris.css
+    javascript:
+      - admin/bower_components/jquery/dist/jquery.min.js
+      - admin/bower_components/bootstrap/dist/js/bootstrap.min.js
+      - admin/bower_components/metisMenu/dist/metisMenu.min.js
+      - admin/bower_components/raphael/raphael-min.js
+      - admin/dist/js/sb-admin-2.js 
+      
+tipoPqrs:
+  index:
+    title: Tipo PQRS | Cult Excel
+    stylesheet:
+      #<!-- Base Css Files -->
+      - panel/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css
+      - panel/assets/libs/bootstrap/css/bootstrap.min.css
+      - panel/assets/libs/font-awesome/css/font-awesome.min.css
+      - panel/assets/libs/fontello/css/fontello.css
+      - panel/assets/libs/animate-css/animate.min.css
+      - panel/assets/libs/nifty-modal/css/component.css
+      - panel/assets/libs/magnific-popup/magnific-popup.css 
+      - panel/assets/libs/ios7-switch/ios7-switch.css
+      - panel/assets/libs/pace/pace.css
+      - panel/assets/libs/sortable/sortable-theme-bootstrap.css
+      - panel/assets/libs/bootstrap-datepicker/css/datepicker.css
+      - panel/assets/libs/jquery-icheck/skins/all.css
+      #<!-- Code Highlighter for Demo -->
+      - panel/assets/libs/prettify/github.css       
+      #<!-- Extra CSS Libraries Start -->
+      - panel/assets/libs/jquery-datatables/css/dataTables.bootstrap.css
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/css/dataTables.tableTools.css
+      - panel/assets/css/style.css
+      #<!-- Extra CSS Libraries End -->
+      - panel/assets/css/style-responsive.css
+    javascript:
+      #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      - panel/assets/libs/jquery/jquery-1.11.1.min.js
+      - panel/assets/libs/bootstrap/js/bootstrap.min.js
+      - panel/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js
+      - panel/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js
+      - panel/assets/libs/jquery-detectmobile/detect.js
+      - panel/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js
+      - panel/assets/libs/ios7-switch/ios7.switch.js
+      - panel/assets/libs/fastclick/fastclick.js
+      - panel/assets/libs/jquery-blockui/jquery.blockUI.js
+      - panel/assets/libs/bootstrap-bootbox/bootbox.min.js
+      - panel/assets/libs/jquery-slimscroll/jquery.slimscroll.js
+      - panel/assets/libs/jquery-sparkline/jquery-sparkline.js
+      - panel/assets/libs/nifty-modal/js/classie.js
+      - panel/assets/libs/nifty-modal/js/modalEffects.js
+      - panel/assets/libs/sortable/sortable.min.js
+      - panel/assets/libs/bootstrap-fileinput/bootstrap.file-input.js
+      - panel/assets/libs/bootstrap-select/bootstrap-select.min.js
+      - panel/assets/libs/bootstrap-select2/select2.min.js
+      - panel/assets/libs/magnific-popup/jquery.magnific-popup.min.js
+      - panel/assets/libs/pace/pace.min.js
+      - panel/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js
+      - panel/assets/libs/jquery-icheck/icheck.min.js
+      #<!-- Demo Specific JS Libraries -->
+      - panel/assets/libs/prettify/prettify.js
+      - panel/assets/js/init.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/jquery-datatables/js/jquery.dataTables.min.js
+      - panel/assets/libs/jquery-datatables/js/dataTables.bootstrap.js
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js
+      - panel/assets/js/pages/datatables.js
+      - index.js
+      - main.js
+
+  edit:
+    title: Actualizar Tipo PQRS | PortalWeb
+    stylesheet:
+      - admin/bower_components/metisMenu/dist/metisMenu.min.css
+      - admin/dist/css/timeline.css
+      - admin/dist/css/sb-admin-2.css
+      - admin/bower_components/morrisjs/morris.css
+    javascript:
+      - admin/bower_components/jquery/dist/jquery.min.js
+      - admin/bower_components/bootstrap/dist/js/bootstrap.min.js
+      - admin/bower_components/metisMenu/dist/metisMenu.min.js
+      - admin/bower_components/raphael/raphael-min.js
+      - admin/dist/js/sb-admin-2.js
+  insert:
+    title: Registrar Tipo PQRS | PortalWeb
+    stylesheet:
+      - admin/bower_components/metisMenu/dist/metisMenu.min.css
+      - admin/dist/css/timeline.css
+      - admin/dist/css/sb-admin-2.css
+      - admin/bower_components/morrisjs/morris.css
+    javascript:
+      - admin/bower_components/jquery/dist/jquery.min.js
+      - admin/bower_components/bootstrap/dist/js/bootstrap.min.js
+      - admin/bower_components/metisMenu/dist/metisMenu.min.js
+      - admin/bower_components/raphael/raphael-min.js
+      - admin/dist/js/sb-admin-2.js
+      
+usuarioGustaCategoria:
+  index:
+    title: Usuario gusta Categoria | Cult Excel
+    stylesheet:
+      #<!-- Base Css Files -->
+      - panel/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css
+      - panel/assets/libs/bootstrap/css/bootstrap.min.css
+      - panel/assets/libs/font-awesome/css/font-awesome.min.css
+      - panel/assets/libs/fontello/css/fontello.css
+      - panel/assets/libs/animate-css/animate.min.css
+      - panel/assets/libs/nifty-modal/css/component.css
+      - panel/assets/libs/magnific-popup/magnific-popup.css 
+      - panel/assets/libs/ios7-switch/ios7-switch.css
+      - panel/assets/libs/pace/pace.css
+      - panel/assets/libs/sortable/sortable-theme-bootstrap.css
+      - panel/assets/libs/bootstrap-datepicker/css/datepicker.css
+      - panel/assets/libs/jquery-icheck/skins/all.css
+      #<!-- Code Highlighter for Demo -->
+      - panel/assets/libs/prettify/github.css       
+      #<!-- Extra CSS Libraries Start -->
+      - panel/assets/libs/jquery-datatables/css/dataTables.bootstrap.css
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/css/dataTables.tableTools.css
+      - panel/assets/css/style.css
+      #<!-- Extra CSS Libraries End -->
+      - panel/assets/css/style-responsive.css
+    javascript:
+      #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      - panel/assets/libs/jquery/jquery-1.11.1.min.js
+      - panel/assets/libs/bootstrap/js/bootstrap.min.js
+      - panel/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js
+      - panel/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js
+      - panel/assets/libs/jquery-detectmobile/detect.js
+      - panel/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js
+      - panel/assets/libs/ios7-switch/ios7.switch.js
+      - panel/assets/libs/fastclick/fastclick.js
+      - panel/assets/libs/jquery-blockui/jquery.blockUI.js
+      - panel/assets/libs/bootstrap-bootbox/bootbox.min.js
+      - panel/assets/libs/jquery-slimscroll/jquery.slimscroll.js
+      - panel/assets/libs/jquery-sparkline/jquery-sparkline.js
+      - panel/assets/libs/nifty-modal/js/classie.js
+      - panel/assets/libs/nifty-modal/js/modalEffects.js
+      - panel/assets/libs/sortable/sortable.min.js
+      - panel/assets/libs/bootstrap-fileinput/bootstrap.file-input.js
+      - panel/assets/libs/bootstrap-select/bootstrap-select.min.js
+      - panel/assets/libs/bootstrap-select2/select2.min.js
+      - panel/assets/libs/magnific-popup/jquery.magnific-popup.min.js
+      - panel/assets/libs/pace/pace.min.js
+      - panel/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js
+      - panel/assets/libs/jquery-icheck/icheck.min.js
+      #<!-- Demo Specific JS Libraries -->
+      - panel/assets/libs/prettify/prettify.js
+      - panel/assets/js/init.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/jquery-datatables/js/jquery.dataTables.min.js
+      - panel/assets/libs/jquery-datatables/js/dataTables.bootstrap.js
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js
+      - panel/assets/js/pages/datatables.js
+      - index.js
+      - main.js
+
+  edit:
+    title: Actualizar Usuario gusta Categoria | PortalWeb
+    stylesheet:
+      - admin/bower_components/metisMenu/dist/metisMenu.min.css
+      - admin/dist/css/timeline.css
+      - admin/dist/css/sb-admin-2.css
+      - admin/bower_components/morrisjs/morris.css
+    javascript:
+      - admin/bower_components/jquery/dist/jquery.min.js
+      - admin/bower_components/bootstrap/dist/js/bootstrap.min.js
+      - admin/bower_components/metisMenu/dist/metisMenu.min.js
+      - admin/bower_components/raphael/raphael-min.js
+      - admin/dist/js/sb-admin-2.js
+  insert:
+    title: Registrar Usuario gusta Categoria | PortalWeb
+    stylesheet:
+      - admin/bower_components/metisMenu/dist/metisMenu.min.css
+      - admin/dist/css/timeline.css
+      - admin/dist/css/sb-admin-2.css
+      - admin/bower_components/morrisjs/morris.css
+    javascript:
+      - admin/bower_components/jquery/dist/jquery.min.js
+      - admin/bower_components/bootstrap/dist/js/bootstrap.min.js
+      - admin/bower_components/metisMenu/dist/metisMenu.min.js
+      - admin/bower_components/raphael/raphael-min.js
+
+eventosBlog:
+  index:
+    title: Registra tu Evento | Cult Excel
+    stylesheet:
+      - asset/css/bootstrap.css
+      - style.css        
+      - responsive.css
+      - animate.css
+      - colors/red.css
+      - eventlist.css
+    javascript:    
+      - jquery-2.1.1.min.js
+      - jquery.migrate.js
+      - modernizrr.js
+      - asset/js/bootstrap.min.js
+      - jquery.fitvids.js
+      - owl.carousel.min.js
+      - nivo-lightbox.min.js
+      - jquery.isotope.min.js
+      - jquery.appear.js
+      - count-to.js
+      - jquery.textillate.js
+      - jquery.lettering.js
+      - jquery.easypiechart.min.js
+      - jquery.nicescroll.min.js
+      - jquery.parallax.js
+      - mediaelement-and-player.js  
+      - script.js
+      - index.js
+      - main.js
+

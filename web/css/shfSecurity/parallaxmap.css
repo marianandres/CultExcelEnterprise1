@@ -1,0 +1,20 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 3, 2015, 12:07:05 AM
+    Author     : pipe
+*/
+
+body{
+    background: url(../images/parallax/back.png);
+    background-color: #444;
+    background: url('../images/parallax/pinlayer2.png'), url('../images/parallax/pinlayer1.png'),url('../images/parallax/back.png');    
+}
+
+.vertical-offset-100{
+    padding-top:50px;
+}
+

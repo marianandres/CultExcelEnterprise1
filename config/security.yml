@@ -1,0 +1,169 @@
+shfSecurity:
+  index:
+    security: false
+  login:
+    security: false
+  logout:
+    security: true
+  noPermission:
+    security: false
+  exception:
+    security: false
+    
+homepage:
+  index:
+    security: false
+
+contact:
+  index:
+    security: false    
+
+admin:
+  index:
+    security: true
+    credentials:
+      - [admin]
+  insert:
+    security: true
+    
+default:
+  index:
+    security: false
+    credentials:
+      - [usuario]
+  insert:
+    security: true
+
+usuario:
+  index:
+    security: true
+    credentials:
+      - [admin]
+  insert:
+    security: true
+    
+eventos:
+  index:
+    security: false
+    
+localidad:
+  index:
+    security: true
+    credentials:
+      - [admin]
+  insert:
+    security: true
+
+tipoDocumento:
+  index:
+    security: true
+    credentials:
+      - [admin]
+  insert:
+    security: true
+    
+
+categoria:
+  index:
+    security: true
+    credentials:
+      - [admin]
+  insert:
+    security: true
+    
+organizacion:
+  index:
+    security: true
+    credentials:
+      - [admin]
+  insert:
+    security: true
+
+recordarMe:
+  index:
+    security: true
+    credentials:
+      - [admin]
+  insert:
+    security: true
+
+usuarioCredencial:
+  index:
+    security: true
+    credentials:
+      - [admin]
+  insert:
+    security: true
+    
+detallePqrs:
+  index:
+    security: true
+    credentials:
+      - [admin]
+  insert:
+    security: true
+    
+eventoPatrocinador:
+  index:
+    security: true
+    credentials:
+      - [admin]
+  insert:
+    security: true
+    
+patrocinador:
+  index:
+    security: true
+    credentials:
+      - [admin]
+  insert:
+    security: true
+    
+estadoPqrs:
+  index:
+    security: true
+    credentials:
+      - [admin]
+  insert:
+    security: true
+    
+pqrs:
+  index:
+    security: true
+    credentials:
+      - [admin]
+  insert:
+    security: true
+    
+recaudoEconomico:
+  index:
+    security: true
+    credentials:
+      - [admin]
+  insert:
+    security: true
+    
+tarifa:
+  index:
+    security: true
+    credentials:
+      - [admin]
+  insert:
+    security: true
+    
+tipoPqrs:
+  index:
+    security: true
+    credentials:
+      - [admin]
+  insert:
+    security: true
+    
+usuarioGustaCategoria:
+  index:
+    security: true
+    credentials:
+      - [admin]
+  insert:
+    security: true    
+    
