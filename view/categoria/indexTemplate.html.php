@@ -647,7 +647,17 @@ use \mvc\request\requestClass as request ?>
                     </div>
                 </div>
                 <!-- Footer Start -->
-               <?php view::includePartial('partials/footerBar') ?>
+                <footer>
+                    <!-- Start Copyright -->
+                    <div class="copyright-section">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>&copy;<?php echo i18n::__('Derechos') ?> <a href="#"><?php echo i18n::__('Autores') ?> </a> </p>
+                            </div><!-- .col-md-6 -->
+                        </div><!-- .row -->
+                    </div>
+                    <!-- End Copyright -->
+                </footer>
                 <!-- Footer End -->			
             </div>
             <!-- ============================================================== -->
