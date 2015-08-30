@@ -796,20 +796,20 @@ use mvc\i18n\i18nClass as i18n ?>
                             <h3><?php echo i18n::__('Basico') ?></h3>
                         </div>
                         <div class="plan-price">
-                            <div class="price-value"><?php echo i18n::__('$49') ?><span><?php echo i18n::__('.00') ?></span></div>
-                            <div class="interval"><?php echo i18n::__('per') ?></div>
+                            <div class="price-value">$49<span>.00</span></div>
+                            <div class="interval">per month</div>
                         </div>
                         <div class="plan-list">
                             <ul>
-                                <li><strong><?php echo i18n::__('40') ?></strong> <?php echo i18n::__('Storage') ?></li>
-                                <li><strong><?php echo i18n::__('40') ?></strong><?php echo i18n::__('Transfer') ?> </li>
-                                <li><strong><?php echo i18n::__('10') ?></strong> <?php echo i18n::__('Domains') ?></li>
-                                <li><strong><?php echo i18n::__('20') ?></strong> <?php echo i18n::__('Projects') ?></li>
-                                <li><strong><?php echo i18n::__('Free') ?></strong> <?php echo i18n::__('installation') ?></li>
+                                <li><strong>40 GB</strong> Storage</li>
+                                <li><strong>40GB</strong> Transfer</li>
+                                <li><strong>10</strong> Domains</li>
+                                <li><strong>20</strong> Projects</li>
+                                <li><strong>Free</strong> installation</li>
                             </ul>
                         </div>
                         <div class="plan-signup">
-                            <a href="#" class="btn-system btn-small"><?php echo i18n::__('SignNow') ?></a>
+                            <a href="#" class="btn-system btn-small">Sign Up Now</a>
                         </div>
                     </div>
                 </div>
@@ -820,20 +820,20 @@ use mvc\i18n\i18nClass as i18n ?>
                             <h3><?php echo i18n::__('Relampago') ?></h3>
                         </div>
                         <div class="plan-price">
-                            <div class="price-value"><?php echo i18n::__('$99') ?><span><?php echo i18n::__('.00') ?></span></div>
-                            <div class="interval"><?php echo i18n::__('per') ?></div>
+                            <div class="price-value">$99<span>.00</span></div>
+                            <div class="interval">per month</div>
                         </div>
                         <div class="plan-list">
                             <ul>
-                                <li><strong><?php echo i18n::__('40') ?></strong> <?php echo i18n::__('Storage') ?></li>
-                                <li><strong><?php echo i18n::__('40') ?></strong><?php echo i18n::__('Transfer') ?> </li>
-                                <li><strong><?php echo i18n::__('10') ?></strong> <?php echo i18n::__('Domains') ?></li>
-                                <li><strong><?php echo i18n::__('20') ?></strong> <?php echo i18n::__('Projects') ?></li>
-                                <li><strong><?php echo i18n::__('Free') ?></strong> <?php echo i18n::__('installation') ?></li>
+                                <li><strong>40 GB</strong> Storage</li>
+                                <li><strong>40GB</strong> Transfer</li>
+                                <li><strong>10</strong> Domains</li>
+                                <li><strong>20</strong> Projects</li>
+                                <li><strong>Free</strong> installation</li>
                             </ul>
                         </div>
                         <div class="plan-signup">
-                            <a href="#" class="btn-system btn-small border-btn"><?php echo i18n::__('SignNow') ?></a>
+                            <a href="#" class="btn-system btn-small border-btn">Sign Up Now</a>
                         </div>
                     </div>
                 </div>
@@ -845,20 +845,20 @@ use mvc\i18n\i18nClass as i18n ?>
                             <h3><?php echo i18n::__('Profesional') ?></h3>
                         </div>
                         <div class="plan-price">
-                            <div class="price-value"><?php echo i18n::__('$199') ?><span><?php echo i18n::__('.00') ?></span></div>
-                            <div class="interval"><?php echo i18n::__('per') ?></div>
+                            <div class="price-value">$199<span>.00</span></div>
+                            <div class="interval">per month</div>
                         </div>
                         <div class="plan-list">
                             <ul>
-                                <li><strong><?php echo i18n::__('40') ?></strong> <?php echo i18n::__('Storage') ?></li>
-                                <li><strong><?php echo i18n::__('40') ?></strong><?php echo i18n::__('Transfer') ?> </li>
-                                <li><strong><?php echo i18n::__('10') ?></strong> <?php echo i18n::__('Domains') ?></li>
-                                <li><strong><?php echo i18n::__('20') ?></strong> <?php echo i18n::__('Projects') ?></li>
-                                <li><strong><?php echo i18n::__('Free') ?></strong> <?php echo i18n::__('installation') ?></li>
+                                <li><strong>40 GB</strong> Storage</li>
+                                <li><strong>40GB</strong> Transfer</li>
+                                <li><strong>10</strong> Domains</li>
+                                <li><strong>20</strong> Projects</li>
+                                <li><strong>Free</strong> installation</li>
                             </ul>
                         </div>
                         <div class="plan-signup">
-                            <a href="#" class="btn-system btn-small"><?php echo i18n::__('SignNow') ?></a>
+                            <a href="#" class="btn-system btn-small">Sign Up Now</a>
                         </div>
                     </div>
                 </div>
@@ -870,20 +870,20 @@ use mvc\i18n\i18nClass as i18n ?>
                             <h3><?php echo i18n::__('Premium') ?></h3>
                         </div>
                         <div class="plan-price">
-                            <div class="price-value"><?php echo i18n::__('$299') ?><span><?php echo i18n::__('.00') ?></span></div>
-                            <div class="interval"><?php echo i18n::__('per') ?></div>
+                            <div class="price-value">$299<span>.00</span></div>
+                            <div class="interval">per month</div>
                         </div>
                         <div class="plan-list">
                             <ul>
-                                <li><strong><?php echo i18n::__('40') ?></strong> <?php echo i18n::__('Storage') ?></li>
-                                <li><strong><?php echo i18n::__('40') ?></strong><?php echo i18n::__('Transfer') ?> </li>
-                                <li><strong><?php echo i18n::__('10') ?></strong> <?php echo i18n::__('Domains') ?></li>
-                                <li><strong><?php echo i18n::__('20') ?></strong> <?php echo i18n::__('Projects') ?></li>
-                                <li><strong><?php echo i18n::__('Free') ?></strong> <?php echo i18n::__('installation') ?></li>
+                                <li><strong>40 GB</strong> Storage</li>
+                                <li><strong>40GB</strong> Transfer</li>
+                                <li><strong>10</strong> Domains</li>
+                                <li><strong>20</strong> Projects</li>
+                                <li><strong>Free</strong> installation</li>
                             </ul>
                         </div>
                         <div class="plan-signup">
-                            <a href="#" class="btn-system btn-small"><?php echo i18n::__('SignNow') ?></a>
+                            <a href="#" class="btn-system btn-small">Sign Up Now</a>
                         </div>
                     </div>
                 </div>
@@ -901,8 +901,8 @@ use mvc\i18n\i18nClass as i18n ?>
 
                 <!-- Start Big Heading -->
                 <div class="big-title text-center">
-                    <h1><?php echo i18n::__('Our') ?> <strong><?php echo i18n::__('Clients') ?></strong></h1>
-                    <p class="title-desc"><?php echo i18n::__('Partners') ?></p>
+                    <h1>Our Happy <strong>Clients</strong></h1>
+                    <p class="title-desc">Partners We Work With</p>
                 </div>
                 <!-- End Big Heading -->
 
