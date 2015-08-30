@@ -72,8 +72,7 @@ use mvc\session\sessionClass as session ?>
     <!-- Begin page -->
     <div id="wrapper">
 
-        <?php mvc\view\viewClass::includePartial('partials/sideBarMenu') ?>
-        <?php mvc\view\viewClass::includePartial('partials/topBarMenu') ?>
+        <?php mvc\view\viewClass::includePartial('partials/top-side-bar.html') ?>
 
         <div class="right side-menu">
             <ul class="nav nav-tabs nav-justified" id="right-tabs">
@@ -479,8 +478,8 @@ use mvc\session\sessionClass as session ?>
                                                     <div class="col-xs-4 text-center right-border">
                                                         <i class="fa fa-database"></i><br>
                                                         <?php if (session::getInstance()->hasAttribute('mvcDbQuery')): ?>
-                                                            <span class="animate-number" data-value="<?php echo session::getInstance()->getAttribute('mvcDbQuery') ?>" >0</span>
-                                                            <?php session::getInstance()->deleteAttribute('mvcDbQuery') ?>
+                                                          <span class="animate-number" data-value="<?php echo session::getInstance()->getAttribute('mvcDbQuery') ?>" >0</span>
+                                                          <?php session::getInstance()->deleteAttribute('mvcDbQuery') ?>
                                                         <?php endif ?>
                                                     </div>
                                                     <div class="col-xs-4 text-center">
@@ -763,7 +762,7 @@ use mvc\session\sessionClass as session ?>
                                 <div class="additional-btn left-toolbar">
                                     <div class="btn-group">
                                         <a class="additional-icon" id="dropdownMenu2" data-toggle="dropdown">
-                                            <?php echo i18n::__('total') ?> Calculadora <i class="fa fa-angle-down"></i>
+                                           <?php echo i18n::__('total') ?> Calculadora <i class="fa fa-angle-down"></i>
                                         </a>
                                         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
                                             <li><a href="#"><?php echo i18n::__('total') ?>Save</a></li>
@@ -935,7 +934,7 @@ use mvc\session\sessionClass as session ?>
     <div class="md-overlay"></div>
     <!-- End of eoverlay modal -->
     <script>
-        var resizefunc = [];
+      var resizefunc = [];
     </script>
 
 </div>

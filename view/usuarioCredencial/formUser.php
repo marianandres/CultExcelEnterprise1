@@ -23,7 +23,7 @@ use mvc\i18n\i18nClass as i18n ?>
         <br>
 
         <button class="btn btn-medium btn-success"><?php echo i18n::__(((isset($objUsuarioCredencial)) ? 'update' : 'register')) ?></button>
-        <a class="btn btn-danger btn-medium" href="<?php echo routing::getInstance()->getUrlWeb('usuarioCredencial', 'index') ?>">Cancelar</a>
+        <a class="btn btn-danger btn-medium" href="<?php echo routing::getInstance()->getUrlWeb('usuarioCredencial', 'index') ?>"><?php echo i18n::__('Cancelar') ?></a>
 
     </form>
 </div></br>

@@ -1,4 +1,5 @@
 <?php
+
 use mvc\session\sessionClass as session ?>
 <?php if (\mvc\config\configClass::getScope() === 'dev'): ?>
   <div id="mvcMain" class="shfDevelopmentBar">

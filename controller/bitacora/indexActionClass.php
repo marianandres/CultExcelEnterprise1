@@ -11,7 +11,7 @@ use mvc\i18n\i18nClass as i18n;
 /**
  * Description of ejemploClass
  *
- * @author 
+ * @author Julian Lasso <ingeniero.julianlasso@gmail.com>
  */
 class indexActionClass extends controllerClass implements controllerActionInterface {
 
@@ -33,5 +33,9 @@ class indexActionClass extends controllerClass implements controllerActionInterf
       echo '<br>';
       echo $exc->getTraceAsString();
     }
+
+
+    //$this->defineView('ejemplo', 'default', session::getInstance()->getFormatOutput());
   }
+
 }
