@@ -1,7 +1,8 @@
 <?php
-use mvc\routing\routingClass as routing;
-use mvc\i18n\i18nClass as i18n 
-?>
+
+use mvc\routing\routingClass as routing ?>
+<?php
+use mvc\i18n\i18nClass as i18n ?>
 <!-- Start Footer Section -->
 <footer>
     <div class="container">

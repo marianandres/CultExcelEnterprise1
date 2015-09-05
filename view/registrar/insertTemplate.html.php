@@ -18,11 +18,8 @@ use mvc\view\viewClass as view ?>
                 </div>
                 <div class="col-lg-3 col-md-2"></div>
             </div>
-
-
         </div><!-- .container -->
     </div>
-
     <?php view::includePartial('partials/footer.html') ?>
     <!-- Modal -->
     <div class="modal fade" id="t_and_c_m" style="margin-top: 100px;" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -82,6 +79,5 @@ use mvc\view\viewClass as view ?>
 </div>
 <div id="ascrail2000" class="nicescroll-rails" style="width: 5px; z-index: 999999999; cursor: default; position: fixed; top: 0px; height: 100%; right: 0px; opacity: 0;">
     <div style="position: relative; top: 0px; float: right; width: 5px; height: 74px; border: 0px; border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; background-color: rgb(51, 51, 51); background-clip: padding-box;">
-
     </div>
 </div>

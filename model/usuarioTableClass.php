@@ -10,9 +10,9 @@ use mvc\config\configClass as config;
  */
 class usuarioTableClass extends usuarioBaseTableClass {
 
-  public static function getTotalPages($lines, $where) {
-    try {
-      $sql = 'SELECT count(' . usuarioTableClass::ID . ') AS cantidad FROM ' . usuarioTableClass::getNameTable() . ' WHERE ' . usuarioTableClass::getNameField(usuarioTableClass::DELETED_AT) . ' IS NULL';
+    public static function getTotalPages($lines, $where) {
+        try {
+            $sql = 'SELECT count(' . usuarioTableClass::ID . ') AS cantidad FROM ' . usuarioTableClass::getNameTable() . ' WHERE ' . usuarioTableClass::getNameField(usuarioTableClass::DELETED_AT) . ' IS NULL';
 //      if (is_array($where) === true) {
 //        foreach ($where as $field => $value) {
 //          if (is_array($value)) {
@@ -22,36 +22,36 @@ class usuarioTableClass extends usuarioBaseTableClass {
 //          }
 //        }
 //      }
-      $answer = model::getInstance()->prepare($sql);
-      $answer->execute();
-      $answer = $answer->fetchAll(PDO::FETCH_OBJ);
-      return ceil($answer[0]->cantidad / $lines);
-    } catch (PDOException $exc) {
-      throw $exc;
+            $answer = model::getInstance()->prepare($sql);
+            $answer->execute();
+            $answer = $answer->fetchAll(PDO::FETCH_OBJ);
+            return ceil($answer[0]->cantidad / $lines);
+        } catch (PDOException $exc) {
+            throw $exc;
+        }
     }
-  }
 
-  public static function getIdNewUser($usuario) {
-    try {
-      $sql = 'SELECT ' . usuarioTableClass::ID
-              . ' FROM ' . usuarioTableClass::getNameTable()
-              . ' WHERE ' . usuarioTableClass::getNameField(usuarioTableClass::DELETED_AT) . ' IS NULL'
-              . ' AND ' . usuarioTableClass::USER . ' = :user ';
-      $params = array(
-          ':user' => $usuario,
-      );
-      $answer = model::getInstance()->prepare($sql);
-      $answer->execute($params);
-      $answer = $answer->fetchAll(PDO::FETCH_OBJ);
-      return $answer[0]->id;
-    } catch (PDOException $exc) {
-      throw $exc;
+    public static function getIdNewUser($usuario) {
+        try {
+            $sql = 'SELECT ' . usuarioTableClass::ID
+                    . ' FROM ' . usuarioTableClass::getNameTable()
+                    . ' WHERE ' . usuarioTableClass::getNameField(usuarioTableClass::DELETED_AT) . ' IS NULL'
+                    . ' AND ' . usuarioTableClass::USER . ' = :user ';
+            $params = array(
+                ':user' => $usuario,
+            );
+            $answer = model::getInstance()->prepare($sql);
+            $answer->execute($params);
+            $answer = $answer->fetchAll(PDO::FETCH_OBJ);
+            return $answer[0]->id;
+        } catch (PDOException $exc) {
+            throw $exc;
+        }
     }
-  }
 
-  public static function verifyUser($usuario, $password) {
-    try {
-      $sql = 'SELECT ' . credencialTableClass::getNameField(credencialTableClass::NOMBRE) . ' as credencial,
+    public static function verifyUser($usuario, $password) {
+        try {
+            $sql = 'SELECT ' . credencialTableClass::getNameField(credencialTableClass::NOMBRE) . ' as credencial,
 	' . usuarioTableClass::getNameField(usuarioTableClass::USER) . ' as usuario,
 	' . usuarioTableClass::getNameField(usuarioTableClass::ID) . ' as id_usuario
     FROM ' . usuarioTableClass::getNameTable() . ' LEFT JOIN ' . usuarioCredencialTableClass::getNameTable() . ' ON ' . usuarioTableClass::getNameField(usuarioTableClass::ID) . ' = ' . usuarioCredencialTableClass::getNameField(usuarioCredencialTableClass::USUARIO_ID) . '
@@ -61,35 +61,51 @@ class usuarioTableClass extends usuarioBaseTableClass {
     AND ' . credencialTableClass::getNameField(credencialTableClass::DELETED_AT) . ' IS NULL
     AND ' . usuarioTableClass::getNameField(usuarioTableClass::USER) . ' = :user
     AND ' . usuarioTableClass::getNameField(usuarioTableClass::PASSWORD) . ' = :pass';
-      $params = array(
-          ':user' => $usuario,
-          ':pass' => md5($password),
-          ':actived' => ((config::getDbDriver() === 'mysql') ? 1 : 't')
-      );
-      $answer = model::getInstance()->prepare($sql);
-      $answer->execute($params);
-      $answer = $answer->fetchAll(PDO::FETCH_OBJ);
-      return (count($answer) > 0 ) ? $answer : false;
-    } catch (PDOException $exc) {
-      throw $exc;
+            $params = array(
+                ':user' => $usuario,
+                ':pass' => md5($password),
+                ':actived' => ((config::getDbDriver() === 'mysql') ? 1 : 't')
+            );
+            $answer = model::getInstance()->prepare($sql);
+            $answer->execute($params);
+            $answer = $answer->fetchAll(PDO::FETCH_OBJ);
+            return (count($answer) > 0 ) ? $answer : false;
+        } catch (PDOException $exc) {
+            throw $exc;
+        }
     }
-  }
 
-  public static function setRegisterLastLoginAt($id) {
-    try {
-      $sql = 'UPDATE ' . usuarioTableClass::getNameTable() . '
+    public static function setRegisterLastLoginAt($id) {
+        try {
+            $sql = 'UPDATE ' . usuarioTableClass::getNameTable() . '
               SET ' . usuarioTableClass::LAST_LOGIN_AT . ' = :last_login_at
               WHERE ' . usuarioTableClass::ID . ' = :id';
-      $params = array(
-          ':id' => $id,
-          ':last_login_at' => date(config::getFormatTimestamp())
-      );
-      $answer = model::getInstance()->prepare($sql);
-      $answer->execute($params);
-      return true;
-    } catch (PDOException $exc) {
-      throw $exc;
+            $params = array(
+                ':id' => $id,
+                ':last_login_at' => date(config::getFormatTimestamp())
+            );
+            $answer = model::getInstance()->prepare($sql);
+            $answer->execute($params);
+            return true;
+        } catch (PDOException $exc) {
+            throw $exc;
+        }
     }
-  }
+
+    public static function getUserName($id) {
+        try {
+            $sql = 'SELECT ' . usuarioTableClass::USER . ',' . usuarioTableClass::ID . 
+                    ' FROM ' . usuarioTableClass::getNameTable() .
+                    ' WHERE ' . usuarioTableClass::ID . ' = :id';
+            $params = array(
+                ':id' => $id,
+            );
+            $answer = model::getInstance()->prepare($sql);
+            $answer->execute($params);
+            return $answer[0]->id;
+        } catch (PDOException $exc) {
+            throw $exc;
+        }
+    }
 
 }

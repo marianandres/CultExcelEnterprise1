@@ -118,24 +118,17 @@ use mvc\i18n\i18nClass as i18n ?>
 
             <h1 class="page-header"><i class="fa fa-calendar"></i>  <?php echo i18n::__('eventos') ?></h1>
             <div class="row">
-
-
-
+                
             </div><!-- .row -->
         </div><!-- .container -->
     </div>
     <!-- End Services Section -->
-
-
     <?php mvc\view\viewClass::includePartial('partials/footer.html') ?>
-
-
 </div>
 <!-- End Full Body Container -->
 
 <!-- Go To Top Link -->
 <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
-
 <div id="loader">
     <div class="spinner">
         <div class="dot1"></div>

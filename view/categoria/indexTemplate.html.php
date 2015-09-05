@@ -89,7 +89,7 @@ use \mvc\request\requestClass as request ?>
             <!-- ============================================================== -->
             <!-- Start Content here -->
             <!-- ============================================================== -->
-            <div class="content">
+           <div class="content">
                 <?php view::includeHandlerMessage() ?>
                 <!-- Page Heading Start -->
                 <div class="page-heading">

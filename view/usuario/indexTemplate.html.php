@@ -113,19 +113,19 @@ use \mvc\request\requestClass as request ?>
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                            <h4 class="modal-title" id="myModalLabel">Filtros</h4>
+                                            <h4 class="modal-title" id="myModalLabel"><?php echo i18n::__('Filtros') ?></h4>
                                         </div>
                                         <div class="modal-body">
                                             <form method="POST" role="form" id="filterForm" action="<?php echo routing::getInstance()->getUrlWeb('usuario', 'index') ?>">
                                                 <div class="form-group">
-                                                    <label for="filterusuario" class="col-sm-2 control-label">Usuario</label>
+                                                    <label for="filterusuario" class="col-sm-2 control-label"><?php echo i18n::__('usuario') ?></label>
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control" id="filterUsuario" name="filter[usuario]" placeholder="Nombre De Usuario">
                                                         </br>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="col-sm-2 control-label">Fecha Creacion</label>
+                                                    <label class="col-sm-2 control-label"><?php echo i18n::__('FechaCreacion') ?></label>
                                                     <div class="col-sm-10">
                                                         <input type="date" class="form-control" id="filterDate1" name="filter[fechaCreacion1]">
                                                         </br>
@@ -139,8 +139,8 @@ use \mvc\request\requestClass as request ?>
                                         </br>
 
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                            <button type="button" onclick="$('#filterForm').submit()"  class="btn btn-primary">Filtrar</button>
+                                            <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo i18n::__('Cerra') ?></button>
+                                            <button type="button" onclick="$('#filterForm').submit()"  class="btn btn-primary"><?php echo i18n::__('Filtrar') ?></button>
                                         </div>
                                     </div>
                                 </div>
@@ -187,7 +187,8 @@ use \mvc\request\requestClass as request ?>
                                                           <!--                    <a href="#" class="btn btn-warning btn-xs">Ver</a>-->
                                                           <a href="<?php echo routing::getInstance()->getUrlWeb('usuario', 'edit', array(usuarioTableClass::ID => $usuario->$id)) ?>" class="btn btn-primary btn-xs"> <?php echo i18n::__('Editar') ?></a>
                                                           <a href="#" onclick="confirmarEliminar(<?php echo $usuario->$id ?>)" class="btn btn-danger btn-xs"> <?php echo i18n::__('Eliminar') ?></a>
-                                                          <a href="<?php echo routing::getInstance()->getUrlWeb('usuarioCredencial', 'index', array(usuarioCredencialTableClass::getNameField(usuarioCredencialTableClass::USUARIO_ID, true) => $usuario->$id)) ?>" class="btn btn-success btn-xs"><i class="fa fa-external-link-square"></i> <?php echo i18n::__('Detalle') ?></a>
+                                                          <a href="<?php echo routing::getInstance()->getUrlWeb('usuarioCredencial', 'index', array(usuarioCredencialTableClass::getNameField(usuarioCredencialTableClass::USUARIO_ID, true) => $usuario->$id)) ?>" class="btn btn-success btn-xs"><i class="fa fa-external-link-square"></i> <?php echo i18n::__('Detalles') ?></a>
+
                                                       </td>
                                                   </tr>
                                                 <?php endforeach ?>

@@ -90,7 +90,7 @@ use \mvc\request\requestClass as request ?>
         <!-- Right Sidebar End -->
         <!-- Start right content -->
         <div class="content-page">
-            <!-- ============================================================== -->
+           <!-- ============================================================== -->
             <!-- Start Content here -->
             <!-- ============================================================== -->
             <div class="content">
@@ -190,15 +190,15 @@ use \mvc\request\requestClass as request ?>
 
                                             <tbody>
                                                 <?php foreach ($objBitacora as $bitacora): ?>
-                                                    <tr>
-                                                        <td><input type="checkbox" name="chk[]" value="<?php echo $bitacora->$id ?>"></td>
-                                                        <td><?php echo $bitacora->$usuario_id ?></td>
-                                                        <td><?php echo $bitacora->$accion ?></td>
-                                                        <td><?php echo $bitacora->$tabla ?></td>
-                                                        <td><?php echo $bitacora->$registro ?></td>
-                                                        <td><?php echo $bitacora->$observacion ?></td>
-                                                        <td><?php echo $bitacora->$fecha ?></td>
-                                                    </tr>
+                                                  <tr>
+                                                      <td><input type="checkbox" name="chk[]" value="<?php echo $bitacora->$id ?>"></td>
+                                                      <td><?php echo $bitacora->$usuario_id ?></td>
+                                                      <td><?php echo $bitacora->$accion ?></td>
+                                                      <td><?php echo $bitacora->$tabla ?></td>
+                                                      <td><?php echo $bitacora->$registro ?></td>
+                                                      <td><?php echo $bitacora->$observacion ?></td>
+                                                      <td><?php echo $bitacora->$fecha ?></td>
+                                                  </tr>
                                                 <?php endforeach ?>
                                             </tbody>
                                         </table>
@@ -213,12 +213,13 @@ use \mvc\request\requestClass as request ?>
                     </div>
                 </div>
                 <!-- Footer Start -->
-                <?php view::includePartial('partials/footerBar') ?>
+                 <?php view::includePartial('partials/footerBar') ?>
                 <!-- Footer End -->			
             </div>
             <!-- ============================================================== -->
             <!-- End content here -->
             <!-- ============================================================== -->
+
         </div>
         <!-- End right content -->
     </div>

@@ -1,5 +1,4 @@
 <?php
-
 use mvc\routing\routingClass as routing ?>
 <?php
 use mvc\i18n\i18nClass as i18n ?>
@@ -96,17 +95,15 @@ use \mvc\request\requestClass as request ?>
                 <?php view::includeHandlerMessage() ?>
                 <!-- Page Heading Start -->
                 <div class="page-heading">
-                    <h1><i class="fa fa-university"></i> Organizacion  <?php i18n::__('adminusu') ?></h1>
-                    <h3>Organizaciones  Del Sistema</h3>            	</div>
+                    <h1><i class="fa fa-university"></i>   <?php i18n::__('Organizacion') ?></h1>
+                    <h3><?php i18n::__('OrganiSistema') ?></h3>            	</div>
                 <!-- Page Heading End-->				<!-- Your awesome content goes here -->
                 <div class="row">
-
                     <div class="col-md-12">
                         <div class="widget">
                             <div class="widget-header">
-                                <h2><strong> Organizacion  <?php i18n::__('adminusu') ?></strong></h2>
+                                <h2><strong>   <?php i18n::__('Organizacion') ?></strong></h2>
                                 <div class="additional-btn">
-
                                     <a href="javascript:location.reload(true)" class="hidden reload"><i class="icon-ccw-1"></i></a>
                                     <a href="#" class="widget-toggle"><i class="icon-down-open-2"></i></a>
                                     <a href="#" class="widget-close"><i class="icon-cancel-3"></i></a>
@@ -118,34 +115,32 @@ use \mvc\request\requestClass as request ?>
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                            <h4 class="modal-title" id="myModalLabel">Filtros</h4>
+                                            <h4 class="modal-title" id="myModalLabel"> <?php i18n::__('Filtros') ?></h4>
                                         </div>
                                         <div class="modal-body">
                                             <form method="POST" role="form" id="filterForm" action="<?php echo routing::getInstance()->getUrlWeb('organizacion', 'index') ?>">
                                                 <div class="form-group">
-                                                    <label for="filterusuario" class="col-sm-2 control-label">Usuario</label>
+                                                    <label for="filterusuario" class="col-sm-2 control-label"> <?php i18n::__('usuario') ?></label>
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control" id="filterUsuario" name="filter[usuario]" placeholder="Nombre De Usuario">
                                                         </br>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="col-sm-2 control-label">Fecha Creacion</label>
+                                                    <label class="col-sm-2 control-label"><?php i18n::__('usuario') ?>Fecha Creacion</label>
                                                     <div class="col-sm-10">
                                                         <input type="date" class="form-control" id="filterDate1" name="filter[fechaCreacion1]">
                                                         </br>
                                                         <input type="date" class="form-control" id="filterDate2" name="filter[fechaCreacion2]">
                                                     </div>
                                                 </div>
-
                                             </form>
                                         </div></br></br></br>
                                         </br></br></br></br>
                                         </br>
-
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                            <button type="button" onclick="$('#filterForm').submit()"  class="btn btn-primary">Filtrar</button>
+                                            <button type="button" class="btn btn-default" data-dismiss="modal"><?php i18n::__('Cerrar') ?></button>
+                                            <button type="button" onclick="$('#filterForm').submit()"  class="btn btn-primary"><?php i18n::__('Filtrar') ?></button>
                                         </div>
                                     </div>
                                 </div>
@@ -156,38 +151,36 @@ use \mvc\request\requestClass as request ?>
                                 <div class="table-responsive">
                                     <form id="frmDeleteAll" class='form-horizontal' action="<?php echo routing::getInstance()->getUrlWeb('organizacion', 'deleteSelect') ?>" method="POST">
                                         <div  style="margin-bottom: 10px; margin-top: 20px;">
-                                            <a href="<?php echo routing::getInstance()->getUrlWeb('organizacion', 'insert') ?>" class="btn btn-success btn-medium"><i class="fa fa-plus-square-o"></i> Nuevo</a>
-                                            <a href="#" class="btn btn-danger btn-medium" onclick="borrarSeleccion()">Borrar</a>
-                                            <a href="<?php echo routing::getInstance()->getUrlWeb('organizacion', 'report') ?>" class="btn btn-default btn-medium"><i class="fa fa-file-pdf-o"></i> Exportar A PDF</a>
+                                            <a href="<?php echo routing::getInstance()->getUrlWeb('organizacion', 'insert') ?>" class="btn btn-success btn-medium"><i class="fa fa-plus-square-o"></i> <?php i18n::__('Nuevo') ?></a>
+                                            <a href="#" class="btn btn-danger btn-medium" onclick="borrarSeleccion()"><?php i18n::__('Borrar') ?></a>
+                                            <a href="<?php echo routing::getInstance()->getUrlWeb('organizacion', 'report') ?>" class="btn btn-default btn-medium"><i class="fa fa-file-pdf-o"></i> <?php i18n::__('ExporPDF') ?></a>
                                             <a href="#" onclick="window.print();" class="btn btn-primary btn-medium" title="Imprimir"><i class="fa fa-print"></i> </a> 
-                                            <button type="button" class="btn btn-primary btn-medium" data-toggle="modal" data-target="#myModalfilter"><i class="fa fa-search"></i> Filtro</button>
-                                            <a class="btn btn-default btn-medium" href="<?php echo routing::getInstance()->getUrlWeb('organizacion', 'deleteFilters') ?>"><i class="fa fa-minus-circle"></i> Eliminar Filtros</a>
+                                            <button type="button" class="btn btn-primary btn-medium" data-toggle="modal" data-target="#myModalfilter"><i class="fa fa-search"></i><?php i18n::__('Filtro') ?> </button>
+                                            <a class="btn btn-default btn-medium" href="<?php echo routing::getInstance()->getUrlWeb('organizacion', 'deleteFilters') ?>"><i class="fa fa-minus-circle"></i> <?php i18n::__('EliminarFiltros') ?></a>
                                         </div>
                                         <table id="datatables-1" class="table table-striped table-bordered" cellspacing="0" width="100%">
                                             <thead>
                                                 <tr>
                                                     <th><input type="checkbox" id="chkAll"></th>
-                                                    <th>Nombre<?php i18n::__('usuario') ?></th>
-                                                    <th>Pagina Web<?php i18n::__('usuario') ?></th>
-                                                    <th>Direccion<?php i18n::__('usuario') ?></th>
-                                                    <th>Correo<?php i18n::__('usuario') ?></th>
-                                                    <th>Telefono<?php i18n::__('usuario') ?></th>
+                                                    <th><?php i18n::__('Nom') ?></th>
+                                                    <th><?php i18n::__('PaginaWeb') ?></th>
+                                                    <th><?php i18n::__('Direccion') ?></th>
+                                                    <th><?php i18n::__('Correo') ?></th>
+                                                    <th><?php i18n::__('telefono') ?></th>
                                                     <th><?php echo i18n::__('actions') ?></th>
                                                 </tr>
                                             </thead>
-
                                             <tfoot>
                                                 <tr>
                                                     <th><input type="checkbox" id="chkAll"></th>
-                                                    <th>Nombre<?php i18n::__('usuario') ?></th>
-                                                    <th>Pagina Web<?php i18n::__('usuario') ?></th>
-                                                    <th>Direccion<?php i18n::__('usuario') ?></th>
-                                                    <th>Correo<?php i18n::__('usuario') ?></th>
-                                                    <th>Telefono<?php i18n::__('usuario') ?></th>
+                                                    <th><?php i18n::__('Nom') ?></th>
+                                                    <th><?php i18n::__('PaginaWeb') ?></th>
+                                                    <th><?php i18n::__('Direccion') ?></th>
+                                                    <th><?php i18n::__('Correo') ?></th>
+                                                    <th><?php i18n::__('telefono') ?></th>
                                                     <th><?php echo i18n::__('actions') ?></th>
                                                 </tr>
                                             </tfoot>
-
                                             <tbody>
                                                 <?php foreach ($objOrganizacion as $usuario): ?>
                                                   <tr>
@@ -199,9 +192,8 @@ use \mvc\request\requestClass as request ?>
                                                       <td><?php echo $usuario->$telefono ?></td>
                                                       <td>
                                                           <!--                    <a href="#" class="btn btn-warning btn-xs">Ver</a>-->
-                                                          <a href="<?php echo routing::getInstance()->getUrlWeb('organizacion', 'edit', array(organizacionTableClass::ID => $usuario->$id)) ?>" class="btn btn-primary btn-xs">Editar</a>
-                                                          <a href="#" onclick="confirmarEliminar(<?php echo $usuario->$id ?>)" class="btn btn-danger btn-xs">Eliminar</a>
-
+                                                          <a href="<?php echo routing::getInstance()->getUrlWeb('organizacion', 'edit', array(organizacionTableClass::ID => $usuario->$id)) ?>" class="btn btn-primary btn-xs"><?php i18n::__('Editar') ?></a>
+                                                          <a href="#" onclick="confirmarEliminar(<?php echo $usuario->$id ?>)" class="btn btn-danger btn-xs"><?php i18n::__('Eliminar') ?></a>
                                                       </td>
                                                   </tr>
                                                 <?php endforeach ?>
@@ -235,4 +227,3 @@ use \mvc\request\requestClass as request ?>
     </script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 </div>
-

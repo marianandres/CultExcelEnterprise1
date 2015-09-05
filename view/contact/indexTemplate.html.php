@@ -126,10 +126,6 @@ use mvc\session\sessionClass as session ?>
       });
     </script>
     <!-- End Map -->
-
-
-
-
     <!-- Start Content -->
     <div id="content">
         <div class="container">
@@ -172,11 +168,8 @@ use mvc\session\sessionClass as session ?>
                         </form>
                     </div>
                     <!-- End Contact Form -->
-
                 </div>
-
                 <div class="col-md-4">
-
                     <!-- Classic Heading -->
                     <h4 class="classic-title"><span><?php echo i18n::__('Information') ?></span></h4>
 
@@ -192,43 +185,33 @@ use mvc\session\sessionClass as session ?>
                         <li><i class="fa fa-envelope-o"></i> <strong><?php echo i18n::__('Email') ?></strong><?php echo i18n::__('@in') ?> </li>
                         <li><i class="fa fa-mobile"></i> <strong><?php echo i18n::__('Phone') ?></strong><?php echo i18n::__('+') ?></li>
                     </ul>
-
                     <!-- Divider -->
                     <div class="hr1" style="margin-bottom:15px;"></div>
 
                     <!-- Classic Heading -->
                     <h4 class="classic-title"><span><?php echo i18n::__('Working') ?></span></h4>
-
                     <!-- Info - List -->
                     <ul class="list-unstyled">
                         <li><strong><?php echo i18n::__('Monday') ?></strong><?php echo i18n::__('am') ?></li>
                         <li><strong><?php echo i18n::__('Saturday') ?></strong><?php echo i18n::__('pm') ?></li>
                         <li><strong><?php echo i18n::__('Sunday') ?></strong> <?php echo i18n::__('Closed') ?></li>
                     </ul>
-
                 </div>
-
             </div>
-
         </div>
     </div>
     <!-- End content -->
-
     <?php mvc\view\viewClass::includePartial('partials/footer.html') ?>
-
 </div>
 <!-- End Full Body Container -->
-
 <!-- Go To Top Link -->
 <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
-
 <div id="loader">
     <div class="spinner">
         <div class="dot1"></div>
         <div class="dot2"></div>
     </div>
 </div>
-
 <!-- Modal logout -->
 <div class="modal fade" id="myModal" tabindex="-1" style="margin-top: 150px;" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">

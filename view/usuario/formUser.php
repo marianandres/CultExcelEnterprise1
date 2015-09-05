@@ -9,10 +9,10 @@ use mvc\session\sessionClass as session ?>
 use mvc\request\requestClass as request ?>
 <?php $idUsuario = usuarioTableClass::ID ?>
 <?php $password = usuarioTableClass::PASSWORD ?>
-<?php $user = usuarioTableClass::USER ?>
+<?php $usuario = usuarioTableClass::USER ?>
 
 <div class="container container-fluid">
-    <h1 class="page-header"><i class="fa fa-user"></i>  <?php echo i18n::__(((isset($objUsuarios)) ? 'update' : 'register')) ?> <?php echo i18n::__('user') ?>  <?php echo $objUsuarios[0]->$usuario ?> </h1>  
+    <h1 class="page-header"><i class="fa fa-user"></i>  <?php echo i18n::__(((isset($objUsuarios)) ? 'update' : 'register')) ?> <?php echo i18n::__('user') ?>  </h1>  
     <form  id="registerForm" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 " method="post" action="<?php echo routing::getInstance()->getUrlWeb('usuario', ((isset($objUsuario)) ? 'update' : 'create')) ?>">
         <?php if (isset($objUsuario) == true): ?>
 

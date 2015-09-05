@@ -40,12 +40,59 @@ dictionary:
     Categoria:            Categoria
 #admin
     Perfiles:             Perfil
+    Return(s):            Return(s) Processed
+    65/174:               65 / 174
+    22/25:                22 / 25
+    19%:                  19%
+    p#0021:               #0021 
+    p#0022:               #0022
+    p#0023:               #0023
+    p#0024:               #0024
+    p#0025:               #0025
+    p#0026:               #0026
+    p#0027:               #0027
+    p#0028:               #0028
+    p#0029:               #0029
+    1,245:                1,245
+    No:                   No
+    JohnDoe:              John Doe
+    JohnnyDepp:           Johnny Depp
+    Scarlett:             Scarlett Johansson
+    London:               London, UK
+    Canbera:              Canbera, AU
+    Bali:                 Bali, ID
+    Bandung:              Bandung, ID
+    Semarang:             Semarang, ID
+    NewYork:              New York, US
+    New:                  New
+    Boston:               Boston, US
+    Hanna:                Hanna Barbara
+    Ali:                  Ali Larter
+    Willy:                Willy Wonka
+    Chris:                Chris Isaac
+    Jenny:                Jenny Doe
+    Order:                Order
+    Yogyakarta:           Yogyakarta, ID
+    Waiting:              Waiting
+    Payment:              Payment
+    Ban:                  Ban ki moon
+    Status:               Status
+    Location:             Location
+    OrderID:              Order ID
+    Buyer:                Buyer
+    Shipped:              Shipped Products
+    Generate:             Generate monthly sales report for John
     Separated:            Separated link
+    Completed:            Completed Salesf
     Daily:                Daily
     Yearly:               Yearly
     Server:               Server
+    ServerLoads:          Server Loads
+    OverallProduct:       Overall Product Stock
     Cerra:                Cerrar
+    Reporte:              Reporte
     Monthly:              Monthly
+    DeVentas:             De Ventas
     Cambiar:              Cambiar Contraseña
     Cerrar:               Cerrar Sesion
     Derechos:             2015 Cult Excel -  Todos Los Derechos Reservados.
@@ -84,6 +131,7 @@ dictionary:
     Arte:                 Eventos Artisticos
     Disfrutar:            Aqui, Disfrutalos!
     Conocer:              Conocelos!
+    Detalles:              Detalle
     Crea:                 Crea Tu Evento
     detalle:              Rellena los detalles del evento y las opciones de entrada, y ¡voilà—! tu página estará lista.
     Compartir:            Compartelo!
@@ -106,6 +154,7 @@ dictionary:
     Disfrute:             Disfruta De Los Mejores
     Ciudad:               En tu Ciudad
     Creacion:             Crear
+    FechaCreacion:        Fecha Creacion
     Imagina:              Imagina
     Propio:               tu propio evento
     Reune:                Reúne a tu gente, o convierte tu pasión en negocio.
@@ -164,10 +213,16 @@ dictionary:
     Ti:                   Ti!
     Disfrutalo:           Es Gratis ! Disfrutalo..
     Regresar:             Regresar
+    UsuaGustaCategoria:   Usuario Gusta Categoria
+    UsuGustCateSistema:   Usuario Gusta Categoria Del Sistema
+    Categoria:            Categoria
+    CategoriaID:          CategoriaID
+    
     acuerdo:              De Acuerdo
     Click:                Al Dar Click En
     Acuerdo:              Tu Estas De Acuerdo Con
     RecordarMe:           Recordar Me
+    RecordarMeSistema:    Recordar Me  Del Sistema
     Usuarios:             Usuarios
     ID:                   ID de usuario
     Accion:               Accion
@@ -195,19 +250,24 @@ dictionary:
     Confirmar:            Confirmar Password
     Registro:             Fecha De Registro  
     detallePqrs:          detallePqrs
+    PQRSPQRS:             PQRS
     pqrs:                 pqrs_id
+    PaginaWeb:            Pagina Web
     respuesta:            respuesta
     usuario_id:           usuario_id
     documento:            tipo_documento_id
     organizacion:         organizacion_id
     Estado:               estado Pqrs
     actived:              actived
+    EventosSistema:       Eventos  Del Sistema
     EvePatrocinador:      evento patrocinador
     EvenPatroSis:         Evento Patrocinador Del Sistema
     eventoId:             evento_id
     patrocinadorId:       patrocinador_id
     localidadId:          localidad_id
     Organizacion:         organizacion
+    OrganiSistema:        Organizaciones  Del Sistema
+    LocalidadID:          Localidad ID
     pagina:               pagina_web
     telefono:             telefono
     patrocinador:         patrocinador 
@@ -215,6 +275,7 @@ dictionary:
     estadoPqrs:           estado_pqrs_id
     tipoPqrs:             tipo_pqrs_id
     SALES:                SALES
+    TiposPQRS:            Tipo PQRS
     Sed:                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo iSed ut nventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt
     titulo:               titulo
     per:                  per month
@@ -232,6 +293,7 @@ dictionary:
     tarifas:              tarifa
     Precio:               valor
     tipoDocumento:        tipo Documento
+    TipoDocumentoSistem:  Tipo Documento  Del Sistema
     tipoPqrs:             tipoPqrs
     usuarioCredenci:      usuarioCredencial
     Something:            Something else here
@@ -252,6 +314,7 @@ dictionary:
     Cuen:                 Cuenta
     Notas:                Notas
     Todo:                 Todo List
+    
     Calculadora:          Calculadora
     USERS:                USERS
     6%:                   6%
@@ -319,13 +382,14 @@ dictionary:
     Export as PNG:        Export as PNG
     Categoria1:           Categoria1
     Categoria2:           Categoria2
-    
-    
+    TipoPQRSID:           Tipo PQRS ID
+    EstadoPQRSID:         Estado PQRS ID
     FechaCre:             Fecha de Creacion
     cerr:                 cerrar
     CategoriaSist:        Categorias De Eventos Del Sistema
     Categorias:           Categorias
     ExporPDF:             Exportar a PDF 
+    CredenUsuSistema:     Credenciales De Usuarios Del Sistema
     Nom:                  Nombre
     Elimina:              Eliminar
     CredenSistem:         Credenciales del Sistema
@@ -336,6 +400,9 @@ dictionary:
     DetalleEvento:        Detalle Del Evento
     EstadoPQRSist:        Estado PQRS Del Sistema
     Activado:             Activado
+    usuarioID:            usuario ID
+    IPAddress:            IP Address
+    HashCookie:           Hash Cookie
     EventosSist:          Eventos Del Sistema
     ¿No?:                ¿No Encuentras Tu Ubicacion?
     #validaciones 

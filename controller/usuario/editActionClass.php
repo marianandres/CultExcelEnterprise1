@@ -18,8 +18,9 @@ class editActionClass extends controllerClass implements controllerActionInterfa
   public function execute() {
     try {
       if (request::getInstance()->hasRequest(usuarioTableClass::ID)) {
+          $UserName = usuarioTableClass::getUserName(usuarioTableClass::ID);
         $fields = array(
-            usuarioTableClass::USER,
+            $UserName,
             usuarioTableClass::PASSWORD
         );
         $where = array(

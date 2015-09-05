@@ -3,11 +3,9 @@
 use mvc\routing\routingClass as routing ?>
 
 <?php
-
 use mvc\i18n\i18nClass as i18n ?>
 <!-- Full Body Container -->
 <div id="container" class="boxed-page">
-
     <header>
         <div id="topbar">
             <div class="container">
@@ -128,9 +126,6 @@ use mvc\i18n\i18nClass as i18n ?>
         </div>
         <!-- End Header Logo & Naviagtion -->
     </header>
-
-
-
     <!-- Start Home Page Slider -->
     <section id="home">
         <!-- Carousel -->
@@ -227,8 +222,6 @@ use mvc\i18n\i18nClass as i18n ?>
         <!-- /carousel -->
     </section>
     <!-- End Home Page Slider -->
-
-
     <!-- Start Services Section -->
     <div class="section service">
         <div class="container">
@@ -335,8 +328,6 @@ use mvc\i18n\i18nClass as i18n ?>
         </div><!-- .container -->
     </div>
     <!-- End Services Section -->
-
-
     <!-- Start Purchase Section -->
     <div class="section purchase">
         <div class="container">
@@ -888,9 +879,6 @@ use mvc\i18n\i18nClass as i18n ?>
 
                         </div>
                         <!-- End Section Content -->  
-
-
-
                     </div>         
                 </div>       
             </div>

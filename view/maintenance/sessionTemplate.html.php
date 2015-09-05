@@ -304,7 +304,6 @@ use mvc\session\sessionClass as session ?>
                             </div>
                         </div>
                     </div>
-
                     <div class="col-lg-3 col-md-6">
                         <div class="widget darkblue-2 animated fadeInDown">
                             <div class="widget-content padding">

@@ -113,12 +113,7 @@ use mvc\i18n\i18nClass as i18n ?>
                         </li>
                     </ul>
                 </div>
-
-
-
             </div>
-
-
         </div><!-- .container -->
     </div>
     <!-- End Purchase Section --> 
@@ -127,18 +122,12 @@ use mvc\i18n\i18nClass as i18n ?>
     <!-- End Header Section -->
 
     <!-- Start Services Section -->
-
-
-
     <?php mvc\view\viewClass::includePartial('partials/footer.html') ?>
-
-
 </div>
 <!-- End Full Body Container -->
 
 <!-- Go To Top Link -->
 <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
-
 <div id="loader">
     <div class="spinner">
         <div class="dot1"></div>

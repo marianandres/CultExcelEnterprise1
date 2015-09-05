@@ -100,8 +100,6 @@ use mvc\i18n\i18nClass as i18n ?>
         <!-- /carousel -->
     </section>
     <!-- End Home Page Slider -->
-
-
     <!-- Start Services Section -->
     <div class="section service">
         <div class="container">
@@ -374,22 +372,9 @@ use mvc\i18n\i18nClass as i18n ?>
 
             </li>
         </ul>
-
         <!-- End Recent Projects Carousel -->
-
-
-
     </div>
     <!-- End Portfolio Section -->
-
-
-
-
-
-
-
-
-
     <!-- Start Testimonials Section -->
     <div>
         <div class="container">
@@ -476,11 +461,8 @@ use mvc\i18n\i18nClass as i18n ?>
                         </div>
                     </div>
                     <!-- End Recent Posts Carousel -->
-
                 </div>
-
                 <div class="col-md-4">
-
                     <!-- Classic Heading -->
                     <h4 class="classic-title"><span>Testimonials</span></h4>
 
@@ -724,15 +706,11 @@ use mvc\i18n\i18nClass as i18n ?>
                     </div>
                 </div>
                 <!-- End Memebr 4 -->
-
             </div>
             <!-- End Team Members -->
-
         </div><!-- .container -->
     </div>
     <!-- End Team Member Section -->
-
-
     <div id="parallax-one" class="parallax" style="background-image:url(<?php echo routing::getInstance()->getUrlImg('parallax/bg-02.jpg') ?>);">
         <div class="parallax-text-container-1">
             <div class="parallax-text-item">
@@ -753,25 +731,15 @@ use mvc\i18n\i18nClass as i18n ?>
                                 <?php echo i18n::__('Excel') ?>
                             </h1>
                             <!-- End Animations Text -->
-
-
                             <!-- Start Buttons -->
-
                             <a href="#" class="btn-system btn-large btn-wite"><i class="fa fa-plus-square-o"></i> <?php echo i18n::__('Comenzar') ?></a>
-
                         </div>
                         <!-- End Section Content -->  
-
-
-
                     </div>         
                 </div>       
             </div>
         </div>        
     </div>
-
-
-
     <!-- Start Pricing Table Section -->
     <div class=" section pricing-section">
         <div class="container">
@@ -787,7 +755,6 @@ use mvc\i18n\i18nClass as i18n ?>
                     <p class="text-center">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
                 </div>
             </div>
-
             <div class="row pricing-tables">
 
                 <div class="col-md-3 col-sm-3 col-xs-12">
@@ -862,8 +829,6 @@ use mvc\i18n\i18nClass as i18n ?>
                         </div>
                     </div>
                 </div>
-
-
                 <div class="col-md-3 col-sm-3 col-xs-12">
                     <div class="pricing-table">
                         <div class="plan-name">
@@ -887,13 +852,10 @@ use mvc\i18n\i18nClass as i18n ?>
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>
     <!-- End Pricing Table Section -->
-
     <!-- Start Client/Partner Section -->
     <div class="partner">
         <div class="container">
@@ -905,7 +867,6 @@ use mvc\i18n\i18nClass as i18n ?>
                     <p class="title-desc">Partners We Work With</p>
                 </div>
                 <!-- End Big Heading -->
-
                 <!--Start Clients Carousel-->
                 <div class="our-clients">
                     <div class="clients-carousel custom-carousel touch-carousel navigation-3" data-appeared-items="5" data-navigation="true">
@@ -957,18 +918,13 @@ use mvc\i18n\i18nClass as i18n ?>
         </div><!-- .container -->
     </div>
     <!-- End Client/Partner Section -->
-
     <!-- Start Footer Section -->
     <?php mvc\view\viewClass::includePartial('partials/footer.html') ?>
     <!-- End Footer Section -->
-
-
 </div>
 <!-- End Full Body Container -->
-
 <!-- Go To Top Link -->
 <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
-
 <div id="loader">
     <div class="spinner">
         <div class="dot1"></div>

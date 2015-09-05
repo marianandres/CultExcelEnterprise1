@@ -181,17 +181,17 @@ use \mvc\request\requestClass as request ?>
 
                                             <tbody>
                                                 <?php foreach ($objCredencial as $usuario): ?>
-                                                    <tr>
-                                                        <td><input type="checkbox" name="chk[]" value="<?php echo $usuario->$id ?>"></td>
-                                                        <td><?php echo $usuario->$nombre ?></td>
-                                                        <td><?php echo $usuario->$updated ?></td>
+                                                  <tr>
+                                                      <td><input type="checkbox" name="chk[]" value="<?php echo $usuario->$id ?>"></td>
+                                                      <td><?php echo $usuario->$nombre ?></td>
+                                                      <td><?php echo $usuario->$updated ?></td>
 
-                                                        <td>
-                                                            <!--                                <a href="#" class="btn btn-warning btn-xs">Ver</a>-->
-                                                            <a href="<?php echo routing::getInstance()->getUrlWeb('credencial', 'edit', array(credencialTableClass::ID => $usuario->$id)) ?>" class="btn btn-primary btn-xs"><?php echo i18n::__('Editar') ?></a>
-                                                            <a href="#" onclick="confirmarEliminar(<?php echo $usuario->$id ?>)" class="btn btn-danger btn-xs"><?php echo i18n::__('Eliminar') ?></a>
-                                                        </td>
-                                                    </tr>
+                                                      <td>
+                                                          <!--                                <a href="#" class="btn btn-warning btn-xs">Ver</a>-->
+                                                          <a href="<?php echo routing::getInstance()->getUrlWeb('credencial', 'edit', array(credencialTableClass::ID => $usuario->$id)) ?>" class="btn btn-primary btn-xs"><?php echo i18n::__('Editar') ?></a>
+                                                          <a href="#" onclick="confirmarEliminar(<?php echo $usuario->$id ?>)" class="btn btn-danger btn-xs"><?php echo i18n::__('Eliminar') ?></a>
+                                                      </td>
+                                                  </tr>
                                                 <?php endforeach ?>
                                             </tbody>
                                         </table>

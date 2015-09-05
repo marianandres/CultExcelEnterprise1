@@ -455,7 +455,7 @@ use mvc\session\sessionClass as session ?>
                                         <li><a href="#"><?php echo i18n::__('Another') ?></a></li>
                                         <li><a href="#"><?php echo i18n::__('total') ?></a></li>
                                         <li class="divider"></li>
-                                        <li><a href="#"><?php echo i18n::__('total') ?>Separated link</a></li>
+                                        <li><a href="#"><?php echo i18n::__('Separated') ?></a></li>
                                     </ul>
                                     <a href="#" class="widget-popout hidden tt" title="Pop Out/In"><i class="icon-publish"></i></a>
                                     <a href="#" class="widget-maximize hidden"><i class="icon-resize-full-1"></i></a>
@@ -467,7 +467,7 @@ use mvc\session\sessionClass as session ?>
                                 <div id="website-statistic2" class="statistic-chart">
 
                                     <div class="col-sm-12 stacked">
-                                        <h4><i class="fa fa-circle-o text-green-1"></i> <?php echo i18n::__('total') ?>Server Loads</h4>
+                                        <h4><i class="fa fa-circle-o text-green-1"></i> <?php echo i18n::__('ServerLoads') ?></h4>
                                         <div class="col-sm-8 status-data">
 
                                             <div class="col-xs-12">
@@ -513,18 +513,18 @@ use mvc\session\sessionClass as session ?>
                     <div class="col-lg-8 portlets">
                         <div class="widget">
                             <div class="widget-header">
-                                <h2><i class="icon-chart-pie-1"></i> <strong><?php echo i18n::__('total') ?>Reporte</strong><?php echo i18n::__('total') ?> De Ventas</h2>
+                                <h2><i class="icon-chart-pie-1"></i> <strong><?php echo i18n::__('Reporte') ?></strong><?php echo i18n::__('DeVentas') ?> </h2>
                                 <div class="additional-btn">
                                     <a href="#" class="hidden reload"><i class="icon-ccw-1"></i></a>
                                     <a class="hidden" id="dropdownMenu1" data-toggle="dropdown">
                                         <i class="fa fa-cogs"></i>
                                     </a>
                                     <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1">
-                                        <li><a href="#"><?php echo i18n::__('total') ?>Action</a></li>
-                                        <li><a href="#"><?php echo i18n::__('total') ?>Another action</a></li>
-                                        <li><a href="#"><?php echo i18n::__('total') ?>Something else here</a></li>
+                                        <li><a href="#"><?php echo i18n::__('Action') ?></a></li>
+                                        <li><a href="#"><?php echo i18n::__('Another') ?></a></li>
+                                        <li><a href="#"><?php echo i18n::__('Something') ?></a></li>
                                         <li class="divider"></li>
-                                        <li><a href="#"><?php echo i18n::__('total') ?>Separated link</a></li>
+                                        <li><a href="#"><?php echo i18n::__('Separated') ?></a></li>
                                     </ul>
                                     <a href="#" class="widget-popout hidden tt" title="Pop Out/In"><i class="icon-publish"></i></a>
                                     <a href="#" class="widget-maximize hidden"><i class="icon-resize-full-1"></i></a>
@@ -537,22 +537,22 @@ use mvc\session\sessionClass as session ?>
                                     <div class="col-sm-5 mini-stats">
                                         <div id="morris-bar-home" class="morris-chart" style="height: 170px;"></div>
                                         <div class="sales-report-data">
-                                            <span class="pull-left"><?php echo i18n::__('total') ?>Completed Sales</span><span class="pull-right"><?php echo i18n::__('total') ?>65 / 174</span>
+                                            <span class="pull-left"><?php echo i18n::__('Completed') ?></span><span class="pull-right"><?php echo i18n::__('65/174') ?></span>
                                             <div class="progress progress-xs">
                                                 <div style="width: 38%;" class="progress-bar bg-blue-1"></div>
                                             </div>
                                             <div class="clearfix"></div>
-                                            <span class="pull-left"><?php echo i18n::__('total') ?>Return(s) Processed</span><span class="pull-right"><?php echo i18n::__('total') ?>22 / 25</span>
+                                            <span class="pull-left"><?php echo i18n::__('Return(s)') ?></span><span class="pull-right"><?php echo i18n::__('22/25') ?></span>
                                             <div class="progress progress-xs">
                                                 <div style="width: 88%;" class="progress-bar bg-lightblue-1"></div>
                                             </div>
                                             <div class="clearfix"></div>
-                                            <span class="pull-left"><?php echo i18n::__('total') ?>Shipped Products</span><span class="pull-right"><?php echo i18n::__('total') ?>418 / 624</span>
+                                            <span class="pull-left"><?php echo i18n::__('Shipped') ?></span><span class="pull-right"><?php echo i18n::__('418/624') ?></span>
                                             <div class="progress progress-xs">
                                                 <div style="width: 58%;" class="progress-bar"></div>
                                             </div>
                                             <div class="clearfix"></div>
-                                            <span class="pull-left"><?php echo i18n::__('total') ?>Overall Product Stock</span><span class="pull-right"><?php echo i18n::__('total') ?>19%</span>
+                                            <span class="pull-left"><?php echo i18n::__('OverallProduct') ?></span><span class="pull-right"><?php echo i18n::__('19%') ?></span>
                                             <div class="progress progress-xs">
                                                 <div style="width: 19%;" class="progress-bar bg-pink-1"></div>
                                             </div>
@@ -567,18 +567,18 @@ use mvc\session\sessionClass as session ?>
                                     <div class="table-responsive">
                                         <table data-sortable class="table table-striped">
                                             <thead>
-                                                <tr><th width="70"><?php echo i18n::__('total') ?>No</th><th data-sortable="false" width="40"><input type="checkbox" id="select-all-rows"></th><th width="120"><?php echo i18n::__('total') ?>Order ID</th><th><?php echo i18n::__('total') ?>Buyer</th><th width="100"><?php echo i18n::__('total') ?>Status</th><th width="150"><?php echo i18n::__('total') ?>Location</th><th width="120"><?php echo i18n::__('total') ?>Total</th></tr>
+                                                <tr><th width="70"><?php echo i18n::__('No') ?></th><th data-sortable="false" width="40"><input type="checkbox" id="select-all-rows"></th><th width="120"><?php echo i18n::__('OrderID') ?></th><th><?php echo i18n::__('Buyer') ?></th><th width="100"><?php echo i18n::__('Status') ?></th><th width="150"><?php echo i18n::__('Location') ?></th><th width="120"><?php echo i18n::__('total') ?></th></tr>
                                             </thead>
                                             <tbody>
-                                                <tr><td>1</td><td><input type="checkbox" class="rows-check"></td><td><?php echo i18n::__('total') ?>#0021</td><td><a href="#"><?php echo i18n::__('total') ?>John Doe</a></td><td><span class="label label-primary"><?php echo i18n::__('total') ?>Order</span></td><td><?php echo i18n::__('total') ?>Yogyakarta, ID</td><td><strong class="text-primary">&#36;<?php echo i18n::__('total') ?> 1,245</strong></td></tr>
-                                                <tr><td>2</td><td><input type="checkbox" class="rows-check"></td><td><?php echo i18n::__('total') ?>#0022</td><td><a href="#"><?php echo i18n::__('total') ?>Johnny Depp</a></td><td><span class="label label-success"><?php echo i18n::__('total') ?>Payment</span></td><td><?php echo i18n::__('total') ?>London, UK</td><td><strong class="text-success">&#36; <?php echo i18n::__('total') ?>1,245</strong></td></tr>
-                                                <tr><td>3</td><td><input type="checkbox" class="rows-check"></td><td><?php echo i18n::__('total') ?>#0023</td><td><a href="#"><?php echo i18n::__('total') ?>Scarlett Johansson</a></td><td><span class="label label-success"><?php echo i18n::__('total') ?>Payment</span></td><td><?php echo i18n::__('total') ?>Canbera, AU</td><td><strong class="text-success">&#36; <?php echo i18n::__('total') ?>1,245</strong></td></tr>
-                                                <tr><td>4</td><td><input type="checkbox" class="rows-check"></td><td><?php echo i18n::__('total') ?>#0024</td><td><a href="#"><?php echo i18n::__('total') ?>Hanna Barbara</a></td><td><span class="label label-danger"><?php echo i18n::__('total') ?>Cancel</span></td><td><?php echo i18n::__('total') ?>Bali, ID</td><td><strong class="text-danger">&#36; <?php echo i18n::__('total') ?>1,245</strong></td></tr>
-                                                <tr><td>5</td><td><input type="checkbox" class="rows-check"></td><td><?php echo i18n::__('total') ?>#0025</td><td><a href="#"><?php echo i18n::__('total') ?>Ali Larter</a></td><td><span class="label label-primary"><?php echo i18n::__('total') ?>Order</span></td><td><?php echo i18n::__('total') ?>Bandung, ID</td><td><strong class="text-primary">&#36;<?php echo i18n::__('total') ?> 1,245</strong></td></tr>
-                                                <tr><td>6</td><td><input type="checkbox" class="rows-check"></td><td><?php echo i18n::__('total') ?>#0026</td><td><a href="#"><?php echo i18n::__('total') ?>Willy Wonka</a></td><td><span class="label label-danger"><?php echo i18n::__('total') ?>Cancel</span></td><td><?php echo i18n::__('total') ?>Semarang, ID</td><td><strong class="text-danger">&#36; <?php echo i18n::__('total') ?>1,245</strong></td></tr>
-                                                <tr><td>7</td><td><input type="checkbox" class="rows-check"></td><td><?php echo i18n::__('total') ?>#0027</td><td><a href="#"><?php echo i18n::__('total') ?>Chris Isaac</a></td><td><span class="label label-warning"><?php echo i18n::__('total') ?>Waiting</span></td><td><?php echo i18n::__('total') ?>New York, US</td><td><strong class="text-warning">&#36; <?php echo i18n::__('total') ?>1,245</strong></td></tr>
-                                                <tr><td>8</td><td><input type="checkbox" class="rows-check"></td><td><?php echo i18n::__('total') ?>#0028</td><td><a href="#"><?php echo i18n::__('total') ?>Jenny Doe</a></td><td><span class="label label-primary"><?php echo i18n::__('total') ?>Order</span></td><td><?php echo i18n::__('total') ?>Boston, US</td><td><strong class="text-primary">&#36;<?php echo i18n::__('total') ?> 1,245</strong></td></tr>
-                                                <tr><td>9</td><td><input type="checkbox" class="rows-check"></td><td><?php echo i18n::__('total') ?>#0029</td><td><a href="#"><?php echo i18n::__('total') ?>Ban ki moon</a></td><td><span class="label label-danger"><?php echo i18n::__('total') ?>Cancel</span></td><td><?php echo i18n::__('total') ?>Boston, US</td><td><strong class="text-danger">&#36;<?php echo i18n::__('total') ?> 1,245</strong></td></tr>
+                                                <tr><td>1</td><td><input type="checkbox" class="rows-check"></td><td><?php echo i18n::__('p#0021') ?></td><td><a href="#"><?php echo i18n::__('JohnDoe') ?></a></td><td><span class="label label-primary"><?php echo i18n::__('Order') ?></span></td><td><?php echo i18n::__('Yogyakarta') ?></td><td><strong class="text-primary">&#36;<?php echo i18n::__('1,245') ?> </strong></td></tr>
+                                                <tr><td>2</td><td><input type="checkbox" class="rows-check"></td><td><?php echo i18n::__('p#0022') ?></td><td><a href="#"><?php echo i18n::__('JohnnyDepp') ?></a></td><td><span class="label label-success"><?php echo i18n::__('Payment') ?></span></td><td><?php echo i18n::__('London') ?></td><td><strong class="text-success">&#36; <?php echo i18n::__('1,245') ?></strong></td></tr>
+                                                <tr><td>3</td><td><input type="checkbox" class="rows-check"></td><td><?php echo i18n::__('p#0023') ?></td><td><a href="#"><?php echo i18n::__('Scarlett') ?></a></td><td><span class="label label-success"><?php echo i18n::__('Payment') ?></span></td><td><?php echo i18n::__('Canbera') ?></td><td><strong class="text-success">&#36; <?php echo i18n::__('1,245') ?></strong></td></tr>
+                                                <tr><td>4</td><td><input type="checkbox" class="rows-check"></td><td><?php echo i18n::__('p#0024') ?></td><td><a href="#"><?php echo i18n::__('Hanna') ?></a></td><td><span class="label label-danger"><?php echo i18n::__('Cancelar') ?></span></td><td><?php echo i18n::__('Bali') ?></td><td><strong class="text-danger">&#36; <?php echo i18n::__('1,245') ?></strong></td></tr>
+                                                <tr><td>5</td><td><input type="checkbox" class="rows-check"></td><td><?php echo i18n::__('p#0025') ?></td><td><a href="#"><?php echo i18n::__('Ali') ?></a></td><td><span class="label label-primary"><?php echo i18n::__('Order') ?></span></td><td><?php echo i18n::__('Bandung') ?></td><td><strong class="text-primary">&#36;<?php echo i18n::__('1,245') ?> </strong></td></tr>
+                                                <tr><td>6</td><td><input type="checkbox" class="rows-check"></td><td><?php echo i18n::__('p#0026') ?></td><td><a href="#"><?php echo i18n::__('Willy') ?></a></td><td><span class="label label-danger"><?php echo i18n::__('Cancelar') ?></span></td><td><?php echo i18n::__('Semarang') ?></td><td><strong class="text-danger">&#36; <?php echo i18n::__('1,245') ?></strong></td></tr>
+                                                <tr><td>7</td><td><input type="checkbox" class="rows-check"></td><td><?php echo i18n::__('p#0027') ?></td><td><a href="#"><?php echo i18n::__('Chris') ?></a></td><td><span class="label label-warning"><?php echo i18n::__('Waiting') ?></span></td><td><?php echo i18n::__('NewYork') ?></td><td><strong class="text-warning">&#36; <?php echo i18n::__('1,245') ?></strong></td></tr>
+                                                <tr><td>8</td><td><input type="checkbox" class="rows-check"></td><td><?php echo i18n::__('p#0028') ?></td><td><a href="#"><?php echo i18n::__('Jenny') ?></a></td><td><span class="label label-primary"><?php echo i18n::__('Order') ?></span></td><td><?php echo i18n::__('Boston') ?></td><td><strong class="text-primary">&#36;<?php echo i18n::__('1,245') ?> </strong></td></tr>
+                                                <tr><td>9</td><td><input type="checkbox" class="rows-check"></td><td><?php echo i18n::__('p#0029') ?></td><td><a href="#"><?php echo i18n::__('Ban') ?></a></td><td><span class="label label-danger"><?php echo i18n::__('Cancelar') ?></span></td><td><?php echo i18n::__('Boston') ?></td><td><strong class="text-danger">&#36;<?php echo i18n::__('1,245') ?> </strong></td></tr>
 
                                             </tbody>
                                         </table>
@@ -593,7 +593,7 @@ use mvc\session\sessionClass as session ?>
                                 <div id="todo-app" class="widget">
                                     <div class="widget-header centered">
                                         <div class="left-btn"><a class="btn btn-sm btn-default add-todo"><i class="fa fa-plus"></i></a></div>
-                                        <h2><?php echo i18n::__('total') ?>Todo List</h2>
+                                        <h2><?php echo i18n::__('Todo') ?></h2>
                                         <div class="additional-btn">
                                             <a href="#" class="hidden reload"><i class="icon-ccw-1"></i></a>
                                             <a href="#" class="widget-popout hidden tt" title="Pop Out/In"><i class="icon-publish"></i></a>
@@ -606,12 +606,12 @@ use mvc\session\sessionClass as session ?>
                                         <ul class="todo-list">
                                             <li>
                                                 <span class="check-icon"><input type="checkbox" /></span>
-                                                <span class="todo-item"><?php echo i18n::__('total') ?>Generate monthly sales report for John</span>
+                                                <span class="todo-item"><?php echo i18n::__('Generate') ?></span>
                                                 <span class="todo-options pull-right">
                                                     <a href="javascript:;" class="todo-delete"><i class="icon-cancel-3"></i></a>
                                                 </span>
                                                 <span class="todo-tags pull-right">
-                                                    <div class="label label-success"><?php echo i18n::__('total') ?>New</div>
+                                                    <div class="label label-success"><?php echo i18n::__('New') ?></div>
                                                 </span>
                                             </li>
                                             <li class="high">
@@ -902,16 +902,7 @@ use mvc\session\sessionClass as session ?>
                 </div>
 
                 <!-- Footer Start -->
-                <footer>
-                    <div class="copyright-section">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <p><?php echo i18n::__('total') ?>&copy; 2015 CULT EXCEL -  Todos Los Derechos Reservados <a href="#"><?php echo i18n::__('total') ?> Design By Mariana Lopez, Andres Felipe Alvarez </a> </p>
-                            </div><!-- .col-md-6 -->
-                        </div><!-- .row -->
-                    </div>
-                    <!-- End Copyright -->
-                </footer>
+                 <?php view::includePartial('partials/footer') ?>
                 <!-- Footer End -->			
             </div>
             <!-- ============================================================== -->
