@@ -42,10 +42,12 @@ contact:
 #  insert:
 #    security: true
 #    
-#eventos:
-#  index:
-#    security: false
-#    
+eventos:
+  insert:
+    security: true
+    credentials:
+      - [admin, usuario]
+    
 #localidad:
 #  index:
 #    security: true

@@ -22,25 +22,58 @@ dictionary:
     
     actions:              Acciones
     idioma:               Idioma
-    Another:              Another action
+    Another:              otra acción
     
     Detalle:              Detalle
-    Action:               Action
+    Action:               Acción
     EliminarFiltros:      Eliminar Filtros
     Filtrar:              Filtrar
     Filtros:              Filtros
     Filtro:               Filtro
 #menu
     Admin:                Panel Administrador
-    adminusuario:         User Admin
-    Credenciales:         Credencials
+    adminusuario:         Usuario Admin
+    Credenciales:         Credenciales
     Bitacora:             Bitacora
     Evento:               Eventos
     Datos:                Datos Usuarios
     Categoria:            Categoria
+    Perfiles:         
+    Sr:                   Sr. Leow Soon Seng
+    CONFERENCIA:          CONFERENCIA
+    RicosMundo:           Los Mas Ricos Del Mundo Contruyen REDES.
+    BuscanTrabajo:        Los Demas Buscan Trabajo
+    TODOQUIERES:          "TODO LO QUE QUIERES EN LA VIDA ESTA ESTA FUERA DE TU ZONA DE CONFORT"
+    OPEN:                 ABIERTO
+    Edicionespecial:      Edicion especial
+    Luchandosueños:       Luchando por nuestros sueños
+    AndresGuzman:         Andres Guzman    
+    DiamanteRoyal:        Diamante Royal
+    AuraSanchez:          Aura Sanchez
+    Diamante:             Diamante
+    HugoDiaz:             Hugo Diaz
+    JuanPabloPineda:      Juan Pablo Pineda
+    $180.000:             $180.000
+    Bonos:                de los Bonos.
+    Afiliaciónesnuevas:   por Afiliaciónes nuevas.
+    $2´250.000:           $2´250.000
+    $1´125.000:           $1´125.000
+    45Cajas:              45 Cajas de
+    100%:                 100 %
+    Ganas$337.000:        Ganas hasta $337.000
+    22Cajas:              22 Cajas de
+    Ganar:                Ganar
+    Web:                  Web
+    Recibes4:             Recibes 4 Cajas de Gano Café 3 en 1 y/o Gano Café Clásico.
+    RecibesCodigo:        Recibes Codigo de afiliacion y pagina web
+    Capacitacion:         Capacitación y entrenamiento.
+    Ganasdosformas:       Ganas de dos formas (venta directa, y los puntos que se generan cuando tu afilias a mas consumidores o empresarios)
+
 #admin
+    TESTIMONIOSVIDA:      TESTIMONIOS DE VIDA
+    secreto:              EL SECRETO DEL CAMBIO ES ENFOCAR TODA TU ENERGIA NO EN LUCHAR CONTRA LO VIEJO SI NO CONSTRUIR LO NUEVO.
     Perfiles:             Perfil
-    Return(s):            Return(s) Processed
+    Return(s):            Retorno (s) Procesado
     65/174:               65 / 174
     22/25:                22 / 25
     19%:                  19%
@@ -71,30 +104,31 @@ dictionary:
     Willy:                Willy Wonka
     Chris:                Chris Isaac
     Jenny:                Jenny Doe
-    Order:                Order
+    Order:                Orden
     Yogyakarta:           Yogyakarta, ID
-    Waiting:              Waiting
-    Payment:              Payment
+    Waiting:              Esperando
+    Payment:              Pago
     Ban:                  Ban ki moon
-    Status:               Status
-    Location:             Location
-    OrderID:              Order ID
-    Buyer:                Buyer
-    Shipped:              Shipped Products
-    Generate:             Generate monthly sales report for John
-    Separated:            Separated link
-    Completed:            Completed Salesf
-    Daily:                Daily
-    Yearly:               Yearly
-    Server:               Server
-    ServerLoads:          Server Loads
-    OverallProduct:       Overall Product Stock
+    Status:               Estado
+    Location:             Localización
+    OrderID:              Identificación de la Orden
+    Buyer:                Si compras
+    Shipped:              Productos Enviado
+    Generate:             Generar informe mensual de ventas para John
+    Separated:            enlace separado
+    Completed:            Ventas completadas
+    Daily:                Diariamente
+    Yearly:               anualmente
+    Server:               servidor
+    ServerLoads:          Las cargas de servidor
+    OverallProduct:       Producto general de la
     Cerra:                Cerrar
     Reporte:              Reporte
-    Monthly:              Monthly
+    Monthly:              Mensual
     DeVentas:             De Ventas
     Cambiar:              Cambiar Contraseña
     Cerrar:               Cerrar Sesion
+    2015:                 2015
     Derechos:             2015 Cult Excel -  Todos Los Derechos Reservados.
 #bitacora
     Portal:               PORTAL WEB
@@ -131,15 +165,15 @@ dictionary:
     Arte:                 Eventos Artisticos
     Disfrutar:            Aqui, Disfrutalos!
     Conocer:              Conocelos!
-    Detalles:              Detalle
-    Crea:                 Crea Tu Evento
-    detalle:              Rellena los detalles del evento y las opciones de entrada, y ¡voilà—! tu página estará lista.
-    Compartir:            Compartelo!
-    Invitacion:           Invita a personas a tu evento mediante nuestras herramientas gratuitas, y siéntate a ver cómo crecen las ventas y las inscripciones.
-    Gratis:               Gratis para eventos gratuitos
-    Gratuitos:            El Portal Web es completamente gratis para eventos gratuitos, da igual lo pequeños que sean.
-    Tarifas:              Tarifas Muy Bajas
-    Ofrecemos:            Te ofrecemos diferentes planes de muy bajo costo, que puedes acceder facilmente para pa publicacion de tu evento.
+    Detalles:             Detalle
+    Crea:                 Robert T.Kiyosaki
+    detalle:              la mente es el activo mas poderoso que tenemos los seres humanos por ende, invierte en mente y estaras haciendo el negocio mas grande de tu vida...
+    Compartir:            Nelson Mandela
+    Invitacion:           Aprendi que el coraje no era la ausencia de miedo, sino el triunfo sobre el. El valiente no es quien no siente miedo, sino aquel que conquista ese miedo.
+    Gratis:               Tony Gaskins
+    Gratuitos:            Si no Construyes tus SUEÑOS, alguien te va a contratar oara que ayudes a CONSTRUIR LOS DE EL
+    Tarifas:              Albert Einstein
+    Ofrecemos:            La mente que se abre a una nueva idea, jamas volvera a su tamaño original.
     Moderno:              Moderno
     Eficaz:               Eficaz
     Innovador:            Innovador
@@ -162,28 +196,29 @@ dictionary:
     Excel:                Cult Excel te da todo lo que necesitas para crear el mejor evento que puedas imaginar
     Comenzar:             Comenzar
     Ahorra:               Ahorra Tiempo Y Dinero Con Nuestros Planes que Tenemos Para
-    Basico:               Basico
-    Profesional:          Profesional 
+    Basico:               CONSUMIDOR
+    Profesional:          ESP2
     Diseño:               Diseño DICAL Web
     Politicas:            Politicas De Privacidad
-    Relampago:            Relampago
-    Premium:              Premium
+    Relampago:            ESP1
+    Premium:              ESP3
     10:                   10
     40:                   40 GB
     20:                   20
-    Free:                 Free
-    Storage:              Storage
-    Transfer:             Transfer
-    Domains:              Domains
-    Projects:             Projects
-    installation:         installation
-    SignNow:              Sign Up Now
+    Free:                 Gratis
+    Storage:              Almacenamiento
+    Transfer:             Traslado
+    Domains:              Dominios
+    Projects:             Proyectos
+    installation:         Instalación
+    SignNow:              ¡Regístrate ahora
     $99:                  $99
     $199:                 $199
     $299:                 $299
-    Our:                  Our Happy
-    Clients:              Clients
-    Partners:             Partners We Work With
+    Our:                  Nuestro feliz
+    Clients:              Clientes
+    Partners:             Socio Trabajamos con
+    adminpanel:           Admin Panel
 #evento
     $49:                  $49
     .00:                  .00
@@ -207,7 +242,7 @@ dictionary:
     Acerca:               Acerca De Nosotros
     Politicas:            Politicas De Privacidad
     EXCEL:                CULT EXCEL
-    EXCEL|:               EXCEL|
+    EXCEL|:               CULT EXCEL|
     Registrar:            Registrate
     Disfruta:             Disfruta De Los Mejores
     Ti:                   Ti!
@@ -258,10 +293,11 @@ dictionary:
     documento:            tipo_documento_id
     organizacion:         organizacion_id
     Estado:               estado Pqrs
-    actived:              actived
+    actived:              activado
     EventosSistema:       Eventos  Del Sistema
     EvePatrocinador:      evento patrocinador
     EvenPatroSis:         Evento Patrocinador Del Sistema
+    patroevensiste:       Patrocinador Del Evento Del Sistema
     eventoId:             evento_id
     patrocinadorId:       patrocinador_id
     localidadId:          localidad_id
@@ -274,29 +310,30 @@ dictionary:
     contenido:            contenido
     estadoPqrs:           estado_pqrs_id
     tipoPqrs:             tipo_pqrs_id
-    SALES:                SALES
+    SALES:                VENTAS
     TiposPQRS:            Tipo PQRS
+    TipPQRSSistema:       Tipo PQRS Del Sistema
     Sed:                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo iSed ut nventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt
     titulo:               titulo
-    per:                  per month
-    recaudo:              recaudoEconomico
-    tarifaId:             tarifa_id
-    parcial:              valorParcial
-    valor:                valorTotal
+    per:                  al mes
+    recaudo:              colección Económico
+    tarifaId:             tasa_ID
+    parcial:              Valor parcial
+    valor:                valor total
     total:                TOTAL
-    VISITORS:             VISITORS
+    VISITORS:             VISITANTES
     39%:                  39%
-    Statistics:           Statistics
-    increaseusers:        increase in users
-    Website:              Website
-    increase:             increase in traffic
+    Statistics:           Estadísticas
+    increaseusers:        aumento de usuarios
+    Website:              Sitio web
+    increase:             en el tráfico
     tarifas:              tarifa
     Precio:               valor
     tipoDocumento:        tipo Documento
     TipoDocumentoSistem:  Tipo Documento  Del Sistema
     tipoPqrs:             tipoPqrs
     usuarioCredenci:      usuarioCredencial
-    Something:            Something else here
+    Something:            Algo más aquí
     credenId:             credencial_id
     Gusta:                usuarioGustaCategoria
     categoriaId:          categoria_id
@@ -318,21 +355,21 @@ dictionary:
     Calculadora:          Calculadora
     USERS:                USERS
     6%:                   6%
-    decrease:             decrease in sales
-    decreaseincome:       decrease in income
-    OVERALL:              OVERALL
-    Weather:              Weather
+    decrease:             disminución en las ventas
+    decreaseincome:       disminución de los ingresos
+    OVERALL:              GENERAL
+    Weather:              Clima
     Calendario:           Calendario
-    INCOME:               INCOME
+    INCOME:               INGRESOS
     7%:                   7%
     Finanzas:             Finanzas
     Español:              Español (ES)
     English:              English (US)
-    My:                   My Profile
-    Change:               Change Password
-    Account:              Account setting
-    Help:                 Help
-    Lock:                 Lock me
+    My:                   Mi perfil
+    Change:               Cambiar la contraseña
+    Account:              ajuste de cuentas
+    Help:                 Ayuda
+    Lock:                 encerrarme
     Logout:               Logout
     Bienvenido:           Bienvenido
     Ir:                   Ir al portal
@@ -366,7 +403,7 @@ dictionary:
     pm:                   -9am to 2pm
     Closed:               -Closed
     Confirmation:         Confirmation
-    Registra:             Registrate
+    Registra:             REGISTRATE
     Registrarse:          Registrarse
     Terminos:             Los Terminos Y condiciones
     Establecido:          Establecido Por El Sitio Web, Incluyendo El Uso De Cookies.
@@ -377,6 +414,15 @@ dictionary:
     TIPOEVENTO:           TIPO DE EVENTO
     Export:               Export
     SelecTipoEvento:      Seleccionar El Tipo De Evento
+    $450.000:             $450.000
+    9Cajas:               9 Cajas de
+    TuPagina:             Tu Pagina
+    12Formas:             12 Formas de
+    50%:                  50 %
+    Ganas$168.500:        Ganas hasta $168.500
+    20%:                  20 %
+    Ganas$56.250:         Ganas hasta $56.250
+    GanoCafé:             Gano Café
     ExportPDF:            Export as PDF
     ExportCSV:            Export as CSV
     Export as PNG:        Export as PNG
@@ -397,6 +443,13 @@ dictionary:
     DetallePQRS:          Detalle PQRS
     DetallPQRSist:        Detalle PQRS Del Sistema
     PqrsID:               PqrsID 
+    GANOEXCEL:            GANO EXCEL 2015
+    REGIONAL:             REGIONAL
+    CENTROEVENTOS:        CENTRO DE EVENTOS VALLE DEL PACIFICO
+    SUPERSABADO:          SUPER SABADO
+    NUEVAVIDA:            UNA NUEVA VIDA
+    AjustesAdicionales:   Ajustes Adicionales
+    
     DetalleEvento:        Detalle Del Evento
     EstadoPQRSist:        Estado PQRS Del Sistema
     Activado:             Activado
@@ -404,7 +457,15 @@ dictionary:
     IPAddress:            IP Address
     HashCookie:           Hash Cookie
     EventosSist:          Eventos Del Sistema
-    ¿No?:                ¿No Encuentras Tu Ubicacion?
+    ¿No?:                 ¿No Encuentras Tu Ubicacion?
+    
+   #nuevos 
+    Guardado:             Guardado
+    quit:                 Dejar
+    C:                    C
+    7:                    7
+    8:                    8
+    9:                    9
     #validaciones 
     20001:                Los Datos Fueron Registrados Exitosamente
   errors:

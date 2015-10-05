@@ -12,43 +12,9 @@ use \mvc\request\requestClass as request ?>
 <?php $nombre = credencialTableClass::NOMBRE ?>
 <?php $id = credencialTableClass::ID ?>
 <?php $updated = credencialTableClass::UPDATED_AT ?>
+<?php view::includePartial('credencial/credencialModalWindow') ?>
 <div class="fixed-left">
     <!-- Modal Start -->
-    <!-- Modal Task Progress -->	
-    <div class="md-modal md-3d-flip-vertical" id="task-progress">
-        <div class="md-content">
-            <h3><strong>Task Progress</strong> Information</h3>
-            <div>
-                <p>CLEANING BUGS</p>
-                <div class="progress progress-xs for-modal">
-                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                        <span class="sr-only">80&#37; Complete</span>
-                    </div>
-                </div>
-                <p>POSTING SOME STUFF</p>
-                <div class="progress progress-xs for-modal">
-                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 65%">
-                        <span class="sr-only">65&#37; Complete</span>
-                    </div>
-                </div>
-                <p>BACKUP DATA FROM SERVER</p>
-                <div class="progress progress-xs for-modal">
-                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 95%">
-                        <span class="sr-only">95&#37; Complete</span>
-                    </div>
-                </div>
-                <p>RE-DESIGNING WEB APPLICATION</p>
-                <div class="progress progress-xs for-modal">
-                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                        <span class="sr-only">100&#37; Complete</span>
-                    </div>
-                </div>
-                <p class="text-center">
-                    <button class="btn btn-danger btn-sm md-close">Close</button>
-                </p>
-            </div>
-        </div>
-    </div>
     <!-- Modal logout -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -90,7 +56,7 @@ use \mvc\request\requestClass as request ?>
             <!-- Start Content here -->
             <!-- ============================================================== -->
             <div class="content">
-                <?php view::includeHandlerMessage() ?>
+
                 <!-- Page Heading Start -->
                 <div class="page-heading">
                     <h1><i class="fa fa-user"></i>  <?php echo i18n::__('credusu') ?></h1>
@@ -149,16 +115,18 @@ use \mvc\request\requestClass as request ?>
                             </div>
                             <!--END MODAL FILTER--> 
                             <div class="widget-content">
-                                <br>					
+                                <br>
+                                <?php view::includeHandlerMessage() ?>
+                                </br>
                                 <div class="table-responsive">
                                     <form id="frmDeleteAll" class='form-horizontal' action="<?php echo routing::getInstance()->getUrlWeb('credencial', 'deleteSelect') ?>" method="POST">
-                                        <div  style="margin-bottom: 10px; margin-top: 20px;">
-                                            <a href="<?php echo routing::getInstance()->getUrlWeb('credencial', 'insert') ?>" class="btn btn-success btn-medium"><i class="fa fa-plus-square-o"></i>  <?php echo i18n::__('Nuevo') ?></a>
+                                        <div  style="margin-bottom: 10px; margin-left: 10px; margin-top: 20px;">
+                                            <button type="button" class="btn  btn-success btn-medium" data-toggle="modal" data-target="#newUserCredencial" ><i class="fa fa-plus-square-o"></i> <?php echo i18n::__('Nuevo') ?> </button>
                                             <a href="#" class="btn btn-danger btn-medium" onclick="borrarSeleccion()"><?php echo i18n::__('Borrar') ?></a>
-                                            <a href="<?php echo routing::getInstance()->getUrlWeb('credencial', 'report') ?>" class="btn btn-default btn-medium"><i class="fa fa-file-pdf-o"></i>  <?php echo i18n::__('ExporPDF') ?> </a>
+<!--                                            <a href="<?php echo routing::getInstance()->getUrlWeb('credencial', 'report') ?>" class="btn btn-default btn-medium"><i class="fa fa-file-pdf-o"></i>  <?php echo i18n::__('ExporPDF') ?> </a>
                                             <a href="#" onclick="window.print();" class="btn btn-primary btn-medium" title="Imprimir"><i class="fa fa-print"></i> </a> 
                                             <button type="button" class="btn btn-primary btn-medium" data-toggle="modal" data-target="#myModalfilter"><i class="fa fa-search"></i>  <?php echo i18n::__('Filtro') ?></button>
-                                            <a class="btn btn-default btn-medium" href="<?php echo routing::getInstance()->getUrlWeb('credencial', 'deleteFilters') ?>"><i class="fa fa-minus-circle"></i>  <?php echo i18n::__('EliminarFiltros') ?></a>
+                                            <a class="btn btn-default btn-medium" href="<?php echo routing::getInstance()->getUrlWeb('credencial', 'deleteFilters') ?>"><i class="fa fa-minus-circle"></i>  <?php echo i18n::__('EliminarFiltros') ?></a>-->
                                         </div>
                                         <table id="datatables-1" class="table table-striped table-bordered" cellspacing="0" width="100%">
                                             <thead>
@@ -181,17 +149,17 @@ use \mvc\request\requestClass as request ?>
 
                                             <tbody>
                                                 <?php foreach ($objCredencial as $usuario): ?>
-                                                  <tr>
-                                                      <td><input type="checkbox" name="chk[]" value="<?php echo $usuario->$id ?>"></td>
-                                                      <td><?php echo $usuario->$nombre ?></td>
-                                                      <td><?php echo $usuario->$updated ?></td>
+                                                    <tr>
+                                                        <td><input type="checkbox" name="chk[]" value="<?php echo $usuario->$id ?>"></td>
+                                                        <td><?php echo $usuario->$nombre ?></td>
+                                                        <td><?php echo $usuario->$updated ?></td>
 
-                                                      <td>
-                                                          <!--                                <a href="#" class="btn btn-warning btn-xs">Ver</a>-->
-                                                          <a href="<?php echo routing::getInstance()->getUrlWeb('credencial', 'edit', array(credencialTableClass::ID => $usuario->$id)) ?>" class="btn btn-primary btn-xs"><?php echo i18n::__('Editar') ?></a>
-                                                          <a href="#" onclick="confirmarEliminar(<?php echo $usuario->$id ?>)" class="btn btn-danger btn-xs"><?php echo i18n::__('Eliminar') ?></a>
-                                                      </td>
-                                                  </tr>
+                                                        <td>
+                                                            <!--                                <a href="#" class="btn btn-warning btn-xs">Ver</a>-->
+                                                            <a href="<?php echo routing::getInstance()->getUrlWeb('credencial', 'edit', array(credencialTableClass::ID => $usuario->$id)) ?>" class="btn btn-primary btn-xs"><?php echo i18n::__('Editar') ?></a>
+                                                            <a href="#" onclick="confirmarEliminar(<?php echo $usuario->$id ?>)" class="btn btn-danger btn-xs"><?php echo i18n::__('Eliminar') ?></a>
+                                                        </td>
+                                                    </tr>
                                                 <?php endforeach ?>
                                             </tbody>
                                         </table>

@@ -9,24 +9,24 @@ use mvc\i18n\i18nClass as i18n ?>
         <h1 class="page-header"><span class="bg-steps">1 </span> <span> <?php echo i18n::__('DetalleEvento') ?></span></h1>  
         <div class="col-xs-12 ">
             <div class="form-group">
-                <label for="<?php echo eventoTableClass::getNameField(eventoTableClass::NOMBRE, true) ?>"><?php echo i18n::__('Nombre') ?> <span>*</span><?php echo i18n::__('nombre') ?></label>		
+                <label for="<?php echo eventoTableClass::getNameField(eventoTableClass::NOMBRE, true) ?>"><?php echo i18n::__('Nombre') ?> <span>*</span></label>		
                 <input class="form-control" type="text" name="<?php echo eventoTableClass::getNameField(eventoTableClass::NOMBRE, true) ?>" placeholder="Dale Un nombre Unico E Inconfundible" required autofocus>
             </div>
         </div>
-        <div class="col-xs-12 ">
-            <div class="form-group">
-                <label for="lugar_latitud"> Ubicacion<?php echo i18n::__('lugar_latitud') ?>:</label>		
-                <input class="form-control" type="text" name="<?php echo eventoTableClass::getNameField(eventoTableClass::LUGAR_LATITUD, true) ?>" placeholder="lugar_latitud" required>
-            </div>
-        </div>
-        <div class="col-xs-12 ">
-            <div class="form-group">		
-                <input class="form-control" type="text" name="<?php echo eventoTableClass::getNameField(eventoTableClass::LUGAR_LONGITUD, true) ?>" placeholder="lugar_longitud" required>
-                <ul>
-                    <li><a class="btn btn-link"><i class="fa fa-laptop"></i><?php echo i18n::__('EventoOnline') ?> </a> <a class="btn btn-link"><i class="fa fa-search"></i> <?php echo i18n::__('¿No?') ?> </a></li>
-                </ul>
-            </div>
-        </div>
+        <!--        <div class="col-xs-12 ">
+                    <div class="form-group">
+                        <label for="lugar_latitud"> Ubicacion<?php echo i18n::__('lugar_latitud') ?>:</label>		
+                        <input class="form-control" type="text" name="<?php echo eventoTableClass::getNameField(eventoTableClass::LUGAR_LATITUD, true) ?>" placeholder="lugar_latitud" required>
+                    </div>
+                </div>
+                <div class="col-xs-12 ">
+                    <div class="form-group">		
+                        <input class="form-control" type="text" name="<?php echo eventoTableClass::getNameField(eventoTableClass::LUGAR_LONGITUD, true) ?>" placeholder="lugar_longitud" required>
+                        <ul>
+                            <li><a class="btn btn-link"><i class="fa fa-laptop"></i><?php echo i18n::__('EventoOnline') ?> </a> <a class="btn btn-link"><i class="fa fa-search"></i> <?php echo i18n::__('¿No?') ?> </a></li>
+                        </ul>
+                    </div>
+                </div>-->
         <div class="col-xs-12">
             <div class="form-group">
                 <label for="<?php echo eventoTableClass::getNameField(eventoTableClass::DIRECCION, true) ?>" ><?php echo i18n::__('DireccionLugarEvento') ?>:</label>		
@@ -56,7 +56,7 @@ use mvc\i18n\i18nClass as i18n ?>
                 <input class="file" type="file" name="<?php echo eventoTableClass::getNameField(eventoTableClass::IMAGEN, true) ?>" required>
             </div>
         </div>
-        <div class="col-xs-12 ">
+        <div style="margin-bottom: 40px;" class="col-xs-12 ">
             <div class="form-group">
                 <label for="<?php echo eventoTableClass::getNameField(eventoTableClass::DESCRIPCION, true) ?>"> <?php echo i18n::__('DescripcionEvento') ?>:</label>
                 <textarea class="form-control" rows="5" maxlength="180" name="<?php echo eventoTableClass::getNameField(eventoTableClass::DESCRIPCION, true) ?>" placeholder="Comenta que tiene tu Evento De Especial." required></textarea>
@@ -64,6 +64,7 @@ use mvc\i18n\i18nClass as i18n ?>
             </div>
             </br></br>
         </div>
+
         <h1 class="page-header"><span class="bg-steps"> <?php echo i18n::__('2') ?> </span><span> <?php echo i18n::__('AjustesAdicionales') ?>  </span></h1>
         <div class="col-xs-12 col-sm-6 col-md-6">
             <div class="form-group">
@@ -81,10 +82,10 @@ use mvc\i18n\i18nClass as i18n ?>
         <div class="col-xs-12 col-sm-6 col-md-6">
             <div class="form-group">
                 <label for="<?php echo eventoTableClass::getNameField(eventoTableClass::COSTO, true) ?>"><?php echo i18n::__('Costo') ?>:</label>		
-                <input class="form-control" type="number" name="<?php echo eventoTableClass::getNameField(eventoTableClass::COSTO, true) ?>" readonly required>
+                <input class="form-control" type="text" name="<?php echo eventoTableClass::getNameField(eventoTableClass::COSTO, true) ?>" required>
             </div>
         </div>
-        <div class="col-xs-12">
+        <div class="col-xs-12 col-sm-6 col-md-6">
             <div class="form-group">
                 <label for="<?php echo eventoTableClass::getNameField(eventoTableClass::CATEGORIA_ID, true) ?>"> <?php echo i18n::__('TIPOEVENTO') ?>:</label>
                 <select class="form-control" name="<?php echo eventoTableClass::getNameField(eventoTableClass::CATEGORIA_ID, true) ?>" required>
@@ -94,6 +95,5 @@ use mvc\i18n\i18nClass as i18n ?>
                 </select>
             </div>
         </div>
-
     </div>
 </div></br>

@@ -156,11 +156,9 @@ use mvc\i18n\i18nClass as i18n ?>
 
                 <!-- Start Service Icon 5 -->
                 <div class="col-md-3 col-sm-6 service-box service-center" data-animation="fadeIn" data-animation-delay="05">
-                    <div class="service-icon">
-                        <i class="fa fa-plus-square icon-large"></i>
-                    </div>
+                    
                     <div class="service-content">
-                        <h4><?php echo i18n::__('Crea') ?></h4>
+                        <h2><?php echo i18n::__('Crea') ?></h2>
                         <p><?php echo i18n::__('detalle') ?></p>
                     </div>
                 </div>
@@ -168,11 +166,9 @@ use mvc\i18n\i18nClass as i18n ?>
 
                 <!-- Start Service Icon 6 -->
                 <div class="col-md-3 col-sm-6 service-box service-center" data-animation="fadeIn" data-animation-delay="06">
-                    <div class="service-icon">
-                        <i class="fa fa-share-square icon-large"></i>
-                    </div>
+                   
                     <div class="service-content">
-                        <h4><?php echo i18n::__('Compartir') ?></h4>
+                        <h2><?php echo i18n::__('Compartir') ?></h2>
                         <p><?php echo i18n::__('Invitacion') ?></p>
                     </div>
                 </div>
@@ -180,11 +176,9 @@ use mvc\i18n\i18nClass as i18n ?>
 
                 <!-- Start Service Icon 7 -->
                 <div class="col-md-3 col-sm-6 service-box service-center" data-animation="fadeIn" data-animation-delay="07">
-                    <div class="service-icon">
-                        <i class="fa fa-users icon-large"></i>
-                    </div>
+                    
                     <div class="service-content">
-                        <h4><?php echo i18n::__('Gratis') ?></h4>
+                        <h2><?php echo i18n::__('Gratis') ?></h2>
                         <p><?php echo i18n::__('Gratuitos') ?></p>
                     </div>
                 </div>
@@ -192,11 +186,9 @@ use mvc\i18n\i18nClass as i18n ?>
 
                 <!-- Start Service Icon 8 -->
                 <div class="col-md-3 col-sm-6 service-box service-center" data-animation="fadeIn" data-animation-delay="08">
-                    <div class="service-icon">
-                        <i class="fa fa-ticket icon-large"></i>
-                    </div>
+                    
                     <div class="service-content">
-                        <h4><?php echo i18n::__('Tarifas') ?></h4>
+                        <h2><?php echo i18n::__('Tarifas') ?></h2>
                         <p><?php echo i18n::__('Ofrecemos') ?></p>
                     </div>
                 </div>
@@ -253,273 +245,102 @@ use mvc\i18n\i18nClass as i18n ?>
 
         <!-- Start Big Heading -->
         <div class="big-title text-center" data-animation="fadeInDown" data-animation-delay="01">
-            <h1><?php echo i18n::__('Disfrute') ?><strong>  <?php echo i18n::__('Evento') ?>  </strong><?php echo i18n::__('Ciudad') ?></h1>
+            <h1><strong><?php echo i18n::__('Disfrute') ?>  <?php echo i18n::__('Evento') ?>  <?php echo i18n::__('Ciudad') ?></strong></h1>
         </div>
         <!-- End Big Heading -->
-
-        <p class="text-center"><?php echo i18n::__('') ?>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-            <br/>veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
-
 
         <!-- Start Recent Projects Carousel -->
         <ul id="portfolio-list" data-animated="fadeIn">
             <li>
-                <img src="images/Portfolio/1.png" alt="" />
+                <img src="<?php echo routing::getInstance()->getUrlImg('Portfolio/1.png') ?>" alt="" />
                 <div class="portfolio-item-content">
-                    <span class="header">Town winter 2013</span>
-                    <p class="body">web develpment, design</p>
+                    <span class="header"><?php echo i18n::__('GANOEXCEL') ?></span>
+                    <p class="body"><?php echo i18n::__('REGIONAL') ?></p>
                 </div>
-                <a href="#"><i class="more">+</i></a>
+                <a href="<?php echo routing::getInstance()->getUrlImg('Portfolio/1.png') ?>"><i class="more">+</i></a>
 
             </li>
             <li>
-                <img src="images/Portfolio/2.png" alt="" />
+                <img src="<?php echo routing::getInstance()->getUrlImg('Portfolio/2.png') ?>" alt="" />
                 <div class="portfolio-item-content">
-                    <span class="header">Quarterly Musashino</span>
-                    <p class="body">web develpment, design</p>
+                    <span class="header"><?php echo i18n::__('CENTROEVENTOS') ?></span>
+                    <p class="body"><?php echo i18n::__('SUPERSABADO') ?></p>
                 </div>
-                <a href="#"><i class="more">+</i></a>
+                <a href="<?php echo routing::getInstance()->getUrlImg('Portfolio/2.png') ?>"><i class="more">+</i></a>
 
             </li>
             <li>
-                <img src="images/Portfolio/3.png" alt="" />
+                <img src="<?php echo routing::getInstance()->getUrlImg('Portfolio/3.png') ?>" alt="" />
                 <div class="portfolio-item-content">
-                    <span class="header">Mainichi April 2014</span>
-                    <p class="body">web develpment, design</p>
+                    <span class="header"><?php echo i18n::__('NUEVAVIDA') ?></span>
+                    <p class="body"><?php echo i18n::__('2015') ?></p>
                 </div>
-                <a href="#"><i class="more">+</i></a>
+                <a href="<?php echo routing::getInstance()->getUrlImg('Portfolio/3.png') ?>"><i class="more">+</i></a>
 
             </li>
             <li>
-                <img src="images/Portfolio/4.png" alt="" />
+                <img src="<?php echo routing::getInstance()->getUrlImg('Portfolio/4.png') ?>" alt="" />
                 <div class="portfolio-item-content">
-                    <span class="header">Shitamachi Rocket</span>
-                    <p class="body">web develpment, design</p>
+                    <span class="header"><?php echo i18n::__('Sr') ?></span>
+                    <p class="body"><?php echo i18n::__('CONFERENCIA') ?></p>
                 </div>
-                <a href="#"><i class="more">+</i></a>
+                <a href="<?php echo routing::getInstance()->getUrlImg('Portfolio/4.png') ?>"><i class="more">+</i></a>
 
             </li>
             <li>
-                <img src="images/Portfolio/5.png" alt="" />
+                <img src="<?php echo routing::getInstance()->getUrlImg('Portfolio/5.png') ?>" alt="" />
                 <div class="portfolio-item-content">
-                    <span class="header">Majesty express vol. 01</span>
-                    <p class="body">web develpment, design</p>
+                    <span class="header"><?php echo i18n::__('RicosMundo') ?></span>
+                    <p class="body"><?php echo i18n::__('BuscanTrabajo') ?></p>
                 </div>
-                <a href="#"><i class="more">+</i></a>
+                <a href="<?php echo routing::getInstance()->getUrlImg('Portfolio/5.png') ?>"><i class="more">+</i></a>
 
             </li>
             <li>
-                <img src="images/Portfolio/6.png" alt="" />
+                <img src="<?php echo routing::getInstance()->getUrlImg('Portfolio/6.png') ?>" alt="" />
                 <div class="portfolio-item-content">
-                    <span class="header">Monocle issue 69</span>
-                    <p class="body">web develpment, design</p>
+                    <span class="header"><?php echo i18n::__('TODOQUIERES') ?></span>
+                    <p class="body"></p>
                 </div>
-                <a href="#"><i class="more">+</i></a>
+                <a href="<?php echo routing::getInstance()->getUrlImg('Portfolio/6.png') ?>"><i class="more">+</i></a>
 
             </li>
             <li>
-                <img src="images/Portfolio/7.png" alt="" />
+                <img src="<?php echo routing::getInstance()->getUrlImg('Portfolio/7.png') ?>" alt="" />
                 <div class="portfolio-item-content">
-                    <span class="header">Monocle issue 69</span>
-                    <p class="body">web develpment, design</p>
+                    <span class="header"><?php echo i18n::__('OPEN') ?></span>
+                    <p class="body"><?php echo i18n::__('Edicionespecial') ?></p>
                 </div>
-                <a href="#"><i class="more">+</i></a>
+                <a href="<?php echo routing::getInstance()->getUrlImg('Portfolio/7.png') ?>"><i class="more">+</i></a>
 
             </li>
             <li>
-                <img src="images/Portfolio/8.png" alt="" />
+                <img src="<?php echo routing::getInstance()->getUrlImg('Portfolio/8.png') ?>" alt="" />
                 <div class="portfolio-item-content">
-                    <span class="header">Monocle issue 69</span>
-                    <p class="body">web develpment, design</p>
+                    <span class="header"><?php echo i18n::__('Luchandosueños') ?></span>
+                    <p class="body"></p>
                 </div>
-                <a href="#"><i class="more">+</i></a>
+                <a href="<?php echo routing::getInstance()->getUrlImg('Portfolio/8.png') ?>"><i class="more">+</i></a>
 
             </li>
-            <li>
-                <img src="images/Portfolio/9.png" alt="" />
-                <div class="portfolio-item-content">
-                    <span class="header">Monocle issue 69</span>
-                    <p class="body">web develpment, design</p>
-                </div>
-                <a href="#"><i class="more">+</i></a>
-
-            </li>
-            <li>
-                <img src="images/Portfolio/10.png" alt="" />
-                <div class="portfolio-item-content">
-                    <span class="header">Monocle issue 69</span>
-                    <p class="body">web develpment, design</p>
-                </div>
-                <a href="#"><i class="more">+</i></a>
-
-            </li>
-            <li>
-                <img src="images/Portfolio/11.png" alt="" />
-                <div class="portfolio-item-content">
-                    <span class="header">Monocle issue 69</span>
-                    <p class="body">web develpment, design</p>
-                </div>
-                <a href="#"><i class="more">+</i></a>
-
-            </li>
-            <li>
-                <img src="images/Portfolio/12.png" alt="" />
-                <div class="portfolio-item-content">
-                    <span class="header">Monocle issue 69</span>
-                    <p class="body">web develpment, design</p>
-                </div>
-                <a href="#"><i class="more">+</i></a>
-
-            </li>
+            
         </ul>
         <!-- End Recent Projects Carousel -->
     </div>
-    <!-- End Portfolio Section -->
-    <!-- Start Testimonials Section -->
-    <div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-
-                    <!-- Start Recent Posts Carousel -->
-                    <div class="latest-posts">
-                        <h4 class="classic-title"><span>Latest News</span></h4>
-                        <div class="latest-posts-classic custom-carousel touch-carousel" data-appeared-items="2">
-
-                            <!-- Posts 1 -->
-                            <div class="post-row item">
-                                <div class="left-meta-post">
-                                    <div class="post-date"><span class="day">28</span><span class="month">Dec</span></div>
-                                    <div class="post-type"><i class="fa fa-picture-o"></i></div>
-                                </div>
-                                <h3 class="post-title"><a href="#">Standard Post With Image</a></h3>
-                                <div class="post-content">
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit. <a class="read-more" href="#">Read More...</a></p>
-                                </div>
-                            </div>
-
-                            <!-- Posts 2 -->
-                            <div class="post-row item">
-                                <div class="left-meta-post">
-                                    <div class="post-date"><span class="day">26</span><span class="month">Dec</span></div>
-                                    <div class="post-type"><i class="fa fa-picture-o"></i></div>
-                                </div>
-                                <h3 class="post-title"><a href="#">Link Post</a></h3>
-                                <div class="post-content">
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit. <a class="read-more" href="#">Read More...</a></p>
-                                </div>
-                            </div>
-
-                            <!-- Posts 3 -->
-                            <div class="post-row item">
-                                <div class="left-meta-post">
-                                    <div class="post-date"><span class="day">26</span><span class="month">Dec</span></div>
-                                    <div class="post-type"><i class="fa fa-picture-o"></i></div>
-                                </div>
-                                <h3 class="post-title"><a href="#">Iframe Video Post</a></h3>
-                                <div class="post-content">
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit. <a class="read-more" href="#">Read More...</a></p>
-                                </div>
-                            </div>
-
-                            <!-- Posts 4 -->
-                            <div class="post-row item">
-                                <div class="left-meta-post">
-                                    <div class="post-date"><span class="day">26</span><span class="month">Dec</span></div>
-                                    <div class="post-type"><i class="fa fa-picture-o"></i></div>
-                                </div>
-                                <h3 class="post-title"><a href="#">Gallery Post</a></h3>
-                                <div class="post-content">
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit. <a class="read-more" href="#">Read More...</a></p>
-                                </div>
-                            </div>
-
-                            <!-- Posts 5 -->
-                            <div class="post-row item">
-                                <div class="left-meta-post">
-                                    <div class="post-date"><span class="day">26</span><span class="month">Dec</span></div>
-                                    <div class="post-type"><i class="fa fa-picture-o"></i></div>
-                                </div>
-                                <h3 class="post-title"><a href="#">Standard Post without Image</a></h3>
-                                <div class="post-content">
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit. <a class="read-more" href="#">Read More...</a></p>
-                                </div>
-                            </div>
-
-                            <!-- Posts 6 -->
-                            <div class="post-row item">
-                                <div class="left-meta-post">
-                                    <div class="post-date"><span class="day">26</span><span class="month">Dec</span></div>
-                                    <div class="post-type"><i class="fa fa-picture-o"></i></div>
-                                </div>
-                                <h3 class="post-title"><a href="#">Iframe Audio Post</a></h3>
-                                <div class="post-content">
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit. <a class="read-more" href="#">Read More...</a></p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!-- End Recent Posts Carousel -->
-                </div>
-                <div class="col-md-4">
-                    <!-- Classic Heading -->
-                    <h4 class="classic-title"><span>Testimonials</span></h4>
-
-                    <!-- Start Testimonials Carousel -->
-                    <div class="custom-carousel show-one-slide touch-carousel" data-appeared-items="1">
-                        <!-- Testimonial 1 -->
-                        <div class="classic-testimonials item">
-                            <div class="testimonial-content">
-                                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="testimonial-author"><span>John Doe</span> - Customer</div>
-                        </div>
-                        <!-- Testimonial 2 -->
-                        <div class="classic-testimonials item">
-                            <div class="testimonial-content">
-                                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="testimonial-author"><span>John Doe</span> - Customer</div>
-                        </div>
-                        <!-- Testimonial 3 -->
-                        <div class="classic-testimonials item">
-                            <div class="testimonial-content">
-                                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="testimonial-author"><span>John Doe</span> - Customer</div>
-                        </div>
-                    </div>
-                    <!-- End Testimonials Carousel -->
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Testimonials Section -->
-
-
-
-
-
-
     <!-- Start Team Member Section -->
-    <div class="section" style="background:#fff;">
+    <div class="section" style="background:#000000;">
         <div class="container">
 
             <!-- Start Big Heading -->
             <div class="big-title text-center" data-animation="fadeInDown" data-animation-delay="01">
-                <h1>Our Great <strong>Team</strong></h1>
+                <h1><strong><?php echo i18n::__('TESTIMONIOSVIDA') ?></strong></h1>
             </div>
             <!-- End Big Heading -->
 
             <!-- Some Text -->
-            <p class="text-center">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium <span class="accent-color sh-tooltip" data-placement="right" title="Simple Tooltip">doloremque laudantium</span>, totam rem aperiam, eaque ipsa quae ab illo inventore
-                <br/>veritatis et quasi <span class="accent-color sh-tooltip" data-placement="bottom" title="Simple Tooltip">architecto</span> beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
-
-
-
-
+            <p class="text-center"><h3><strong>" <?php echo i18n::__('secreto') ?>"</strong></h3>
+            <br>
+                            
             <!-- Start Team Members -->
             <div class="row">
 
@@ -528,43 +349,18 @@ use mvc\i18n\i18nClass as i18n ?>
                     <div class="team-member modern">
                         <!-- Memebr Photo, Name & Position -->
                         <div class="member-photo">
-                            <img alt="" src="images/team/face_1.png" />
-                            <div class="member-name">John Doe <span>Developer</span>
+                            <img src="<?php echo routing::getInstance()->getUrlImg('team/face_1.png') ?>" alt="" />
+                            <div class="member-name"><?php echo i18n::__('AndresGuzman') ?> <span><?php echo i18n::__('DiamanteRoyal') ?></span>
                             </div>
                         </div>
                         <!-- Memebr Words -->
                         <div class="member-info">
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat.</p>
+                            <p> <a href="https://www.youtube.com/results?search_query=testimonios+andres+guzman">https://www.youtube.com/results?search_query=testimonios+andres+guzman<a/></p>
                         </div>
                         <!-- Start Progress Bar 1 -->
-                        <div class="progress-label">Photoshop</div>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-primary" data-progress-animation="96%" data-appear-animation-delay="400">
-                                <span class="percentage">96%</span>
-                            </div>
-                        </div>
-                        <!-- Start Progress Bar 2 -->
-                        <div class="progress-label">Logo Design</div>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-primary" data-progress-animation="88%" data-appear-animation-delay="800">
-                                <span class="percentage">88%</span>
-                            </div>
-                        </div>
-                        <!-- Start Progress Bar 3 -->
-                        <div class="progress-label">Vectors Design</div>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-primary" data-progress-animation="100%" data-appear-animation-delay="1200">
-                                <span class="percentage">100%</span>
-                            </div>
-                        </div>
+                        
                         <!-- Memebr Social Links -->
-                        <div class="member-socail">
-                            <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
-                            <a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
-                            <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
-                            <a class="flickr" href="#"><i class="fa fa-flickr"></i></a>
-                            <a class="mail" href="#"><i class="fa fa-envelope"></i></a>
-                        </div>
+                        
                     </div>
                 </div>
                 <!-- End Memebr 1 -->
@@ -574,43 +370,15 @@ use mvc\i18n\i18nClass as i18n ?>
                     <div class="team-member modern">
                         <!-- Memebr Photo, Name & Position -->
                         <div class="member-photo">
-                            <img alt="" src="images/team/face_2.png" />
-                            <div class="member-name">Silly Sally <span>Developer</span>
+                            <img src="<?php echo routing::getInstance()->getUrlImg('team/face_2.png') ?>" alt="" />
+                            <div class="member-name"><?php echo i18n::__('AuraSanchez') ?> <span><?php echo i18n::__('Diamante') ?></span>
                             </div>
                         </div>
                         <!-- Memebr Words -->
                         <div class="member-info">
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat.</p>
+                            <p><a href="https://www.youtube.com/watch?v=qq_vkVxE2Uw">https://www.youtube.com/watch?v=qq_vkVxE2Uw<a/> </p>
                         </div>
-                        <!-- Start Progress Bar 1 -->
-                        <div class="progress-label">Photoshop</div>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-primary" data-progress-animation="96%" data-appear-animation-delay="400">
-                                <span class="percentage">96%</span>
-                            </div>
-                        </div>
-                        <!-- Start Progress Bar 2 -->
-                        <div class="progress-label">Logo Design</div>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-primary" data-progress-animation="88%" data-appear-animation-delay="800">
-                                <span class="percentage">88%</span>
-                            </div>
-                        </div>
-                        <!-- Start Progress Bar 3 -->
-                        <div class="progress-label">Vectors Design</div>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-primary" data-progress-animation="100%" data-appear-animation-delay="1200">
-                                <span class="percentage">100%</span>
-                            </div>
-                        </div>
-                        <!-- Memebr Social Links -->
-                        <div class="member-socail">
-                            <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
-                            <a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
-                            <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
-                            <a class="flickr" href="#"><i class="fa fa-flickr"></i></a>
-                            <a class="mail" href="#"><i class="fa fa-envelope"></i></a>
-                        </div>
+                       
                     </div>
                 </div>
                 <!-- End Memebr 2 -->
@@ -620,43 +388,15 @@ use mvc\i18n\i18nClass as i18n ?>
                     <div class="team-member modern">
                         <!-- Memebr Photo, Name & Position -->
                         <div class="member-photo">
-                            <img alt="" src="images/team/face_3.png" />
-                            <div class="member-name">Chris John <span>Developer</span>
+                            <img src="<?php echo routing::getInstance()->getUrlImg('team/face_3.png') ?>" alt="" />
+                            <div class="member-name"><?php echo i18n::__('HugoDiaz') ?>
                             </div>
                         </div>
                         <!-- Memebr Words -->
                         <div class="member-info">
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat.</p>
+                            <p><a href="https://www.youtube.com/watch?v=lZMW-slEZso">https://www.youtube.com/watch?v=lZMW-slEZso<a/> </p>
                         </div>
-                        <!-- Start Progress Bar 1 -->
-                        <div class="progress-label">Photoshop</div>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-primary" data-progress-animation="96%" data-appear-animation-delay="400">
-                                <span class="percentage">96%</span>
-                            </div>
-                        </div>
-                        <!-- Start Progress Bar 2 -->
-                        <div class="progress-label">Logo Design</div>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-primary" data-progress-animation="94%" data-appear-animation-delay="800">
-                                <span class="percentage">94%</span>
-                            </div>
-                        </div>
-                        <!-- Start Progress Bar 3 -->
-                        <div class="progress-label">Vectors Design</div>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-primary" data-progress-animation="90%" data-appear-animation-delay="1200">
-                                <span class="percentage">90%</span>
-                            </div>
-                        </div>
-                        <!-- Memebr Social Links -->
-                        <div class="member-socail">
-                            <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
-                            <a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
-                            <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
-                            <a class="flickr" href="#"><i class="fa fa-flickr"></i></a>
-                            <a class="mail" href="#"><i class="fa fa-envelope"></i></a>
-                        </div>
+                        
                     </div>
                 </div>
                 <!-- End Memebr 3 -->
@@ -666,43 +406,15 @@ use mvc\i18n\i18nClass as i18n ?>
                     <div class="team-member modern">
                         <!-- Memebr Photo, Name & Position -->
                         <div class="member-photo">
-                            <img alt="" src="images/team/face_4.png" />
-                            <div class="member-name">Sara John <span>Developer</span>
+                            <img src="<?php echo routing::getInstance()->getUrlImg('team/face_4.png') ?>" alt="" />
+                            <div class="member-name"><?php echo i18n::__('JuanPabloPineda') ?> <span><?php echo i18n::__('Diamante') ?></span>
                             </div>
                         </div>
                         <!-- Memebr Words -->
                         <div class="member-info">
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat.</p>
+                            <p><a href="https://www.youtube.com/watch?v=jbTX4KYGTpQ">https://www.youtube.com/watch?v=jbTX4KYGTpQ<a/> </p>
                         </div>
-                        <!-- Start Progress Bar 1 -->
-                        <div class="progress-label">Photoshop</div>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-primary" data-progress-animation="96%" data-appear-animation-delay="400">
-                                <span class="percentage">96%</span>
-                            </div>
-                        </div>
-                        <!-- Start Progress Bar 2 -->
-                        <div class="progress-label">Logo Design</div>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-primary" data-progress-animation="85%" data-appear-animation-delay="800">
-                                <span class="percentage">85%</span>
-                            </div>
-                        </div>
-                        <!-- Start Progress Bar 3 -->
-                        <div class="progress-label">Vectors Design</div>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-primary" data-progress-animation="100%" data-appear-animation-delay="1200">
-                                <span class="percentage">100%</span>
-                            </div>
-                        </div>
-                        <!-- Memebr Social Links -->
-                        <div class="member-socail">
-                            <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
-                            <a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
-                            <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
-                            <a class="flickr" href="#"><i class="fa fa-flickr"></i></a>
-                            <a class="mail" href="#"><i class="fa fa-envelope"></i></a>
-                        </div>
+                        
                     </div>
                 </div>
                 <!-- End Memebr 4 -->
@@ -732,7 +444,7 @@ use mvc\i18n\i18nClass as i18n ?>
                             </h1>
                             <!-- End Animations Text -->
                             <!-- Start Buttons -->
-                            <a href="#" class="btn-system btn-large btn-wite"><i class="fa fa-plus-square-o"></i> <?php echo i18n::__('Comenzar') ?></a>
+                            <a href="<?php echo routing::getInstance()->getUrlWeb('registrar', 'insert') ?>" class="btn-system btn-large btn-wite"><i class="fa fa-plus-square-o"></i> <?php echo i18n::__('Comenzar') ?></a>
                         </div>
                         <!-- End Section Content -->  
                     </div>         
@@ -747,36 +459,35 @@ use mvc\i18n\i18nClass as i18n ?>
                 <div class="col-md-12">
                     <!-- Start Big Heading -->
                     <div class="big-title text-center">
-                        <h1><?php echo i18n::__('Ahorra') ?><strong><?php echo i18n::__('Ti') ?></strong></h1>
+                        <h1><strong><?php echo i18n::__('Ahorra') ?></strong><strong><?php echo i18n::__('Ti') ?></strong></h1>
                     </div>
                     <!-- End Big Heading -->
 
-                    <!-- Text -->
-                    <p class="text-center">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                    
                 </div>
             </div>
             <div class="row pricing-tables">
 
                 <div class="col-md-3 col-sm-3 col-xs-12">
-                    <div class="pricing-table">
+                    <div class="pricing-table highlight-plan">
                         <div class="plan-name">
                             <h3><?php echo i18n::__('Basico') ?></h3>
                         </div>
                         <div class="plan-price">
-                            <div class="price-value">$49<span>.00</span></div>
-                            <div class="interval">per month</div>
+                            <div class="price-value"><?php echo i18n::__('$180.000') ?><span></div>
+                            
                         </div>
                         <div class="plan-list">
                             <ul>
-                                <li><strong>40 GB</strong> Storage</li>
-                                <li><strong>40GB</strong> Transfer</li>
-                                <li><strong>10</strong> Domains</li>
-                                <li><strong>20</strong> Projects</li>
-                                <li><strong>Free</strong> installation</li>
+                                <li><strong><?php echo i18n::__('Recibes4') ?></li>
+                                <li><strong> <?php echo i18n::__('RecibesCodigo') ?></li>
+                                <li><strong><?php echo i18n::__('Capacitacion') ?></strong></li>
+                                <li><strong><?php echo i18n::__('Ganasdosformas') ?></strong></li>
+                                
                             </ul>
                         </div>
                         <div class="plan-signup">
-                            <a href="#" class="btn-system btn-small">Sign Up Now</a>
+                            <a href="http://www.ganoexcel.com.co/" class="btn-system btn-small border-btn"><?php echo i18n::__('Registrar') ?></a>
                         </div>
                     </div>
                 </div>
@@ -787,68 +498,68 @@ use mvc\i18n\i18nClass as i18n ?>
                             <h3><?php echo i18n::__('Relampago') ?></h3>
                         </div>
                         <div class="plan-price">
-                            <div class="price-value">$99<span>.00</span></div>
-                            <div class="interval">per month</div>
+                            <div class="price-value"><?php echo i18n::__('$450.000') ?></div>
                         </div>
                         <div class="plan-list">
                             <ul>
-                                <li><strong>40 GB</strong> Storage</li>
-                                <li><strong>40GB</strong> Transfer</li>
-                                <li><strong>10</strong> Domains</li>
-                                <li><strong>20</strong> Projects</li>
-                                <li><strong>Free</strong> installation</li>
+                                 <li><strong><?php echo i18n::__('9Cajas') ?></strong><?php echo i18n::__('GanoCafé') ?></li>
+                                <li><strong><?php echo i18n::__('TuPagina') ?></strong><?php echo i18n::__('Web') ?> </li>
+                                <li><strong><?php echo i18n::__('Capacitacion') ?></strong></li>
+                                <li><strong><?php echo i18n::__('12Formas') ?></strong> <?php echo i18n::__('Ganar') ?></li>
+                                <li><strong><?php echo i18n::__('20%') ?></strong> <?php echo i18n::__('Bonos') ?> </li>
+                                <li><strong><?php echo i18n::__('Ganas$56.250') ?></strong><?php echo i18n::__('Afiliaciónesnuevas') ?></li>
                             </ul>
                         </div>
                         <div class="plan-signup">
-                            <a href="#" class="btn-system btn-small border-btn">Sign Up Now</a>
+                            <a href="http://www.ganoexcel.com.co/" class="btn-system btn-small border-btn"><?php echo i18n::__('Registrar') ?></a>
                         </div>
                     </div>
                 </div>
 
 
                 <div class="col-md-3 col-sm-3 col-xs-12">
-                    <div class="pricing-table">
+                    <div class="pricing-table highlight-plan">
                         <div class="plan-name">
                             <h3><?php echo i18n::__('Profesional') ?></h3>
                         </div>
                         <div class="plan-price">
-                            <div class="price-value">$199<span>.00</span></div>
-                            <div class="interval">per month</div>
+                            <div class="price-value"><?php echo i18n::__('$1´125.000') ?></div>
                         </div>
                         <div class="plan-list">
                             <ul>
-                                <li><strong>40 GB</strong> Storage</li>
-                                <li><strong>40GB</strong> Transfer</li>
-                                <li><strong>10</strong> Domains</li>
-                                <li><strong>20</strong> Projects</li>
-                                <li><strong>Free</strong> installation</li>
+                                <li><strong><?php echo i18n::__('22Cajas') ?></strong><?php echo i18n::__('GanoCafé') ?></li>
+                                <li><strong><?php echo i18n::__('TuPagina') ?></strong><?php echo i18n::__('Web') ?> </li>
+                                <li><strong><?php echo i18n::__('Capacitacion') ?></strong></li>
+                                <li><strong><?php echo i18n::__('12Formas') ?></strong> <?php echo i18n::__('Ganar') ?></li>
+                                <li><strong><?php echo i18n::__('50%') ?></strong>  <?php echo i18n::__('Bonos') ?></li>
+                                <li><strong><?php echo i18n::__('Ganas$168.500') ?></strong><?php echo i18n::__('Afiliaciónesnuevas') ?></li>
                             </ul>
                         </div>
                         <div class="plan-signup">
-                            <a href="#" class="btn-system btn-small">Sign Up Now</a>
+                            <a href="http://www.ganoexcel.com.co/" class="btn-system btn-small border-btn"><?php echo i18n::__('Registrar') ?></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-12">
-                    <div class="pricing-table">
+                    <div class="pricing-table highlight-plan">
                         <div class="plan-name">
                             <h3><?php echo i18n::__('Premium') ?></h3>
                         </div>
                         <div class="plan-price">
-                            <div class="price-value">$299<span>.00</span></div>
-                            <div class="interval">per month</div>
+                            <div class="price-value"><?php echo i18n::__('$2´250.000') ?> </span></div>
                         </div>
                         <div class="plan-list">
                             <ul>
-                                <li><strong>40 GB</strong> Storage</li>
-                                <li><strong>40GB</strong> Transfer</li>
-                                <li><strong>10</strong> Domains</li>
-                                <li><strong>20</strong> Projects</li>
-                                <li><strong>Free</strong> installation</li>
+                                <li><strong><?php echo i18n::__('45Cajas') ?></strong><?php echo i18n::__('GanoCafé') ?></li>
+                                <li><strong><?php echo i18n::__('TuPagina') ?></strong><?php echo i18n::__('Web') ?> </li>
+                                <li><strong><?php echo i18n::__('Capacitacion') ?></strong></li>
+                                <li><strong><?php echo i18n::__('12Formas') ?></strong> <?php echo i18n::__('Ganar') ?></li>
+                                <li><strong><?php echo i18n::__('100%') ?></strong><?php echo i18n::__('Bonos') ?></li>
+                                <li><strong><?php echo i18n::__('Ganas$337.000') ?></strong><?php echo i18n::__('Afiliaciónesnuevas') ?></li>
                             </ul>
                         </div>
                         <div class="plan-signup">
-                            <a href="#" class="btn-system btn-small">Sign Up Now</a>
+                            <a href="http://www.ganoexcel.com.co/" class="btn-system btn-small border-btn"><?php echo i18n::__('Registrar') ?></a>
                         </div>
                     </div>
                 </div>
@@ -860,60 +571,60 @@ use mvc\i18n\i18nClass as i18n ?>
     <div class="partner">
         <div class="container">
             <div class="row">
-
-                <!-- Start Big Heading -->
+<!--
+                 Start Big Heading 
                 <div class="big-title text-center">
                     <h1>Our Happy <strong>Clients</strong></h1>
                     <p class="title-desc">Partners We Work With</p>
                 </div>
-                <!-- End Big Heading -->
-                <!--Start Clients Carousel-->
+                 End Big Heading 
+                Start Clients Carousel
                 <div class="our-clients">
                     <div class="clients-carousel custom-carousel touch-carousel navigation-3" data-appeared-items="5" data-navigation="true">
 
-                        <!-- Client 1 -->
+                         Client 1 
                         <div class="client-item item">
                             <a href="#"><img src="images/c1.png" alt="" /></a>
                         </div>
 
-                        <!-- Client 2 -->
+                         Client 2 
                         <div class="client-item item">
                             <a href="#"><img src="images/c2.png" alt="" /></a>
                         </div>
 
-                        <!-- Client 3 -->
+                         Client 3 
                         <div class="client-item item">
                             <a href="#"><img src="images/c3.png" alt="" /></a>
                         </div>
 
-                        <!-- Client 4 -->
+                         Client 4 
                         <div class="client-item item">
                             <a href="#"><img src="images/c4.png" alt="" /></a>
                         </div>
 
-                        <!-- Client 5 -->
+                         Client 5 
                         <div class="client-item item">
                             <a href="#"><img src="images/c5.png" alt="" /></a>
                         </div>
 
-                        <!-- Client 6 -->
+                         Client 6 
                         <div class="client-item item">
                             <a href="#"><img src="images/c6.png" alt="" /></a>
                         </div>
 
-                        <!-- Client 7 -->
+                         Client 7 
                         <div class="client-item item">
                             <a href="#"><img src="images/c7.png" alt="" /></a>
                         </div>
 
-                        <!-- Client 8 -->
+                         Client 8 
                         <div class="client-item item">
                             <a href="#"><img src="images/c8.png" alt="" /></a>
                         </div>
 
                     </div>
                 </div>
-                <!-- End Clients Carousel -->
+                 End Clients Carousel -->
             </div><!-- .row -->
         </div><!-- .container -->
     </div>

@@ -94,7 +94,7 @@ class usuarioTableClass extends usuarioBaseTableClass {
 
     public static function getUserName($id) {
         try {
-            $sql = 'SELECT ' . usuarioTableClass::USER . ',' . usuarioTableClass::ID . 
+            $sql = 'SELECT ' . usuarioTableClass::USER . ',' . usuarioTableClass::ID .
                     ' FROM ' . usuarioTableClass::getNameTable() .
                     ' WHERE ' . usuarioTableClass::ID . ' = :id';
             $params = array(
@@ -103,6 +103,19 @@ class usuarioTableClass extends usuarioBaseTableClass {
             $answer = model::getInstance()->prepare($sql);
             $answer->execute($params);
             return $answer[0]->id;
+        } catch (PDOException $exc) {
+            throw $exc;
+        }
+    }
+
+    public static function countUsers() {
+        try {
+            $sql = 'SELECT COUNT(' . usuarioTableClass::ID . ') AS USER' .
+                    ' FROM ' . usuarioTableClass::getNameTable() . '';
+            $answer = model::getInstance()->prepare($sql);
+            $answer->execute();
+            $answer = $answer->fetchAll(PDO::FETCH_OBJ);
+            return $answer[0]->user;
         } catch (PDOException $exc) {
             throw $exc;
         }

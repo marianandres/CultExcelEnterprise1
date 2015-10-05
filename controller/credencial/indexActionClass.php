@@ -15,26 +15,24 @@ use mvc\i18n\i18nClass as i18n;
  */
 class indexActionClass extends controllerClass implements controllerActionInterface {
 
-  public function execute() {
-    try {
+    public function execute() {
+        try {
 
-      $fields = array(
-          credencialTableClass::ID,
-          credencialTableClass::NOMBRE,
-          credencialTableClass::UPDATED_AT
-      );
-      $orderBy = array(
-          credencialTableClass::NOMBRE
-      );
-      $this->objCredencial = credencialTableClass::getAll($fields, true, $orderBy, 'ASC');
-      $this->defineView('index', 'credencial', session::getInstance()->getFormatOutput());
-    } catch (PDOException $exc) {
-      echo $exc->getMessage();
-      echo '<br>';
-      echo '<pre>';
-      print_r($exc->getTrace());
-      echo '</pre>';
+            $fields = array(
+                credencialTableClass::ID,
+                credencialTableClass::NOMBRE,
+                credencialTableClass::UPDATED_AT
+            );
+            $orderBy = array(
+                credencialTableClass::NOMBRE
+            );
+            session::getInstance()->setFlash('credencial', 'credencial');
+            $this->objCredencial = credencialTableClass::getAll($fields, true, $orderBy, 'ASC');
+            $this->defineView('index', 'credencial', session::getInstance()->getFormatOutput());
+        } catch (PDOException $exc) {
+            session::getInstance()->setFlash('exc', $exc);
+            routing::getInstance()->forward('shfSecurity', 'exception');
+        }
     }
-  }
 
 }

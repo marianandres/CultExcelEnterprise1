@@ -12,7 +12,7 @@ use mvc\i18n\i18nClass as i18n ?>
 <?php $telefono = organizacionTableClass::TELEFONO ?>
 
 <div class="container container-fluid">
-    <h1 class="page-header"><i class="fa fa-user"></i>  <?php echo i18n::__(((isset($objOrganizacion)) ? 'update' : 'register')) ?> <?php echo i18n::__('organizacion') ?>  <?php echo $objOrganizacion[0]->$organizacion ?> </h1>  
+    <h1 class="page-header"><i class="fa fa-user"></i>  <?php echo i18n::__('update') ?> <?php echo i18n::__('Organizacion') ?></h1>  
     <form class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 " method="post" action="<?php echo routing::getInstance()->getUrlWeb('organizacion', ((isset($objOrganizacion)) ? 'update' : 'create')) ?>">
         <?php if (isset($objOrganizacion) == true): ?>
 

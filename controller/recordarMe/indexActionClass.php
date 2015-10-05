@@ -15,27 +15,25 @@ use mvc\i18n\i18nClass as i18n;
  */
 class indexActionClass extends controllerClass implements controllerActionInterface {
 
-  public function execute() {
-    try {
+    public function execute() {
+        try {
 
-      $fields = array(
-          recordarMeTableClass::ID,
-          recordarMeTableClass::USUARIO_ID,
-          recordarMeTableClass::IP_ADDRESS,
-          recordarMeTableClass::HASH_COOKIE,
-      );
-      $orderBy = array(
-          recordarMeTableClass::ID
-      );
-      $this->objRecordarMe = recordarMeTableClass::getAll($fields, false, $orderBy, 'ASC');
-      $this->defineView('index', 'recordarMe', session::getInstance()->getFormatOutput());
-    } catch (PDOException $exc) {
-      echo $exc->getMessage();
-      echo '<br>';
-      echo '<pre>';
-      print_r($exc->getTrace());
-      echo '</pre>';
+            $fields = array(
+                recordarMeTableClass::ID,
+                recordarMeTableClass::USUARIO_ID,
+                recordarMeTableClass::IP_ADDRESS,
+                recordarMeTableClass::HASH_COOKIE,
+            );
+            $orderBy = array(
+                recordarMeTableClass::ID
+            );
+            session::getInstance()->setFlash('recordarme', 'recordarme');
+            $this->objRecordarMe = recordarMeTableClass::getAll($fields, false, $orderBy, 'ASC');
+            $this->defineView('index', 'recordarMe', session::getInstance()->getFormatOutput());
+        } catch (PDOException $exc) {
+            session::getInstance()->setFlash('exc', $exc);
+            routing::getInstance()->forward('shfSecurity', 'exception');
+        }
     }
-  }
 
 }

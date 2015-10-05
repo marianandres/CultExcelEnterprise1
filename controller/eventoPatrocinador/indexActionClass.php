@@ -15,23 +15,24 @@ use mvc\i18n\i18nClass as i18n;
  */
 class indexActionClass extends controllerClass implements controllerActionInterface {
 
-  public function execute() {
-    try {
+    public function execute() {
+        try {
 
-      $fields = array(
-          eventoPatrocinadorTableClass::ID,
-          eventoPatrocinadorTableClass::EVENTO_ID,
-          eventoPatrocinadorTableClass::PATROCINADOR_ID
-      );
-      $orderBy = array(
-          eventoPatrocinadorTableClass::PATROCINADOR_ID
-      );
-      $this->objEventoPatrocinador = eventoPatrocinadorTableClass::getAll($fields, true, $orderBy, 'ASC');
-      $this->defineView('index', 'eventoPatrocinador', session::getInstance()->getFormatOutput());
-    } catch (PDOException $exc) {
-      session::getInstance()->setFlash('exc', $exc);
-      routing::getInstance()->forward('shfSecurity', 'exception');
+            $fields = array(
+                eventoPatrocinadorTableClass::ID,
+                eventoPatrocinadorTableClass::EVENTO_ID,
+                eventoPatrocinadorTableClass::PATROCINADOR_ID
+            );
+            $orderBy = array(
+                eventoPatrocinadorTableClass::PATROCINADOR_ID
+            );
+            session::getInstance()->setFlash('eventoPatrocinador', 'eventoPatrocinador');
+            $this->objEventoPatrocinador = eventoPatrocinadorTableClass::getAll($fields, true, $orderBy, 'ASC');
+            $this->defineView('index', 'eventoPatrocinador', session::getInstance()->getFormatOutput());
+        } catch (PDOException $exc) {
+            session::getInstance()->setFlash('exc', $exc);
+            routing::getInstance()->forward('shfSecurity', 'exception');
+        }
     }
-  }
 
 }

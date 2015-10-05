@@ -11,7 +11,7 @@ use mvc\i18n\i18nClass as i18n;
 /**
  * Description of ejemploClass
  *
- * @author Julian Lasso <ingeniero.julianlasso@gmail.com>
+ * @author Mariana Lopez, Andres Felipe Alvarez
  */
 class indexActionClass extends controllerClass implements controllerActionInterface {
 
@@ -53,7 +53,7 @@ class indexActionClass extends controllerClass implements controllerActionInterf
         $this->page = request::getInstance()->getGet('page');
         $page = $page * config::getRowGrid();
       }
-
+      session::getInstance()->setFlash('usuario', 'usuario');
       $this->cntPages = usuarioTableClass::getTotalPages(config::getRowGrid(), $where);
       $this->objUsuarios = usuarioTableClass::getAll($fields, true, $orderBy, 'ASC', null, null, $where);
       $this->defineView('index', 'usuario', session::getInstance()->getFormatOutput());

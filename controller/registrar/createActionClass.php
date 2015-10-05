@@ -31,7 +31,7 @@ class createActionClass extends controllerClass implements controllerActionInter
         usuarioTableClass::insert($data);
 
         $user = usuarioTableClass::getIdNewUser($usuario);
-        $credential = 'admin';
+        $credential = 'usuario';
         $credencial = credencialTableClass::getIdCredencial($credential);
 
         $data1 = array(

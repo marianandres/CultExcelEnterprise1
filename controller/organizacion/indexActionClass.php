@@ -30,6 +30,7 @@ class indexActionClass extends controllerClass implements controllerActionInterf
       $orderBy = array(
           organizacionTableClass::NOMBRE
       );
+      session::getInstance()->setFlash('organizacion', 'organizacion');
       $this->objOrganizacion = organizacionTableClass::getAll($fields, true, $orderBy, 'ASC');
       $this->defineView('index', 'organizacion', session::getInstance()->getFormatOutput());
     } catch (PDOException $exc) {

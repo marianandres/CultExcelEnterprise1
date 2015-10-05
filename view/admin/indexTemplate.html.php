@@ -1,5 +1,4 @@
 <?php
-
 use mvc\routing\routingClass as routing ?>
 <?php
 use mvc\i18n\i18nClass as i18n ?>
@@ -8,44 +7,13 @@ use mvc\config\configClass as config ?>
 <?php
 use \mvc\request\requestClass as request ?>
 <?php
-use mvc\session\sessionClass as session ?>
+use mvc\session\sessionClass as session;
+use mvc\view\viewClass as view;?>
+<?php  
+$usuarios = usuarioTableClass::countUsers();
+?>
 <div class="fixed-left">
     <!-- Modal Start -->
-    <!-- Modal Task Progress -->	
-    <div class="md-modal md-3d-flip-vertical" id="task-progress">
-        <div class="md-content">
-            <h3><strong>Task Progress</strong> Information</h3>
-            <div>
-                <p>CLEANING BUGS</p>
-                <div class="progress progress-xs for-modal">
-                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                        <span class="sr-only">80&#37; Complete</span>
-                    </div>
-                </div>
-                <p>POSTING SOME STUFF</p>
-                <div class="progress progress-xs for-modal">
-                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 65%">
-                        <span class="sr-only">65&#37; Complete</span>
-                    </div>
-                </div>
-                <p>BACKUP DATA FROM SERVER</p>
-                <div class="progress progress-xs for-modal">
-                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 95%">
-                        <span class="sr-only">95&#37; Complete</span>
-                    </div>
-                </div>
-                <p>RE-DESIGNING WEB APPLICATION</p>
-                <div class="progress progress-xs for-modal">
-                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                        <span class="sr-only">100&#37; Complete</span>
-                    </div>
-                </div>
-                <p class="text-center">
-                    <button class="btn btn-danger btn-sm md-close">Close</button>
-                </p>
-            </div>
-        </div>
-    </div>
     <!-- Modal logout -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -74,206 +42,8 @@ use mvc\session\sessionClass as session ?>
 
         <?php mvc\view\viewClass::includePartial('partials/sideBarMenu') ?>
         <?php mvc\view\viewClass::includePartial('partials/topBarMenu') ?>
+        <?php mvc\view\viewClass::includePartial('partials/rightSideBar') ?>
 
-        <div class="right side-menu">
-            <ul class="nav nav-tabs nav-justified" id="right-tabs">
-                <li class="active"><a href="#feed" data-toggle="tab" title="Live Feed"><i class="icon-rss-2"></i></a></li>
-                <li><a href="#connect" data-toggle="tab" title="Chat"><i class="icon-chat"></i></a></li>
-                <li><a href="#settings" data-toggle="tab" title="Preferences"><i class="icon-wrench"></i></a></li>
-            </ul>
-            <div class="clearfix"></div>
-            <div class="tab-content">
-                <div class="tab-pane active" id="feed">
-                    <div class="tab-inner slimscroller">
-                        <div class="search-right">
-                            <input type="text" class="form-control" placeholder="Search">
-                        </div>
-                        <div class="right-toolbar">
-                            <a href="javascript:;" class="pull-right">Settings <i class="icon-cog"></i></a>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="clearfix"></div>
-                        <div class="panel-group" id="collapse">
-                            <div class="panel panel-default">
-                                <div class="panel-heading bg-orange-1">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion" href="#rnotifications">
-                                            <i class="icon-bell-2"></i> Notifications
-                                            <span class="label bg-darkblue-1 pull-right">4</span>
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="rnotifications" class="panel-collapse collapse in">
-                                    <div class="panel-body">
-                                        <ul class="list-unstyled" id="notification-list">
-                                            <li><a href="javascript:;"><span class="icon-wrapper"><i class="icon-video"></i></span> 1 Video Uploaded <span class="muted">12 minutes ago</span></a></li>
-                                            <li><a href="javascript:;"><span class="icon-wrapper"><i class="icon-users-1"></i></span> 3 Users signed up <span class="muted">16 minutes ago</span></a></li>
-                                            <li><a href="javascript:;"><span class="icon-wrapper"><i class="icon-picture-1"></i></span> 1 Video Uploaded <span class="muted">12 minutes ago</span></a></li>
-                                            <li><a href="javascript:;"><span class="icon-wrapper"><i class="icon-hourglass-1"></i></span> Deadline for 1 project <span class="muted">12 minutes ago</span></a></li>
-                                        </ul>
-                                        <a class="btn btn-block btn-sm btn-warning">See all notifications</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading bg-green-3">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion" href="#remails">
-                                            <i class="icon-mail"></i> E-mails
-                                            <span class="label bg-darkblue-1 pull-right">3</span>
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="remails" class="panel-collapse collapse in">
-                                    <div class="panel-body">
-                                        <ul class="list-unstyled" id="inbox-list">
-                                            <li><a href="javascript:;"><span class="sender"><i class="icon-star text-yellow-2"></i> Kim Wilde</span> <span class="datetime">6 mins ago</span>
-                                                    <span class="title">You keep me hangin on</span>
-                                                    <span class="content">Where are you? I am waiting for 3 hours in the restaurant. I ate 3 hamburgers.</span>
-                                                </a></li>
-                                            <li><a href="javascript:;"><span class="sender">Tyler Durden</span> <span class="datetime">13 hours ago</span>
-                                                    <span class="title">Buy some soap from market before</span>
-                                                    <span class="content">We are crowded here. We need some more soap at home. Buy some before you come home.</span>
-                                                </a></li>
-                                            <li><a href="javascript:;"><span class="sender">John Bonomo</span> <span class="datetime">Yesterday</span>
-                                                    <span class="title">Late delivery</span>
-                                                    <span class="content">Hello, I ordered 15 box of viagra for a friend of mine but he still hasn't receive them.</span>
-                                                </a></li>
-                                        </ul>
-                                        <a class="btn btn-block btn-sm btn-primary">Go to inbox</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading bg-blue-1">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion" href="#rupdates">
-                                            <i class="icon-signal-2"></i> Updates
-                                            <span class="label bg-darkblue-1 pull-right">5</span>
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="rupdates" class="panel-collapse collapse in">
-                                    <div class="panel-body">
-                                        <ul class="list-unstyled" id="updates-list">
-                                            <li><a href="javascript:;"><span class="icon-wrapper bg-green-1"><i class="icon-comment-1"></i></span> <b>David Guetta</b> came online <abbr title="15 seconds ago">just now</abbr>.</a></li>
-                                            <li><a href="javascript:;"><span class="icon-wrapper bg-red-1"><i class="icon-user-3"></i></span> <b>Katy Perry</b> updated her profile <abbr title="4 mins ago">4 mins ago</abbr>.</a></li>
-                                            <li><a href="javascript:;"><span class="icon-wrapper bg-blue-1"><i class="icon-twitter-2"></i></span> <b>4 tweets posted</b> with cronjob <abbr title="22 mins ago">22 mins ago</abbr>.</a></li>
-                                            <li><a href="javascript:;"><span class="icon-wrapper bg-orange-3"><i class="icon-water"></i></span> <b>Adele</b> set fire to the rain <abbr title="43 mins ago">43 mins ago</abbr>.</a></li>
-                                            <li><a href="javascript:;"><span class="icon-wrapper bg-pink-2"><i class="icon-heart-broken"></i></span> <b>Taylor Swift</b> learned that you are trouble <abbr title="3 hours ago">3 days ago</abbr>.</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane" id="connect">
-                    <div class="tab-inner slimscroller">
-                        <div class="search-right">
-                            <input type="text" class="form-control" placeholder="Search">
-                        </div>	
-                        <div class="panel-group" id="collapse">
-                            <div class="panel panel-default" id="chat-panel">
-                                <div class="panel-heading bg-darkblue-2">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#chat-coll">
-                                            <i class="icon-briefcase-1"></i> Colleagues
-                                            <span class="label bg-darkblue-1 pull-right">14</span>
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="chat-coll" class="panel-collapse collapse in">
-                                    <div class="panel-body">
-                                        <ul class="list-unstyled" id="chat-list">
-                                            <li><a href="javascript:;" class="online"><span class="chat-user-avatar"><img src="images/users/chat/1.jpg"></span> <span class="chat-user-name">Dorothy Simons</span><span class="chat-user-msg">I wish I was a bird in the sky</span></a></li>
-                                            <li><a href="javascript:;" class="online"><span class="chat-user-avatar"><img src="images/users/chat/2.jpg"></span> <span class="chat-user-name">John Malkovich</span><span class="chat-user-msg">You were the traitor</span></a></li>
-                                            <li><a href="javascript:;" class="online"><span class="chat-user-avatar"><img src="images/users/chat/3.jpg"></span> <span class="chat-user-name">Jessica Simons</span><span class="chat-user-msg">Where is my mind</span></a></li>
-                                            <li><a href="javascript:;" class="away"><span class="chat-user-avatar"><img src="images/users/chat/4.jpg"></span> <span class="chat-user-name">Jack Stallman</span><span class="chat-user-msg">Away since 13:32</span></a></li>
-                                            <li><a href="javascript:;" class="offline"><span class="chat-user-avatar"><img src="images/users/chat/5.jpg"></span> <span class="chat-user-name">Neil Armstrong</span><span class="chat-user-msg" title="I am flying to the moon and back">I am flying to the moon and back</span></a></li>
-                                            <li><a href="javascript:;" class="offline"><span class="chat-user-avatar"><img src="images/users/chat/6.jpg"></span> <span class="chat-user-name">Hollywood Studios</span><span class="chat-user-msg">Yes he definitely is!</span></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-default" id="chat-panel">
-                                <div class="panel-heading bg-darkblue-2">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                                            <i class="icon-heart-3"></i> Friends
-                                            <span class="label bg-darkblue-1 pull-right">3</span>
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseTwo" class="panel-collapse collapse in">
-                                    <div class="panel-body">
-                                        <ul class="list-unstyled" id="chat-list">
-                                            <li><a href="javascript:;" class="online"><span class="chat-user-avatar"><img src="images/users/chat/1.jpg"></span> <span class="chat-user-name">Dorothy Simons</span><span class="chat-user-msg">I wish I was a bird in the sky</span></a></li>
-                                            <li><a href="javascript:;" class="online"><span class="chat-user-avatar"><img src="images/users/chat/2.jpg"></span> <span class="chat-user-name">John Malkovich</span><span class="chat-user-msg">You were the traitor</span></a></li>
-                                            <li><a href="javascript:;" class="online"><span class="chat-user-avatar"><img src="images/users/chat/3.jpg"></span> <span class="chat-user-name">Jessica Simons</span><span class="chat-user-msg" title="Eminem - The Monster ft. Rihanna"><i class="icon-play"></i> Eminem - The Monster ft. Rihanna</span></a></li>
-                                            <li><a href="javascript:;" class="away"><span class="chat-user-avatar"><img src="images/users/chat/4.jpg"></span> <span class="chat-user-name">Jack Stallman</span><span class="chat-user-msg">Away since 13:32</span></a></li>
-                                            <li><a href="javascript:;" class="offline"><span class="chat-user-avatar"><img src="images/users/chat/5.jpg"></span> <span class="chat-user-name">Neil Armstrong</span><span class="chat-user-msg" title="I am flying to the moon and back">I am flying to the moon and back</span></a></li>
-                                            <li><a href="javascript:;" class="offline"><span class="chat-user-avatar"><img src="images/users/chat/6.jpg"></span> <span class="chat-user-name">Hollywood Studios</span><span class="chat-user-msg">Yes he definitely is!</span></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tab-pane" id="settings">
-                    <div class="tab-inner slimscroller">
-                        <div class="col-sm-12">
-                            <h3>Preferences</h3>
-                            <div class="row">
-                                <div class="col-xs-8">
-                                    Live data updates
-                                </div>
-                                <div class="col-xs-4">
-                                    <input type="checkbox" class="ios-switch ios-switch-success ios-switch-sm" checked />
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-8">
-                                    Live feeds
-                                </div>
-                                <div class="col-xs-4">
-                                    <input type="checkbox" class="ios-switch ios-switch-success ios-switch-sm" checked />
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-8">
-                                    Sync data to cloud
-                                </div>
-                                <div class="col-xs-4">
-                                    <input type="checkbox" class="ios-switch ios-switch-success ios-switch-sm" checked />
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-8">
-                                    Keep activity record
-                                </div>
-                                <div class="col-xs-4">
-                                    <input type="checkbox" class="ios-switch ios-switch-danger ios-switch-sm" checked />
-                                </div>
-                            </div>
-                            <h4>Other Settings</h4>
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <label class="checkboxw"><input type="checkbox" checked> Autosave settings</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <label class="checkboxw"><input type="checkbox"> Always online</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- Right Sidebar End -->		
         <!-- Start right content -->
         <div class="content-page">
@@ -307,7 +77,7 @@ use mvc\session\sessionClass as session ?>
                     </div>
 
                     <div class="col-lg-3 col-md-6">
-                        <div class="widget darkblue-2 animated fadeInDown">
+<!--                        <div class="widget darkblue-2 animated fadeInDown">
                             <div class="widget-content padding">
                                 <div class="widget-icon">
                                     <i class="icon-bag"></i>
@@ -327,11 +97,11 @@ use mvc\session\sessionClass as session ?>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
-                        </div>
+                        </div>-->
                     </div>
 
                     <div class="col-lg-3 col-md-6">
-                        <div class="widget pink-1 animated fadeInDown">
+<!--                        <div class="widget pink-1 animated fadeInDown">
                             <div class="widget-content padding">
                                 <div class="widget-icon">
                                     <i class="fa fa-dollar"></i>
@@ -350,7 +120,7 @@ use mvc\session\sessionClass as session ?>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
-                        </div>
+                        </div>-->
                     </div>
 
                     <div class="col-lg-3 col-md-6">
@@ -361,7 +131,7 @@ use mvc\session\sessionClass as session ?>
                                 </div>
                                 <div class="text-box">
                                     <p class="maindata"> <?php echo i18n::__('total') ?> <b><?php echo i18n::__('USERS') ?></b></p>
-                                    <h2><span class="animate-number" data-value="18648" data-duration="3000">0</span></h2>
+                                    <h2><span class="animate-number" data-value="<?php echo $usuarios ?>" data-duration="3000">0</span></h2>
                                     <div class="clearfix"></div>
                                 </div>
                             </div>
@@ -513,24 +283,6 @@ use mvc\session\sessionClass as session ?>
                     <div class="col-lg-8 portlets">
                         <div class="widget">
                             <div class="widget-header">
-                                <h2><i class="icon-chart-pie-1"></i> <strong><?php echo i18n::__('Reporte') ?></strong><?php echo i18n::__('DeVentas') ?> </h2>
-                                <div class="additional-btn">
-                                    <a href="#" class="hidden reload"><i class="icon-ccw-1"></i></a>
-                                    <a class="hidden" id="dropdownMenu1" data-toggle="dropdown">
-                                        <i class="fa fa-cogs"></i>
-                                    </a>
-                                    <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1">
-                                        <li><a href="#"><?php echo i18n::__('Action') ?></a></li>
-                                        <li><a href="#"><?php echo i18n::__('Another') ?></a></li>
-                                        <li><a href="#"><?php echo i18n::__('Something') ?></a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#"><?php echo i18n::__('Separated') ?></a></li>
-                                    </ul>
-                                    <a href="#" class="widget-popout hidden tt" title="Pop Out/In"><i class="icon-publish"></i></a>
-                                    <a href="#" class="widget-maximize hidden"><i class="icon-resize-full-1"></i></a>
-                                    <a href="#" class="widget-toggle"><i class="icon-down-open-2"></i></a>
-                                    <a href="#" class="widget-close"><i class="icon-cancel-3"></i></a>
-                                </div>
                             </div>
                             <div class="widget-content">
                                 <div class="row stacked">
@@ -563,120 +315,12 @@ use mvc\session\sessionClass as session ?>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
-                                <div id="sales-report" class="collapse in hidden-xs">
-                                    <div class="table-responsive">
-                                        <table data-sortable class="table table-striped">
-                                            <thead>
-                                                <tr><th width="70"><?php echo i18n::__('No') ?></th><th data-sortable="false" width="40"><input type="checkbox" id="select-all-rows"></th><th width="120"><?php echo i18n::__('OrderID') ?></th><th><?php echo i18n::__('Buyer') ?></th><th width="100"><?php echo i18n::__('Status') ?></th><th width="150"><?php echo i18n::__('Location') ?></th><th width="120"><?php echo i18n::__('total') ?></th></tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr><td>1</td><td><input type="checkbox" class="rows-check"></td><td><?php echo i18n::__('p#0021') ?></td><td><a href="#"><?php echo i18n::__('JohnDoe') ?></a></td><td><span class="label label-primary"><?php echo i18n::__('Order') ?></span></td><td><?php echo i18n::__('Yogyakarta') ?></td><td><strong class="text-primary">&#36;<?php echo i18n::__('1,245') ?> </strong></td></tr>
-                                                <tr><td>2</td><td><input type="checkbox" class="rows-check"></td><td><?php echo i18n::__('p#0022') ?></td><td><a href="#"><?php echo i18n::__('JohnnyDepp') ?></a></td><td><span class="label label-success"><?php echo i18n::__('Payment') ?></span></td><td><?php echo i18n::__('London') ?></td><td><strong class="text-success">&#36; <?php echo i18n::__('1,245') ?></strong></td></tr>
-                                                <tr><td>3</td><td><input type="checkbox" class="rows-check"></td><td><?php echo i18n::__('p#0023') ?></td><td><a href="#"><?php echo i18n::__('Scarlett') ?></a></td><td><span class="label label-success"><?php echo i18n::__('Payment') ?></span></td><td><?php echo i18n::__('Canbera') ?></td><td><strong class="text-success">&#36; <?php echo i18n::__('1,245') ?></strong></td></tr>
-                                                <tr><td>4</td><td><input type="checkbox" class="rows-check"></td><td><?php echo i18n::__('p#0024') ?></td><td><a href="#"><?php echo i18n::__('Hanna') ?></a></td><td><span class="label label-danger"><?php echo i18n::__('Cancelar') ?></span></td><td><?php echo i18n::__('Bali') ?></td><td><strong class="text-danger">&#36; <?php echo i18n::__('1,245') ?></strong></td></tr>
-                                                <tr><td>5</td><td><input type="checkbox" class="rows-check"></td><td><?php echo i18n::__('p#0025') ?></td><td><a href="#"><?php echo i18n::__('Ali') ?></a></td><td><span class="label label-primary"><?php echo i18n::__('Order') ?></span></td><td><?php echo i18n::__('Bandung') ?></td><td><strong class="text-primary">&#36;<?php echo i18n::__('1,245') ?> </strong></td></tr>
-                                                <tr><td>6</td><td><input type="checkbox" class="rows-check"></td><td><?php echo i18n::__('p#0026') ?></td><td><a href="#"><?php echo i18n::__('Willy') ?></a></td><td><span class="label label-danger"><?php echo i18n::__('Cancelar') ?></span></td><td><?php echo i18n::__('Semarang') ?></td><td><strong class="text-danger">&#36; <?php echo i18n::__('1,245') ?></strong></td></tr>
-                                                <tr><td>7</td><td><input type="checkbox" class="rows-check"></td><td><?php echo i18n::__('p#0027') ?></td><td><a href="#"><?php echo i18n::__('Chris') ?></a></td><td><span class="label label-warning"><?php echo i18n::__('Waiting') ?></span></td><td><?php echo i18n::__('NewYork') ?></td><td><strong class="text-warning">&#36; <?php echo i18n::__('1,245') ?></strong></td></tr>
-                                                <tr><td>8</td><td><input type="checkbox" class="rows-check"></td><td><?php echo i18n::__('p#0028') ?></td><td><a href="#"><?php echo i18n::__('Jenny') ?></a></td><td><span class="label label-primary"><?php echo i18n::__('Order') ?></span></td><td><?php echo i18n::__('Boston') ?></td><td><strong class="text-primary">&#36;<?php echo i18n::__('1,245') ?> </strong></td></tr>
-                                                <tr><td>9</td><td><input type="checkbox" class="rows-check"></td><td><?php echo i18n::__('p#0029') ?></td><td><a href="#"><?php echo i18n::__('Ban') ?></a></td><td><span class="label label-danger"><?php echo i18n::__('Cancelar') ?></span></td><td><?php echo i18n::__('Boston') ?></td><td><strong class="text-danger">&#36;<?php echo i18n::__('1,245') ?> </strong></td></tr>
-
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 portlets">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div id="todo-app" class="widget">
-                                    <div class="widget-header centered">
-                                        <div class="left-btn"><a class="btn btn-sm btn-default add-todo"><i class="fa fa-plus"></i></a></div>
-                                        <h2><?php echo i18n::__('Todo') ?></h2>
-                                        <div class="additional-btn">
-                                            <a href="#" class="hidden reload"><i class="icon-ccw-1"></i></a>
-                                            <a href="#" class="widget-popout hidden tt" title="Pop Out/In"><i class="icon-publish"></i></a>
-                                            <a href="#" class="widget-maximize hidden"><i class="icon-resize-full-1"></i></a>
-                                            <a href="#" class="widget-toggle"><i class="icon-down-open-2"></i></a>
-                                            <a href="#" class="widget-close"><i class="icon-cancel-3"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="widget-content padding-sm">
-                                        <ul class="todo-list">
-                                            <li>
-                                                <span class="check-icon"><input type="checkbox" /></span>
-                                                <span class="todo-item"><?php echo i18n::__('Generate') ?></span>
-                                                <span class="todo-options pull-right">
-                                                    <a href="javascript:;" class="todo-delete"><i class="icon-cancel-3"></i></a>
-                                                </span>
-                                                <span class="todo-tags pull-right">
-                                                    <div class="label label-success"><?php echo i18n::__('New') ?></div>
-                                                </span>
-                                            </li>
-                                            <li class="high">
-                                                <span class="check-icon"><input type="checkbox" /></span>
-                                                <span class="todo-item"><?php echo i18n::__('total') ?>Mail those reports to John</span>
-                                                <span class="todo-options pull-right">
-                                                    <a href="javascript:;" class="todo-delete"><i class="icon-cancel-3"></i></a>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="check-icon"><input type="checkbox" /></span>
-                                                <span class="todo-item"><?php echo i18n::__('total') ?>Don't forget to send those reports to John</span>
-                                                <span class="todo-options pull-right">
-                                                    <a href="javascript:;" class="todo-delete"><i class="icon-cancel-3"></i></a>
-                                                </span>
-                                            </li>
-                                            <li class="medium">
-                                                <span class="check-icon"><input type="checkbox" /></span>
-                                                <span class="todo-item"><?php echo i18n::__('total') ?>If you forgot, go back to office to pick them up</span>
-                                                <span class="todo-options pull-right">
-                                                    <a href="javascript:;" class="todo-delete"><i class="icon-cancel-3"></i></a>
-                                                </span>
-                                                <span class="todo-tags pull-right">
-                                                    <div class="label label-info"><?php echo i18n::__('total') ?>Today</div>
-                                                </span>
-                                            </li>
-                                            <li class="low">
-                                                <span class="check-icon"><input type="checkbox" /></span>
-                                                <span class="todo-item"><?php echo i18n::__('total') ?>Deliver reports by hand to John</span>
-                                                <span class="todo-options pull-right">
-                                                    <a href="javascript:;" class="todo-delete"><i class="icon-cancel-3"></i></a>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="check-icon"><input type="checkbox" /></span>
-                                                <span class="todo-item"><?php echo i18n::__('total') ?>Say John that you are sorry</span>
-                                                <span class="todo-options pull-right">
-                                                    <a href="javascript:;" class="todo-delete"><i class="icon-cancel-3"></i></a>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="check-icon"><input type="checkbox" /></span>
-                                                <span class="todo-item"><?php echo i18n::__('total') ?>Beg for your job...</span>
-                                                <span class="todo-options pull-right">
-                                                    <a href="javascript:;" class="todo-delete"><i class="icon-cancel-3"></i></a>
-                                                </span>
-                                                <span class="todo-tags pull-right">
-                                                    <div class="label label-danger">Important</div>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="check-icon"><input type="checkbox" /></span>
-                                                <span class="todo-item"><?php echo i18n::__('total') ?>Look for a new job</span>
-                                                <span class="todo-options pull-right">
-                                                    <a href="javascript:;" class="todo-delete"><i class="icon-cancel-3"></i></a>
-                                                </span>
-                                                <span class="todo-tags pull-right">
-                                                    <div class="label label-warning"><i class="icon-search"></i></div>
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="row">
                             <div class="col-sm-12">
                                 <div id="notes-app" class="widget">
@@ -704,7 +348,7 @@ use mvc\session\sessionClass as session ?>
                                                 <textarea class="form-control" id="note-text" placeholder="Escribe Tu Nota..."></textarea>
                                             </form>
                                         </div>
-                                        <div class="status-indicator"><?php echo i18n::__('total') ?>Guardado</div>
+                                        <div class="status-indicator"><?php echo i18n::__('Guardado') ?></div>
                                     </div>
                                 </div>
                             </div>
@@ -712,64 +356,21 @@ use mvc\session\sessionClass as session ?>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 portlets">
-                        <div id="weather-widget" class="widget">
-                            <div class="widget-header transparent">
-                                <h2><strong><?php echo i18n::__('total') ?>Weather</strong> <?php echo i18n::__('total') ?>Widget</h2>
-                                <div class="additional-btn">
-                                    <a href="#" class="hidden reload"><i class="icon-ccw-1"></i></a>
-                                    <a class="hidden" id="dropdownMenu1" data-toggle="dropdown">
-                                        <i class="fa fa-cogs"></i>
-                                    </a>
-                                    <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1">
-                                        <li><a href="#"><?php echo i18n::__('total') ?>Action</a></li>
-                                        <li><a href="#"><?php echo i18n::__('total') ?>Another action</a></li>
-                                        <li><a href="#"><?php echo i18n::__('total') ?>Something else here</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#"><?php echo i18n::__('total') ?>Separated link</a></li>
-                                    </ul>
-                                    <a href="#" class="widget-popout hidden tt" title="Pop Out/In"><i class="icon-publish"></i></a>
-                                    <a href="#" class="widget-maximize hidden"><i class="icon-resize-full-1"></i></a>
-                                    <a href="#" class="widget-toggle"><i class="icon-down-open-2"></i></a>
-                                    <a href="#" class="widget-close"><i class="icon-cancel-3"></i></a>
-                                </div>
-                            </div>
-                            <div id="weather" class="widget-content">
 
-                            </div><i class="wi-day-rain-mix"></i>
-                            <button class="js-geolocation btn btn-sm btn-default" style="display: none;"><?php echo i18n::__('total') ?>Use Your Location</button>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portlets">
-                        <div id="calendar-widget2" class="widget blue-1">
-                            <div class="widget-header transparent">
-                                <h2><strong><?php echo i18n::__('total') ?>Calendario</strong> <?php echo i18n::__('total') ?>Widget</h2>
-                                <div class="additional-btn">
-                                    <a href="#" class="hidden reload"><i class="icon-ccw-1"></i></a>
-                                    <a href="#" class="widget-popout hidden tt" title="Pop Out/In"><i class="icon-publish"></i></a>
-                                    <a href="#" class="widget-toggle"><i class="icon-down-open-2"></i></a>
-                                    <a href="#" class="widget-close"><i class="icon-cancel-3"></i></a>
-                                </div>
-                            </div>
-                            <div id="calendar-box2" class="widget-content col-sm-12">
-
-                            </div>
-                        </div>
-                    </div>
+                   
                     <div class="col-lg-4 col-md-6 portlets">
                         <div id="calc" class="widget darkblue-2">
                             <div class="widget-header">
                                 <div class="additional-btn left-toolbar">
                                     <div class="btn-group">
                                         <a class="additional-icon" id="dropdownMenu2" data-toggle="dropdown">
-                                            <?php echo i18n::__('total') ?> Calculadora <i class="fa fa-angle-down"></i>
+                                            <?php echo i18n::__('Calculadora') ?> Calculadora <i class="fa fa-angle-down"></i>
                                         </a>
                                         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
-                                            <li><a href="#"><?php echo i18n::__('total') ?>Save</a></li>
-                                            <li><a href="#"><?php echo i18n::__('total') ?>Export</a></li>
+                                            <li><a href="#"><?php echo i18n::__('Guardado') ?></a></li>
+                                            <li><a href="#"><?php echo i18n::__('Export') ?></a></li>
                                             <li class="divider"></li>
-                                            <li><a href="#"><?php echo i18n::__('total') ?>Quit</a></li>
+                                            <li><a href="#"><?php echo i18n::__('total') ?></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -783,16 +384,16 @@ use mvc\session\sessionClass as session ?>
                             <div id="calculator" class="widget-content">
                                 <div class="calc-top col-xs-12">
                                     <div class="row">
-                                        <div class="col-xs-3"><span class="calc-clean"><?php echo i18n::__('total') ?>C</span></div>
+                                        <div class="col-xs-3"><span class="calc-clean"><?php echo i18n::__('C') ?></span></div>
                                         <div class="col-xs-9"><div class="calc-screen"></div></div>
                                     </div>
                                 </div>
 
                                 <div class="calc-keys col-xs-12">
                                     <div class="row">
-                                        <div class="col-xs-3"><span><?php echo i18n::__('total') ?>7</span></div>
-                                        <div class="col-xs-3"><span><?php echo i18n::__('total') ?>8</span></div>
-                                        <div class="col-xs-3"><span><?php echo i18n::__('total') ?>9</span></div>
+                                        <div class="col-xs-3"><span><?php echo i18n::__('7') ?></span></div>
+                                        <div class="col-xs-3"><span><?php echo i18n::__('8') ?>8</span></div>
+                                        <div class="col-xs-3"><span><?php echo i18n::__('9') ?>9</span></div>
                                         <div class="col-xs-3"><span class="calc-operator">+</span></div>
                                     </div>
                                     <div class="row">
@@ -899,19 +500,18 @@ use mvc\session\sessionClass as session ?>
                             </div>
                         </div>
                     </div>
+                    
                 </div>
 
                 <!-- Footer Start -->
-                 <?php view::includePartial('partials/footer') ?>
+                 <?php view::includePartial('partials/footerBar') ?>
                 <!-- Footer End -->			
             </div>
             <!-- ============================================================== -->
             <!-- End content here -->
             <!-- ============================================================== -->
-
         </div>
         <!-- End right content -->
-
     </div>
     <div id="contextMenu" class="dropdown clearfix">
         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display:block;position:static;margin-bottom:5px;">

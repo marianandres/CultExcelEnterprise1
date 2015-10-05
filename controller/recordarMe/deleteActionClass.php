@@ -15,27 +15,25 @@ use mvc\i18n\i18nClass as i18n;
  */
 class deleteActionClass extends controllerClass implements controllerActionInterface {
 
-  public function execute() {
-    try {
-      if (request::getInstance()->isMethod('POST')) {
+    public function execute() {
+        try {
+            if (request::getInstance()->isMethod('POST')) {
 
-        $id = request::getInstance()->getPost(recordarMeTableClass::getNameField(recordarMeTableClass::ID, true));
+                $id = request::getInstance()->getPost(recordarMeTableClass::getNameField(recordarMeTableClass::ID, true));
 
-        $ids = array(
-            recordarMeTableClass::ID => $id
-        );
-        recordarMeTableClass::delete($ids, false);
-        routing::getInstance()->redirect('recordarMe', 'index');
-      } else {
-        routing::getInstance()->redirect('recordarMe', 'index');
-      }
-    } catch (PDOException $exc) {
-      echo $exc->getMessage();
-      echo '<br>';
-      echo '<pre>';
-      print_r($exc->getTrace());
-      echo '</pre>';
+                $ids = array(
+                    recordarMeTableClass::ID => $id
+                );
+                recordarMeTableClass::delete($ids, false);
+                session::getInstance()->setSuccess(i18n::__(20003, null, 'default'));
+                routing::getInstance()->redirect('recordarMe', 'index');
+            } else {
+                routing::getInstance()->redirect('recordarMe', 'index');
+            }
+        } catch (PDOException $exc) {
+            session::getInstance()->setFlash('exc', $exc);
+            routing::getInstance()->forward('shfSecurity', 'exception');
+        }
     }
-  }
 
 }

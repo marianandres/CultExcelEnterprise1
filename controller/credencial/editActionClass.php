@@ -15,46 +15,26 @@ use mvc\i18n\i18nClass as i18n;
  */
 class editActionClass extends controllerClass implements controllerActionInterface {
 
-  public function execute() {
-    try {
-      if (request::getInstance()->hasRequest(credencialTableClass::ID)) {
-        $fields = array(
-            credencialTableClass::ID,
-            credencialTableClass::NOMBRE
-        );
-        $where = array(
-            credencialTableClass::ID => request::getInstance()->getRequest(credencialTableClass::ID)
-        );
-        $this->objUsuario = credencialTableClass::getAll($fields, true, null, null, null, null, $where);
-        $this->defineView('edit', 'credencial', session::getInstance()->getFormatOutput());
-      } else {
-        routing::getInstance()->redirect('credencial', 'index');
-      }
-//      if (request::getInstance()->isMethod('POST')) {
-//
-//        $usuario = request::getInstance()->getPost(usuarioTableClass::getNameField(usuarioTableClass::USUARIO, true));
-//        $password = request::getInstance()->getPost(usuarioTableClass::getNameField(usuarioTableClass::PASSWORD, true));
-//
-//        if (strlen($usuario) > usuarioTableClass::USUARIO_LENGTH) {
-//          throw new PDOException(i18n::__(00001, null, 'errors', array(':longitud' => usuarioTableClass::USUARIO_LENGTH)), 00001);
-//        }
-//
-//        $data = array(
-//            usuarioTableClass::USUARIO => $usuario,
-//            usuarioTableClass::PASSWORD => md5($password)
-//        );
-//        usuarioTableClass::insert($data);
-//        routing::getInstance()->redirect('default', 'index');
-//      } else {
-//        routing::getInstance()->redirect('default', 'index');
-//      }
-    } catch (PDOException $exc) {
-      echo $exc->getMessage();
-      echo '<br>';
-      echo '<pre>';
-      print_r($exc->getTrace());
-      echo '</pre>';
+    public function execute() {
+        try {
+            if (request::getInstance()->hasRequest(credencialTableClass::ID)) {
+                $fields = array(
+                    credencialTableClass::ID,
+                    credencialTableClass::NOMBRE
+                );
+                $where = array(
+                    credencialTableClass::ID => request::getInstance()->getRequest(credencialTableClass::ID)
+                );
+                session::getInstance()->setFlash('credencial', 'credencial');
+                $this->objCredencial = credencialTableClass::getAll($fields, true, null, null, null, null, $where);
+                $this->defineView('edit', 'credencial', session::getInstance()->getFormatOutput());
+            } else {
+                routing::getInstance()->redirect('credencial', 'index');
+            }
+        } catch (PDOException $exc) {
+            session::getInstance()->setFlash('exc', $exc);
+            routing::getInstance()->forward('shfSecurity', 'exception');
+        }
     }
-  }
 
 }

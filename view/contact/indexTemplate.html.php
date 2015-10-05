@@ -56,7 +56,7 @@ use mvc\session\sessionClass as session ?>
     </section>
     <!-- End Home Page Slider -->
     <!-- Start Map -->
-    <div id="map" data-position-latitude="23.858092" data-position-longitude="90.262181"></div>
+    <div id="map" data-position-latitude="3.422245" data-position-longitude="-76.545569"></div>
     <script>
       (function ($) {
           $.fn.CustomMap = function (options) {
@@ -174,15 +174,14 @@ use mvc\session\sessionClass as session ?>
                     <h4 class="classic-title"><span><?php echo i18n::__('Information') ?></span></h4>
 
                     <!-- Some Info -->
-                    <p><?php echo i18n::__('') ?>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.</p>
-
+              
                     <!-- Divider -->
                     <div class="hr1" style="margin-bottom:10px;"></div>
 
                     <!-- Info - Icons List -->
                     <ul class="icons-list">
                         <li><i class="fa fa-globe">  </i> <strong><?php echo i18n::__('Address') ?></strong><?php echo i18n::__('street') ?> </li>
-                        <li><i class="fa fa-envelope-o"></i> <strong><?php echo i18n::__('Email') ?></strong><?php echo i18n::__('@in') ?> </li>
+                        <li><i class="fa fa-envelope-o"></i> <strong><?php echo i18n::__('Email') ?></strong><?php echo i18n::__('@info') ?> </li>
                         <li><i class="fa fa-mobile"></i> <strong><?php echo i18n::__('Phone') ?></strong><?php echo i18n::__('+') ?></li>
                     </ul>
                     <!-- Divider -->
@@ -235,3 +234,4 @@ use mvc\session\sessionClass as session ?>
     </div>
 </div>
 <!-- end Modal logout -->
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>

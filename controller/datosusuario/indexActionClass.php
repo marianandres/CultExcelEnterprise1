@@ -15,30 +15,26 @@ use mvc\i18n\i18nClass as i18n;
  */
 class indexActionClass extends controllerClass implements controllerActionInterface {
 
-  public function execute() {
-    try {
-      $fields = array(
-          datoUsuarioTableClass::ID,
-          datoUsuarioTableClass::NOMBRE,
-          datoUsuarioTableClass::APELLIDO,
-          datoUsuarioTableClass::CORREO,
-          datoUsuarioTableClass::GENERO,
-          datoUsuarioTableClass::FECHA_NACIMIENTO,
-          datoUsuarioTableClass::LOCALIDAD_ID,
-          datoUsuarioTableClass::TIPO_DOCUMENTO_ID,
-          datoUsuarioTableClass::USUARIO_ID,
-          datoUsuarioTableClass::ORGANIZACION_ID
-      );
-      $this->objDatoUsuario = datoUsuarioTableClass::getAll($fields, true);
-      $this->defineView('index', 'datosusuario', session::getInstance()->getFormatOutput());
-    } catch (PDOException $exc) {
-      echo $exc->getMessage();
-      echo '<br>';
-      echo $exc->getTraceAsString();
+    public function execute() {
+        try {
+            $fields = array(
+                datoUsuarioTableClass::ID,
+                datoUsuarioTableClass::NOMBRE,
+                datoUsuarioTableClass::APELLIDO,
+                datoUsuarioTableClass::CORREO,
+                datoUsuarioTableClass::GENERO,
+                datoUsuarioTableClass::FECHA_NACIMIENTO,
+                datoUsuarioTableClass::LOCALIDAD_ID,
+                datoUsuarioTableClass::TIPO_DOCUMENTO_ID,
+                datoUsuarioTableClass::USUARIO_ID,
+                datoUsuarioTableClass::ORGANIZACION_ID
+            );
+            $this->objDatoUsuario = datoUsuarioTableClass::getAll($fields, true);
+            $this->defineView('index', 'datosusuario', session::getInstance()->getFormatOutput());
+        } catch (PDOException $exc) {
+            session::getInstance()->setFlash('exc', $exc);
+            routing::getInstance()->forward('shfSecurity', 'exception');
+        }
     }
-
-
-    //$this->defineView('ejemplo', 'default', session::getInstance()->getFormatOutput());
-  }
 
 }

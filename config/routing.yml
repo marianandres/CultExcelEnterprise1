@@ -11,8 +11,63 @@ contact:
   load:
     - model/base/usuarioBaseTableClass.php
     - model/usuarioTableClass.php
+    
+vision_index:
+  url: /vision
+  param:  { module: vision, action: index, format: html }
+  load:
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php 
+    
+mision_index:
+  url: /mision
+  param:  { module: mision, action: index, format: html }
+  load:
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php
+    
+help_index:
+  url: /Ayuda
+  param:  { module: help, action: index, format: html }
+  load:
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php
+    
+userPQRS_index:
+  url: /MisPQRS
+  param:  { module: userPQRS, action: index, format: html }
+  load:
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php
+    - model/base/pqrsBaseTableClass.php
+    - model/pqrsTableClass.php
+    
+report_index:
+  url:    /report
+  param:  { module: report, action: index, format: html }
+  load:
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
 
-##-------------------------- TRaductor--------------------------##    
+report_reporte:
+  url:    /ReporteDeEventos
+  param:  { module: report, action: report, format: pdf }
+  load:
+    - libs/fpdf/fpdf.php
+    
+userData_index:
+  url:    /DatosDeUsuario
+  param:  { module: userData, action: index, format: html }
+  load:
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php    
+##-------------------------- Traductor--------------------------##    
 traduccion:
   url:    /traduccion
   param:  { module: usuario, action: traductor, format: html }
@@ -86,6 +141,15 @@ admin_index:
     - model/base/usuarioBaseTableClass.php
     - model/usuarioTableClass.php
 ##-------------------------- end admin panel --------------------------##
+profile_index:
+  url:    /profile/index
+  param:  { module: profile, action: index, format: html }
+  load:
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
 ##-------------------------- USUARIO --------------------------##
 usuario_index:
   url:    /usuarios/index
@@ -93,6 +157,9 @@ usuario_index:
   load:
     - model/base/usuarioBaseTableClass.php
     - model/usuarioTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
 
 usuario_insert:
   url:    /usuarios/insertar
@@ -100,7 +167,7 @@ usuario_insert:
   load:
     - model/base/usuarioBaseTableClass.php
     - model/usuarioTableClass.php
-
+    
 usuario_create:
   url:    /usuarios/crear
   param:  { module: usuario, action: create, format: html }
@@ -117,20 +184,29 @@ usuario_edit:
   load:
     - model/base/usuarioBaseTableClass.php
     - model/usuarioTableClass.php
-
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    
 usuario_update:
   url:    /usuario/actualizar
   param:  { module: usuario, action: update, format: html }
   load:
     - model/base/usuarioBaseTableClass.php
     - model/usuarioTableClass.php
-
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    
 usuario_delete:
   url:    /usuario/eliminar
   param:  { module: usuario, action: delete, format: html }
   load:
     - model/base/usuarioBaseTableClass.php
     - model/usuarioTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
 
 usuario_deleteSelect:
   url:    /usuario/eliminarSeleccion
@@ -138,6 +214,9 @@ usuario_deleteSelect:
   load:
     - model/base/usuarioBaseTableClass.php
     - model/usuarioTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
     
 usuario_deleteFilters:
   url:    /Borrar_Filtros
@@ -225,6 +304,9 @@ credencial_insert:
   load:
     - model/base/credencialBaseTableClass.php
     - model/credencialTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
 
 credencial_create:
   url:    /credencial/crear
@@ -232,6 +314,9 @@ credencial_create:
   load:
     - model/base/credencialBaseTableClass.php
     - model/credencialTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
 
 credencial_edit:
   url:    /credencial/editar
@@ -1404,5 +1489,24 @@ usuarioGustaCategoria_reporte:
 eventosBlog_index:
   url:    /eventosBlog
   param:  { module: eventosBlog, action: index, format: html }
+  load:
+    - model/base/eventoBaseTableClass.php
+    - model/eventoTableClass.php   
+  
+userEvents_index:
+  url:    /MisEventos
+  param:  { module: userEvents, action: index, format: html }
+  load:
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php
+    - model/base/eventoBaseTableClass.php
+    - model/eventoTableClass.php
+    
+userProfile_index:
+  url:    /MiPerfil
+  param:  { module: userProfile, action: index, format: html }
+  load:
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php    
 
  ##-------------------------usuarioGustaCategoria--------------------------##

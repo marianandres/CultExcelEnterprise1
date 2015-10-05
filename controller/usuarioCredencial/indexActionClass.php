@@ -11,40 +11,35 @@ use mvc\i18n\i18nClass as i18n;
 /**
  * Description of ejemploClass
  *
- * @author Julian Lasso <ingeniero.julianlasso@gmail.com>
+ * @author Mariana lopez , Andres Felipe Alvarez 
  */
 class indexActionClass extends controllerClass implements controllerActionInterface {
 
-  public function execute() {
-    try {
+    public function execute() {
+        try {
 
-      $fields = array(
-          usuarioCredencialTableClass::ID,
-          usuarioCredencialTableClass::USUARIO_ID,
-          usuarioCredencialTableClass::CREDENCIAL_ID,
-          usuarioCredencialTableClass::CREATED_AT
-      );
-      $orderBy = array(
-          usuarioCredencialTableClass::ID
-      );
-      if (request::getInstance()->hasGet(usuarioCredencialTableClass::getNameField(usuarioCredencialTableClass::USUARIO_ID, true))) {
-        $usuarioId = request::getInstance()->getGet(usuarioCredencialTableClass::getNameField(usuarioCredencialTableClass::USUARIO_ID, true));
-        $where = array(
-            usuarioCredencialTableClass::USUARIO_ID => $usuarioId
-        );
-      }
+            $fields = array(
+                usuarioCredencialTableClass::ID,
+                usuarioCredencialTableClass::USUARIO_ID,
+                usuarioCredencialTableClass::CREDENCIAL_ID,
+                usuarioCredencialTableClass::CREATED_AT
+            );
+            $orderBy = array(
+                usuarioCredencialTableClass::ID
+            );
+            if (request::getInstance()->hasGet(usuarioCredencialTableClass::getNameField(usuarioCredencialTableClass::USUARIO_ID, true))) {
+                $usuarioId = request::getInstance()->getGet(usuarioCredencialTableClass::getNameField(usuarioCredencialTableClass::USUARIO_ID, true));
+                $where = array(
+                    usuarioCredencialTableClass::USUARIO_ID => $usuarioId
+                );
+            }
 
-
-
-      $this->objUsuarioCredencial = usuarioCredencialTableClass::getAll($fields, false, $orderBy, 'ASC', null, null, $where);
-      $this->defineView('index', 'usuarioCredencial', session::getInstance()->getFormatOutput());
-    } catch (PDOException $exc) {
-      echo $exc->getMessage();
-      echo '<br>';
-      echo '<pre>';
-      print_r($exc->getTrace());
-      echo '</pre>';
+            $this->objUsuarioCredencial = usuarioCredencialTableClass::getAll($fields, false, $orderBy, 'ASC', null, null, $where);
+            $this->defineView('index', 'usuarioCredencial', session::getInstance()->getFormatOutput());
+        } catch (PDOException $exc) {
+            session::getInstance()->setFlash('exc', $exc);
+            routing::getInstance()->forward('shfSecurity', 'exception');
+        }
     }
-  }
 
 }

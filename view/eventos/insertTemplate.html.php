@@ -8,7 +8,6 @@ use mvc\view\viewClass as view ?>
 <!-- Full Body Container -->
 <div id="container" class="boxed-page">
 
-
     <?php mvc\view\viewClass::includePartial('partials/header.html') ?>
     <!--  </header> -->
     <!-- End Header Section -->
@@ -16,15 +15,12 @@ use mvc\view\viewClass as view ?>
     <!-- Start Services Section -->
     <div class="section service">
         <div class="container">
-            <form id="eventForm" method="POST" action="<?php echo routing::getInstance()->getUrlWeb('usuario', 'create') ?>" onSubmit="return validate();" >
+            <form id="eventForm" method="POST" action="<?php echo routing::getInstance()->getUrlWeb('eventos', 'create') ?>" onSubmit="return validate();" >
 
             <div class="" style="background-image:url(<?php echo routing::getInstance()->getUrlImg('patterns/12.png') ?>); padding: 15px; border-radius: 10px;">      
                 <div class="text-right">
                     <div class="col-md-offset-6">
-                        
-                            <a class="btn btn-danger btn-bordered" href="#"  style="color: whitesmoke; font-weight: bold;">Guardar</a>
-                            <a class="btn btn-info" href="#"  style="color: whitesmoke; font-weight: bold;">Previsualizacion</a>
-                            <a class="btn btn-success" href="#"  style="color: whitesmoke; font-weight: bold;">Publicar Evento</a>
+                        <button type="submit" class="btn btn-success" href="#"  style="color: whitesmoke; font-weight: bold;">Publicar Evento</button>
                     </div>
                 </div>
             </div>
@@ -48,7 +44,7 @@ use mvc\view\viewClass as view ?>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>        
-                            <a class="navbar-brand" href="<?php echo routing::getInstance()->getUrlWeb('homepage', 'index') ?>"><h1><strong>Crear Evento<?php echo i18n::__('') ?>  |</strong></h1></a>          
+                            <a class="navbar-brand"><h1><strong><?php echo i18n::__('Crear') ?>  |</strong></h1></a>          
                         </div>
 
                         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -59,19 +55,17 @@ use mvc\view\viewClass as view ?>
                                           </ul>-->
                             <ul class="nav navbar-nav navbar-right">
                                 <li><a class="active" href="#">Editar</a></li>
-                                <li><a href="#">Diseño</a></li>
                             </ul>
                         </div><!-- /.navbar-collapse -->
                     </div><!-- /.container-fluid -->
                 </nav>
                 <?php view::includeHandlerMessage() ?>
-                <?php view::includePartial('eventos/formUser', array('mensaje' => $mensaje)) ?>
+                <?php view::includePartial('eventos/formUser') ?>
                 <div  style="background-image:url(<?php echo routing::getInstance()->getUrlImg('parallax/back.png') ?>); padding: 10px; border-radius: 10px;">
                     <div class="text-center"></br>
                         <h1 style="color: whitesmoke;">Buena Esa! Ya Casi Has Terminado!.</h1></br>
-                        <button class="btn btn-danger btn-bordered" href="#"  style="color: whitesmoke; font-weight: bold;">Guardar</button>
-                        <a class="btn btn-info" href="#"  style="color: whitesmoke; font-weight: bold;">Previsualizacion</a>
-                        <a class="btn btn-success" href="#"  style="color: whitesmoke; font-weight: bold;">Publicar Evento</a>
+
+                        <button type="submit" class="btn btn-success" href="#"  style="color: whitesmoke; font-weight: bold;">Publicar Evento</button>
                     </div>
                 </div>
 

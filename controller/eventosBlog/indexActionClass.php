@@ -15,14 +15,32 @@ use mvc\i18n\i18nClass as i18n;
  */
 class indexActionClass extends controllerClass implements controllerActionInterface {
 
-  public function execute() {
-    try {
-      session::getInstance()->setFlash('eventosBlog', true);
-      $this->defineView('index', 'eventosBlog', session::getInstance()->getFormatOutput());
-    } catch (PDOException $exc) {
-      session::getInstance()->setFlash('exc', $exc);
-      routing::getInstance()->forward('shfSecurity', 'exception');
+    public function execute() {
+        try {
+            $fields = array(
+                eventoTableClass::ID,
+                eventoTableClass::IMAGEN,
+                eventoTableClass::NOMBRE,
+                eventoTableClass::DESCRIPCION,
+                eventoTableClass::DIRECCION,
+                eventoTableClass::FECHA_INICIAL_EVENTO,
+                eventoTableClass::FECHA_FINAL_EVENTO,
+                eventoTableClass::FECHA_INICIAL_PUBLICACION,
+                eventoTableClass::FECHA_FINAL_PUBLICACION,
+                eventoTableClass::COSTO,
+                eventoTableClass::CATEGORIA_ID,
+                eventoTableClass::CREATED_AT
+            );
+            $orderBy = array(
+                eventoTableClass::NOMBRE
+            );
+            session::getInstance()->setFlash('eventosBlog', true);
+            $this->objEventos = eventoTableClass::getAll($fields, true, $orderBy, 'ASC');
+            $this->defineView('index', 'eventosBlog', session::getInstance()->getFormatOutput());
+        } catch (PDOException $exc) {
+            session::getInstance()->setFlash('exc', $exc);
+            routing::getInstance()->forward('shfSecurity', 'exception');
+        }
     }
-  }
 
 }

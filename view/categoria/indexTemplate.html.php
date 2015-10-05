@@ -12,43 +12,9 @@ use \mvc\request\requestClass as request ?>
 <?php $id = categoriaTableClass::ID ?>
 <?php $nombre = categoriaTableClass::NOMBRE ?>
 <?php $created = categoriaTableClass::CREATED_AT ?>
+<?php view::includePartial('categoria/categoriaModalWindows')?>
 <div class="fixed-left">
     <!-- Modal Start -->
-    <!-- Modal Task Progress -->	
-    <div class="md-modal md-3d-flip-vertical" id="task-progress">
-        <div class="md-content">
-            <h3><strong>Task Progress</strong> Information</h3>
-            <div>
-                <p>CLEANING BUGS</p>
-                <div class="progress progress-xs for-modal">
-                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                        <span class="sr-only">80&#37; Complete</span>
-                    </div>
-                </div>
-                <p>POSTING SOME STUFF</p>
-                <div class="progress progress-xs for-modal">
-                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 65%">
-                        <span class="sr-only">65&#37; Complete</span>
-                    </div>
-                </div>
-                <p>BACKUP DATA FROM SERVER</p>
-                <div class="progress progress-xs for-modal">
-                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 95%">
-                        <span class="sr-only">95&#37; Complete</span>
-                    </div>
-                </div>
-                <p>RE-DESIGNING WEB APPLICATION</p>
-                <div class="progress progress-xs for-modal">
-                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                        <span class="sr-only">100&#37; Complete</span>
-                    </div>
-                </div>
-                <p class="text-center">
-                    <button class="btn btn-danger btn-sm md-close">Close</button>
-                </p>
-            </div>
-        </div>
-    </div>
     <!-- Modal logout -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -93,7 +59,7 @@ use \mvc\request\requestClass as request ?>
                 <?php view::includeHandlerMessage() ?>
                 <!-- Page Heading Start -->
                 <div class="page-heading">
-                    <h1><i class="fa fa-cc"></i> Categorias  <?php i18n::__('userCredencial') ?></h1>
+                    <h1><i class="fa fa-cc"></i>   <?php echo i18n::__('Categorias') ?></h1>
                     <h3><?php echo i18n::__('CategoriaSist') ?></h3>            	</div>
                 <!-- Page Heading End-->				<!-- Your awesome content goes here -->
                 <div class="row">
@@ -101,7 +67,7 @@ use \mvc\request\requestClass as request ?>
                     <div class="col-md-12">
                         <div class="widget">
                             <div class="widget-header">
-                                <h2><strong> <?php i18n::__('Categorias') ?>  <?php i18n::__('userCredencial') ?></strong></h2>
+                                <h2><strong> <?php echo i18n::__('CategoriaSist') ?> </strong></h2>
                                 <div class="additional-btn">
 
                                     <a href="javascript:location.reload(true)" class="hidden reload"><i class="icon-ccw-1"></i></a>
@@ -120,7 +86,7 @@ use \mvc\request\requestClass as request ?>
                                         <div class="modal-body">
                                             <form method="POST" role="form" id="filterForm" action="<?php echo routing::getInstance()->getUrlWeb('categoria', 'index') ?>">
                                                 <div class="form-group">
-                                                    <label for="filterusuario" class="col-sm-2 control-label"><?php i18n::__('usuario') ?>Usuario</label>
+                                                    <label for="filterusuario" class="col-sm-2 control-label"><?php i18n::__('usuario') ?></label>
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control" id="filterUsuario" name="filter[usuario]" placeholder="<?php i18n::__('user') ?>">
                                                         </br>
@@ -152,13 +118,10 @@ use \mvc\request\requestClass as request ?>
                                 <br>					
                                 <div class="table-responsive">
                                     <form id="frmDeleteAll" class='form-horizontal' action="<?php echo routing::getInstance()->getUrlWeb('categoria', 'deleteSelect') ?>" method="POST">
-                                        <div  style="margin-bottom: 10px; margin-top: 20px;">
-                                            <a href="<?php echo routing::getInstance()->getUrlWeb('categoria', 'insert') ?>" class="btn btn-success btn-medium"><i class="fa fa-plus-square-o"></i> <?php echo i18n::__('Nuevo') ?></a>
-                                            <a href="#" class="btn btn-danger btn-medium" onclick="borrarSeleccion()"><?php echo i18n::__('Borrar') ?></a>
-                                            <a href="<?php echo routing::getInstance()->getUrlWeb('categoria', 'report') ?>" class="btn btn-default btn-medium"><i class="fa fa-file-pdf-o"></i><?php echo i18n::__('ExporPDF') ?></a>
-                                            <a href="#" onclick="window.print();" class="btn btn-primary btn-medium" title="Imprimir"><i class="fa fa-print"></i> </a> 
-                                            <button type="button" class="btn btn-primary btn-medium" data-toggle="modal" data-target="#myModalfilter"><i class="fa fa-search"></i> <?php echo i18n::__('Filtro') ?></button>
-                                            <a class="btn btn-default btn-medium" href="<?php echo routing::getInstance()->getUrlWeb('categoria', 'deleteFilters') ?>"><i class="fa fa-minus-circle"></i> <?php echo i18n::__('EliminarFiltros') ?></a>
+                                        <div  style="margin-bottom: 10px; margin-left: 10px; margin-top: 20px;">
+                                            <button type="button" class="btn  btn-success btn-medium" data-toggle="modal" data-target="#newCategory" ><i class="fa fa-plus-square-o"></i> <?php echo i18n::__('Nuevo') ?> </button>
+                                             <a href="#" class="btn btn-danger btn-medium" onclick="borrarSeleccion()"><?php echo i18n::__('Borrar') ?></a>
+                                            
                                         </div>
                                         <table id="datatables-1" class="table table-striped table-bordered" cellspacing="0" width="100%">
                                             <thead>

@@ -1,6 +1,8 @@
 <?php
 
-use mvc\routing\routingClass as routing ?>
+use mvc\routing\routingClass as routing;
+use mvc\session\sessionClass as session;
+?>
 <?php
 use mvc\i18n\i18nClass as i18n ?>
 <?php
@@ -14,14 +16,28 @@ use mvc\view\viewClass as view ?>
                 <div class="col-lg-3 col-md-2"></div>
                 <div class=" col-lg-6 col-md-8 col-sm-12 col-xs-12">
                     <?php view::includeHandlerMessage() ?>
-                    <?php view::includePartial('registrar/formUser', array('mensaje' => $mensaje)) ?>
+                    </br>
+                    <?php view::includePartial('registrar/formUser') ?>
                 </div>
                 <div class="col-lg-3 col-md-2"></div>
             </div>
         </div><!-- .container -->
     </div>
     <?php view::includePartial('partials/footer.html') ?>
-    <!-- Modal -->
+<!-- Go To Top Link -->
+<a href="#" class="back-to-top" style="display: none;"><i class="fa fa-angle-up"></i></a>
+<div id="loader" style="display: none;">
+    <div class="spinner">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+    </div>
+</div>
+<div id="ascrail2000" class="nicescroll-rails" style="width: 5px; z-index: 999999999; cursor: default; position: fixed; top: 0px; height: 100%; right: 0px; opacity: 0;">
+    <div style="position: relative; top: 0px; float: right; width: 5px; height: 74px; border: 0px; border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; background-color: rgb(51, 51, 51); background-clip: padding-box;">
+    </div>
+</div>
+
+<!-- Modal -->
     <div class="modal fade" id="t_and_c_m" style="margin-top: 100px;" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -68,16 +84,3 @@ use mvc\view\viewClass as view ?>
     </div>
   </div>' : '' ?>
 <!-- end Modal registro -->
-
-<!-- Go To Top Link -->
-<a href="#" class="back-to-top" style="display: none;"><i class="fa fa-angle-up"></i></a>
-<div id="loader" style="display: none;">
-    <div class="spinner">
-        <div class="dot1"></div>
-        <div class="dot2"></div>
-    </div>
-</div>
-<div id="ascrail2000" class="nicescroll-rails" style="width: 5px; z-index: 999999999; cursor: default; position: fixed; top: 0px; height: 100%; right: 0px; opacity: 0;">
-    <div style="position: relative; top: 0px; float: right; width: 5px; height: 74px; border: 0px; border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; background-color: rgb(51, 51, 51); background-clip: padding-box;">
-    </div>
-</div>

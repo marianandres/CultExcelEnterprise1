@@ -15,26 +15,24 @@ use mvc\i18n\i18nClass as i18n;
  */
 class indexActionClass extends controllerClass implements controllerActionInterface {
 
-  public function execute() {
-    try {
+    public function execute() {
+        try {
 
-      $fields = array(
-          tipoDocumentoTableClass::ID,
-          tipoDocumentoTableClass::NOMBRE,
-          tipoDocumentoTableClass::CREATED_AT
-      );
-      $orderBy = array(
-          tipoDocumentoTableClass::ID
-      );
-      $this->objTipoDocumento = tipoDocumentoTableClass::getAll($fields, true, $orderBy, 'ASC');
-      $this->defineView('index', 'tipoDocumento', session::getInstance()->getFormatOutput());
-    } catch (PDOException $exc) {
-      echo $exc->getMessage();
-      echo '<br>';
-      echo '<pre>';
-      print_r($exc->getTrace());
-      echo '</pre>';
+            $fields = array(
+                tipoDocumentoTableClass::ID,
+                tipoDocumentoTableClass::NOMBRE,
+                tipoDocumentoTableClass::CREATED_AT
+            );
+            $orderBy = array(
+                tipoDocumentoTableClass::ID
+            );
+            session::getInstance()->setFlash('tipoDocumento', 'tipoDocumento');
+            $this->objTipoDocumento = tipoDocumentoTableClass::getAll($fields, true, $orderBy, 'ASC');
+            $this->defineView('index', 'tipoDocumento', session::getInstance()->getFormatOutput());
+        } catch (PDOException $exc) {
+            session::getInstance()->setFlash('exc', $exc);
+            routing::getInstance()->forward('shfSecurity', 'exception');
+        }
     }
-  }
 
 }

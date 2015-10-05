@@ -30,11 +30,13 @@ class indexActionClass extends controllerClass implements controllerActionInterf
           eventoTableClass::FECHA_FINAL_PUBLICACION,
           eventoTableClass::COSTO,
           eventoTableClass::CATEGORIA_ID,
-          eventoTableClass::CREATED_AT
+          eventoTableClass::CREATED_AT,
+          eventoTableClass::LUGAR_LATITUD
       );
       $orderBy = array(
           eventoTableClass::NOMBRE
       );
+      session::getInstance()->setFlash('evento', 'evento');
       $this->objUsuarios = eventoTableClass::getAll($fields, true, $orderBy, 'ASC');
       $this->defineView('index', 'evento', session::getInstance()->getFormatOutput());
     } catch (PDOException $exc) {

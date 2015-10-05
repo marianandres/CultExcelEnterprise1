@@ -7,7 +7,7 @@ use mvc\i18n\i18nClass as i18n ?>
 <?php $nombre = credencialTableClass::NOMBRE ?>
 
 <div class="container container-fluid">
-    <h1 class="page-header"><i class="fa fa-user"></i>  <?php echo i18n::__(((isset($objCredencial)) ? 'update' : 'register')) ?> <?php echo i18n::__('credencial') ?> </h1>  
+    <h1 class="page-header"><i class="fa fa-users"></i>  <?php echo i18n::__('update') ?> <?php echo i18n::__('credencial') ?> </h1>  
     <form class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 " method="post" action="<?php echo routing::getInstance()->getUrlWeb('credencial', ((isset($objCredencial)) ? 'update' : 'create')) ?>">
         <?php if (isset($objCredencial) == true): ?>
 
@@ -18,7 +18,7 @@ use mvc\i18n\i18nClass as i18n ?>
         <br>
 
         <button class="btn btn-medium btn-success"><?php echo i18n::__(((isset($objCredencial)) ? 'update' : 'register')) ?></button>
-        <a class="btn btn-danger btn-medium" href="<?php echo routing::getInstance()->getUrlWeb('credencial', 'index') ?>"><?php echo i18n::__('Cancelar') ?>Cancelar</a>
+        <a class="btn btn-danger btn-medium" href="<?php echo routing::getInstance()->getUrlWeb('credencial', 'index') ?>"><?php echo i18n::__('Cancelar') ?></a>
 
     </form>
 </div></br>

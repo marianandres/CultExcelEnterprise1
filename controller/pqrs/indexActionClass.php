@@ -29,6 +29,7 @@ class indexActionClass extends controllerClass implements controllerActionInterf
       $orderBy = array(
           pqrsTableClass::CONTENIDO
       );
+      session::getInstance()->setFlash('pqrs', 'pqrs');
       $this->objPqrs = pqrsTableClass::getAll($fields, true, $orderBy, 'ASC');
       $this->defineView('index', 'pqrs', session::getInstance()->getFormatOutput());
     } catch (PDOException $exc) {

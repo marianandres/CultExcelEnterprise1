@@ -28,6 +28,7 @@ class indexActionClass extends controllerClass implements controllerActionInterf
       $orderBy = array(
           detallePqrsTableClass::ID
       );
+      session::getInstance()->setFlash('detallePqrs', 'detallePqrs');
       $this->objDetallePqrs = detallePqrsTableClass::getAll($fields, true, $orderBy, 'ASC');
       $this->defineView('index', 'detallePqrs', session::getInstance()->getFormatOutput());
     } catch (PDOException $exc) {

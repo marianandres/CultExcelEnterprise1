@@ -15,25 +15,27 @@ use mvc\i18n\i18nClass as i18n;
  */
 class indexActionClass extends controllerClass implements controllerActionInterface {
 
-  public function execute() {
-    try {
+    public function execute() {
+        try {
 
 
-      $fields = array(
-          usuarioTableClass::ID,
-          usuarioTableClass::USER,
-          usuarioTableClass::CREATED_AT,
-          usuarioTableClass::LAST_LOGIN_AT
-      );
-      $orderBy = array(
-          usuarioTableClass::USER
-      );
-      $this->objUsuarios = usuarioTableClass::getAll($fields, true, $orderBy, 'ASC');
-      $this->defineView('index', 'admin', session::getInstance()->getFormatOutput());
-    } catch (PDOException $exc) {
-      session::getInstance()->setFlash('exc', $exc);
-      routing::getInstance()->forward('shfSecurity', 'exception');
+            $fields = array(
+                usuarioTableClass::ID,
+                usuarioTableClass::USER,
+                usuarioTableClass::CREATED_AT,
+                usuarioTableClass::LAST_LOGIN_AT
+            );
+            $orderBy = array(
+                usuarioTableClass::USER
+            );
+            session::getInstance()->setFlash('admin', 'admin');
+            $this->usuarios = usuarioTableClass::countUsers();
+            $this->objUsuarios = usuarioTableClass::getAll($fields, true, $orderBy, 'ASC');
+            $this->defineView('index', 'admin', session::getInstance()->getFormatOutput());
+        } catch (PDOException $exc) {
+            session::getInstance()->setFlash('exc', $exc);
+            routing::getInstance()->forward('shfSecurity', 'exception');
+        }
     }
-  }
 
 }

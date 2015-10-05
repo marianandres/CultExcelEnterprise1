@@ -15,26 +15,27 @@ use mvc\i18n\i18nClass as i18n;
  */
 class editActionClass extends controllerClass implements controllerActionInterface {
 
-  public function execute() {
-    try {
-      if (request::getInstance()->hasRequest(organizacionTableClass::ID)) {
-        $fields = array(
-            organizacionTableClass::ID,
-            organizacionTableClass::CORREO,
-            organizacionTableClass::DIRECCION,
-            organizacionTableClass::FAX,
-            organizacionTableClass::NOMBRE,
-            organizacionTableClass::PAGINA_WEB,
-            organizacionTableClass::TELEFONO
-        );
-        $where = array(
-            organizacionTableClass::ID => request::getInstance()->getRequest(organizacionTableClass::ID)
-        );
-        $this->objUsuarios = organizacionTableClass::getAll($fields, true, null, null, null, null, $where);
-        $this->defineView('edit', 'organizacion', session::getInstance()->getFormatOutput());
-      } else {
-        routing::getInstance()->redirect('organizacion', 'index');
-      }
+    public function execute() {
+        try {
+            if (request::getInstance()->hasRequest(organizacionTableClass::ID)) {
+                $fields = array(
+                    organizacionTableClass::ID,
+                    organizacionTableClass::CORREO,
+                    organizacionTableClass::DIRECCION,
+                    organizacionTableClass::FAX,
+                    organizacionTableClass::NOMBRE,
+                    organizacionTableClass::PAGINA_WEB,
+                    organizacionTableClass::TELEFONO
+                );
+                $where = array(
+                    organizacionTableClass::ID => request::getInstance()->getRequest(organizacionTableClass::ID)
+                );
+                session::getInstance()->setFlash('organizacion', 'organizacion');
+                $this->objOrganizacion = organizacionTableClass::getAll($fields, true, null, null, null, null, $where);
+                $this->defineView('edit', 'organizacion', session::getInstance()->getFormatOutput());
+            } else {
+                routing::getInstance()->redirect('organizacion', 'index');
+            }
 //      if (request::getInstance()->isMethod('POST')) {
 //
 //        $usuario = request::getInstance()->getPost(usuarioTableClass::getNameField(usuarioTableClass::USUARIO, true));
@@ -53,13 +54,13 @@ class editActionClass extends controllerClass implements controllerActionInterfa
 //      } else {
 //        routing::getInstance()->redirect('default', 'index');
 //      }
-    } catch (PDOException $exc) {
-      echo $exc->getMessage();
-      echo '<br>';
-      echo '<pre>';
-      print_r($exc->getTrace());
-      echo '</pre>';
+        } catch (PDOException $exc) {
+            echo $exc->getMessage();
+            echo '<br>';
+            echo '<pre>';
+            print_r($exc->getTrace());
+            echo '</pre>';
+        }
     }
-  }
 
 }

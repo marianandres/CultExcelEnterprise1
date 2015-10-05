@@ -17,7 +17,71 @@ $(document).ready(function () {
                     },
                     stringLength: {
                         min: 6,
-                        max: 30,
+                        max: 80,
+                        message: 'El nombre Del Usuario Debe Ser Minimo 6 y Maximo 30 caracteres!.'
+                    },
+                    regexp: {
+                        regexp: /^[a-zA-Z0-9_\.]+$/,
+                        message: 'El nombre del usuario Solo Permite Alfanumericos No Permite Simbolos!.'
+                    },
+                    different: {
+                        field: 'usuario_password_1',
+                        message: 'El Usuario y Password no Puede Ser Iguales!.'
+                    }
+                }
+            },
+            usuario_password_1: {
+                validators: {
+                    notEmpty: {
+                        message: 'EL Password Es Requerido Y No Puede estar Vacio!.'
+                    },
+                    identical: {
+                        field: 'usuario_password_2',
+                        message: 'Los Password Ingresados No Son Iguales!.'
+                    },
+                    different: {
+                        field: 'usuario_user_name',
+                        message: 'El Password no Puede Ser Igual al Nombre Del Usuario!.'
+                    }
+                }
+            },
+            usuario_password_2: {
+                validators: {
+                    notEmpty: {
+                        message: 'El Password Es Requerido Y No Puede estar Vacio!.'
+                    },
+                    identical: {
+                        field: 'usuario_password_1',
+                        message: 'Los Password Ingresados No Son Iguales!.'
+                    },
+                    different: {
+                        field: 'usuario_user_name',
+                        message: 'El Password no Puede Ser Igual al Nombre Del Usuario!.'
+                    }
+                }
+            },
+            acceptTerms: {
+                validators: {
+                    notEmpty: {
+                        message: 'Necesitas Aceptar Los Terminos Y Condiciones!.'
+                    }
+                }
+            }
+        }
+    });
+    // editar usuario
+    $('#editUser').bootstrapValidator({
+        message: 'El Campo No Puede Estar Vacio Es Requerido!.',
+        fields: {
+            usuario_user_name: {
+                message: 'El Nombre De Usuario No Es Valido!.',
+                validators: {
+                    notEmpty: {
+                        message: 'El Nombre Del Usuario Es Requerido Y no Puede Estar Vacio!.'
+                    },
+                    stringLength: {
+                        min: 6,
+                        max: 80,
                         message: 'El nombre Del Usuario Debe Ser Minimo 6 y Maximo 30 caracteres!.'
                     },
                     regexp: {
@@ -69,34 +133,34 @@ $(document).ready(function () {
                         message: 'El Password no Puede Ser Igual al Nombre Del Usuario!.'
                     }
                 }
-            },
-            phoneNumber: {
-                validators: {
-                    digits: {
-                        message: 'The value can contain only digits'
-                    }
-                }
-            },
-            acceptTerms: {
+            }
+        }
+    });
+    // crear credencial
+    $('#createCredencial').bootstrapValidator({
+        message: 'El Campo No Puede Estar Vacio Es Requerido!.',
+        fields: {
+            credencial_nombre: {
+                message: 'El Nombre De La Credencial No Es Valido!.',
                 validators: {
                     notEmpty: {
-                        message: 'Necesitas Aceptar Los Terminos Y Condiciones!.'
-                    }
-                }
-            },
-            captcha: {
-                validators: {
-                    callback: {
-                        message: 'Wrong answer',
-                        callback: function (value, validator) {
-                            var items = $('#captchaOperation').html().split(' '), sum = parseInt(items[0]) + parseInt(items[2]);
-                            return value == sum;
-                        }
+                        message: 'El Nombre De  La Credencial Es Requerido Y no Puede Estar Vacio!.'
+                    },
+                    stringLength: {
+                        min: 6,
+                        max: 80,
+                        message: 'El nombre De  La Credencial Debe Ser Minimo 6 y Maximo 30 caracteres!.'
+                    },
+                    regexp: {
+                        regexp: /^[a-zA-Z0-9_\.]+$/,
+                        message: 'El nombre de La Credencial  Solo Permite Alfanumericos No Permite Simbolos!.'
                     }
                 }
             }
         }
     });
+
+
     $('#eventForm').bootstrapValidator({
         message: 'El Campo No Puede Estar Vacio Es Requerido!.',
         fields: {
@@ -110,10 +174,6 @@ $(document).ready(function () {
                         min: 6,
                         max: 45,
                         message: 'El nombre Del Evento Debe Ser Minimo 6 y Maximo 45 caracteres!.'
-                    },
-                    regexp: {
-                        regexp: /^[a-zA-Z0-9_\.]+$/,
-                        message: 'El nombre del Evento Solo Permite Alfanumericos No Permite Simbolos!.'
                     }
                 }
             },
@@ -142,10 +202,6 @@ $(document).ready(function () {
                 validators: {
                     notEmpty: {
                         message: 'La Fecha Inicial  Del Evento Es Requerido Y no Puede Estar Vacio!.'
-                    },
-                    date: {
-                        format: 'MM/DD/YYYY h:m A',
-                        message: 'EL Dato Ingresado No Es Una Fecha Y Hora Valida!.'
                     }
 
                 }
@@ -154,10 +210,6 @@ $(document).ready(function () {
                 validators: {
                     notEmpty: {
                         message: 'La Fecha Final  Del Evento Es Requerido Y no Puede Estar Vacio!.'
-                    },
-                    date: {
-                        format: 'MM/DD/YYYY h:m A',
-                        message: 'EL Dato Ingresado No Es UnaFecha Y Hora Valida!.'
                     }
                 }
             },
@@ -178,31 +230,14 @@ $(document).ready(function () {
                 validators: {
                     notEmpty: {
                         message: 'La Fecha Inicial De Publicacion  Del Evento Es Requerido Y no Puede Estar Vacio!.'
-                    },
-                    date: {
-                        format: 'MM/DD/YYYY h:m A',
-                        message: 'EL Dato Ingresado No Es Una Fecha Y Hora Valida!.'
                     }
+                    
                 }
             },
             evento_fecha_final_publicacion: {
                 validators: {
                     notEmpty: {
                         message: 'La Fecha Final De Publicacion  Del Evento Es Requerido Y no Puede Estar Vacio!.'
-                    },
-                    date: {
-                        format: 'MM/DD/YYYY h:m A',
-                        message: 'EL Dato Ingresado No Es UnaFecha Y Hora Valida!.'
-                    }
-                }
-            },
-            email: {
-                validators: {
-                    notEmpty: {
-                        message: 'The email address is required and can\'t be empty'
-                    },
-                    emailAddress: {
-                        message: 'The input is not a valid email address'
                     }
                 }
             },
@@ -210,12 +245,8 @@ $(document).ready(function () {
                 validators: {
                     notEmpty: {
                         message: 'El Tipo Del Evento Debe Estar Establecido Y No Vacio!.'
-                    },
-                    digits: {
-                        message: 'Solo Puede Contener Digitos'
                     }
                 },
-            
             }
         }
     });

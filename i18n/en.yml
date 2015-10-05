@@ -1,201 +1,472 @@
-# Diccionario de ejemplo
-culture:                  Español
+ # Diccionario de ejemplo
+culture:                  Ingles
 dictionary:
   default:
-    user:                 User
-    pass:                 Digite Su Contraseña
-    confipass:            Confirmar La Contraseña
-    usertxtPlaceholder:   Usuario
-    passtxtPlaceholder:   Contraseña
-    passtxtPlaceholder2:  Confirmar Contraseña
-    register:             Registrar
-    update:               Actualizar
-    adminusu:             User Administration
-    adminusulow:          User system Administration
-    credusu:              Credenciales De Usuario
-    credencial:           Credencial
-    bitacora:             Bitacora Del Sistema
-    evento:               Eventos
-    userCredencial:       Usuario Credencial
-    usuario:              User
-    fechaCreacion:        Date Created
-    actions:              Actions
+    user:                 Username
+    pass:                 Enter Your Password
+    confipass:            Confirm your password
+    usertxtPlaceholder:   user
+    passtxtPlaceholder:   password
+    passtxtPlaceholder2:  Confirm Password
+    register:             register
+    update:               update
+    adminusu:             Users' administration
+    adminusulow:          User Management System
+    credusu:              User Credentials
+    credencial:           credential
+    bitacora:             Syslogger
+    evento:               Events
+    userCredencial:       user Credential
+    usuario:              user
+    fechaCreacion:        Registration date
+    
+    actions:              actions
     idioma:               Language
-    Detalle:              Details
-    EliminarFiltros:      Delete Filter
-    Filtrar:              Filter
+    Another:              Another action
+    
+    Detalle:              detail
+    Action:               Action
+    EliminarFiltros:      remove Filters
+    Filtrar:              filter
+    Filtros:              filters
+    Filtro:               filter
 #menu
-    Admin:                Admin Panel
+    Admin:                Administrator panel
     adminusuario:         User Admin
     Credenciales:         Credencials
-    Bitacora:             LogBook
+    Bitacora:             Bitacora
     Evento:               Events
-    Datos:                User Data
-    Categoria:            Categories
+    Datos:                data Users
+    Categoria:            category
+    Perfiles:             
+    Sr:                   Sr. Leow Soon Seng
+    CONFERENCIA:          CONFERENCE
+    RicosMundo:           The richest in the world build networks.
+    BuscanTrabajo:        Others seek Work
+    TODOQUIERES:          "EVERYTHING YOU WANT IN LIFE IS REMOVED FROM YOUR COMFORT ZONE"
+    OPEN:                 OPEN
+    Edicionespecial:      Special edition
+    Luchandosueños:       Fighting for our dreams
+    AndresGuzman:         Andres Guzman    
+    DiamanteRoyal:        Royal diamond
+    AuraSanchez:          Aura Sanchez
+    Diamante:             Diamond
+    HugoDiaz:             Hugo Diaz
+    JuanPabloPineda:      Juan Pablo Pineda
+    $180.000:             $180.000
+    Bonos:                Bond.
+    Afiliaciónesnuevas:   by new affiliations.
+    $2´250.000:           $2´250.000
+    $1´125.000:           $1´125.000
+    45Cajas:              45 Boxes
+    100%:                 100 %
+    Ganas$337.000:        Win up to $ 337,000
+    22Cajas:              22 Boxes
+    Ganar:                win
+    Web:                  Web
+    Recibes4:             You receive 4 boxes of Gano Cafe 3 in 1 and / or Gano Cafe Classic.
+    RecibesCodigo:        Receive affiliate code and website
+    Capacitacion:         Education and training.
+    Ganasdosformas:       Win one of two ways (direct sales, and the points that are generated when your afilias more consumers or entrepreneurs)
+
 #admin
-    Perfiles:             Perfil
-    Cambiar:              Cambiar Contraseña
-    Cerrar:               Cerrar Sesion
-    Derechos:             2015 Cult Excel -  All Rights Reserved.
+    TESTIMONIOSVIDA:      LIFE STORIES
+    secreto:              CHANGE IS THE SECRET OF ALL YOUR ENERGY NOT FOCUS ON FIGHTING THE OLD OR THE NEW BUILDING.
+    Perfiles:             profile
+    Return(s):            Return(s) Processed
+    65/174:               65 / 174
+    22/25:                22 / 25
+    19%:                  19%
+    p#0021:               #0021 
+    p#0022:               #0022
+    p#0023:               #0023
+    p#0024:               #0024
+    p#0025:               #0025
+    p#0026:               #0026
+    p#0027:               #0027
+    p#0028:               #0028
+    p#0029:               #0029
+    1,245:                1,245
+    No:                   Do not
+    JohnDoe:              John Doe
+    JohnnyDepp:           Johnny Depp
+    Scarlett:             Scarlett Johansson
+    London:               London, UK
+    Canbera:              Canbera, AU
+    Bali:                 Bali, ID
+    Bandung:              Bandung, ID
+    Semarang:             Semarang, ID
+    NewYork:              New York, US
+    New:                  New
+    Boston:               Boston, US
+    Hanna:                Hanna Barbara
+    Ali:                  Ali Larter
+    Willy:                Willy Wonka
+    Chris:                Chris Isaac
+    Jenny:                Jenny Doe
+    Order:                Order
+    Yogyakarta:           Yogyakarta, ID
+    Waiting:              Waiting
+    Payment:              Payment
+    Ban:                  Ban ki moon
+    Status:               Status
+    Location:             Location
+    OrderID:              Order ID
+    Buyer:                Buyer
+    Shipped:              Shipped Products
+    Generate:             Generate monthly sales report for John
+    Separated:            Separated link
+    Completed:            Completed Sales
+    Daily:                Daily
+    Yearly:               Yearly
+    Server:               Server
+    ServerLoads:          Server Loads
+    OverallProduct:       Overall Product Stock
+    Cerra:                Close
+    Reporte:              report
+    Monthly:              Monthly
+    DeVentas:             Sales
+    Cambiar:              Change Password
+    Cerrar:               Log out
+    2015:                 2015
+    Derechos:             Cult Excel 2015 - All rights reserved.
 #bitacora
-    Portal:               PORTAL WEB
-    PDF:                  Export To PDF
-    Autores:              Design By Mariana Lopez, Andres Felipe Alvarez 
+    Portal:               WEB PORTAL
+    PDF:                  Insert A PDF
+    Autores:              Designed By Mariana Lopez, Andres Felipe Alvarez  
 #credencial 
-    Cancelar:             Cancel
-    Nuevo:                New
-    Editar:               Edit
+    Cancelar:             cancel
+    Nuevo:                new
+    Editar:               edit
 #datoUsuario
-    Seleccion:            Delet Select
+    Seleccion:            clear selection
     Borrar:               Delete
-    Eliminar:             Drop
-    Usuarios:             User Data
+    Eliminar:             Remove
+    DatoUsu:              Data Users
 #default
     lugar:                Santiago De Cali, Colombia
-    Inicio:               Inicio
-    Cuenta:               Tu Cuenta
-    Ayuda:                Ayuda
-    Nosotros:             Acerca De Nosotros
-    Vision:               Vision
-    Mision:               Mision
-    Crear:                Crear Evento
-    Contacto:             Contactenos
-    Bienvenida:           Bienvenidos A
-    Web:                  Portal Web
-    Gente:                que Conecta tu Gente
-    Quienes:              Quienes somos?
-    Sobre:                De Eventos
-    Publicar:             Publica Tus
-    Esperar:              Que Estas Esperando!
-    Cuando:               Publica Ya!
-    mejor:                Los mejores
-    Arte:                 Eventos Artisticos
-    Disfrutar:            Aqui, Disfrutalos!
-    Conocer:              Conocelos!
-    Crea:                 Crea Tu Evento
-    detalle:              Rellena los detalles del evento y las opciones de entrada, y ¡voilà—! tu página estará lista.
-    Compartir:            Compartelo!
-    Invitacion:           Invita a personas a tu evento mediante nuestras herramientas gratuitas, y siéntate a ver cómo crecen las ventas y las inscripciones.
-    Gratis:               Gratis para eventos gratuitos
-    Gratuitos:            El Portal Web es completamente gratis para eventos gratuitos, da igual lo pequeños que sean.
-    Tarifas:              Tarifas Muy Bajas
-    Ofrecemos:            Te ofrecemos diferentes planes de muy bajo costo, que puedes acceder facilmente para pa publicacion de tu evento.
-    Moderno:              Moderno
-    Eficaz:               Eficaz
-    Innovador:            Innovador
-    Sencillo:             Sencillo
-    Amigable:             Amigable
-    Manera:               El PORTALWEB Es La Manera Mas 
-    Forma:                Sencilla Y Rapida
-    Para:                 Para
-    Nube:                 Crear Y Publicar tus Eventos En La Nube.
-    Conoce:               Conocenos!
-    Registrate:           Registrate Ya!
-    Disfruta:             Disfruta De Los Mejores
-    Ciudad:               En tu Ciudad
-    Crear:                Crear
-    Imagina:              Imagina
-    Propio:               tu propio evento
-    Reúne:                Reúne a tu gente, o convierte tu pasión en negocio.  
-    Excel:                Cult Excel te da todo lo que necesitas para crear el mejor evento que puedas imaginar
-    Comenzar:             Comenzar
-    Ahorra:               Ahorra Tiempo Y Dinero Con Nuestros Planes que Tenemos Para
-    Basico:               Basico
-    Profesional:          Profesional 
-    Diseño:               Diseño DICAL Web
-    Politicas:            Politicas De Privacidad
+    Inicio:               Start
+    Cuenta:               Your account
+    Ayuda:                help
+    Nosotros:             About us
+    Vision:               View
+    Mision:               mission
+    Crear:                Create Event
+    Contacto:             Contact Us
+    Bienvenida:           Welcome to
+    Web:                  Web portal
+    Gente:                that connects your People
+    Quienes:              Who we are?
+    Sobre:                Events
+    Publicar:             Publish Your
+    Esperar:              What are you waiting for!
+    Cuando:               Post Now!
+    mejor:                The bests
+    Arte:                 Artistic Events
+    Disfrutar:            Here, enjoy!
+    Conocer:              Get to know them!
+    Detalles:             detail
+    Crea:                 Robert T.Kiyosaki
+    detalle:              the mind is the most powerful asset we have humans therefore invests in mind and you'll be making the biggest deal of your life ...
+    Compartir:            Nelson Mandela
+    Invitacion:           I learned that courage was not the absence of fear, but the triumph over it. The brave is not who does not feel afraid, but he who conquers that fear.
+    Gratis:               Tony Gaskins
+    Gratuitos:            If you do not build your dreams, someone you are hiring someone to help build THOSE OF THE
+    Tarifas:              Albert Einstein
+    Ofrecemos:            The mind that opens to a new idea never returns to its original size.
+    Moderno:              modern
+    Eficaz:               effective
+    Innovador:            innovative
+    Sencillo:             easy
+    Amigable:             Friendly
+    Manera:               The PORTALWEB Is The Way
+    Forma:                Quick and easy
+    Para:                 For
+    Nube:                 Create and publish your Events in the cloud.
+    Conoce:               About us!
+    Registrate:           Register Now!
+    Disfrute:             Enjoy the best
+    Ciudad:               In your city
+    Creacion:             create
+    FechaCreacion:        Creation date
+    Imagina:              Imagine
+    Propio:               your own event
+    Reune:                Gather your people, or turn your passion into business.
+    
+    Excel:                Cult Excel gives you everything you need to create the best event you can imagine
+    Comenzar:             Begin
+    Ahorra:               Save time and money with our plans we have for
+    Basico:               CONSUMER
+    Profesional:          ESP2
+    Diseño:               Web Design DICAL
+    Relampago:            ESP1
+    Premium:              ESP3
+    10:                   10
+    40:                   40 GB
+    20:                   20
+    Free:                 Free
+    Storage:              Storage
+    Transfer:             Transfer
+    Domains:              Domains
+    Projects:             Projects
+    installation:         installation
+    SignNow:              Sign Up Now
+    $99:                  $99
+    $199:                 $199
+    $299:                 $299
+    Our:                  Our Happy
+    Clients:              Clients
+    Partners:             Partners We Work With
+    adminpanel:           Admin Panel
 #evento
-    Nombre:               Nombre Del Evento
-    Descripcion:          Descripcion
-    Direccion:            Direccion
-    Inicial:              Fecha Inicial Evento
-    Final:                Fecha Final Evento
-    Publicacion:          Fecha Inicial Publicacion
-    Fecha:                Fecha Final Publicacion
-    Latitud:              Latitud
-    Acciones:             Acciones
+    $49:                  $49
+    .00:                  .00
+    Nombre:               Event name
+    Descripcion:          Description
+    DescripcionEvento:    Event Description         
+ 
+    Direccion:            Direction
+    FINALIZACION:         COMPLETION
+    ImagenEvento:         Event image
+    DireccionLugarEvento: Direction of the venue
+    Inicial:              Initial Date Event
+    Final:                Date Event Final
+    Publicacion:          Initial Issue Date
+    Fecha:                Final Publication Date
+    Latitud:              latitude
+    Acciones:             Actions
+    EventoOnline:         Event Online
 #eventos
-    Sistema:              Sistema
-    Acerca:               Acerca De Nosotros
-    Politicas:            Politicas De Privacidad
+    Sistema:              system
+    Acerca:               About us
+    Politicas:            Privacy policies
     EXCEL:                CULT EXCEL
-    Registrar:            Registrate
-    Disfruta:             Aqui, Disfrutalos!
-    Ti:                   Ti!
-    Disfrutalo:           Es Gratis ! Disfrutalo..
-    Regresar:             Regresar
-    Acuerdo:              De Acuerdo
-    Click:                Al Dar Click En
-    Acuerdo:              Tu Estas De Acuerdo Con
-    RecordarMe:           Recordar Me
-    Usuarios:             Usuarios
-    ID:                   ID de usuario
-    Accion:               Accion
-    Tabla:                Tabla
-    Registro:             Registro
-    Observacion:          Observacion
-    Dia:                  Fecha
-    Credencial:           Credencial Usuario
-    Credencial:           Credencial De Usuario
-    Modificacion:         Fecha De Modificacion
-    Confirmar:            Confirmar Contraseña
-    Nombre:               Nombre
-    Apellido:             Apellido
-    Correo:               Correo
-    Genero:               Genero
-    Nacimiento:           Fecha De Nacimiento
-    Localidad:            Localidad
-    Tipo:                 Tipo Doc
-    UsuarioID:            UsuarioID
-    Costo:                Costo
-    imagen:               imagen
-    Buscar:               Buscar Eventos ...
+    EXCEL|:               CULT EXCEL|
+    Registrar:            Register
+    Disfruta:             Enjoy the best
+    Ti:                   You!
+    Disfrutalo:           It's free ! Enjoy it .
+    Regresar:             return
+    UsuaGustaCategoria:   User Gusta Category
+    UsuGustCateSistema:   Like user system category
+    Categoria:            category
+    CategoriaID:          categoryID
+    
+    acuerdo:              According
+    Click:                By clicking on
+    Acuerdo:              You agree to
+    RecordarMe:           remember me
+    RecordarMeSistema:    System Remember
+    Usuarios:             users
+    ID:                   User ID
+    Accion:               Action
+    Tabla:                table
+    Registro:             registration
+    Observacion:          observation
+    Dia:                  date
+    Credencial:           User credential
+    Credencial:           User Credential
+    Modificacion:         Date modified
+    Confirmar:            Confirm Password
+    Nombre:               name
+    Apellido:             Last name
+    Correo:               mail
+    Genero:               Gender
+    Nacimiento:           Birthdate
+    Localidad:            location
+    Tipo:                 Doc type
+    UsuarioID:            userID
+    Costo:                cost
+    imagen:               image
+    Buscar:               Search Events ...
     Email:                Email  
     Password:             Password 
-    Confirmar:            Confirmar Password
-    Registro:             Fecha De Registro  
-    detallePqrs:          detallePqrs
+    Confirmar:            confirm Password
+    Registro:             Registration date  
+    detallePqrs:          PQRS detail
+    PQRSPQRS:             PQRS
     pqrs:                 pqrs_id
-    respuesta:            respuesta
-    usuario_id:           usuario_id
-    documento:            tipo_documento_id
-    organizacion:         organizacion_id
-    Estado:               estadoPqrs
-    actived:              actived
-    patrocinador:         evento patrocinador
-    eventoId:             evento_id
-    patrocinadorId:       patrocinador_id
-    localidadId:          localidad_id
-    organizacion:         organizacion
-    pagina:               pagina_web
-    telefono:             telefono
-    patrocinador:         patrocinador 
-    contenido:            contenido
-    estadoPqrs:           estado_pqrs_id
-    tipoPqrs:             tipo_pqrs_id
-    titulo:               titulo
-    recaudo:              recaudoEconomico
-    tarifaId:             tarifa_id
-    parcial:              valorParcial
-    valor:                valorTotal
-    tarifas:              tarifa
-    Precio:               valor
-    tipoDocumento:        tipoDocumento
-    tipoPqrs:             tipoPqrs
-    usuarioCredenci:      usuarioCredencial
-    credenId:             credencial_id
-    Gusta:                usuarioGustaCategoria
-    categoriaId:          categoria_id
+    PaginaWeb:            Web page
+    respuesta:            answer
+    usuario_id:           user_id
+    documento:            document_type_id
+    organizacion:         id_organization
+    Estado:               state pqrs
+    actived:              activated
+    EventosSistema:       System Events
+    EvePatrocinador:      event sponsor
+    EvenPatroSis:         Event Sponsor System
+    patroevensiste:       Event Sponsor System
+    eventoId:             id_event
+    patrocinadorId:       sponsor_id
+    localidadId:          town_id 
+    Organizacion:         organization
+    OrganiSistema:        System Organizations
+    LocalidadID:          Location ID
+    pagina:               Web_page
+    telefono:             phone
+    patrocinador:         sponsor 
+    contenido:            content
+    estadoPqrs:           state_pqrs_id
+    tipoPqrs:             type_pqrs_id
+    SALES:                SALES
+    TiposPQRS:            Type PQRS
+    TipPQRSSistema:       PQRS Type System
+    Sed:                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo iSed ut nventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt
+    titulo:               title
+    per:                  per month
+    recaudo:              Economic collection
+    tarifaId:             id_rate
+    parcial:              Partialvalue
+    valor:                total value
+    total:                TOTAL
+    VISITORS:             VISITORS
+    39%:                  39%
+    Statistics:           Statistics
+    increaseusers:        increase in users
+    Website:              Website
+    increase:             increase in traffic
+    tarifas:              rate
+    Precio:               value
+    tipoDocumento:        Document ID
+    TipoDocumentoSistem:  System Document Id
+    tipoPqrs:             PqrsType
+    usuarioCredenci:      user Credential
+    Something:            Something else here
+    credenId:             credential_id
+    Gusta:                User Like Category
+    categoriaId:          category_id
+    Clave:                The Key to Connect Your World
+    Iniciar:              Log In
+    Estamos:              We are to contact you and
+    Responder:            To answer all the questions that you need!
+    Deseo:                Yes! I Want To Log Out
+    Mi:                   My account 
+    AdminUsu:             User Admin
+    Mis:                  My Events
+    Tu:                   Your Account
+    @:                    company@company.com
+    creden:               Credentials
+    Cuen:                 Account
+    Notas:                Notes
+    Todo:                 List
+    
+    Calculadora:          calculator
+    USERS:                USERS
+    6%:                   6%
+    decrease:             decrease in sales
+    decreaseincome:       decrease in income
+    OVERALL:              OVERALL
+    Weather:              Weather
+    Calendario:           Calendar
+    INCOME:               INCOME
+    7%:                   7%
+    Finanzas:             finances
+    Español:              Spanish (ES)
+    English:              English (US)
+    My:                   My Profile
+    Change:               Change Password
+    Account:              Account setting
+    Help:                 Help
+    Lock:                 Lock me
+    Logout:               Logout
+    Bienvenido:           Welcome
+    Ir:                   Go to website
+    Panel:                Admin Panel
+    PQRS:                 PQRS
+    Configuracion:        settings
+    ConfiSis:             System settings
+    Manteni:              maintenance
+    Contact:              Contact Us
+    Name:                 Name
+    PleaseN:              Please enter your name
+    PleaseE:              Please enter a valid e-mail
+    Website:              Website
+    Add:                  Add Your Comment
+    Say:                  Say something!
+    Information:          Information
+    Address:              Address
+    11%:                  11%
+    street:               :1234 Street Name, Bangladesh 
+    @info:                info@yourcompany.com
+    Phone:                Phone
+    +:                    :+12 345 678 001
+    Working:              Working Hours
+    Monday:               Monday - Friday
+    2:                    2
+    FECHINICPUBLIEVENT:   DATE OF PUBLICATION OF THE EVENT
+    FECHFINALPUBLIEVE:    TERMINATION DATE OF PUBLICATION OF THE EVENT
+    Saturday:             Saturday
+    Sunday:               Sunday
+    am:                   -9am to 5pm
+    pm:                   -9am to 2pm
+    Closed:               -Closed
+    Confirmation:         Confirmation
+    Registra:             REGISTER
+    Registrarse:          Register
+    Terminos:             Terms and conditions
+    Establecido:          Established by the website, including the use of cookies.
+    Condiciones:          Terms and conditions 
+    Yo:                   I agree
+    NickName:             NickName
+    Costo:                Cost
+    TIPOEVENTO:           Event Type
+    Export:               Export
+    SelecTipoEvento:      Select the type of event
+    $450.000:             $450.000
+    9Cajas:               9 boxes of
+    TuPagina:             your Page
+    12Formas:             12 ways of
+    50%:                  50 %
+    Ganas$168.500:        wins until $168.500
+    20%:                  20 %
+    Ganas$56.250:         wins until $56.250
+    GanoCafé:             Gano Café
+    ExportPDF:            Export as PDF
+    ExportCSV:            Export as CSV
+    Export as PNG:        Export as PNG
+    Categoria1:           Categoria1
+    Categoria2:           Categoria2
+    TipoPQRSID:           Tipe PQRS ID
+    EstadoPQRSID:         Estate PQRS ID
+    FechaCre:             Creation date
+    cerr:                 Close
+    CategoriaSist:        System event categories
+    Categorias:           Categories
+    ExporPDF:             Export to PDF 
+    CredenUsuSistema:     Credentials of system users
+    Nom:                  Name
+    Elimina:              Delete
+    CredenSistem:         System Credentials
+    DatosUsuSis:          Data System Users
+    DetallePQRS:          Detail PQRS
+    DetallPQRSist:        Detail PQRS Del Sistema
+    PqrsID:               PqrsID 
+    GANOEXCEL:            GANO EXCEL 2015
+    REGIONAL:             REGIONAL
+    CENTROEVENTOS:        CENTER OF EVENTS VALLE DEL PACIFICO
+    SUPERSABADO:          SUPER SABADO
+    NUEVAVIDA:            A NEW LIFE
+    AjustesAdicionales:   Aditional Settings
+    
+    DetalleEvento:        Event detail
+    EstadoPQRSist:        PQRS State System
+    Activado:             Activated
+    usuarioID:            user ID
+    IPAddress:            IP Address
+    HashCookie:           Hash Cookie
+    EventosSist:          System Events
+    ¿No?:                 You can not find your location?
     #validaciones
-    20001:                Los Datos Fueron Registrados Exitosamente
+    20001:                The data were recorded Successfully
   errors:
-    00001:                El módulo y la acción solicitada, no existe.
-    00002:                La dirección que solicita no está registrada.
-    00003:                Los datos de usuario y contrseña son inválidos.
-    00004:                La confirmacion De Contraseña no Coinciden.
-    10001:                El Nombre Del Usuario %user% exede Los %caracteres% Caracteres Maximo Permitidos!.
-    10002:                Las Contraseñas Ingresadas No coinciden.
-    10004:                El Usuario que Desea Registrar Ya Existe.
+    00001:                The module and the requested action does not exist.
+    00002:                The address request is not registered.
+    00003:                User name and password are invalid.
+    00004:                The password confirmation do not match.
+    10001:                The user name of the %user% characters exceeds maximum characters allowed !.
+    10002:                Entered passwords do not match.
+    10004:                User name that want to register already exists.
 #    00001:  Lo que buscas no existe
 #    10001:  Existe un error en la definición de los includes
 #    10002:  No hay definido un ambito (dev o prod) para la aplicación

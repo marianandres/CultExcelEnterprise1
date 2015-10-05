@@ -11,26 +11,26 @@ use mvc\i18n\i18nClass as i18n;
 /**
  * Description of ejemploClass
  *
- * @author Julian Lasso <ingeniero.julianlasso@gmail.com>
+ * @author  Mariana Lopez, Andres Alvarez
  */
 class indexActionClass extends controllerClass implements controllerActionInterface {
 
-  public function execute() {
-    try {
+    public function execute() {
+        try {
 
-      $fields = array(
-          tipoPqrsTableClass::ID,
-          tipoPqrsTableClass::NOMBRE
-      );
-      $orderBy = array(
-          tipoPqrsTableClass::NOMBRE
-      );
-      $this->objTipoPqrs = tipoPqrsTableClass::getAll($fields, true, $orderBy, 'ASC');
-      $this->defineView('index', 'tipoPqrs', session::getInstance()->getFormatOutput());
-    } catch (PDOException $exc) {
-      session::getInstance()->setFlash('exc', $exc);
-      routing::getInstance()->forward('shfSecurity', 'exception');
+            $fields = array(
+                tipoPqrsTableClass::ID,
+                tipoPqrsTableClass::NOMBRE
+            );
+            $orderBy = array(
+                tipoPqrsTableClass::NOMBRE
+            );
+            $this->objTipoPqrs = tipoPqrsTableClass::getAll($fields, true, $orderBy, 'ASC');
+            $this->defineView('index', 'tipoPqrs', session::getInstance()->getFormatOutput());
+        } catch (PDOException $exc) {
+            session::getInstance()->setFlash('exc', $exc);
+            routing::getInstance()->forward('shfSecurity', 'exception');
+        }
     }
-  }
 
 }

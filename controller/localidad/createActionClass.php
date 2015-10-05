@@ -36,75 +36,8 @@ class createActionClass extends controllerClass implements controllerActionInter
         routing::getInstance()->redirect('localidad', 'index');
       }
     } catch (PDOException $exc) {
-      echo $exc->getMessage();
-      echo '<br>';
-      echo '<pre>';
-      print_r($exc->getTrace());
-      echo '</pre>';
-    }
+            session::getInstance()->setFlash('exc', $exc);
+            routing::getInstance()->forward('shfSecurity', 'exception');
+        }
   }
-
-  private function validate($localidad_id, $nombre) {
-    $flag = false;
-
-
-    if (empty($usuario)) {
-
-      session::getInstance()->setError(i18n::__(00006, NULL, 'errors'));
-      $flag = true;
-      session::getInstance()->setFlash(usuarioTableClass::getNameField(usuarioTableClass::USER, true), true);
-    }
-
-    if (strlen($usuario) > usuarioTableClass::USER_LENGTH) {
-      session::getInstance()->setError(i18n::__(00004, NULL, 'errors', array('%user%' => $usuario, '%caracteres%' => usuarioTableClass::USER_LENGTH)));
-
-      $flag = true;
-      session::getInstance()->setFlash(usuarioTableClass::getNameField(usuarioTableClass::USER, true), true);
-    }
-
-    if ($password !== $password2) {
-
-      session::getInstance()->setError(i18n::__(00005, NULL, 'errors'));
-      $flag = true;
-      session::getInstance()->setFlash(usuarioTableClass::getNameField(usuarioTableClass::PASSWORD, true), true);
-    }
-
-    if (empty($password)) {
-
-      session::getInstance()->setError(i18n::__(00007, NULL, 'errors'));
-      $flag = true;
-
-      session::getInstance()->setFlash(usuarioTableClass::getNameField(usuarioTableClass::USER, true), true);
-    }
-
-
-    if (empty($password2)) {
-
-      session::getInstance()->setError(i18n::__(00009, NULL, 'errors'));
-      $flag = true;
-      session::getInstance()->setFlash(usuarioTableClass::getNameField(usuarioTableClass::PASSWORD, true), true);
-      session::getInstance()->setFlash(usuarioTableClass::getNameField(usuarioTableClass::USER, true), true);
-    }
-
-    $fields = array(
-        usuarioTableClass::USER
-    );
-    $objUsuario = usuarioTableClass::getAll($fields);
-
-    foreach ($objUsuario as $key) {
-      if ($key->user_name === $usuario) {
-        session::getInstance()->setError(i18n::__(00010, NULL, 'errors'));
-        $flag = true;
-        session::getInstance()->setFlash(usuarioTableClass::getNameField(usuarioTableClass::USER, true), true);
-      }
-    }
-
-
-    if ($flag === true) {
-
-      request::getInstance()->setMethod('GET');
-      routing::getInstance()->forward('usuario', 'insert');
-    }
-  }
-
 }
