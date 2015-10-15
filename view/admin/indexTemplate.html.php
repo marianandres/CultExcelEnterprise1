@@ -1,4 +1,5 @@
 <?php
+
 use mvc\routing\routingClass as routing ?>
 <?php
 use mvc\i18n\i18nClass as i18n ?>
@@ -8,8 +9,9 @@ use mvc\config\configClass as config ?>
 use \mvc\request\requestClass as request ?>
 <?php
 use mvc\session\sessionClass as session;
-use mvc\view\viewClass as view;?>
-<?php  
+use mvc\view\viewClass as view;
+?>
+<?php
 $usuarios = usuarioTableClass::countUsers();
 ?>
 <div class="fixed-left">
@@ -77,50 +79,49 @@ $usuarios = usuarioTableClass::countUsers();
                     </div>
 
                     <div class="col-lg-3 col-md-6">
-<!--                        <div class="widget darkblue-2 animated fadeInDown">
+                        <div class="widget red-1 animated fadeInDown">
                             <div class="widget-content padding">
                                 <div class="widget-icon">
-                                    <i class="icon-bag"></i>
+                                    <i class="fa fa-categorias"></i>
                                 </div>
                                 <div class="text-box">
-                                    <p class="maindata"><?php echo i18n::__('total') ?> <b><?php echo i18n::__('SALES') ?></b></p>
-                                    <h2><span class="animate-number" data-value="6399" data-duration="3000">0</span></h2>
-
+                                    <p class="maindata"> <?php echo i18n::__('total') ?> <b><?php echo i18n::__('USERS') ?></b></p>
+                                    <h2><span class="animate-number" data-value="<?php echo $usuarios ?>" data-duration="3000">0</span></h2>
                                     <div class="clearfix"></div>
                                 </div>
                             </div>
                             <div class="widget-footer">
                                 <div class="row">
                                     <div class="col-sm-12">
-                                        <i class="fa fa-caret-down rel-change"></i> <b><?php echo i18n::__('11%') ?></b> <?php echo i18n::__('decrease') ?>
+                                        <i class="fa fa-caret-up rel-change"></i> <b><?php echo i18n::__('6%') ?></b> <?php echo i18n::__('increaseusers') ?>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
-                        </div>-->
+                        </div>
                     </div>
 
                     <div class="col-lg-3 col-md-6">
-<!--                        <div class="widget pink-1 animated fadeInDown">
+                        <div class="widget lightblue-1 animated fadeInDown">
                             <div class="widget-content padding">
                                 <div class="widget-icon">
-                                    <i class="fa fa-dollar"></i>
+                                    <i class="fa fa-categorias"></i>
                                 </div>
                                 <div class="text-box">
-                                    <p class="maindata"><?php echo i18n::__('total') ?> <b><?php echo i18n::__('INCOME') ?></b></p>
-                                    <h2>$<span class="animate-number" data-value="70389" data-duration="3000">0</span></h2>
+                                    <p class="maindata"> <?php echo i18n::__('total') ?> <b><?php echo i18n::__('USERS') ?></b></p>
+                                    <h2><span class="animate-number" data-value="<?php echo $usuarios ?>" data-duration="3000">0</span></h2>
                                     <div class="clearfix"></div>
                                 </div>
                             </div>
                             <div class="widget-footer">
                                 <div class="row">
                                     <div class="col-sm-12">
-                                        <i class="fa fa-caret-down rel-change"></i> <b><?php echo i18n::__('7%') ?></b><?php echo i18n::__('decreaseincome') ?> 
+                                        <i class="fa fa-caret-up rel-change"></i> <b><?php echo i18n::__('6%') ?></b> <?php echo i18n::__('increaseusers') ?>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
-                        </div>-->
+                        </div>
                     </div>
 
                     <div class="col-lg-3 col-md-6">
@@ -315,12 +316,12 @@ $usuarios = usuarioTableClass::countUsers();
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
-                                
+
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 portlets">
-                        
+
                         <div class="row">
                             <div class="col-sm-12">
                                 <div id="notes-app" class="widget">
@@ -357,7 +358,7 @@ $usuarios = usuarioTableClass::countUsers();
                 </div>
                 <div class="row">
 
-                   
+
                     <div class="col-lg-4 col-md-6 portlets">
                         <div id="calc" class="widget darkblue-2">
                             <div class="widget-header">
@@ -500,11 +501,11 @@ $usuarios = usuarioTableClass::countUsers();
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
 
                 <!-- Footer Start -->
-                 <?php view::includePartial('partials/footerBar') ?>
+                <?php view::includePartial('partials/footerBar') ?>
                 <!-- Footer End -->			
             </div>
             <!-- ============================================================== -->

@@ -11,6 +11,10 @@ $(document).ready(function () {
 });
 
 // filtros
+function paginador (objeto, url) {
+  window.location.href = url + '?page=' + $(objeto).val();
+    
+}
 
 $(document).ready(function () {
     $('.filterable .btn-filter').click(function () {

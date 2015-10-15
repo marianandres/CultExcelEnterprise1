@@ -35,7 +35,7 @@ use mvc\session\sessionClass as session ?>
                             <h3 class="animated3">
                                 <span style="color: #2b2b2b"><?php echo i18n::__('Responder') ?></span>
                             </h3>
-                            <p class="animated4"><a href="#" class="slider btn btn-primary"><?php echo i18n::__('Contacto') ?></a>
+                            <p class="animated4"><a href="http://www.ganoexcel.com.co/index.php/contactenos" class="slider btn btn-primary"><?php echo i18n::__('Contacto') ?></a>
                             </p>
                         </div>
                     </div>
@@ -140,7 +140,7 @@ use mvc\session\sessionClass as session ?>
                     <!-- Start Contact Form -->
                     <div id="contact-form" class="contatct-form">
                         <div class="loader"></div>
-                        <form action="mail.php" class="contactForm" name="cform" method="post">
+<!--                        <form action="mail.php" class="contactForm" name="cform" method="post">
                             <div class="row">
                                 <div class="col-md-4">
                                     <label for="name"><?php echo i18n::__('Name') ?><span class="required">*</span></label>
@@ -165,7 +165,9 @@ use mvc\session\sessionClass as session ?>
                                     <input type="submit" name="submit" class="button" id="submit_btn" value="Send Message">
                                 </div>
                             </div>
-                        </form>
+                        </form>-->
+                        <p class="animated4"><a href="http://www.ganoexcel.com.co/index.php/contactenos" class="slider btn btn-primary"><?php echo i18n::__('Contacto') ?></a>
+                            </p>
                     </div>
                     <!-- End Contact Form -->
                 </div>

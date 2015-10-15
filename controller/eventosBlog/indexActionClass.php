@@ -17,6 +17,19 @@ class indexActionClass extends controllerClass implements controllerActionInterf
 
     public function execute() {
         try {
+            $where = null;
+            if (request::getInstance()->hasPost('filter')) {
+                $filter = request::getInstance()->getPost('filter');
+
+                //Validaciones
+                if (isset($filter['evento']) and $filter['evento'] !== null and $filter['evento'] !== '') {
+                    $where[eventoTableClass::NOMBRE] = $filter['evento'];
+                }
+
+                session::getInstance()->setAttribute('eventoIndexFilter', $where);
+            } else if (session::getInstance()->hasAttribute('eventoIndexFilter')) {
+                $where = session::getInstance()->getAttribute('eventoIndexFilter');
+            }
             $fields = array(
                 eventoTableClass::ID,
                 eventoTableClass::IMAGEN,
@@ -29,13 +42,22 @@ class indexActionClass extends controllerClass implements controllerActionInterf
                 eventoTableClass::FECHA_FINAL_PUBLICACION,
                 eventoTableClass::COSTO,
                 eventoTableClass::CATEGORIA_ID,
-                eventoTableClass::CREATED_AT
+                eventoTableClass::CREATED_AT,
+                eventoTableClass::FACEBOOK,
+                eventoTableClass::TWITTER
             );
             $orderBy = array(
                 eventoTableClass::NOMBRE
             );
+            $page = 0;
+            if (request::getInstance()->hasGet('page')) {
+                $this->page = request::getInstance()->getGet('page');
+                $page = request::getInstance()->getGet('page') - 1;
+                $page = $page * config::getRowGrid();
+            }
             session::getInstance()->setFlash('eventosBlog', true);
-            $this->objEventos = eventoTableClass::getAll($fields, true, $orderBy, 'ASC');
+            $this->cntPages = eventoTableClass::getTotalPages(config::getRowGrid(), $where);
+            $this->objEventos = eventoTableClass::getAll($fields, true, $orderBy, 'ASC', config::getRowGrid(), $page, $where);
             $this->defineView('index', 'eventosBlog', session::getInstance()->getFormatOutput());
         } catch (PDOException $exc) {
             session::getInstance()->setFlash('exc', $exc);

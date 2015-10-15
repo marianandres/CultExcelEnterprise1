@@ -10,7 +10,10 @@ dictionary:
     passtxtPlaceholder2:  Confirmar Contraseña
     register:             Registrar
     update:               Actualizar
+    RegistroSistema:      Registro Del Sistema
     adminusu:             Administracion De Usuarios
+    AdministRoles:        Administracion Roles
+    AdministUsuarios:     Administracion De Usuarios
     adminusulow:          Administracion De Usuarios Del Sistema
     credusu:              Credenciales De Usuario
     credencial:           Credencial
@@ -66,6 +69,13 @@ dictionary:
     Web:                  Web
     Recibes4:             Recibes 4 Cajas de Gano Café 3 en 1 y/o Gano Café Clásico.
     RecibesCodigo:        Recibes Codigo de afiliacion y pagina web
+    energiza:             PRUEBA LA DIFERENCIA = ENERGIZA
+    revitaliza:           SIENTE LA DIFERENCIA= REVITALIZA
+    armoniza:             HAZ LA DIFERENCIA= ARMONIZA
+    socializa:            SE LA DIFERENCIA= SOCIALIZA
+    brindarexcelente:      Brindar y  un excelente y completo servicio en publicación de eventos, donde la seriedad y  cumplimiento son la garantía para lograr una ocasión inolvidable, donde proveeremos las mejores  herramientas y el mejor liderazgo para asistir a los miembros de nuestro team en el desarrollo  de un negocio solido del NETWORK MARKETING, y convertirse, de la manera más efectiva y eficiente, en ejecutivos exitosos.
+    nuestravisi:          Nuestra misión
+    nuestraempresa:       Hacer de nuestra empresa una organización líder, difundiendo el profesionalismo de quienes la integran, ostentando la calidez humana como virtud principal, Convertir nuestro team en  la red preferencial para los profesionales del NETWORK MARKETING en el mundo, donde el éxito  del grupo sea el de cada uno de sus miembros, traducido en una vida plena, próspera, sin estrés, y en el marco de la mayor libertad individual posible.
     Capacitacion:         Capacitación y entrenamiento.
     Ganasdosformas:       Ganas de dos formas (venta directa, y los puntos que se generan cuando tu afilias a mas consumidores o empresarios)
 
@@ -124,6 +134,11 @@ dictionary:
     OverallProduct:       Producto general de la
     Cerra:                Cerrar
     Reporte:              Reporte
+    Reportes:             Reportes  
+    
+    GraficaCategoria:     Grafica De Eventos Publicados Por Categoria (Eventos x Año)
+    PublicadosCategoria:  Reportes De Eventos Publicados Por Categoria
+    ReportesCategoria:    Reportes de Eventos Por Categoria
     Monthly:              Mensual
     DeVentas:             De Ventas
     Cambiar:              Cambiar Contraseña
@@ -137,7 +152,8 @@ dictionary:
 #credencial 
     Cancelar:             Cancelar
     Nuevo:                Nuevo
-    Editar:               Editar  
+    Editar:               Editar 
+    BuenaEsaTerminado:    Buena Esa! Ya Casi Has Terminado!.
 #datoUsuario
     Seleccion:            borrarSeleccion
     Borrar:               Borrar
@@ -221,6 +237,7 @@ dictionary:
     adminpanel:           Admin Panel
 #evento
     $49:                  $49
+    Inicio:               Inicio
     .00:                  .00
     Nombre:               Nombre Del Evento
     Descripcion:          Descripcion
@@ -230,6 +247,8 @@ dictionary:
     FINALIZACION:         FINALIZACION
     ImagenEvento:         Imagen De Evento
     DireccionLugarEvento: Direccion Del Lugar Del Evento
+    PublicarEvento:       Publicar Evento
+    ComentaEventEspecial: Comenta que tiene tu Evento De Especial.
     Inicial:              Fecha Inicial Evento
     Final:                Fecha Final Evento
     Publicacion:          Fecha Inicial Publicacion
@@ -239,6 +258,8 @@ dictionary:
     EventoOnline:         Evento Online
 #eventos
     Sistema:              Sistema
+    Eventos:              Eventos
+    EventosRecientes:     Eventos Recientes
     Acerca:               Acerca De Nosotros
     Politicas:            Politicas De Privacidad
     EXCEL:                CULT EXCEL
@@ -345,6 +366,8 @@ dictionary:
     Mi:                   Mi Cuenta 
     AdminUsu:             Admin.usuarios
     Mis:                  Mis Eventos
+    Inconfundible:        Dale Un nombre Unico E Inconfundible
+    
     Tu:                   Tu Cuenta
     @:                    company@company.com
     creden:               Credenciales
@@ -373,7 +396,7 @@ dictionary:
     Logout:               Logout
     Bienvenido:           Bienvenido
     Ir:                   Ir al portal
-    Panel:                Admin Panel
+    Panel:                Panel de administrador
     PQRS:                 PQRS
     Configuracion:        Configuracion
     ConfiSis:             Configuracion del Sistema

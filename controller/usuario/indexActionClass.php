@@ -42,6 +42,8 @@ class indexActionClass extends controllerClass implements controllerActionInterf
       $fields = array(
           usuarioTableClass::ID,
           usuarioTableClass::USER,
+          usuarioTableClass::CODIGOKEY,
+          usuarioTableClass::ESTADOKEY,
           usuarioTableClass::CREATED_AT
       );
       $orderBy = array(

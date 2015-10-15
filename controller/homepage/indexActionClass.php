@@ -30,6 +30,7 @@ class indexActionClass extends controllerClass implements controllerActionInterf
             $orderBy = array(
                 usuarioTableClass::USER
             );
+            
 
             $this->objUsuarios = usuarioTableClass::getAll($fields, true, $orderBy, 'ASC');
             session::getInstance()->setFlash('homepage', true);

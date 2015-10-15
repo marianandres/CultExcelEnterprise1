@@ -220,24 +220,16 @@ $(document).ready(function () {
                         message: 'La Descripcion Del Evento Es Requerido Y no Puede Estar Vacio!.'
                     },
                     stringLength: {
-                        min: 15,
-                        max: 1024,
-                        message: 'La Descripcion Del Evento Debe Ser Minimo 15 y Maximo 1024 caracteres!.'
+                        min: 5,
+                        max: 180,
+                        message: 'La Descripcion Del Evento Debe Ser Minimo 5 y Maximo 180 caracteres!.'
                     }
                 }
             },
-            evento_fecha_inicial_publicacion: {
+            evento_costo: {
                 validators: {
                     notEmpty: {
-                        message: 'La Fecha Inicial De Publicacion  Del Evento Es Requerido Y no Puede Estar Vacio!.'
-                    }
-                    
-                }
-            },
-            evento_fecha_final_publicacion: {
-                validators: {
-                    notEmpty: {
-                        message: 'La Fecha Final De Publicacion  Del Evento Es Requerido Y no Puede Estar Vacio!.'
+                        message: 'El Costo Del Evento Debe Estar Establecido Y No Vacio!.'
                     }
                 }
             },
@@ -246,7 +238,14 @@ $(document).ready(function () {
                     notEmpty: {
                         message: 'El Tipo Del Evento Debe Estar Establecido Y No Vacio!.'
                     }
-                },
+                }
+            },
+            evento_startTime: {
+                validators: {
+                    notEmpty: {
+                        message: 'La Hora Del Evento Debe Estar Establecido Y No Vacio!.'
+                    }
+                }
             }
         }
     });

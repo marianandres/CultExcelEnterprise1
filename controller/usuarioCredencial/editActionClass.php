@@ -54,8 +54,6 @@ class editActionClass extends controllerClass implements controllerActionInterfa
         // ya te hago un ejemplo
         // $this->objUsuarioCredencial = usuarioCredencialTableClass::getAll($fields, FALSE, null, null, null, null, $where);
 
-
-        $this->objUsuarioCredencial = usuarioCredencialTableClass::findById(request::getInstance()->getRequest(usuarioCredencialTableClass::ID));
         $this->objCredencial1 = credencialTableClass::getAll($fields1, true, null, null, null, null, null);
         $this->defineView('edit', 'usuarioCredencial', session::getInstance()->getFormatOutput());
       } else {

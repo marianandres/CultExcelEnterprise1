@@ -17,6 +17,8 @@ class usuarioBaseTableClass extends tableBaseClass {
   protected $created_at;
   protected $updated_at;
   protected $deleted_at;
+  protected $estadokey;
+  protected $codigokey;
   protected static $package;
 
   const ID = 'id';
@@ -29,6 +31,8 @@ class usuarioBaseTableClass extends tableBaseClass {
   const CREATED_AT = 'created_at';
   const UPDATED_AT = 'updated_at';
   const DELETED_AT = 'deleted_at';
+  const CODIGOKEY = 'codigokey';
+  const ESTADOKEY = 'estadokey';
 
   public function getLastLoginAt() {
     return $this->last_login_at;

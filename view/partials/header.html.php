@@ -96,9 +96,15 @@ use mvc\i18n\i18nClass as i18n ?>
                     <li>
                         <a href="<?php echo routing::getInstance()->getUrlWeb('eventosBlog', 'index') ?>" class="<?php echo (session::getInstance()->hasFlash('eventosBlog')) ? 'active' : '' ?>" ><?php echo i18n::__('Evento') ?></a>
                     </li>
-                    <li>
-                        <a class="btn btn-info btn-medium btn-bordered <?php echo (session::getInstance()->hasFlash('eventos')) ? 'active' : '' ?>" style="color: #2b2b2b; font-weight: bold;" href="<?php echo \mvc\routing\routingClass::getInstance()->getUrlWeb('eventos', 'insert') ?>"><?php echo i18n::__('Crear') ?></a>
-                    </li>
+                    <?php if (session::getInstance()->isUserAuthenticated() == true) { ?>
+                        <?php if (usuarioTableClass::getVerifyUser(mvc\session\sessionClass::getInstance()->getUserId()) == 0) { ?>
+
+                        <?php } else { ?>
+                            <li>                        
+                                <a class="btn btn-info btn-medium btn-bordered <?php echo (session::getInstance()->hasFlash('eventos')) ? 'active' : '' ?>" style="color: #2b2b2b; font-weight: bold;" href="<?php echo \mvc\routing\routingClass::getInstance()->getUrlWeb('eventos', 'insert') ?>"><?php echo i18n::__('Crear') ?></a>                     
+                            </li>
+                        <?php } ?>
+                    <?php } ?>
                     <li>
                         <a href="<?php echo routing::getInstance()->getUrlWeb('contact', 'index') ?>" class="<?php echo (session::getInstance()->hasFlash('contact')) ? 'active' : '' ?>"><?php echo i18n::__('Contacto') ?></a>
                     </li>
@@ -110,12 +116,12 @@ use mvc\i18n\i18nClass as i18n ?>
                                     <li>
                                         <a href="<?php echo routing::getInstance()->getUrlWeb('admin', 'index') ?>"><i class="fa fa-users"></i> <?php echo i18n::__('adminpanel') ?></a>
                                     </li>
-<!--                                    <li>
-                                        <a href="<?php echo routing::getInstance()->getUrlWeb('credencial', 'index') ?>"><i class="fa fa-user"></i> <?php echo i18n::__('creden') ?></a>
-                                    </li>
-                                    <li>
-                                        <a href="404.html"><?php echo i18n::__('Bitacora') ?></a>
-                                    </li>-->
+                                    <!--                                    <li>
+                                                                            <a href="<?php echo routing::getInstance()->getUrlWeb('credencial', 'index') ?>"><i class="fa fa-user"></i> <?php echo i18n::__('creden') ?></a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="404.html"><?php echo i18n::__('Bitacora') ?></a>
+                                                                        </li>-->
                                     <li class="divider"></li>
                                     <li>
                                         <a href="<?php echo routing::getInstance()->getUrlWeb('help', 'index') ?>"><i class="fa fa-info-circle"></i> <?php echo i18n::__('Ayuda') ?></a>
@@ -126,13 +132,13 @@ use mvc\i18n\i18nClass as i18n ?>
                             <li>
                                 <a href="#" class="<?php echo (session::getInstance()->hasFlash('userEvents')) ? 'active' : '' ?>"><i class="fa fa-laptop"></i> <?php echo i18n::__('Mi') ?></a>
                                 <ul class="dropdown">
-                                    
+
                                     <li>
                                         <a href="<?php echo \mvc\routing\routingClass::getInstance()->getUrlWeb('userEvents', 'index') ?>" class="<?php echo (session::getInstance()->hasFlash('userEvents')) ? 'active' : '' ?>"><i class="fa fa-calendar-o"></i> <?php echo i18n::__('Mis') ?></a>
                                     </li>
-<!--                                    <li>
-                                        <a href="<?php echo \mvc\routing\routingClass::getInstance()->getUrlWeb('userPQRS', 'index') ?>" class="<?php echo (session::getInstance()->hasFlash('userPQRS')) ? 'active' : '' ?>"><i class="fa fa-envelope-square"></i> <?php  ?> Mis PQRS</a>
-                                    </li>-->
+                                    <li>
+                                        <a href="<?php echo \mvc\routing\routingClass::getInstance()->getUrlWeb('userPQRS', 'index') ?>" class="<?php echo (session::getInstance()->hasFlash('userPQRS')) ? 'active' : '' ?>"><i class="fa fa-envelope-square"></i> <?php ?> Mis PQRS</a>
+                                    </li>
                                     <li class="divider"></li>
                                     <li>
                                         <a href="<?php echo routing::getInstance()->getUrlWeb('help', 'index') ?>"><i class="fa fa-info-circle"></i> <?php echo i18n::__('Ayuda') ?></a>
@@ -144,8 +150,8 @@ use mvc\i18n\i18nClass as i18n ?>
                         <li>
                             <a href="#"><i class="fa fa-user"></i> <?php echo session::getInstance()->getUserName() ?><span class="caret"></span></a>
                             <ul class="dropdown" role="menu">
-<!--                                <li><a href="<?php echo routing::getInstance()->getUrlWeb('profile', 'index') ?>"><i class="fa fa-user"></i><?php echo i18n::__('Perfiles') ?></a></li>-->
-<!--                                <li><a href="#"><i class="fa fa-cogs"></i> <?php echo i18n::__('Cambiar') ?></a></li>-->
+                                    <li><a href="<?php echo routing::getInstance()->getUrlWeb('profile', 'index') ?>"><i class="fa fa-user"></i><?php echo i18n::__('Perfiles') ?></a></li>
+    <!--                                <li><a href="#"><i class="fa fa-cogs"></i> <?php echo i18n::__('Cambiar') ?></a></li>-->
                                 <li class="divider"></li>
                                 <li><a data-toggle="modal" data-target="#myModal"><i class="fa fa-sign-out"></i><?php echo i18n::__('Cerrar') ?></a></li>
                             </ul>
@@ -187,6 +193,60 @@ use mvc\i18n\i18nClass as i18n ?>
                 <button type="button" class="btn btn-danger" data-dismiss="modal">No!</button>
                 <a href="<?php echo \mvc\routing\routingClass::getInstance()->getUrlWeb('shfSecurity', 'logout') ?>"  class="btn btn-success"><?php echo i18n::__('Deseo') ?></a>
             </div>
+        </div>
+    </div>
+</div>
+<!-- end Modal logout -->
+
+<!-- Modal consejos -->
+<div class="modal fade" id="consejos" style="margin-top: 150px;" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Consejos para el paso 1: Detalles del evento</h4>
+            </div>
+            <div class="modal-body">
+                <div class="text-left">
+
+                    <p>Aquí te presentamos algunos consejos de experto sobre los detalles de tu evento:</p></br>
+                    <ul style="list-style: disc; padding-left: 10px;">
+
+                        <li>Dale una nota de color a la descripción de tu evento mediante video or fotos.</li>
+                        <li>Embellece tu página de perfil de organizador para promocionar tus eventos.</li>
+                        <li>Descubre cómo configurar eventos periódicos con total facilidad.</li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- end Modal logout -->
+<!-- Modal verificacion -->
+<div class="modal fade" id="userVerify" style="margin-top: 150px;" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-user"></i>Verificar Registro de La Cuenta</h4>
+            </div>
+            <div class="modal-body">
+                <div class="text-left">
+                    <form role="form" method="post" action="<?php echo routing::getInstance()->getUrlWeb('usuario', 'verificar') ?>">
+                        <input name="<?php echo usuarioTableClass::getNameField(usuarioTableClass::ID, true) ?>" value="<?php echo session::getInstance()->getUserId() ?>" type="hidden">
+                        <div class="form-group">  
+                            <label for="statuskey" class="control-label">Codigo De Verificacion:</label>	  
+                            <input class="form-control" 
+                                   type="text" id="<?php echo usuarioTableClass::getNameField(usuarioTableClass::CODIGOKEY, true) ?>" name="<?php echo usuarioTableClass::getNameField(usuarioTableClass::CODIGOKEY, true) ?>" placeholder="Ingrese el Codigo De Verificacion" required autofocus>
+                        </div>
+                        <button class="btn btn-success" type="submit"> Verificar Cuenta</button>
+                    </form>
+
+                </div>
+            </div>
+
         </div>
     </div>
 </div>

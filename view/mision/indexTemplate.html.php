@@ -20,13 +20,13 @@ use mvc\i18n\i18nClass as i18n ?>
                     <!-- Search Widget -->
                     <!-- Categories Widget -->
                     <div class="widget widget-categories">
-                        <h4>Acerca De Nosotros <span class="head-line"></span></h4>
+                        <h4><?php echo i18n::__('Nosotros') ?> <span class="head-line"></span></h4>
                         <ul>
                             <li>
-                                <a href="<?php echo routing::getInstance()->getUrlWeb('vision', 'index') ?>">Vision</a>
+                                <a href="<?php echo routing::getInstance()->getUrlWeb('vision', 'index') ?>"><?php echo i18n::__('Vision') ?></a>
                             </li>
                             <li>
-                                <a href="<?php echo routing::getInstance()->getUrlWeb('mision', 'index') ?>" style="color: #ee1e2d">Mision</a>
+                                <a href="<?php echo routing::getInstance()->getUrlWeb('mision', 'index') ?>" style="color: #ee1e2d"><?php echo i18n::__('Mision') ?></a>
                             </li>
                         </ul>
                     </div>
@@ -45,16 +45,13 @@ use mvc\i18n\i18nClass as i18n ?>
                         </div>-->
                         <!-- Post Content -->
                         <div class="post-content">
-                            <h1 class="page-header">Mision</h1>
+                            <h1 class="page-header"><?php echo i18n::__('Mision') ?></h1>
                             <p class="JustifyFull">
-                            <h3>Nuestra misión,</br></h3>
+                            <h3><?php echo i18n::__('nuestravisi') ?></br></h3>
                             </br>
+                            <?php echo i18n::__('brindarexcelente') ?>
 
-                            Brindar y  un excelente y completo servicio en publicación de eventos, donde la seriedad y 
-                            cumplimiento son la garantía para lograr una ocasión inolvidable, donde proveeremos las mejores 
-                            herramientas y el mejor liderazgo para asistir a los miembros de nuestro team en el desarrollo 
-                            de un negocio solido del NETWORK MARKETING, y convertirse, de la manera más efectiva y eficiente,
-                            en ejecutivos exitosos.
+                           
                             </p>
 
                         </div>

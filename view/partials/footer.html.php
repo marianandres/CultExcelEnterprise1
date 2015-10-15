@@ -11,7 +11,7 @@ use mvc\i18n\i18nClass as i18n ?>
             <div class="col-md-3 col-xs-12">
                 <div class="footer-widget contact-widget">
                     <h4><img src="<?php echo routing::getInstance()->getUrlImg('footer/energiza.jpg') ?>" style="height: 300px" class="img-responsive" alt="Footer Logo" /></h4>
-                   <p>PRUEBA LA DIFERENCIA: ENERGIZA</p>
+                   <p><?php echo i18n::__('energiza') ?></p>
                 </div>
             </div><!-- .col-md-3 -->
             <!-- End Contact Widget -->
@@ -19,7 +19,7 @@ use mvc\i18n\i18nClass as i18n ?>
             <div class="col-md-3 col-xs-12">
                 <div class="footer-widget contact-widget">
                     <h4><img src="<?php echo routing::getInstance()->getUrlImg('footer/revitaliza.jpg') ?>" style="height: 300px" class="img-responsive" alt="Footer Logo" /></h4>
-                   <p>SIENTE LA DIFERENCIA: REVITALIZA</p>
+                   <p><?php echo i18n::__('revitaliza') ?></p>
                 </div>
             </div><!-- .col-md-3 -->
             <!-- End Contact Widget -->
@@ -27,7 +27,7 @@ use mvc\i18n\i18nClass as i18n ?>
             <div class="col-md-3 col-xs-12">
                 <div class="footer-widget contact-widget">
                     <h4><img src="<?php echo routing::getInstance()->getUrlImg('footer/armoniza.jpg') ?>" style="height: 300px" class="img-responsive" alt="Footer Logo" /></h4>
-                    <p>HAZ LA DIFERENCIA: ARMONIZA</p>
+                    <p><?php echo i18n::__('armoniza') ?></p>
                 </div>
             </div><!-- .col-md-3 -->
             <!-- End Contact Widget -->
@@ -35,7 +35,7 @@ use mvc\i18n\i18nClass as i18n ?>
             <div class="col-md-3 col-xs-12">
                 <div class="footer-widget contact-widget">
                     <h4><img src="<?php echo routing::getInstance()->getUrlImg('footer/socializa.jpg') ?>" style="height: 300px" class="img-responsive" alt="Footer Logo" /></h4>
-                    <p>SE LA DIFERENCIA: SOCIALIZA</p>
+                    <p><?php echo i18n::__('socializa') ?></p>
                 </div>
             </div><!-- .col-md-3 -->
             <!-- End Contact Widget -->

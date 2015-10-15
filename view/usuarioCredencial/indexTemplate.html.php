@@ -150,8 +150,8 @@ use \mvc\request\requestClass as request ?>
                                                       <td><input type="checkbox" name="chk[]" value="<?php echo $usuario->$id ?>"></td>
                                                       <td><?php echo credencialTableClass::getNameCredencial($usuario->$credencial) ?></td>
                                                       <td>
-                                                          <a href="<?php echo routing::getInstance()->getUrlWeb('usuarioCredencial', 'edit', array(usuarioCredencialTableClass::ID => $usuario->$id)) ?>" class="btn btn-primary btn-xs"><?php i18n::__('Editar') ?></a>
-                                                          <a href="#" onclick="confirmarEliminar(<?php echo $usuario->$id ?>)" class="btn btn-danger btn-xs"><?php i18n::__('Eliminar') ?></a>
+<!--                                                          <a href="<?php echo routing::getInstance()->getUrlWeb('usuarioCredencial', 'edit', array(usuarioCredencialTableClass::ID => $usuario->$id)) ?>" class="btn btn-primary btn-xs"><?php echo i18n::__('Editar') ?></a>-->
+                                                          <a href="#" onclick="confirmarEliminar(<?php echo $usuario->$id ?>)" class="btn btn-danger btn-xs"><?php echo i18n::__('Eliminar') ?></a>
 
                                                       </td>
                                                   </tr>

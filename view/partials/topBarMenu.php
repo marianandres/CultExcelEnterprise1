@@ -82,8 +82,8 @@ use mvc\i18n\i18nClass as i18n ?>
                     <li class="dropdown topbar-profile">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="rounded-image topbar-profile-image"><img src="<?php echo routing::getInstance()->getUrlImg('logo/logo.jpg') ?>"></span><strong><?php echo \mvc\session\sessionClass::getInstance()->getUserName() ?></strong> <i class="fa fa-caret-down"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="<?php echo routing::getInstance()->getUrlWeb('profile', 'index') ?>"><?php echo i18n::__('My') ?> </a></li>
-                            <li><a href="#"><?php echo i18n::__('Change') ?></a></li>
+<!--                            <li><a href="<?php echo routing::getInstance()->getUrlWeb('profile', 'index') ?>"><?php echo i18n::__('My') ?> </a></li>
+                            <li><a href="#"><?php echo i18n::__('Change') ?></a></li>-->
 <!--                            <li><a href="#"><?php echo i18n::__('Account') ?></a></li>-->
                             <li class="divider"></li>
 <!--                            <li><a href="#"><i class="icon-help-2"></i> <?php echo i18n::__('Help') ?></a></li>-->
@@ -91,9 +91,9 @@ use mvc\i18n\i18nClass as i18n ?>
                             <li><a class="md-trigger" data-toggle="modal" data-target="#myModal"><i class="icon-logout-1"></i><?php echo i18n::__('Logout') ?></a></li>
                         </ul>
                     </li>
-                    <li class="right-opener">
+<!--                    <li class="right-opener">
                         <a href="javascript:;" class="open-right"><i class="fa fa-angle-double-left"></i><i class="fa fa-angle-double-right"></i></a>
-                    </li>
+                    </li>-->
                 </ul>
             </div>
             <!--/.nav-collapse -->

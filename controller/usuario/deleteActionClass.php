@@ -25,7 +25,8 @@ class deleteActionClass extends controllerClass implements controllerActionInter
                 $ids = array(
                     usuarioTableClass::ID => $id
                 );
-                usuarioTableClass::delete($ids, false);
+                datoUsuarioTableClass::delete($ids, true);
+                usuarioTableClass::delete($ids, true);
                 session::getInstance()->setSuccess(i18n::__(20004, null, 'default'));
                 log::register('Eliminacion', usuarioTableClass::getNameTable(), null, session::getInstance()->getUserId());
                 routing::getInstance()->redirect('usuario', 'index');

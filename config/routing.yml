@@ -12,6 +12,7 @@ contact:
     - model/base/usuarioBaseTableClass.php
     - model/usuarioTableClass.php
     
+    
 vision_index:
   url: /vision
   param:  { module: vision, action: index, format: html }
@@ -51,12 +52,20 @@ report_index:
     - hooks/logHookClass.php
     - model/base/bitacoraBaseTableClass.php
     - model/bitacoraTableClass.php
+    - model/base/eventoBaseTableClass.php
+    - model/eventoTableClass.php
+    - model/base/categoriaBaseTableClass.php
+    - model/categoriaTableClass.php
 
 report_reporte:
   url:    /ReporteDeEventos
   param:  { module: report, action: report, format: pdf }
   load:
     - libs/fpdf/fpdf.php
+    - model/base/eventoBaseTableClass.php
+    - model/eventoTableClass.php
+    - model/base/categoriaBaseTableClass.php
+    - model/categoriaTableClass.php
     
 userData_index:
   url:    /DatosDeUsuario
@@ -118,6 +127,10 @@ shfSecurity_logout:
 shfSecurity_noPermission:
   url:    /sin_permisos
   param:  { module: shfSecurity, action: noPermission, format: html }
+  
+shfSecurity_notRegistered:
+  url:    /Ruta_Indefinida
+  param:  { module: shfSecurity, action: notRegistered, format: html }  
 
 shfSecurity_exception:
   url:    /exception
@@ -204,6 +217,8 @@ usuario_delete:
   load:
     - model/base/usuarioBaseTableClass.php
     - model/usuarioTableClass.php
+    - model/base/datoUsuarioBaseTableClass.php
+    - model/datoUsuarioTableClass.php
     - hooks/logHookClass.php
     - model/base/bitacoraBaseTableClass.php
     - model/bitacoraTableClass.php
@@ -217,6 +232,36 @@ usuario_deleteSelect:
     - hooks/logHookClass.php
     - model/base/bitacoraBaseTableClass.php
     - model/bitacoraTableClass.php
+    
+usuario_verificar:
+  url:    /usuario/verificar
+  param:  { module: usuario, action: verificar, format: html }
+  load:
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php  
+    
+usuario_active:
+  url:    /usuario/active
+  param:  { module: usuario, action: active, format: html }
+  load:
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php  
+    
+usuario_inactive:
+  url:    /usuario/inactive
+  param:  { module: usuario, action: inactive, format: html }
+  load:
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php      
     
 usuario_deleteFilters:
   url:    /Borrar_Filtros
@@ -486,6 +531,8 @@ eventos_index:
   load:
     - model/base/eventoBaseTableClass.php
     - model/eventoTableClass.php
+    - model/base/categoriaBaseTableClass.php
+    - model/categoriaTableClass.php
     
 eventos_insert:
   url:    /eventos/insert
@@ -493,6 +540,8 @@ eventos_insert:
   load:
     - model/base/eventoBaseTableClass.php
     - model/eventoTableClass.php
+    - model/base/categoriaBaseTableClass.php
+    - model/categoriaTableClass.php
     
 eventos_create:
   url:    /eventos/create
@@ -1491,7 +1540,9 @@ eventosBlog_index:
   param:  { module: eventosBlog, action: index, format: html }
   load:
     - model/base/eventoBaseTableClass.php
-    - model/eventoTableClass.php   
+    - model/eventoTableClass.php
+    - model/base/categoriaBaseTableClass.php
+    - model/categoriaTableClass.php
   
 userEvents_index:
   url:    /MisEventos

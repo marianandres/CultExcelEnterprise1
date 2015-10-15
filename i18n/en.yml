@@ -10,6 +10,8 @@ dictionary:
     passtxtPlaceholder2:  Confirm Password
     register:             register
     update:               update
+    AdministRoles:        administration Roles
+    RegistroSistema:      Registration System
     adminusu:             Users' administration
     adminusulow:          User Management System
     credusu:              User Credentials
@@ -138,6 +140,7 @@ dictionary:
     Cancelar:             cancel
     Nuevo:                new
     Editar:               edit
+    BuenaEsaTerminado:    Good one! Almost 're done !.
 #datoUsuario
     Seleccion:            clear selection
     Borrar:               Delete
@@ -145,11 +148,17 @@ dictionary:
     DatoUsu:              Data Users
 #default
     lugar:                Santiago De Cali, Colombia
+    Categoria:            category
     Inicio:               Start
     Cuenta:               Your account
     Ayuda:                help
     Nosotros:             About us
+    Eventos:              Events
+    EventosRecientes:     Recent events
+    Inicio:               Start
     Vision:               View
+    Mis:                  My Events
+    Inconfundible:        Give a unique name and unmistakable
     Mision:               mission
     Crear:                Create Event
     Contacto:             Contact Us
@@ -217,6 +226,7 @@ dictionary:
     Our:                  Our Happy
     Clients:              Clients
     Partners:             Partners We Work With
+    Panel:                panel admin
     adminpanel:           Admin Panel
 #evento
     $49:                  $49
@@ -229,6 +239,8 @@ dictionary:
     FINALIZACION:         COMPLETION
     ImagenEvento:         Event image
     DireccionLugarEvento: Direction of the venue
+    ComentaEventEspecial: Discuss having your Special Event .
+    PublicarEvento:       Post Event
     Inicial:              Initial Date Event
     Final:                Date Event Final
     Publicacion:          Initial Issue Date
@@ -274,6 +286,8 @@ dictionary:
     Genero:               Gender
     Nacimiento:           Birthdate
     Localidad:            location
+    Reportes:             reports
+    ReportesCategoria:    Event Reports By Category
     Tipo:                 Doc type
     UsuarioID:            userID
     Costo:                cost
@@ -307,6 +321,10 @@ dictionary:
     telefono:             phone
     patrocinador:         sponsor 
     contenido:            content
+    Reportes:             reports
+    GraficaCategoria:     Grafica Event Published by category ( Events x Year )
+    ReportesCategoria:    Event Reports By Category
+    PublicadosCategoria:  Event Reports published by Category
     estadoPqrs:           state_pqrs_id
     tipoPqrs:             type_pqrs_id
     SALES:                SALES
@@ -402,6 +420,7 @@ dictionary:
     pm:                   -9am to 2pm
     Closed:               -Closed
     Confirmation:         Confirmation
+    Ir:                   Go to website
     Registra:             REGISTER
     Registrarse:          Register
     Terminos:             Terms and conditions
@@ -448,7 +467,14 @@ dictionary:
     SUPERSABADO:          SUPER SABADO
     NUEVAVIDA:            A NEW LIFE
     AjustesAdicionales:   Aditional Settings
-    
+    energiza:             TEST THE DIFFERENCE = ENERGISES
+    revitaliza:           FEEL THE DIFFERENCE = REVITALISES
+    armoniza:             MAKE THE DIFFERENCE = HARMONIZES
+    socializa:            IS THE DIFFERENCE = GET SOCIAL
+    nuestraempresa:       Make our company a leading organization , spreading the professionalism of those  integrate , showing human warmth as principal virtue , our team in Convert  the preferential network to network marketing professionals in the world, where success  the group is that of each of its members, resulted in a prosperous , fulfilling life without stress, and in the context of greater individual freedom possible.
+    vision:               view
+    nuestravisi:          Our mission
+    brindarexcelente:     And provide an excellent, full service event publishing , where the seriousness and compliance are the guarantee for an unforgettable occasion , which will provide the best tools and best leadership to assist our members in the development team a solid network marketing business, and become , in the most effective and efficient manner, successful executives.
     DetalleEvento:        Event detail
     EstadoPQRSist:        PQRS State System
     Activado:             Activated

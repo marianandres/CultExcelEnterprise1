@@ -2,12 +2,25 @@
 
 use mvc\routing\routingClass as routing ?>
 <?php
-use mvc\i18n\i18nClass as i18n ?>
+use mvc\i18n\i18nClass as i18n;
+use mvc\view\viewClass as view;
+use mvc\session\sessionClass as session;
+?>
+
 <!-- Full Body Container -->
 <div id="container" class="boxed-page">
     <?php mvc\view\viewClass::includePartial('partials/header.html') ?>
     <!-- Start Home Page Slider -->
     <section id="home">
+        <?php echo view::includeHandlerMessage() ?>
+        <?php if (session::getInstance()->isUserAuthenticated() == true) { ?>
+            <?php if (usuarioTableClass::getVerifyUser(mvc\session\sessionClass::getInstance()->getUserId()) == 0) { ?>
+                <div class="alert alert-warning alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong>Warning!</strong> Bienvenido! Te has registrado en El Portal Cult Excel Enterprise. Porfavor Ingrese a Su Correo electronico Para Verificar su Cuenta! <a data-toggle="modal" data-target="#userVerify"><i class="fa fa-link"></i> Verificar!</a>
+                </div>
+            <?php } ?>
+        <?php } ?>
         <!-- Carousel -->
         <div id="main-slide" class="carousel slider" data-ride="carousel">
             <!-- Indicators -->
@@ -156,7 +169,7 @@ use mvc\i18n\i18nClass as i18n ?>
 
                 <!-- Start Service Icon 5 -->
                 <div class="col-md-3 col-sm-6 service-box service-center" data-animation="fadeIn" data-animation-delay="05">
-                    
+
                     <div class="service-content">
                         <h2><?php echo i18n::__('Crea') ?></h2>
                         <p><?php echo i18n::__('detalle') ?></p>
@@ -166,7 +179,7 @@ use mvc\i18n\i18nClass as i18n ?>
 
                 <!-- Start Service Icon 6 -->
                 <div class="col-md-3 col-sm-6 service-box service-center" data-animation="fadeIn" data-animation-delay="06">
-                   
+
                     <div class="service-content">
                         <h2><?php echo i18n::__('Compartir') ?></h2>
                         <p><?php echo i18n::__('Invitacion') ?></p>
@@ -176,7 +189,7 @@ use mvc\i18n\i18nClass as i18n ?>
 
                 <!-- Start Service Icon 7 -->
                 <div class="col-md-3 col-sm-6 service-box service-center" data-animation="fadeIn" data-animation-delay="07">
-                    
+
                     <div class="service-content">
                         <h2><?php echo i18n::__('Gratis') ?></h2>
                         <p><?php echo i18n::__('Gratuitos') ?></p>
@@ -186,7 +199,7 @@ use mvc\i18n\i18nClass as i18n ?>
 
                 <!-- Start Service Icon 8 -->
                 <div class="col-md-3 col-sm-6 service-box service-center" data-animation="fadeIn" data-animation-delay="08">
-                    
+
                     <div class="service-content">
                         <h2><?php echo i18n::__('Tarifas') ?></h2>
                         <p><?php echo i18n::__('Ofrecemos') ?></p>
@@ -323,7 +336,7 @@ use mvc\i18n\i18nClass as i18n ?>
                 <a href="<?php echo routing::getInstance()->getUrlImg('Portfolio/8.png') ?>"><i class="more">+</i></a>
 
             </li>
-            
+
         </ul>
         <!-- End Recent Projects Carousel -->
     </div>
@@ -340,7 +353,7 @@ use mvc\i18n\i18nClass as i18n ?>
             <!-- Some Text -->
             <p class="text-center"><h3><strong>" <?php echo i18n::__('secreto') ?>"</strong></h3>
             <br>
-                            
+
             <!-- Start Team Members -->
             <div class="row">
 
@@ -358,9 +371,9 @@ use mvc\i18n\i18nClass as i18n ?>
                             <p> <a href="https://www.youtube.com/results?search_query=testimonios+andres+guzman">https://www.youtube.com/results?search_query=testimonios+andres+guzman<a/></p>
                         </div>
                         <!-- Start Progress Bar 1 -->
-                        
+
                         <!-- Memebr Social Links -->
-                        
+
                     </div>
                 </div>
                 <!-- End Memebr 1 -->
@@ -378,7 +391,7 @@ use mvc\i18n\i18nClass as i18n ?>
                         <div class="member-info">
                             <p><a href="https://www.youtube.com/watch?v=qq_vkVxE2Uw">https://www.youtube.com/watch?v=qq_vkVxE2Uw<a/> </p>
                         </div>
-                       
+
                     </div>
                 </div>
                 <!-- End Memebr 2 -->
@@ -396,7 +409,7 @@ use mvc\i18n\i18nClass as i18n ?>
                         <div class="member-info">
                             <p><a href="https://www.youtube.com/watch?v=lZMW-slEZso">https://www.youtube.com/watch?v=lZMW-slEZso<a/> </p>
                         </div>
-                        
+
                     </div>
                 </div>
                 <!-- End Memebr 3 -->
@@ -414,7 +427,7 @@ use mvc\i18n\i18nClass as i18n ?>
                         <div class="member-info">
                             <p><a href="https://www.youtube.com/watch?v=jbTX4KYGTpQ">https://www.youtube.com/watch?v=jbTX4KYGTpQ<a/> </p>
                         </div>
-                        
+
                     </div>
                 </div>
                 <!-- End Memebr 4 -->
@@ -463,7 +476,7 @@ use mvc\i18n\i18nClass as i18n ?>
                     </div>
                     <!-- End Big Heading -->
 
-                    
+
                 </div>
             </div>
             <div class="row pricing-tables">
@@ -475,7 +488,7 @@ use mvc\i18n\i18nClass as i18n ?>
                         </div>
                         <div class="plan-price">
                             <div class="price-value"><?php echo i18n::__('$180.000') ?><span></div>
-                            
+
                         </div>
                         <div class="plan-list">
                             <ul>
@@ -483,7 +496,7 @@ use mvc\i18n\i18nClass as i18n ?>
                                 <li><strong> <?php echo i18n::__('RecibesCodigo') ?></li>
                                 <li><strong><?php echo i18n::__('Capacitacion') ?></strong></li>
                                 <li><strong><?php echo i18n::__('Ganasdosformas') ?></strong></li>
-                                
+
                             </ul>
                         </div>
                         <div class="plan-signup">
@@ -502,7 +515,7 @@ use mvc\i18n\i18nClass as i18n ?>
                         </div>
                         <div class="plan-list">
                             <ul>
-                                 <li><strong><?php echo i18n::__('9Cajas') ?></strong><?php echo i18n::__('GanoCafé') ?></li>
+                                <li><strong><?php echo i18n::__('9Cajas') ?></strong><?php echo i18n::__('GanoCafé') ?></li>
                                 <li><strong><?php echo i18n::__('TuPagina') ?></strong><?php echo i18n::__('Web') ?> </li>
                                 <li><strong><?php echo i18n::__('Capacitacion') ?></strong></li>
                                 <li><strong><?php echo i18n::__('12Formas') ?></strong> <?php echo i18n::__('Ganar') ?></li>
@@ -571,60 +584,60 @@ use mvc\i18n\i18nClass as i18n ?>
     <div class="partner">
         <div class="container">
             <div class="row">
-<!--
-                 Start Big Heading 
-                <div class="big-title text-center">
-                    <h1>Our Happy <strong>Clients</strong></h1>
-                    <p class="title-desc">Partners We Work With</p>
-                </div>
-                 End Big Heading 
-                Start Clients Carousel
-                <div class="our-clients">
-                    <div class="clients-carousel custom-carousel touch-carousel navigation-3" data-appeared-items="5" data-navigation="true">
-
-                         Client 1 
-                        <div class="client-item item">
-                            <a href="#"><img src="images/c1.png" alt="" /></a>
-                        </div>
-
-                         Client 2 
-                        <div class="client-item item">
-                            <a href="#"><img src="images/c2.png" alt="" /></a>
-                        </div>
-
-                         Client 3 
-                        <div class="client-item item">
-                            <a href="#"><img src="images/c3.png" alt="" /></a>
-                        </div>
-
-                         Client 4 
-                        <div class="client-item item">
-                            <a href="#"><img src="images/c4.png" alt="" /></a>
-                        </div>
-
-                         Client 5 
-                        <div class="client-item item">
-                            <a href="#"><img src="images/c5.png" alt="" /></a>
-                        </div>
-
-                         Client 6 
-                        <div class="client-item item">
-                            <a href="#"><img src="images/c6.png" alt="" /></a>
-                        </div>
-
-                         Client 7 
-                        <div class="client-item item">
-                            <a href="#"><img src="images/c7.png" alt="" /></a>
-                        </div>
-
-                         Client 8 
-                        <div class="client-item item">
-                            <a href="#"><img src="images/c8.png" alt="" /></a>
-                        </div>
-
-                    </div>
-                </div>
-                 End Clients Carousel -->
+                <!--
+                                 Start Big Heading 
+                                <div class="big-title text-center">
+                                    <h1>Our Happy <strong>Clients</strong></h1>
+                                    <p class="title-desc">Partners We Work With</p>
+                                </div>
+                                 End Big Heading 
+                                Start Clients Carousel
+                                <div class="our-clients">
+                                    <div class="clients-carousel custom-carousel touch-carousel navigation-3" data-appeared-items="5" data-navigation="true">
+                
+                                         Client 1 
+                                        <div class="client-item item">
+                                            <a href="#"><img src="images/c1.png" alt="" /></a>
+                                        </div>
+                
+                                         Client 2 
+                                        <div class="client-item item">
+                                            <a href="#"><img src="images/c2.png" alt="" /></a>
+                                        </div>
+                
+                                         Client 3 
+                                        <div class="client-item item">
+                                            <a href="#"><img src="images/c3.png" alt="" /></a>
+                                        </div>
+                
+                                         Client 4 
+                                        <div class="client-item item">
+                                            <a href="#"><img src="images/c4.png" alt="" /></a>
+                                        </div>
+                
+                                         Client 5 
+                                        <div class="client-item item">
+                                            <a href="#"><img src="images/c5.png" alt="" /></a>
+                                        </div>
+                
+                                         Client 6 
+                                        <div class="client-item item">
+                                            <a href="#"><img src="images/c6.png" alt="" /></a>
+                                        </div>
+                
+                                         Client 7 
+                                        <div class="client-item item">
+                                            <a href="#"><img src="images/c7.png" alt="" /></a>
+                                        </div>
+                
+                                         Client 8 
+                                        <div class="client-item item">
+                                            <a href="#"><img src="images/c8.png" alt="" /></a>
+                                        </div>
+                
+                                    </div>
+                                </div>
+                                 End Clients Carousel -->
             </div><!-- .row -->
         </div><!-- .container -->
     </div>

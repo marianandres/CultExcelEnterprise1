@@ -42,7 +42,24 @@ namespace mvc\config {
     private static $row_grid;
     private static $default_module_permission;
     private static $default_action_permission;
-
+    private static $googleMapsApiKey;
+    
+    /**
+     * Obtiene google API key
+     * 
+     * @return string
+     */
+    public static function getGoogleMapsApiKey() {
+      return self::$googleMapsApiKey;
+    }
+    
+    /*
+     * 
+     */
+    public static function setGoogleMapsApiKey($googleMapsApiKey) {
+      self::$googleMapsApiKey = $googleMapsApiKey;
+    }
+    
     /**
      * Obtiene la URL base del sistema
      *

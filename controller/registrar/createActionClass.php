@@ -15,56 +15,108 @@ use mvc\i18n\i18nClass as i18n;
  */
 class createActionClass extends controllerClass implements controllerActionInterface {
 
-  public function execute() {
-    try {
-      if (request::getInstance()->isMethod('POST')) {
+    public function execute() {
+        try {
+            if (request::getInstance()->isMethod('POST')) {
 
-        $usuario = trim(request::getInstance()->getPost(usuarioTableClass::getNameField(usuarioTableClass::USER, true)));
-        $password = request::getInstance()->getPost(usuarioTableClass::getNameField(usuarioTableClass::PASSWORD, true) . '_1');
-        $password2 = request::getInstance()->getPost(usuarioTableClass::getNameField(usuarioTableClass::PASSWORD, true) . '_2');
+                $usuario = trim(request::getInstance()->getPost(usuarioTableClass::getNameField(usuarioTableClass::USER, true)));
+                $password = request::getInstance()->getPost(usuarioTableClass::getNameField(usuarioTableClass::PASSWORD, true) . '_1');
+                $password2 = request::getInstance()->getPost(usuarioTableClass::getNameField(usuarioTableClass::PASSWORD, true) . '_2');
+                $correo = trim(request::getInstance()->getPost(datoUsuarioTableClass::getNameField(datoUsuarioTableClass::CORREO, true)));
 
-        $this->validate($usuario, $password, $password2);
-        $data = array(
-            usuarioTableClass::USER => $usuario,
-            usuarioTableClass::PASSWORD => md5($password)
-        );
-        usuarioTableClass::insert($data);
+                $this->validate($usuario, $password, $password2);
+                $key = $this->generarCodigo(8);
 
-        $user = usuarioTableClass::getIdNewUser($usuario);
-        $credential = 'usuario';
-        $credencial = credencialTableClass::getIdCredencial($credential);
+                $data = array(
+                    usuarioTableClass::USER => $usuario,
+                    usuarioTableClass::PASSWORD => md5($password),
+                    usuarioTableClass::CODIGOKEY => $key
+                );
+                usuarioTableClass::insert($data);
 
-        $data1 = array(
-            usuarioCredencialTableClass::USUARIO_ID => $user,
-            usuarioCredencialTableClass::CREDENCIAL_ID => $credencial
-        );
+                $user = usuarioTableClass::getIdNewUser($usuario);
+                $credential = 'usuario';
+                $credencial = credencialTableClass::getIdCredencial($credential);
+
+                $data1 = array(
+                    usuarioCredencialTableClass::USUARIO_ID => $user,
+                    usuarioCredencialTableClass::CREDENCIAL_ID => $credencial
+                );
+                $data2 = array(
+                    datoUsuarioTableClass::USUARIO_ID => $user,
+                    datoUsuarioTableClass::CORREO => $correo
+                );
 //        print_r($data1);
 //        exit();
-        usuarioCredencialTableClass::insert($data1);
-        routing::getInstance()->redirect('homepage', 'index');
-      } else {
-        routing::getInstance()->redirect('registrar', 'insert');
-      }
-    } catch (PDOException $exc) {
-      session::getInstance()->setFlash('exc', $exc);
-      routing::getInstance()->forward('shfSecurity', 'exception');
-    }
-  }
+                // email de destino
+                $email = $correo;
 
-  private function validate($usuario, $password, $password2) {
-    $flag = false;
+                // asunto del email
+                $subject = "Activa tu cuenta Cult Excel.";
 
-    if (strlen($usuario) > usuarioTableClass::USER_LENGTH) {
-      session::getInstance()->setError(i18n::__(10001, null, 'errors', array('%user%' => $usuario, '%caracteres%' => usuarioTableClass::USER_LENGTH)));
-      $flag = true;
-      session::getInstance()->getFlash(usuarioTableClass::getNameField(usuarioTableClass::USER, true), true);
+                // Cuerpo del mensaje
+                $mensaje = "---------------------------------- \n";
+                $mensaje.= " Sistema De Registro De Usuarios   \n";
+                $mensaje.= "---------------------------------- \n";
+                $mensaje.= "NOMBRE:   " . $usuario . "\n";
+                $mensaje.= "EMAIL:    " . $correo . "\n";
+                $mensaje.= "FECHA:    " . date("d-m-Y") . "\n";
+                $mensaje.= "HORA:    " . date("H-i-s") . "\n";
+                $mensaje.= "---------------------------------- \n\n";
+                $mensaje.= "Hola $usuario, Bienvenido tu te as registrado en "
+                        . "http://$web y para activar tu cuenta necesitas meterte en esta url. "
+                        . "http://$web/validacion.php?email=$correo&key=$key \n";
+                $mensaje.= "---------------------------------- \n";
+                $mensaje.= "Enviado desde Cult Excel Enterprise \n";
+
+                // headers del email
+                $headers = "From: andy_93421@hotmail.com \r\n";
+
+                // Enviamos el mensaje 
+                if (mail($email, $subject, $mensaje, $headers)) {
+                    echo "<script language='javascript'>
+alert('Mensaje enviado, muchas gracias.');
+window.location.href = 'index.php';
+</script>";
+                } else {
+                    echo "Error de envío.";
+                }
+                usuarioCredencialTableClass::insert($data1);
+                datoUsuarioTableClass::insert($data2);
+                session::getInstance()->setSuccess("Bienvenido! Te has registrado en El Portal Cult Excel Enterprise. Porfavor Ingrese a Su Correo electronico Para Verificar su Cuenta!");
+                routing::getInstance()->redirect('homepage', 'index');
+            } else {
+                routing::getInstance()->redirect('registrar', 'insert');
+            }
+        } catch (PDOException $exc) {
+            session::getInstance()->setFlash('exc', $exc);
+            routing::getInstance()->forward('shfSecurity', 'exception');
+        }
     }
 
-    if (($password) !== ($password2)) {
-      session::getInstance()->setError(i18n::__(10002, null, 'errors'));
-      $flag = true;
-      session::getInstance()->getFlash(usuarioTableClass::getNameField(usuarioTableClass::PASSWORD, true), true);
+    private function generarCodigo($longitud) {
+        $key = '';
+        $pattern = '1234567890abcdefghijklmnopqrstuvwxyz';
+        $max = strlen($pattern) - 1;
+        for ($i = 0; $i < $longitud; $i++)
+            $key .= $pattern{mt_rand(0, $max)};
+        return $key;
     }
+
+    private function validate($usuario, $password, $password2) {
+        $flag = false;
+
+        if (strlen($usuario) > usuarioTableClass::USER_LENGTH) {
+            session::getInstance()->setError(i18n::__(10001, null, 'errors', array('%user%' => $usuario, '%caracteres%' => usuarioTableClass::USER_LENGTH)));
+            $flag = true;
+            session::getInstance()->getFlash(usuarioTableClass::getNameField(usuarioTableClass::USER, true), true);
+        }
+
+        if (($password) !== ($password2)) {
+            session::getInstance()->setError(i18n::__(10002, null, 'errors'));
+            $flag = true;
+            session::getInstance()->getFlash(usuarioTableClass::getNameField(usuarioTableClass::PASSWORD, true), true);
+        }
 
 //    if (($cadena) !== ($usuario )) {
 //      session::getInstance()->setError(i18n::__(00001, null, 'errors'));
@@ -72,22 +124,22 @@ class createActionClass extends controllerClass implements controllerActionInter
 //      session::getInstance()->getFlash(usuarioTableClass::getNameField(usuarioTableClass::USER, true), true);
 //    }
 //
-    if ($usuario == "" or $password == "" or $password2 == "") {
-      session::getInstance()->setError(i18n::__(10003, null, 'errors'));
-      $flag = true;
-      session::getInstance()->getFlash(usuarioTableClass::getNameField(usuarioTableClass::USER, true), true);
-    }
+        if ($usuario == "" or $password == "" or $password2 == "") {
+            session::getInstance()->setError(i18n::__(10003, null, 'errors'));
+            $flag = true;
+            session::getInstance()->getFlash(usuarioTableClass::getNameField(usuarioTableClass::USER, true), true);
+        }
 
-    if ($usuario === usuarioTableClass::getNameField(usuarioTableClass::USER)) {
-      session::getInstance()->setError(i18n::__(10004, null, 'errors'));
-      $flag = true;
-      session::getInstance()->getFlash(usuarioTableClass::getNameField(usuarioTableClass::USER, true), true);
-    }
+        if ($usuario === usuarioTableClass::getNameField(usuarioTableClass::USER)) {
+            session::getInstance()->setError(i18n::__(10004, null, 'errors'));
+            $flag = true;
+            session::getInstance()->getFlash(usuarioTableClass::getNameField(usuarioTableClass::USER, true), true);
+        }
 
-    if ($flag === true) {
-      request::getInstance()->setMethod('GET');
-      routing::getInstance()->forward('registrar', 'insert');
+        if ($flag === true) {
+            request::getInstance()->setMethod('GET');
+            routing::getInstance()->forward('registrar', 'insert');
+        }
     }
-  }
 
 }

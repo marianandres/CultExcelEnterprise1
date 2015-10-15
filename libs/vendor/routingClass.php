@@ -180,7 +180,8 @@ namespace mvc\routing {
                         }
                     }
                     if ($flag === false) {
-                        throw new \Exception(i18nClass::__(00002, null, 'errors'), 00002);
+                        routingClass::getInstance()->redirect('shfSecurity', 'notRegistered');
+//                        throw new \Exception(i18nClass::__(00002, null, 'errors'), 00002);
                     }
                     return true;
                 }

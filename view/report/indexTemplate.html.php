@@ -9,34 +9,8 @@ use mvc\view\viewClass as view ?>
 use mvc\config\configClass as config ?>
 <?php
 use \mvc\request\requestClass as request ?>
-<?php $usu = usuarioTableClass::USER ?>
-<?php $id = usuarioTableClass::ID ?>
-<?php $created = usuarioTableClass::CREATED_AT ?>
 <div class="fixed-left">
     <!-- Modal Start -->
-
-    <!-- Modal logout -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="text-center">
-                        <h3><strong>Logout</strong> Confirmation</h3>
-                        <p>Are you sure want to logout from this awesome system?</p>
-
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">No!</button>
-                    <a  href="<?php echo \mvc\routing\routingClass::getInstance()->getUrlWeb('shfSecurity', 'logout') ?>" class="btn btn-success">Si! , Deseo Cerrar Sesion</a>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- end Modal logout -->
     <!-- Begin page -->
     <div id="wrapper">
@@ -58,14 +32,14 @@ use \mvc\request\requestClass as request ?>
 
                 <!-- Page Heading Start -->
                 <div class="page-heading">
-                    <h1><i class="fa fa-files-o"></i>  <?php ?> Reportes</h1>
-                    <h3><?php ?> Reportes De Eventos Publicados Por Categoria</h3>            	</div>
+                    <h1><i class="fa fa-files-o"></i>  <?php ?><?php echo i18n::__('Reportes') ?> </h1>
+                    <h3><?php ?><?php echo i18n::__('PublicadosCategoria') ?> </h3>            	</div>
                 <!-- Page Heading End-->				<!-- Your awesome content goes here -->
                 <div class="row">
                     <div class="col-md-12">
                         <div class="widget">
                             <div class="widget-header">
-                                <h2><strong><?php ?> Grafica De Eventos Publicados Por Categoria (Eventos x Año)</strong></h2>
+                                <h2><strong><?php ?> <?php echo i18n::__('GraficaCategoria') ?></strong></h2>
                                 <div class="additional-btn">
 
                                     <a href="javascript:location.reload(true)" class="hidden reload"><i class="icon-ccw-1"></i></a>
@@ -77,6 +51,9 @@ use \mvc\request\requestClass as request ?>
                                 <br>					
                                 <div class="row">
                                     <div class="widget-content padding">
+                                        <?php if (empty($objCategoryEvents)): ?>
+                                            <?php echo "<h1>" . "no hay registros" . "</h1>"; ?>
+                                        <?php endif; ?>
                                         <div id="report-event"></div>
                                     </div>
                                 </div>
@@ -85,7 +62,7 @@ use \mvc\request\requestClass as request ?>
 
                         <div class="widget">
                             <div class="widget-header">
-                                <h2><strong><?php ?> Reportes De Eventos Publicados Por Categoria</strong></h2>
+                                <h2><strong><?php ?> <?php echo i18n::__('PublicadosCategoria') ?></strong></h2>
                                 <div class="additional-btn">
 
                                     <a href="javascript:location.reload(true)" class="hidden reload"><i class="icon-ccw-1"></i></a>
@@ -107,32 +84,24 @@ use \mvc\request\requestClass as request ?>
                                         <table id="datatables-1" class="table table-striped table-bordered" cellspacing="0" width="100%">
                                             <thead>
                                                 <tr>
-                                                    <th><input type="checkbox" id="chkAll"></th>
-                                                    <th><?php echo i18n::__('usuario') ?></th>
-                                                    <th><?php echo i18n::__('fechaCreacion') ?></th>
-                                                    <th><?php echo i18n::__('actions') ?></th>
+                                                    <th>Categoria De Eventos</th>
+                                                    <th>Cantidad De Eventos x Categoria</th>
                                                 </tr>
                                             </thead>
                                             <tfoot>
                                                 <tr>
-                                                    <th><input type="checkbox" id="chkAll"></th>
-                                                    <th><?php echo i18n::__('usuario') ?></th>
-                                                    <th><?php echo i18n::__('fechaCreacion') ?></th>
-                                                    <th><?php echo i18n::__('actions') ?></th>
+
+                                                    <th>Categoria De Eventos</th>
+                                                    <th>Cantidad De Eventos x Categoria</th>
                                                 </tr>
                                             </tfoot>
                                             <tbody>
-                                                <?php foreach ($objUsuarios as $usuario): ?>
+                                                <?php foreach ($objCategoryEvents as $categoryEvents): ?>
                                                     <tr>
-                                                        <td><input type="checkbox" name="chk[]" value="<?php echo $usuario->$id ?>"></td>
-                                                        <td><?php echo $usuario->$usu ?></td>
-                                                        <td><?php echo $usuario->$created ?></td>
-                                                        <td>
-                                                            <!--                    <a href="#" class="btn btn-warning btn-xs">Ver</a>-->
-                                                            <a href="<?php echo routing::getInstance()->getUrlWeb('usuario', 'edit', array(usuarioTableClass::ID => $usuario->$id)) ?>" class="btn btn-primary btn-xs"> <?php echo i18n::__('Editar') ?></a>
-                                                            <a href="#" onclick="confirmarEliminar(<?php echo $usuario->$id ?>)" class="btn btn-danger btn-xs"> <?php echo i18n::__('Eliminar') ?></a>
-                                                            <a href="<?php echo routing::getInstance()->getUrlWeb('usuarioCredencial', 'index', array(usuarioCredencialTableClass::getNameField(usuarioCredencialTableClass::USUARIO_ID, true) => $usuario->$id)) ?>" class="btn btn-success btn-xs"><i class="fa fa-external-link-square"></i> <?php echo i18n::__('Detalles') ?></a>
-                                                        </td>
+
+                                                        <td><?php echo $categoryEvents->nombre ?></td>
+                                                        <td><?php echo $categoryEvents->conteo ?></td>
+
                                                     </tr>
                                                 <?php endforeach ?>
                                             </tbody>
@@ -165,17 +134,17 @@ use \mvc\request\requestClass as request ?>
     </script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script>
-        Morris.Line({
-            element: 'report-event',
-            resize: true,
-            data: [
-                {y: '2013', a: 200, b: 90, c: 20, d: 30, e: 40, f: 50},
-                {y: '2014', a: 75, b: 65, c: 120, d: 60, e: 80, f: 150},
-                {y: '2015', a: 50, b: 40, c: 35, d: 38, e: 180, f: 15},
-            ],
-            xkey: 'y',
-            ykeys: ['a', 'b', 'c', 'd', 'e', 'f'],
-            labels: ['One To One', 'Coffee Break', 'Open', 'SuperSabado', 'Open Especial', 'Convenciones']
+        Morris.Bar({
+        element: 'report-event',
+                resize: true,
+                data: [
+
+                    {y: '2011', a: 75, b: 65}
+
+                ],
+                xkey: 'y',
+                ykeys: ['a', ],
+                labels: ['Series A']
         });
     </script>
 </div>

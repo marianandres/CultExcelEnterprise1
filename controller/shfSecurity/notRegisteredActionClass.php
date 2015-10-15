@@ -9,18 +9,15 @@ use mvc\session\sessionClass as session;
 use mvc\i18n\i18nClass as i18n;
 
 /**
- * Description of ejemploClass
+ * Description of noPermissionActionClass
  *
  * @author Julian Lasso <ingeniero.julianlasso@gmail.com>
  */
-class reportActionClass extends controllerClass implements controllerActionInterface {
+class notRegisteredActionClass extends controllerClass implements controllerActionInterface {
 
   public function execute() {
     try {
-      
-
-      $this->objCategoryEvents = eventoTableClass::getReportCategoryEventData();
-      $this->defineView('index', 'report', session::getInstance()->getFormatOutput());
+      $this->defineView('notRegistered', 'shfSecurity', session::getInstance()->getFormatOutput());
     } catch (PDOException $exc) {
       session::getInstance()->setFlash('exc', $exc);
       routing::getInstance()->forward('shfSecurity', 'exception');

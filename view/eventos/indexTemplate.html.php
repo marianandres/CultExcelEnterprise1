@@ -13,6 +13,7 @@ use mvc\i18n\i18nClass as i18n ?>
 <?php // $usu = eventoTableClass::NOMBRE         ?>
 <?php // $id = eventoTableClass::ID         ?>
 
+
 <!-- Full Body Container -->
 <div id="container" class="boxed-page">
 

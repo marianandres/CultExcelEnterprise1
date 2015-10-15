@@ -9,6 +9,63 @@ use mvc\config\configClass as config;
  * @author Julian Lasso <ingeniero.julianlasso@gmail.com>
  */
 class usuarioTableClass extends usuarioBaseTableClass {
+    
+    public static function getVerifyUser($id) {
+        try {
+            $sql = 'SELECT ' . usuarioTableClass::ID. ','
+                    . usuarioTableClass::ESTADOKEY.' '
+                    . ' FROM ' . usuarioTableClass::getNameTable()
+                    . ' WHERE ' . usuarioTableClass::getNameField(usuarioTableClass::DELETED_AT) . ' IS NULL'
+                    . ' AND ' . usuarioTableClass::ID . ' = :id ';
+            $params = array(
+                ':id' => $id,
+            );
+            $answer = model::getInstance()->prepare($sql);
+            $answer->execute($params);
+            $answer = $answer->fetchAll(PDO::FETCH_OBJ);
+            return $answer[0]->estadokey;
+        } catch (PDOException $exc) {
+            throw $exc;
+        }
+    }
+    
+    public static function getVerifyUserKey($id) {
+        try {
+            $sql = 'SELECT ' . usuarioTableClass::ID. ','
+                    . usuarioTableClass::CODIGOKEY.' '
+                    . ' FROM ' . usuarioTableClass::getNameTable()
+                    . ' WHERE ' . usuarioTableClass::getNameField(usuarioTableClass::DELETED_AT) . ' IS NULL'
+                    . ' AND ' . usuarioTableClass::ID . ' = :id ';
+            $params = array(
+                ':id' => $id,
+            );
+            $answer = model::getInstance()->prepare($sql);
+            $answer->execute($params);
+            $answer = $answer->fetchAll(PDO::FETCH_OBJ);
+            return $answer[0]->codigokey;
+        } catch (PDOException $exc) {
+            throw $exc;
+        }
+    }
+    
+    public static function getVerifyUserPass($id) {
+        try {
+            $sql = 'SELECT ' . usuarioTableClass::ID. ','
+                    . usuarioTableClass::PASSWORD.' '
+                    . ' FROM ' . usuarioTableClass::getNameTable()
+                    . ' WHERE ' . usuarioTableClass::getNameField(usuarioTableClass::DELETED_AT) . ' IS NULL'
+                    . ' AND ' . usuarioTableClass::ID . ' = :id ';
+            $params = array(
+                ':id' => $id,
+            );
+            $answer = model::getInstance()->prepare($sql);
+            $answer->execute($params);
+            $answer = $answer->fetchAll(PDO::FETCH_OBJ);
+            return $answer[0]->password;
+        } catch (PDOException $exc) {
+            throw $exc;
+        }
+    }
 
     public static function getTotalPages($lines, $where) {
         try {

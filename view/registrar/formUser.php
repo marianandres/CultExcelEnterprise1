@@ -67,11 +67,12 @@ use mvc\i18n\i18nClass as i18n ?>
     >>>>>>> origin/master
     
         -->            
-<!--        <div class="col-xs-12 col-sm-6 col-md-6">
+      <div class="col-xs-12 col-sm-6 col-md-12">
             <div class="form-group">
-                <input type="email" name="<?php echo datoUsuarioTableClass::getNameField(datoUsuarioTableClass::CORREO, true) ?>" class="form-control input-lg" placeholder="Email" required>
+                <input type="email" name="<?php echo datoUsuarioTableClass::getNameField(datoUsuarioTableClass::CORREO, true) ?>" class="form-control input-lg" placeholder="Correo Electronico" required>
             </div>
         </div>
+        <!--  
         <div class="col-xs-12 col-sm-6 col-md-6">
             <div class="form-group">
                 <input class="form-control input-lg"  type="text" name="<?php echo datoUsuarioTableClass::getNameField(datoUsuarioTableClass::GENERO, true) ?>" placeholder="Genero" required >

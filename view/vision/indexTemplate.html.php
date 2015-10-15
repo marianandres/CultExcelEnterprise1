@@ -21,13 +21,13 @@ use mvc\i18n\i18nClass as i18n ?>
 
                     <!-- Categories Widget -->
                     <div class="widget widget-categories">
-                        <h4>Acerca De Nosotros <span class="head-line"></span></h4>
+                        <h4><?php echo i18n::__('Nosotros') ?> <span class="head-line"></span></h4>
                         <ul>
                             <li>
-                                <a href="<?php echo routing::getInstance()->getUrlWeb('vision', 'index') ?>" style="color: #ee1e2d">Vision</a>
+                                <a href="<?php echo routing::getInstance()->getUrlWeb('vision', 'index') ?>" style="color: #ee1e2d"><?php echo i18n::__('Vision') ?></a>
                             </li>
                             <li>
-                                <a href="<?php echo routing::getInstance()->getUrlWeb('mision', 'index') ?>">Mision</a>
+                                <a href="<?php echo routing::getInstance()->getUrlWeb('mision', 'index') ?>"><?php echo i18n::__('Mision') ?></a>
                             </li>
                         </ul>
                     </div>
@@ -48,14 +48,10 @@ use mvc\i18n\i18nClass as i18n ?>
                         </div>-->
                         <!-- Post Content -->
                         <div class="post-content">
-                            <h1 class="page-header">Vision</h1>
+                            <h1 class="page-header"><?php echo i18n::__('Vision') ?></h1>
                             <p class="JustifyFull">
-                            </br>
-                            Hacer de nuestra empresa una organización líder, difundiendo el profesionalismo de quienes
-                            la integran, ostentando la calidez humana como virtud principal, Convertir nuestro team en 
-                            la red preferencial para los profesionales del NETWORK MARKETING en el mundo, donde el éxito 
-                            del grupo sea el de cada uno de sus miembros, traducido en una vida plena, próspera, sin estrés,
-                            y en el marco de la mayor libertad individual posible.
+                            </br><?php echo i18n::__('nuestraempresa') ?>
+                            
                             </p>
                         </div>
                     </div>

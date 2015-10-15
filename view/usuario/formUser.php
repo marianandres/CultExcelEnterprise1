@@ -20,7 +20,7 @@ use mvc\request\requestClass as request ?>
         <?php endif ?>
         <div class="form-group <?php echo (session::getInstance()->hasFlash(usuarioTableClass::getNameField(usuarioTableClass::USER, true) === true)) ? 'has-error has-feedback' : '' ?> ">  
             <label for="usuario" class="control-label"><?php echo i18n::__('user') ?>:</label>	  
-            <input class="form-control" value="<?php echo (session::getInstance()->hasFlash(usuarioTableClass::getNameField(usuarioTableClass::USER, true) === true)) ? request::getInstance()->getPost(usuarioTableClass::getNameField(usuarioTableClass::USER, true)) : ''or ( (isset($objUsuario) == true) ? $objUsuario[0]->$usuario : '') ?>" 
+            <input class="form-control" value="<?php echo  ( (isset($objUsuario) == true) ? $objUsuario[0]->$usuario : '') ?>" 
                    type="text" id="<?php echo usuarioTableClass::getNameField(usuarioTableClass::USER, true) ?>" name="<?php echo usuarioTableClass::getNameField(usuarioTableClass::USER, true) ?>" placeholder="<?php echo i18n::__('usertxtPlaceholder') ?>" required autofocus>
                    <?php if (session::getInstance()->hasFlash(usuarioTableClass::getNameField(usuarioTableClass::USER, true) === true)): ?>
               <span class="fa fa-remove form-control-feedback"></span>
@@ -28,7 +28,7 @@ use mvc\request\requestClass as request ?>
         </div>
         <div class="form-group <?php echo (session::getInstance()->hasFlash(usuarioTableClass::getNameField(usuarioTableClass::PASSWORD, true) === true)) ? 'has-error has-feedback' : '' ?> ">    
             <label for="<?php echo usuarioTableClass::getNameField(usuarioTableClass::PASSWORD, true) . '_1' ?>" class="control-label"><?php echo i18n::__('pass') ?>:</label>		
-            <input class="form-control" value="<?php echo ((isset($objUsuario) == true) ? $objUsuario[0]->$password : '') ?>"  type="password" id="<?php echo usuarioTableClass::getNameField(usuarioTableClass::PASSWORD, true) . '_1' ?>" name="<?php echo usuarioTableClass::getNameField(usuarioTableClass::PASSWORD, true) . '_1' ?>" placeholder="<?php echo i18n::__('passtxtPlaceholder') ?>" required>
+            <input class="form-control"   type="password" id="<?php echo usuarioTableClass::getNameField(usuarioTableClass::PASSWORD, true) . '_1' ?>" name="<?php echo usuarioTableClass::getNameField(usuarioTableClass::PASSWORD, true) . '_1' ?>" placeholder="<?php echo i18n::__('passtxtPlaceholder') ?>" required>
             <?php if (session::getInstance()->hasFlash(usuarioTableClass::getNameField(usuarioTableClass::PASSWORD, true) === true)): ?>
               <span class="fa fa-remove form-control-feedback"></span>
             <?php endif; ?>

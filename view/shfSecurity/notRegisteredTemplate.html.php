@@ -10,10 +10,9 @@
         ">
     <br>
     <center>
-
-        <h1><b>Lo Sentimos  Accesso Restringido!</b></h1>
+                <img SRC="<?php echo mvc\routing\routingClass::getInstance()->getUrlImg('shfSecurity/404.png') ?>" WIDTH=300px HEIGHT=300px ALT="Pagina No Encontrada"><br>
+        <h1><b>Lo Sentimos Esta Ruta No Esta Registrada o No Se Encuentra Aquí.!</b></h1>
         <p>Señor Usuario: <?php echo mvc\session\sessionClass::getInstance()->getUserName() ?></p>
-        <h3>Usted no tiene permisos para Ingresar  aquí</h3>
         <em>Comuniquese con El Administrador Del sistema Si Presenta Un Error en Su sistema!</em>
         <br></br>
 

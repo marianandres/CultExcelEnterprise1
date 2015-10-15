@@ -140,8 +140,8 @@ use \mvc\request\requestClass as request ?>
                                                     <th><?php echo i18n::__('Direccion') ?></th>
                                                     <th><?php echo i18n::__('Inicial') ?></th>
                                                     <th><?php echo i18n::__('Final') ?></th>
-                                                    <th><?php echo i18n::__('Publicacion') ?></th>
-                                                    <th><?php echo i18n::__('Fecha') ?></th>
+<!--                                                    <th><?php echo i18n::__('Publicacion') ?></th>
+                                                    <th><?php echo i18n::__('Fecha') ?></th>-->
                                                     <th><?php echo i18n::__('actions') ?></th>
                                                 </tr>
                                             </thead>
@@ -154,8 +154,8 @@ use \mvc\request\requestClass as request ?>
                                                     <th><?php echo i18n::__('Direccion') ?></th>
                                                     <th><?php echo i18n::__('Inicial') ?></th>
                                                     <th><?php echo i18n::__('Final') ?></th>
-                                                    <th><?php echo i18n::__('Publicacion') ?></th>
-                                                    <th><?php echo i18n::__('Fecha') ?></th>
+<!--                                                    <th><?php echo i18n::__('Publicacion') ?></th>
+                                                    <th><?php echo i18n::__('Fecha') ?></th>-->
                                                     <th><?php echo i18n::__('actions') ?></th>
                                                 </tr>
                                             </tfoot>
@@ -169,11 +169,11 @@ use \mvc\request\requestClass as request ?>
                                                       <td><?php echo $usuario->$direccion ?></td>
                                                       <td><?php echo $usuario->$fechainievento ?></td>
                                                       <td><?php echo $usuario->$fechafnlevento ?></td>
-                                                      <td><?php echo $usuario->$fechainipublicacion ?></td>
-                                                      <td><?php echo $usuario->$fechafnlpublicacion ?></td>
+<!--                                                      <td><?php echo $usuario->$fechainipublicacion ?></td>
+                                                      <td><?php echo $usuario->$fechafnlpublicacion ?></td>-->
                                                       <td>
                                                           <!--                                        <a href="#" class="btn btn-warning btn-xs">Ver</a>-->
-                                                          <a href="<?php echo routing::getInstance()->getUrlWeb('usuario', 'edit', array(eventoTableClass::ID => $usuario->$id)) ?>" class="btn btn-primary btn-xs"><?php echo i18n::__('Editar') ?></a>
+<!--                                                          <a href="<?php echo routing::getInstance()->getUrlWeb('usuario', 'edit', array(eventoTableClass::ID => $usuario->$id)) ?>" class="btn btn-primary btn-xs"><?php echo i18n::__('Editar') ?></a>-->
                                                           <a href="#" onclick="confirmarEliminar(<?php echo $usuario->$id ?>)" class="btn btn-danger btn-xs"><?php echo i18n::__('Eliminar') ?></a>
                                                       </td>
                                                   </tr>

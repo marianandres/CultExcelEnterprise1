@@ -3,13 +3,6 @@
 use mvc\routing\routingClass as routing;
 use mvc\i18n\i18nClass as i18n;
 
-$usu = usuarioTableClass::USER;
-$id = usuarioTableClass::ID;
-$created = usuarioTableClass::CREATED_AT;
-$lastlogin = usuarioTableClass::LAST_LOGIN_AT;
-$deleted = usuarioTableClass::DELETED_AT;
-$updated = usuarioTableClass::UPDATED_AT;
-
 class PDF_HTML extends FPDF {
 
   var $B = 0;
@@ -152,30 +145,23 @@ $pdf->SetFont('helvetica', '', 18, 'B', true);
 // This method has several options, check the source code documentation for more information.
 $pdf->AddPage();
 $pdf->Cell(70, 10, '', 0);
-$pdf->Cell(40, 10, i18n::__('adminusu'), 2, 0, 'C');
+$pdf->Cell(40, 10, i18n::__('PublicadosCategoria'), 2, 0, 'C');
 $pdf->Ln(23);
 
 $pdf->SetTextColor(255, 0, 0);  // Establece el color del texto (en este caso es blanco) 
 $pdf->SetFillColor(0, 0, 255);
-$pdf->SetFont('Arial', '', 12, 'B', true);
-$pdf->Cell(8, 8, "ID", 1);
-$pdf->Cell(25, 8, "NOMBRE", 1);
-$pdf->Cell(45, 8, "REGISTRADO", 1);
-$pdf->Cell(43, 8, "ACTUALIZADO", 1);
-$pdf->Cell(40, 8, "ULTIMO INGRESO", 1);
-$pdf->Cell(30, 8, "ELIMINADO", 1);
+
+$pdf->Cell(90, 8, "CATEGORIAS POR EVENTO", 1);
+$pdf->Cell(80, 8, "CANTIDAD DE EVENTOS", 1);
+
 $pdf->Ln(8);
 //************* daTOS DE LA TABLA
 $pdf->SetFillColor(153, 255, 100);
 $pdf->SetTextColor(85, 107, 47);
 $pdf->SetFont('Arial', '', 9);
-foreach ($objUsuarios as $user) {
-  $pdf->Cell(8, 8, $user->$id, 1);
-  $pdf->Cell(25, 8, $user->$usu, 1);
-  $pdf->Cell(45, 8, $user->$created, 1);
-  $pdf->Cell(43, 8, $user->$updated, 1);
-  $pdf->Cell(40, 8, $user->$lastlogin, 1);
-  $pdf->Cell(30, 8, $user->$deleted, 1);
+foreach ($objCategoryEvents as $categoryEvents) {
+  $pdf->Cell(90, 8, $categoryEvents->nombre, 1);
+  $pdf->Cell(80, 8, $categoryEvents->conteo, 1);
   $pdf->Ln();
 }
 

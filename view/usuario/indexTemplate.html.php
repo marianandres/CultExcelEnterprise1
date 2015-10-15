@@ -11,11 +11,13 @@ use mvc\config\configClass as config ?>
 use \mvc\request\requestClass as request ?>
 <?php $usu = usuarioTableClass::USER ?>
 <?php $id = usuarioTableClass::ID ?>
+<?php $estadokey = usuarioTableClass::ESTADOKEY ?>
+<?php $codigokey = usuarioTableClass::CODIGOKEY ?>
 <?php $created = usuarioTableClass::CREATED_AT ?>
 <?php view::includePartial('usuario/usuarioModalWindows') ?>
 <div class="fixed-left">
     <!-- Modal Start -->
-
+    
     <!-- Modal logout -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -45,10 +47,10 @@ use \mvc\request\requestClass as request ?>
         <?php view::includePartial('partials/topBarMenu') ?>
         <!-- Top Bar End -->
         <!-- Left Sidebar Start -->
-       <?php view::includePartial('partials/sideBarMenu') ?>
+        <?php view::includePartial('partials/sideBarMenu') ?>
         <!-- Left Sidebar End -->		    
         <!-- Right Sidebar Start -->
-       <?php view::includePartial('partials/rightSideBar') ?>
+        <?php view::includePartial('partials/rightSideBar') ?>
         <!-- Right Sidebar End -->
         <!-- Start right content -->
         <div class="content-page">
@@ -56,7 +58,7 @@ use \mvc\request\requestClass as request ?>
             <!-- Start Content here -->
             <!-- ============================================================== -->
             <div class="content">
-               
+
                 <!-- Page Heading Start -->
                 <div class="page-heading">
                     <h1><i class="fa fa-users"></i>  <?php echo i18n::__('adminusu') ?></h1>
@@ -115,7 +117,7 @@ use \mvc\request\requestClass as request ?>
                             <!--END MODAL FILTER--> 
                             <div class="widget-content">
                                 </br>
-                                 <?php view::includeHandlerMessage() ?>
+                                <?php echo view::includeHandlerMessage() ?>
                                 <br>					
                                 <div class="table-responsive">
                                     <form id="frmDeleteAll" class='form-horizontal' action="<?php echo routing::getInstance()->getUrlWeb('usuario', 'deleteSelect') ?>" method="POST">
@@ -133,6 +135,8 @@ use \mvc\request\requestClass as request ?>
                                                     <th><input type="checkbox" id="chkAll"></th>
                                                     <th><?php echo i18n::__('usuario') ?></th>
                                                     <th><?php echo i18n::__('fechaCreacion') ?></th>
+                                                    <th>Estado </th>
+                                                    <th>Codigo Verificacion</th>
                                                     <th><?php echo i18n::__('actions') ?></th>
                                                 </tr>
                                             </thead>
@@ -141,22 +145,35 @@ use \mvc\request\requestClass as request ?>
                                                     <th><input type="checkbox" id="chkAll"></th>
                                                     <th><?php echo i18n::__('usuario') ?></th>
                                                     <th><?php echo i18n::__('fechaCreacion') ?></th>
+                                                    <th>Estado </th>
+                                                    <th>Codigo Verificacion</th>
                                                     <th><?php echo i18n::__('actions') ?></th>
                                                 </tr>
                                             </tfoot>
                                             <tbody>
                                                 <?php foreach ($objUsuarios as $usuario): ?>
-                                                  <tr>
-                                                      <td><input type="checkbox" name="chk[]" value="<?php echo $usuario->$id ?>"></td>
-                                                      <td><?php echo $usuario->$usu ?></td>
-                                                      <td><?php echo $usuario->$created ?></td>
-                                                      <td>
-                                                          <!--                    <a href="#" class="btn btn-warning btn-xs">Ver</a>-->
-                                                          <a href="<?php echo routing::getInstance()->getUrlWeb('usuario', 'edit', array(usuarioTableClass::ID => $usuario->$id)) ?>" class="btn btn-primary btn-xs"> <?php echo i18n::__('Editar') ?></a>
-                                                          <a href="#" onclick="confirmarEliminar(<?php echo $usuario->$id ?>)" class="btn btn-danger btn-xs"> <?php echo i18n::__('Eliminar') ?></a>
-                                                          <a href="<?php echo routing::getInstance()->getUrlWeb('usuarioCredencial', 'index', array(usuarioCredencialTableClass::getNameField(usuarioCredencialTableClass::USUARIO_ID, true) => $usuario->$id)) ?>" class="btn btn-success btn-xs"><i class="fa fa-external-link-square"></i> <?php echo i18n::__('Detalles') ?></a>
-                                                      </td>
-                                                  </tr>
+                                                    <tr>
+                                                        <td><input type="checkbox" name="chk[]" value="<?php echo $usuario->$id ?>"></td>
+                                                        <td><?php echo $usuario->$usu ?></td>
+                                                        <td><?php echo $usuario->$created ?></td>
+                                                        <td><?php if ($usuario->$estadokey == 0) { ?>
+                                                            <button class="disabled btn btn-danger btn-xs" >Inactivo</button>
+                                                            <?php } else { ?>
+                                                            <button class="disabled btn btn-success btn-xs" >Activo</button>
+                                                            <?php } ?></td>
+                                                        <td><?php echo $usuario->$codigokey ?></td>
+                                                        <td>
+                                                            <!--                    <a href="#" class="btn btn-warning btn-xs">Ver</a>-->
+                                                            <a href="<?php echo routing::getInstance()->getUrlWeb('usuario', 'edit', array(usuarioTableClass::ID => $usuario->$id)) ?>" class="btn btn-primary btn-xs"> <?php echo i18n::__('Editar') ?></a>
+                                                            <a href="#" onclick="confirmarEliminar(<?php echo $usuario->$id ?>)" class="btn btn-danger btn-xs"> <?php echo i18n::__('Eliminar') ?></a>
+                                                            <a href="<?php echo routing::getInstance()->getUrlWeb('usuarioCredencial', 'index', array(usuarioCredencialTableClass::getNameField(usuarioCredencialTableClass::USUARIO_ID, true) => $usuario->$id)) ?>" class="btn btn-success btn-xs"><i class="fa fa-external-link-square"></i> <?php echo i18n::__('Detalles') ?></a>
+                                                            <?php if ($usuario->$estadokey == 0) { ?>
+<!--                                                            <button type="button" class="btn  btn-success btn-xs" data-toggle="modal" data-target="#active" ><i class="fa fa-plus-square-o"></i> Activar </button>-->
+                                                            <?php } else { ?>
+<!--                                                            <button type="button" class="btn  btn-danger btn-xs" data-toggle="modal" data-target="#inactive" ><i class="fa fa-remove"></i> Desactivar </button>-->
+                                                            <?php } ?>
+                                                        </td>
+                                                    </tr>
                                                 <?php endforeach ?>
                                             </tbody>
                                         </table>
@@ -184,7 +201,7 @@ use \mvc\request\requestClass as request ?>
     <div class="md-overlay"></div>
     <!-- End of eoverlay modal -->
     <script>
-      var resizefunc = [];
+        var resizefunc = [];
     </script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 </div>

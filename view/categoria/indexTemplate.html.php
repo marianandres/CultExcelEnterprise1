@@ -149,7 +149,7 @@ use \mvc\request\requestClass as request ?>
                                                       <td><?php echo $usuario->$nombre ?></td>
                                                       <td><?php echo $usuario->$created ?></td>
                                                       <td>
-                                                          <a href="<?php echo routing::getInstance()->getUrlWeb('categoria', 'edit', array(categoriaTableClass::ID => $usuario->$id)) ?>" class="btn btn-primary btn-xs"><?php echo i18n::__('Editar') ?></a>
+<!--                                                          <a href="<?php echo routing::getInstance()->getUrlWeb('categoria', 'edit', array(categoriaTableClass::ID => $usuario->$id)) ?>" class="btn btn-primary btn-xs"><?php echo i18n::__('Editar') ?></a>-->
                                                           <a href="#" onclick="confirmarEliminar(<?php echo $usuario->$id ?>)" class="btn btn-danger btn-xs"><?php echo i18n::__('Elimina') ?></a>
 
                                                       </td>
