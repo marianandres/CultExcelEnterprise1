@@ -436,15 +436,15 @@ use mvc\session\sessionClass as session;
         </div><!-- .container -->
     </div>
     <!-- End Team Member Section -->
-    <div id="parallax-one" class="parallax" style="background-image:url(<?php echo routing::getInstance()->getUrlImg('parallax/bg-02.jpg') ?>);">
+<!--    <div id="parallax-one" class="parallax" style="background-image:url(<?php echo routing::getInstance()->getUrlImg('parallax/bg-02.jpg') ?>);">
         <div class="parallax-text-container-1">
             <div class="parallax-text-item">
                 <div class="container">
                     <div class="row">
-                        <!-- Start Video Section Content -->
+                         Start Video Section Content 
                         <div class="section-video-content text-center">
 
-                            <!-- Start Animations Text -->
+                             Start Animations Text 
                             <h1 class="fittext wite-text uppercase tlt">
                                 <span class="texts">
                                     <span><?php echo i18n::__('Creacion') ?></span>
@@ -455,16 +455,16 @@ use mvc\session\sessionClass as session;
                                 <?php echo i18n::__('Reune') ?> </br>
                                 <?php echo i18n::__('Excel') ?>
                             </h1>
-                            <!-- End Animations Text -->
-                            <!-- Start Buttons -->
+                             End Animations Text 
+                             Start Buttons 
                             <a href="<?php echo routing::getInstance()->getUrlWeb('registrar', 'insert') ?>" class="btn-system btn-large btn-wite"><i class="fa fa-plus-square-o"></i> <?php echo i18n::__('Comenzar') ?></a>
                         </div>
-                        <!-- End Section Content -->  
+                         End Section Content   
                     </div>         
                 </div>       
             </div>
         </div>        
-    </div>
+    </div>-->
     <!-- Start Pricing Table Section -->
     <div class=" section pricing-section">
         <div class="container">

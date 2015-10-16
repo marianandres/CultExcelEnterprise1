@@ -44,10 +44,11 @@ class indexActionClass extends controllerClass implements controllerActionInterf
                 eventoTableClass::CATEGORIA_ID,
                 eventoTableClass::CREATED_AT,
                 eventoTableClass::FACEBOOK,
-                eventoTableClass::TWITTER
+                eventoTableClass::TWITTER,
+                eventoTableClass::GOOGLEPLUS
             );
             $orderBy = array(
-                eventoTableClass::NOMBRE
+                eventoTableClass::FECHA_INICIAL_EVENTO
             );
             $page = 0;
             if (request::getInstance()->hasGet('page')) {

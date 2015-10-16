@@ -32,8 +32,11 @@ class eventoBaseTableClass extends tableBaseClass {
     const DIRECCION_LENGTH = 150;
     const COSTO = 'costo';
     const STARTTIME = 'starttime';
+    const ENDTIME = 'endtime';
+    const ESTADOPUBLICACION = 'estadopublicacion';
     const FACEBOOK = 'facebook';
     const TWITTER = 'twitter';
+    const GOOGLEPLUS = 'googleplus';
     const USUARIO_ID = 'usuario_id';
     const CATEGORIA_ID = 'categoria_id';
     const FECHA_INICIAL_PUBLICACION = 'fecha_inicial_publicacion';

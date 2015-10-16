@@ -9,11 +9,9 @@ use mvc\view\viewClass as view ?>
 <?php $nombre = categoriaTableClass::NOMBRE ?>
 <!-- Full Body Container -->
 <div id="container" class="boxed-page">
-
     <?php mvc\view\viewClass::includePartial('partials/header.html') ?>
     <!--  </header> -->
     <!-- End Header Section -->
-
     <!-- Start Services Section -->
     <div class="section service">
         <div class="container">
@@ -22,7 +20,7 @@ use mvc\view\viewClass as view ?>
                 <div class="" style="background-image:url(<?php echo routing::getInstance()->getUrlImg('patterns/12.png') ?>); padding: 15px; border-radius: 10px;">      
                     <div class="text-right">
                         <div class="col-md-offset-6">
-                            <button type="submit" class="btn btn-success" href="#"  style="color: whitesmoke; font-weight: bold;"><?php echo i18n::__('PublicarEvento') ?></button>
+<!--                            <button type="submit" class="btn btn-success" href="#"  style="color: whitesmoke; font-weight: bold;"><?php echo i18n::__('PublicarEvento') ?></button>-->
                         </div>
                     </div>
                 </div>
@@ -61,7 +59,7 @@ use mvc\view\viewClass as view ?>
                             </div><!-- /.navbar-collapse -->
                         </div><!-- /.container-fluid -->
                     </nav>
-                    <?php view::includeHandlerMessage() ?>
+                    <?php echo view::includeHandlerMessage() ?>
                     <?php view::includePartial('eventos/formUser') ?>
                     <div class="col-xs-12 col-sm-6 col-md-6">
                         <div class="form-group">
@@ -81,6 +79,7 @@ use mvc\view\viewClass as view ?>
         <div  style="background-image:url(<?php echo routing::getInstance()->getUrlImg('parallax/back.png') ?>); padding: 10px; border-radius: 10px;">
             <div class="text-center"></br>
                 <h1 style="color: whitesmoke;"><?php echo i18n::__('BuenaEsaTerminado') ?></h1></br>
+                <button type="submit" class="btn btn-info"  style="color: whitesmoke; font-weight: bold;"> Guardar</button>
                 <button type="submit" class="btn btn-success"  style="color: whitesmoke; font-weight: bold;"><?php echo i18n::__('PublicarEvento') ?></button>
             </div>
         </div>
