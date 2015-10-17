@@ -25,66 +25,70 @@ class createActionClass extends controllerClass implements controllerActionInter
                 $correo = trim(request::getInstance()->getPost(datoUsuarioTableClass::getNameField(datoUsuarioTableClass::CORREO, true)));
 
                 $this->validate($usuario, $password, $password2);
-                $key = $this->generarCodigo(8);
+                $verifyExistingUser = usuarioTableClass::getVerifyExistingUser($usuario);
+                if ($verifyExistingUser == $usuario) {
+                    session::getInstance()->setError("El NickName De Usuario Ingresado Ya Existe E La Base De Datos!. ");
+                    routing::getInstance()->redirect('registrar', 'insert');
+                } else {
+                    $key = $this->generarCodigo(8);
 
-                $data = array(
-                    usuarioTableClass::USER => $usuario,
-                    usuarioTableClass::PASSWORD => md5($password),
-                    usuarioTableClass::CODIGOKEY => $key
-                );
-                usuarioTableClass::insert($data);
+                    $data = array(
+                        usuarioTableClass::USER => $usuario,
+                        usuarioTableClass::PASSWORD => md5($password),
+                        usuarioTableClass::CODIGOKEY => $key
+                    );
+                    usuarioTableClass::insert($data);
 
-                $user = usuarioTableClass::getIdNewUser($usuario);
-                $credential = 'usuario';
-                $credencial = credencialTableClass::getIdCredencial($credential);
+                    $user = usuarioTableClass::getIdNewUser($usuario);
+                    $credential = 'usuario';
+                    $credencial = credencialTableClass::getIdCredencial($credential);
 
-                $data1 = array(
-                    usuarioCredencialTableClass::USUARIO_ID => $user,
-                    usuarioCredencialTableClass::CREDENCIAL_ID => $credencial
-                );
-                $data2 = array(
-                    datoUsuarioTableClass::USUARIO_ID => $user,
-                    datoUsuarioTableClass::CORREO => $correo
-                );
-//        print_r($data1);
-//        exit();
-                // email de destino
-                $email = $correo;
+                    $data1 = array(
+                        usuarioCredencialTableClass::USUARIO_ID => $user,
+                        usuarioCredencialTableClass::CREDENCIAL_ID => $credencial
+                    );
+                    $data2 = array(
+                        datoUsuarioTableClass::USUARIO_ID => $user,
+                        datoUsuarioTableClass::CORREO => $correo
+                    );
+                    // email de destino
+                    $email = $correo;
 
-                // asunto del email
-                $subject = "Activa tu cuenta Cult Excel.";
+                    // asunto del email
+                    $subject = "Activa tu cuenta Cult Excel.";
 
-                // Cuerpo del mensaje
-                $mensaje = "---------------------------------- \n";
-                $mensaje.= " Sistema De Registro De Usuarios   \n";
-                $mensaje.= "---------------------------------- \n";
-                $mensaje.= "NOMBRE:   " . $usuario . "\n";
-                $mensaje.= "EMAIL:    " . $correo . "\n";
-                $mensaje.= "FECHA:    " . date("d-m-Y") . "\n";
-                $mensaje.= "HORA:    " . date("H-i-s") . "\n";
-                $mensaje.= "---------------------------------- \n\n";
-                $mensaje.= "Hola $usuario, Bienvenido tu te as registrado en "
-                        . "http://$web y para activar tu cuenta necesitas meterte en esta url. "
-                        . "http://$web/validacion.php?email=$correo&key=$key \n";
-                $mensaje.= "---------------------------------- \n";
-                $mensaje.= "Enviado desde Cult Excel Enterprise \n";
+                    // Cuerpo del mensaje
+                    $mensaje = "---------------------------------- \n";
+                    $mensaje.= " Sistema De Registro De Usuarios   \n";
+                    $mensaje.= "---------------------------------- \n";
+                    $mensaje.= "NOMBRE:   " . $usuario . "\n";
+                    $mensaje.= "EMAIL:    " . $correo . "\n";
+                    $mensaje.= "FECHA:    " . date("d-m-Y") . "\n";
+                    $mensaje.= "HORA:    " . date("H-i-s") . "\n";
+                    $mensaje.= "---------------------------------- \n\n";
+                    $mensaje.= "Hola $usuario, Bienvenido al Portal Web  tu te as registrado en "
+                            . " Cult excel Enterprise, para activar tu cuenta necesitas Validar el Registro Con el Siquiente Codigo:. "
+                            . "Codigo De Registro = $key \n";
+                    $mensaje.= "---------------------------------- \n";
+                    $mensaje.= "Enviado desde Cult Excel Enterprise \n";
 
-                // headers del email
-                $headers = "From: andy_93421@hotmail.com \r\n";
+                    // headers del email
+                    $headers = "From: andy_93421@hotmail.com \r\n";
 
-                // Enviamos el mensaje 
-                if (mail($email, $subject, $mensaje, $headers)) {
-                    echo "<script language='javascript'>
+                    // Enviamos el mensaje 
+                    if (mail($email, $subject, $mensaje, $headers)) {
+                        echo "<script language='javascript'>
 alert('Mensaje enviado, muchas gracias.');
 window.location.href = 'index.php';
 </script>";
-                } else {
-                    echo "Error de envío.";
+                    } else {
+                        echo "Error de envío.";
+                    }
+                    usuarioCredencialTableClass::insert($data1);
+                    datoUsuarioTableClass::insert($data2);
+                    session::getInstance()->setSuccess("Bienvenido! Te has registrado en El Portal Cult Excel Enterprise. Porfavor Ingrese a Su Correo electronico Para Verificar su Cuenta!");
+                    routing::getInstance()->redirect('shfSecurity', 'index');
                 }
-                usuarioCredencialTableClass::insert($data1);
-                datoUsuarioTableClass::insert($data2);
-                session::getInstance()->setSuccess("Bienvenido! Te has registrado en El Portal Cult Excel Enterprise. Porfavor Ingrese a Su Correo electronico Para Verificar su Cuenta!");
-                routing::getInstance()->redirect('homepage', 'index');
             } else {
                 routing::getInstance()->redirect('registrar', 'insert');
             }
@@ -117,13 +121,6 @@ window.location.href = 'index.php';
             $flag = true;
             session::getInstance()->getFlash(usuarioTableClass::getNameField(usuarioTableClass::PASSWORD, true), true);
         }
-
-//    if (($cadena) !== ($usuario )) {
-//      session::getInstance()->setError(i18n::__(00001, null, 'errors'));
-//      $flag = true;
-//      session::getInstance()->getFlash(usuarioTableClass::getNameField(usuarioTableClass::USER, true), true);
-//    }
-//
         if ($usuario == "" or $password == "" or $password2 == "") {
             session::getInstance()->setError(i18n::__(10003, null, 'errors'));
             $flag = true;

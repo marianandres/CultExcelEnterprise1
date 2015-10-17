@@ -33,6 +33,8 @@ class datoUsuarioBaseTableClass extends tableBaseClass {
   const FECHA_NACIMIENTO = 'fecha_nacimiento';
   const LOCALIDAD_ID = 'localidad_id';
   const TIPO_DOCUMENTO_ID = 'tipo_documento_id';
+  const DOCUMENTOID = 'documentoId';
+  const UPDATESTATE = 'updatestate';
   const ORGANIZACION_ID = 'organizacion_id';
 
   /**

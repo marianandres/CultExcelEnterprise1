@@ -9,11 +9,30 @@ use mvc\config\configClass as config;
  * @author Julian Lasso <ingeniero.julianlasso@gmail.com>
  */
 class usuarioTableClass extends usuarioBaseTableClass {
-    
+
+    public static function getVerifyExistingUser($user) {
+        try {
+            $sql = 'SELECT ' . usuarioTableClass::ID . ','
+                    . usuarioTableClass::USER . ' '
+                    . ' FROM ' . usuarioTableClass::getNameTable()
+                    . ' WHERE ' . usuarioTableClass::getNameField(usuarioTableClass::DELETED_AT) . ' IS NULL'
+                    . ' AND ' . usuarioTableClass::USER . ' = :user ';
+            $params = array(
+                ':user' => $user,
+            );
+            $answer = model::getInstance()->prepare($sql);
+            $answer->execute($params);
+            $answer = $answer->fetchAll(PDO::FETCH_OBJ);
+            return $answer[0]->user_name;
+        } catch (PDOException $exc) {
+            throw $exc;
+        }
+    }
+
     public static function getVerifyUser($id) {
         try {
-            $sql = 'SELECT ' . usuarioTableClass::ID. ','
-                    . usuarioTableClass::ESTADOKEY.' '
+            $sql = 'SELECT ' . usuarioTableClass::ID . ','
+                    . usuarioTableClass::ESTADOKEY . ' '
                     . ' FROM ' . usuarioTableClass::getNameTable()
                     . ' WHERE ' . usuarioTableClass::getNameField(usuarioTableClass::DELETED_AT) . ' IS NULL'
                     . ' AND ' . usuarioTableClass::ID . ' = :id ';
@@ -28,11 +47,11 @@ class usuarioTableClass extends usuarioBaseTableClass {
             throw $exc;
         }
     }
-    
+
     public static function getVerifyUserKey($id) {
         try {
-            $sql = 'SELECT ' . usuarioTableClass::ID. ','
-                    . usuarioTableClass::CODIGOKEY.' '
+            $sql = 'SELECT ' . usuarioTableClass::ID . ','
+                    . usuarioTableClass::CODIGOKEY . ' '
                     . ' FROM ' . usuarioTableClass::getNameTable()
                     . ' WHERE ' . usuarioTableClass::getNameField(usuarioTableClass::DELETED_AT) . ' IS NULL'
                     . ' AND ' . usuarioTableClass::ID . ' = :id ';
@@ -47,11 +66,11 @@ class usuarioTableClass extends usuarioBaseTableClass {
             throw $exc;
         }
     }
-    
+
     public static function getVerifyUserPass($id) {
         try {
-            $sql = 'SELECT ' . usuarioTableClass::ID. ','
-                    . usuarioTableClass::PASSWORD.' '
+            $sql = 'SELECT ' . usuarioTableClass::ID . ','
+                    . usuarioTableClass::PASSWORD . ' '
                     . ' FROM ' . usuarioTableClass::getNameTable()
                     . ' WHERE ' . usuarioTableClass::getNameField(usuarioTableClass::DELETED_AT) . ' IS NULL'
                     . ' AND ' . usuarioTableClass::ID . ' = :id ';

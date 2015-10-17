@@ -15,15 +15,14 @@ use mvc\i18n\i18nClass as i18n;
  */
 class insertActionClass extends controllerClass implements controllerActionInterface {
 
-  public function execute() {
-    try {
-      session::getInstance()->setFlash('register', true);
-      session::getInstance()->setFlash('exito', true);
-      $this->defineView('insert', 'registrar', session::getInstance()->getFormatOutput());
-    } catch (PDOException $exc) {
-      session::getInstance()->setFlash('exc', $exc);
-      routing::getInstance()->forward('shfSecurity', 'exception');
+    public function execute() {
+        try {
+            session::getInstance()->setFlash('register', 'register');
+            $this->defineView('insert', 'registrar', session::getInstance()->getFormatOutput());
+        } catch (PDOException $exc) {
+            session::getInstance()->setFlash('exc', $exc);
+            routing::getInstance()->forward('shfSecurity', 'exception');
+        }
     }
-  }
 
 }

@@ -171,7 +171,6 @@ use mvc\i18n\i18nClass as i18n ?>
         </div>
     </div>
     <!-- End Header Logo & Naviagtion -->
-
 </header> 
 <!-- End Header Section -->
 <!-- Modal logout -->

@@ -152,63 +152,7 @@ $usuarios = usuarioTableClass::countUsers();
 
                 <div class="row">
                     <div class="col-lg-8 portlets">
-                        <div id="website-statistics1" class="widget">
-                            <div class="widget-header transparent">
-                                <h2><i class="icon-chart-line"></i> <strong><?php echo i18n::__('Website') ?></strong><?php echo i18n::__('Statistics') ?> </h2>
-                                <div class="additional-btn">
-                                    <a href="#" class="hidden reload"><i class="icon-ccw-1"></i></a>
-                                    <a class="hidden" id="dropdownMenu1" data-toggle="dropdown">
-                                        <i class="fa fa-cogs"></i>
-                                    </a>
-                                    <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1">
-                                        <li><a href="#"><?php echo i18n::__('Action') ?></a></li>
-                                        <li><a href="#"><?php echo i18n::__('Another action') ?></a></li>
-                                        <li><a href="#"><?php echo i18n::__('Something') ?></a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#"><?php echo i18n::__('Separated') ?></a></li>
-                                    </ul>
-                                    <a href="#" class="widget-popout hidden tt" title="Pop Out/In"><i class="icon-publish"></i></a>
-                                    <a href="#" class="widget-maximize hidden"><i class="icon-resize-full-1"></i></a>
-                                    <a href="#" class="widget-toggle"><i class="icon-down-open-2"></i></a>
-                                    <a href="#" class="widget-close"><i class="icon-cancel-3"></i></a>
-                                </div>
-                            </div>
-                            <div class="widget-content">
-                                <div id="website-statistic" class="statistic-chart">	
-                                    <div class="row stacked">
-                                        <div class="col-sm-12">
-                                            <div class="toolbar">
-                                                <div class="pull-left">
-                                                    <div class="btn-group">
-                                                        <a href="#" class="btn btn-default btn-xs"><?php echo i18n::__('Daily') ?></a>
-                                                        <a href="#" class="btn btn-default btn-xs active"><?php echo i18n::__('Monthly') ?></a>
-                                                        <a href="#" class="btn btn-default btn-xs"><?php echo i18n::__('Yearly') ?></a>
-                                                    </div>
-                                                </div>
-                                                <div class="pull-right">
-                                                    <div class="btn-group">
-                                                        <a class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-                                                            <?php echo i18n::__('Export') ?> <i class="icon-down-open-2"></i>
-                                                        </a>
-                                                        <ul class="dropdown-menu pull-right" role="menu">
-                                                            <li><a href="#"><?php echo i18n::__('Export') ?></a></li>
-                                                            <li><a href="#"><?php echo i18n::__('ExportCSV') ?></a></li>
-                                                            <li><a href="#"><?php echo i18n::__('ExportPNG') ?></a></li>
-                                                            <li class="divider"></li>
-                                                            <li><a href="#"><?php echo i18n::__('Separated') ?></a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <a href="#" class="btn btn-primary btn-xs"><i class="icon-cog-2"></i></a>
-                                                </div>
-                                                <div class="clearfix"></div>
-                                            </div>
-                                            <div class="clearfix"></div>
-                                            <div id="morris-home" class="morris-chart" style="height: 270px;"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
 
 
                     </div>
@@ -283,41 +227,7 @@ $usuarios = usuarioTableClass::countUsers();
                 <div class="row">
                     <div class="col-lg-8 portlets">
                         <div class="widget">
-                            <div class="widget-header">
-                            </div>
-                            <div class="widget-content">
-                                <div class="row stacked">
-                                    <div class="col-sm-5 mini-stats">
-                                        <div id="morris-bar-home" class="morris-chart" style="height: 170px;"></div>
-                                        <div class="sales-report-data">
-                                            <span class="pull-left"><?php echo i18n::__('Completed') ?></span><span class="pull-right"><?php echo i18n::__('65/174') ?></span>
-                                            <div class="progress progress-xs">
-                                                <div style="width: 38%;" class="progress-bar bg-blue-1"></div>
-                                            </div>
-                                            <div class="clearfix"></div>
-                                            <span class="pull-left"><?php echo i18n::__('Return(s)') ?></span><span class="pull-right"><?php echo i18n::__('22/25') ?></span>
-                                            <div class="progress progress-xs">
-                                                <div style="width: 88%;" class="progress-bar bg-lightblue-1"></div>
-                                            </div>
-                                            <div class="clearfix"></div>
-                                            <span class="pull-left"><?php echo i18n::__('Shipped') ?></span><span class="pull-right"><?php echo i18n::__('418/624') ?></span>
-                                            <div class="progress progress-xs">
-                                                <div style="width: 58%;" class="progress-bar"></div>
-                                            </div>
-                                            <div class="clearfix"></div>
-                                            <span class="pull-left"><?php echo i18n::__('OverallProduct') ?></span><span class="pull-right"><?php echo i18n::__('19%') ?></span>
-                                            <div class="progress progress-xs">
-                                                <div style="width: 19%;" class="progress-bar bg-pink-1"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-7">
-                                        <div id="vector-map" style="height:370px"></div>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-
-                            </div>
+  
                         </div>
                     </div>
                     <div class="col-lg-4 portlets">

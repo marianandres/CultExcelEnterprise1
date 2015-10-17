@@ -914,6 +914,39 @@ registrar:
       #<!-- Page Specific JS Libraries -->
       - panel/assets/libs/bootstrap-validator/js/bootstrapValidator.min.js
       - panel/assets/js/pages/form-validation.js
+      
+  insertDatoUser:
+    title: Registra Informacion de La Cuenta | Cult Excel
+    stylesheet:
+      - register.css
+      - asset/css/bootstrap.css
+      - style.css        
+      - responsive.css
+      - animate.css
+      - colors/red.css
+      - assets/libs/bootstrap-validator/css/bootstrapValidator.min.css
+    javascript:
+      - jquery-2.1.1.min.js
+      - jquery.migrate.js
+      - modernizrr.js
+      - asset/js/bootstrap.min.js
+      - jquery.fitvids.js
+      - owl.carousel.min.js
+      - nivo-lightbox.min.js
+      - jquery.isotope.min.js
+      - jquery.appear.js
+      - count-to.js
+      - jquery.textillate.js
+      - jquery.lettering.js
+      - jquery.easypiechart.min.js
+      - jquery.nicescroll.min.js
+      - jquery.parallax.js
+      - mediaelement-and-player.js
+      - script.js
+      - main.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/bootstrap-validator/js/bootstrapValidator.min.js
+      - panel/assets/js/pages/form-validation.js  
 
       
 categoria:

@@ -15,8 +15,28 @@ use mvc\config\configClass as config;
  * @author Julian Lasso <ingeniero.julianlasso@gmail.com>
  */
 class datoUsuarioTableClass extends datoUsuarioBaseTableClass {
-  //put your code here
-  //  public static function getCountPages() {
+
+    public static function getVerifyUpdateUserData($userId) {
+        try {
+            $sql = 'SELECT ' . datoUsuarioTableClass::ID . ','
+                    . datoUsuarioTableClass::UPDATESTATE . ' AS updatestate'
+                    . ' FROM ' . datoUsuarioTableClass::getNameTable()
+                    . ' WHERE ' . datoUsuarioTableClass::getNameField(datoUsuarioTableClass::DELETED_AT) . ' IS NULL'
+                    . ' AND ' . datoUsuarioTableClass::USUARIO_ID . ' = :userId ';
+            $params = array(
+                ':userId' => $userId,
+            );
+            $answer = model::getInstance()->prepare($sql);
+            $answer->execute($params);
+            $answer = $answer->fetchAll(PDO::FETCH_OBJ);
+            return $answer[0]->updatestate;
+        } catch (PDOException $exc) {
+            throw $exc;
+        }
+    }
+
+    //put your code here
+    //  public static function getCountPages() {
 //    try {
 //      // SELECT COUNT(id) FROM usuario
 //      $sql = 'SELECT COUNT(' . usuarioTableClass::getNameField(usuarioTableClass::ID) . ') AS cantidad'

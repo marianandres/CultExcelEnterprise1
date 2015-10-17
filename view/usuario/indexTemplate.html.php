@@ -17,7 +17,7 @@ use \mvc\request\requestClass as request ?>
 <?php view::includePartial('usuario/usuarioModalWindows') ?>
 <div class="fixed-left">
     <!-- Modal Start -->
-    
+
     <!-- Modal logout -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -157,9 +157,9 @@ use \mvc\request\requestClass as request ?>
                                                         <td><?php echo $usuario->$usu ?></td>
                                                         <td><?php echo $usuario->$created ?></td>
                                                         <td><?php if ($usuario->$estadokey == 0) { ?>
-                                                            <button class="disabled btn btn-danger btn-xs" >Inactivo</button>
+                                                                <span class="label label-danger" >Inactivo</span>
                                                             <?php } else { ?>
-                                                            <button class="disabled btn btn-success btn-xs" >Activo</button>
+                                                                <span class="label label-success" >Activo</span>
                                                             <?php } ?></td>
                                                         <td><?php echo $usuario->$codigokey ?></td>
                                                         <td>
@@ -168,9 +168,9 @@ use \mvc\request\requestClass as request ?>
                                                             <a href="#" onclick="confirmarEliminar(<?php echo $usuario->$id ?>)" class="btn btn-danger btn-xs"> <?php echo i18n::__('Eliminar') ?></a>
                                                             <a href="<?php echo routing::getInstance()->getUrlWeb('usuarioCredencial', 'index', array(usuarioCredencialTableClass::getNameField(usuarioCredencialTableClass::USUARIO_ID, true) => $usuario->$id)) ?>" class="btn btn-success btn-xs"><i class="fa fa-external-link-square"></i> <?php echo i18n::__('Detalles') ?></a>
                                                             <?php if ($usuario->$estadokey == 0) { ?>
-<!--                                                            <button type="button" class="btn  btn-success btn-xs" data-toggle="modal" data-target="#active" ><i class="fa fa-plus-square-o"></i> Activar </button>-->
+                                                                <button type="button" class="open-Modal btn  btn-success btn-xs" data-toggle="modal" data-id="<?php echo $usuario->$id ?>" data-key="<?php echo $usuario->$codigokey ?>" data-target="#active" ><i class="fa fa-plus-square-o"></i> Activar </button>
                                                             <?php } else { ?>
-<!--                                                            <button type="button" class="btn  btn-danger btn-xs" data-toggle="modal" data-target="#inactive" ><i class="fa fa-remove"></i> Desactivar </button>-->
+                                                                <button type="button" class="btn  btn-danger btn-xs" data-toggle="modal" data-target="#inactive" ><i class="fa fa-remove"></i> Desactivar </button>
                                                             <?php } ?>
                                                         </td>
                                                     </tr>
@@ -204,4 +204,12 @@ use \mvc\request\requestClass as request ?>
         var resizefunc = [];
     </script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script>
+        $(document).on("click", ".open-Modal", function () {
+            var myId = $(this).data('id');
+            $(".modal-body #usuario_id").val(myId);
+            var mykey = $(this).data('key');
+            $(".modal-body #usuario_codigokey").val(mykey);
+        });
+    </script>
 </div>

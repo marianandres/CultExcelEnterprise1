@@ -20,6 +20,12 @@ use mvc\session\sessionClass as session;
                     <strong>Warning!</strong> Bienvenido! Te has registrado en El Portal Cult Excel Enterprise. Porfavor Ingrese a Su Correo electronico Para Verificar su Cuenta! <a data-toggle="modal" data-target="#userVerify"><i class="fa fa-link"></i> Verificar!</a>
                 </div>
             <?php } ?>
+            <?php if (datoUsuarioTableClass::getVerifyUpdateUserData(mvc\session\sessionClass::getInstance()->getUserId()) == 0) { ?>
+                <div class="alert alert-warning alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong>Info!</strong> Por Favor Actialiizar Su Informacion De Perfil!. <a href="<?php echo routing::getInstance()->getUrlWeb('registrar', 'insertDatoUser') ?>"><i class="fa fa-link"></i> Actualizar!</a> 
+                </div>
+            <?php } ?>
         <?php } ?>
         <!-- Carousel -->
         <div id="main-slide" class="carousel slider" data-ride="carousel">
@@ -452,8 +458,8 @@ use mvc\session\sessionClass as session;
 
                                 </span>
                                 <strong><?php echo i18n::__('Propio') ?></strong></br>
-                                <?php echo i18n::__('Reune') ?> </br>
-                                <?php echo i18n::__('Excel') ?>
+    <?php echo i18n::__('Reune') ?> </br>
+    <?php echo i18n::__('Excel') ?>
                             </h1>
                              End Animations Text 
                              Start Buttons 

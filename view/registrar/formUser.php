@@ -72,35 +72,7 @@ use mvc\i18n\i18nClass as i18n ?>
                 <input type="email" name="<?php echo datoUsuarioTableClass::getNameField(datoUsuarioTableClass::CORREO, true) ?>" class="form-control input-lg" placeholder="Correo Electronico" required>
             </div>
         </div>
-        <!--  
-        <div class="col-xs-12 col-sm-6 col-md-6">
-            <div class="form-group">
-                <input class="form-control input-lg"  type="text" name="<?php echo datoUsuarioTableClass::getNameField(datoUsuarioTableClass::GENERO, true) ?>" placeholder="Genero" required >
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-6">
-            <div class="form-group">
-                <input class="form-control input-lg"  type="text" name="<?php echo datoUsuarioTableClass::getNameField(datoUsuarioTableClass::TIPO_DOCUMENTO_ID, true) ?>" placeholder="Tipo Documento Id" required >
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-6">
-            <div class="form-group">
-                <input class="form-control input-lg" type="text" name="<?php echo datoUsuarioTableClass::getNameField(datoUsuarioTableClass::USUARIO_ID, true) ?>" placeholder="Numero Tipo Documento" required >
-            </div> 
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-6">
-            <div class="form-group">
-                <input class="form-control input-lg"  type="date" name="<?php echo datoUsuarioTableClass::getNameField(datoUsuarioTableClass::FECHA_NACIMIENTO, true) ?>"  required >
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-6">
-            <div class="form-group">
-                <input class="form-control input-lg"  type="text" name="<?php echo datoUsuarioTableClass::getNameField(datoUsuarioTableClass::LOCALIDAD_ID, true) ?>" placeholder="Localidad" required>
-            </div>
-        </div>
-        <div class="form-group">
-            <input class="form-control input-lg"  type="text" name="<?php echo datoUsuarioTableClass::getNameField(datoUsuarioTableClass::ORGANIZACION_ID, true) ?>" placeholder="Organizacion Id" required >
-        </div>-->
+        
     </div>   
     <div class="row form-register">
         <div class="col-xs-4 col-sm-3 col-md-3">
