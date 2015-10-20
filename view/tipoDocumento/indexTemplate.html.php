@@ -152,7 +152,7 @@ use \mvc\request\requestClass as request ?>
                                                       <td><?php echo $usuario->$created ?></td>
                                                       <td>
                                                           <!--                    <a href="#" class="btn btn-warning btn-xs">Ver</a>-->
-                                                          <a href="<?php echo routing::getInstance()->getUrlWeb('tipoDocumento', 'edit', array(tipoDocumentoTableClass::ID => $usuario->$id)) ?>" class="btn btn-primary btn-xs"><?php echo i18n::__('Editar') ?></a>
+<!--                                                          <a href="<?php echo routing::getInstance()->getUrlWeb('tipoDocumento', 'edit', array(tipoDocumentoTableClass::ID => $usuario->$id)) ?>" class="btn btn-primary btn-xs"><?php echo i18n::__('Editar') ?></a>-->
                                                           <a href="#" onclick="confirmarEliminar(<?php echo $usuario->$id ?>)" class="btn btn-danger btn-xs"><?php echo i18n::__('Eliminar') ?></a>
 <!--                                                          <a href="<?php echo routing::getInstance()->getUrlWeb('usuarioCredencial', 'index', array(usuarioCredencialTableClass::getNameField(usuarioCredencialTableClass::USUARIO_ID, true) => $usuario->$id)) ?>" class="btn btn-success btn-xs"><i class="fa fa-external-link-square"></i> <?php echo i18n::__('Detalles') ?></a>-->
 

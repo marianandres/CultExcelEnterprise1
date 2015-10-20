@@ -13,6 +13,8 @@ use mvc\view\viewClass as view;
 ?>
 <?php
 $usuarios = usuarioTableClass::countUsers();
+$eventos = eventoTableClass::countEvents();
+$peticiones = pqrsTableClass::countPqrsf();
 ?>
 <div class="fixed-left">
     <!-- Modal Start -->
@@ -82,11 +84,12 @@ $usuarios = usuarioTableClass::countUsers();
                         <div class="widget red-1 animated fadeInDown">
                             <div class="widget-content padding">
                                 <div class="widget-icon">
-                                    <i class="fa fa-categorias"></i>
+                                    
+                                    <i class="fa fa-calendar-o"></i>
                                 </div>
                                 <div class="text-box">
-                                    <p class="maindata"> <?php echo i18n::__('total') ?> <b><?php echo i18n::__('USERS') ?></b></p>
-                                    <h2><span class="animate-number" data-value="<?php echo $usuarios ?>" data-duration="3000">0</span></h2>
+                                    <p class="maindata"> <?php echo i18n::__('total') ?> <b>Eventos </b></p>
+                                    <h2><span class="animate-number" data-value="<?php echo $eventos ?>" data-duration="3000">0</span></h2>
                                     <div class="clearfix"></div>
                                 </div>
                             </div>
@@ -105,11 +108,11 @@ $usuarios = usuarioTableClass::countUsers();
                         <div class="widget lightblue-1 animated fadeInDown">
                             <div class="widget-content padding">
                                 <div class="widget-icon">
-                                    <i class="fa fa-categorias"></i>
+                                    <i class="fa fa-envelope-o"></i>
                                 </div>
                                 <div class="text-box">
-                                    <p class="maindata"> <?php echo i18n::__('total') ?> <b><?php echo i18n::__('USERS') ?></b></p>
-                                    <h2><span class="animate-number" data-value="<?php echo $usuarios ?>" data-duration="3000">0</span></h2>
+                                    <p class="maindata"> <?php echo i18n::__('total') ?> <b> PQRSF´S</b></p>
+                                    <h2><span class="animate-number" data-value="<?php echo $peticiones ?>" data-duration="3000">0</span></h2>
                                     <div class="clearfix"></div>
                                 </div>
                             </div>

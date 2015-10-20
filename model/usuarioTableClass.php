@@ -170,7 +170,7 @@ class usuarioTableClass extends usuarioBaseTableClass {
 
     public static function getUserName($id) {
         try {
-            $sql = 'SELECT ' . usuarioTableClass::USER . ',' . usuarioTableClass::ID .
+            $sql = 'SELECT ' . usuarioTableClass::USER . ' AS nombre ,' . usuarioTableClass::ID .
                     ' FROM ' . usuarioTableClass::getNameTable() .
                     ' WHERE ' . usuarioTableClass::ID . ' = :id';
             $params = array(
@@ -178,7 +178,8 @@ class usuarioTableClass extends usuarioBaseTableClass {
             );
             $answer = model::getInstance()->prepare($sql);
             $answer->execute($params);
-            return $answer[0]->id;
+            $answer = $answer->fetchAll(PDO::FETCH_OBJ);
+            return $answer[0]->nombre;
         } catch (PDOException $exc) {
             throw $exc;
         }

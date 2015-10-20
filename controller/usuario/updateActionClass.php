@@ -23,13 +23,13 @@ class updateActionClass extends controllerClass implements controllerActionInter
                 $id = request::getInstance()->getPost(usuarioTableClass::getNameField(usuarioTableClass::ID, true));
                 $usuario = request::getInstance()->getPost(usuarioTableClass::getNameField(usuarioTableClass::USER, true));
                 $password = request::getInstance()->getPost(usuarioTableClass::getNameField(usuarioTableClass::PASSWORD, true));
-
+                $passwordMd5 = md5($password);
                 $ids = array(
                     usuarioTableClass::ID => $id
                 );
                 $data = array(
                     usuarioTableClass::USER => $usuario,
-                    usuarioTableClass::PASSWORD => $password,
+                    usuarioTableClass::PASSWORD => $passwordMd5,
                 );
                 usuarioTableClass::update($ids, $data);
                 session::getInstance()->setSuccess("La Cuenta Ha Sido Actualizada Con exito!");

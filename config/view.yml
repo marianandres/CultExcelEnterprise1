@@ -2772,11 +2772,15 @@ userPQRS:
   index:
     title: Mis PQRS | Cult Excel
     stylesheet:
+      - register.css
       - asset/css/bootstrap.css
       - style.css        
       - responsive.css
       - animate.css
       - colors/red.css
+      - assets/libs/bootstrap-validator/css/bootstrapValidator.min.css
+      - panel/assets/libs/jquery-datatables/css/dataTables.bootstrap.css
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/css/dataTables.tableTools.css
     javascript:
       - jquery-2.1.1.min.js
       - jquery.migrate.js
@@ -2795,8 +2799,14 @@ userPQRS:
       - jquery.parallax.js
       - mediaelement-and-player.js
       - script.js
-      - index.js
       - main.js
+      #<!-- Page Specific JS Libraries -->
+      - panel/assets/libs/jquery-datatables/js/jquery.dataTables.min.js
+      - panel/assets/libs/jquery-datatables/js/dataTables.bootstrap.js
+      - panel/assets/libs/jquery-datatables/extensions/TableTools/js/dataTables.tableTools.min.js
+      - panel/assets/js/pages/datatables.js
+      - panel/assets/libs/bootstrap-validator/js/bootstrapValidator.min.js
+      - panel/assets/js/pages/form-validation.js
       
 help:
   index:

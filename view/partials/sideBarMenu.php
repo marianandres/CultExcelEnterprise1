@@ -55,13 +55,13 @@ use mvc\i18n\i18nClass as i18n ?>
                             <li><a href='<?php echo routing::getInstance()->getUrlWeb('usuarioGustaCategoria', 'index') ?>' ><i class='fa fa-check-circle-o'></i><span><?php echo i18n::__('Gusta') ?></span> <span class="pull-right"></span></a></li>-->
                         </ul>
                     </li>
-                    <li class='has_sub'>
+<!--                    <li class='has_sub'>
                         <a href='javascript:void(0);'><i class='fa fa-newspaper-o'></i><span><?php ?><?php echo i18n::__('AdministRoles') ?> </span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a>
                         <ul>
                             <li><a href='<?php echo routing::getInstance()->getUrlWeb('credencial', 'index') ?>' <?php echo (session::getInstance()->hasFlash('credencial') ? 'class="active"' : '') ?>><i class="fa fa-user"></i><span><?php echo i18n::__('creden') ?></span> <span class="pull-right"></span></a></li>
-    <!--                            <li><a href='<?php echo routing::getInstance()->getUrlWeb('usuarioCredencial', 'index') ?>' ><i class="fa fa-unlock"></i><span><?php echo i18n::__('userCredencial') ?></span> <span class="pull-right"></span></a></li>-->
+                                <li><a href='<?php echo routing::getInstance()->getUrlWeb('usuarioCredencial', 'index') ?>' ><i class="fa fa-unlock"></i><span><?php echo i18n::__('userCredencial') ?></span> <span class="pull-right"></span></a></li>
                         </ul>
-                    </li>
+                    </li>-->
                     <li class='has_sub'>
                         <a href='javascript:void(0);'><i class='fa fa-hdd-o'></i><span><?php ?><?php echo i18n::__('RegistroSistema') ?> </span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a>
                         <ul>
@@ -69,15 +69,15 @@ use mvc\i18n\i18nClass as i18n ?>
                             <li><a href='<?php echo routing::getInstance()->getUrlWeb('recordarMe', 'index') ?>' <?php echo (session::getInstance()->hasFlash('recordarme') ? 'class="active"' : '') ?>><i class="fa fa-bookmark"></i><span><?php echo i18n::__('RecordarMe') ?></span> <span class="pull-right"></span></a></li>
                         </ul>
                     </li>
-                    <!--                    <li class='has_sub'>
-                                            <a href='javascript:void(0);'><i class='fa fa-archive'></i><span><?php ?> Buzon De Sugerencias</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a>
-                                            <ul>
-                                                <li><a href='<?php echo routing::getInstance()->getUrlWeb('pqrs', 'index') ?>' <?php echo (session::getInstance()->hasFlash('pqrs') ? 'class="active"' : '') ?>><i class='icon-home-3'></i><span><?php echo i18n::__('PQRS') ?></span> <span class="pull-right"></span></a></li>
-                                                <li><a href='<?php echo routing::getInstance()->getUrlWeb('detallePqrs', 'index') ?>' <?php echo (session::getInstance()->hasFlash('detallePqrs') ? 'class="active"' : '') ?>><i class='icon-home-3'></i><span><?php echo i18n::__('detallePqrs') ?></span> <span class="pull-right"></span></a></li>
-                                                <li><a href='<?php echo routing::getInstance()->getUrlWeb('tipoPqrs', 'index') ?>' ><i class='icon-home-3'></i><span><?php echo i18n::__('tipoPqrs') ?></span> <span class="pull-right"></span></a></li>
-                                                <li><a href='<?php echo routing::getInstance()->getUrlWeb('estadoPqrs', 'index') ?>' <?php echo (session::getInstance()->hasFlash('estadoPqrs') ? 'class="active"' : '') ?>><i class='icon-home-3'></i><span><?php echo i18n::__('Estado') ?></span> <span class="pull-right"></span></a></li>
-                                            </ul>
-                                        </li>-->
+                    <li class='has_sub'>
+                            <a href='javascript:void(0);'><i class='fa fa-archive'></i><span><?php ?> Buzon De Sugerencias</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a>
+                            <ul>
+                                <li><a href='<?php echo routing::getInstance()->getUrlWeb('pqrs', 'index') ?>' <?php echo (session::getInstance()->hasFlash('pqrs') ? 'class="active"' : '') ?>><i class='icon-home-3'></i><span>Admin. De <?php echo i18n::__('PQRS') ?>´S</span> <span class="pull-right"></span></a></li>
+<!--                                <li><a href='<?php echo routing::getInstance()->getUrlWeb('detallePqrs', 'index') ?>' <?php echo (session::getInstance()->hasFlash('detallePqrs') ? 'class="active"' : '') ?>><i class='icon-home-3'></i><span><?php echo i18n::__('detallePqrs') ?></span> <span class="pull-right"></span></a></li>-->
+<!--                                <li><a href='<?php echo routing::getInstance()->getUrlWeb('tipoPqrs', 'index') ?>' ><i class='icon-home-3'></i><span><?php echo i18n::__('tipoPqrs') ?></span> <span class="pull-right"></span></a></li>-->
+<!--                                <li><a href='<?php echo routing::getInstance()->getUrlWeb('estadoPqrs', 'index') ?>' <?php echo (session::getInstance()->hasFlash('estadoPqrs') ? 'class="active"' : '') ?>><i class='icon-home-3'></i><span><?php echo i18n::__('Estado') ?></span> <span class="pull-right"></span></a></li>-->
+                            </ul>
+                        </li>
                     <!--                    <li class='has_sub'>
                                             <a href='javascript:void(0);'><i class='fa fa-cc-mastercard'></i><span><?php ?><?php echo i18n::__('patrocinador') ?></span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a>
                                             <ul>

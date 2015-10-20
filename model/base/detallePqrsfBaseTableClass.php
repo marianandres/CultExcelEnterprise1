@@ -22,6 +22,7 @@ class detallePqrsfBaseTableClass extends tableBaseClass {
   const UPDATED_AT = 'updated_at';
   const DELETED_AT = 'deleted_at';
   const PQRS_ID = 'pqrs_id';
+  const USUARIO_ID = 'usuario_id';
   const RESPUESTA = 'respuesta';
   const RESPUESTA__LENGTH = 2048;
   const ORGANIZACION_ID = 'organizacion_id';

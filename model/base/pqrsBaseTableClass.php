@@ -27,6 +27,7 @@ class pqrsTableBaseClass extends tableBaseClass {
   const TITULO = 'titulo';
   const TITULO_LENGTH = 50;
   const CONTENIDO = 'contenido';
+  const ESTADOPQRS = 'estadopqrs';
   const CONTENIDO_LENGTH = 2048;
   const USUARIO_ID = 'usuario_id';
 

@@ -15,27 +15,30 @@ use mvc\i18n\i18nClass as i18n;
  */
 class indexActionClass extends controllerClass implements controllerActionInterface {
 
-  public function execute() {
-    try {
-
-      $fields = array(
-          pqrsTableClass::ID,
-          pqrsTableClass::CONTENIDO,
-          pqrsTableClass::ESTADO_PQRS_ID,
-          pqrsTableClass::TIPO_PQRS_ID,
-          pqrsTableClass::TITULO,
-          pqrsTableClass::USUARIO_ID
-      );
-      $orderBy = array(
-          pqrsTableClass::CONTENIDO
-      );
-      session::getInstance()->setFlash('pqrs', 'pqrs');
-      $this->objPqrs = pqrsTableClass::getAll($fields, true, $orderBy, 'ASC');
-      $this->defineView('index', 'pqrs', session::getInstance()->getFormatOutput());
-    } catch (PDOException $exc) {
-      session::getInstance()->setFlash('exc', $exc);
-      routing::getInstance()->forward('shfSecurity', 'exception');
+    public function execute() {
+        try {
+//
+//      $fields = array(
+//          pqrsTableClass::ID,
+//          pqrsTableClass::CONTENIDO,
+//          pqrsTableClass::ESTADOPQRS,
+//          pqrsTableClass::TIPO_PQRS_ID,
+//          pqrsTableClass::TITULO,
+//          pqrsTableClass::USUARIO_ID
+//      );
+//      $orderBy = array(
+//          pqrsTableClass::CONTENIDO
+//      );
+            $id = 0;
+            session::getInstance()->setFlash('pqrs', 'pqrs');
+            $this->objPqrs = pqrsTableClass::getPqrsBuzon($id, null, null);
+            $idSent = 1;
+            $this->objPqrsSent = pqrsTableClass::getPqrsSent($idSent, null, null);
+            $this->defineView('index', 'pqrs', session::getInstance()->getFormatOutput());
+        } catch (PDOException $exc) {
+            session::getInstance()->setFlash('exc', $exc);
+            routing::getInstance()->forward('shfSecurity', 'exception');
+        }
     }
-  }
 
 }

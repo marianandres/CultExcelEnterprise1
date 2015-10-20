@@ -358,5 +358,18 @@ class eventoTableClass extends eventoBaseTableClass {
             throw $exc;
         }
     }
+    
+    public static function countEvents() {
+        try {
+            $sql = 'SELECT COUNT(' . eventoTableClass::ID . ') AS EVENTS' .
+                    ' FROM ' . eventoTableClass::getNameTable() . '';
+            $answer = model::getInstance()->prepare($sql);
+            $answer->execute();
+            $answer = $answer->fetchAll(PDO::FETCH_OBJ);
+            return $answer[0]->events;
+        } catch (PDOException $exc) {
+            throw $exc;
+        }
+    }
 
 }

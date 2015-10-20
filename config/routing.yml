@@ -44,6 +44,27 @@ userPQRS_index:
     - model/usuarioTableClass.php
     - model/base/pqrsBaseTableClass.php
     - model/pqrsTableClass.php
+    - model/base/tipoPqrsBaseTableClass.php
+    - model/tipoPqrsTableClass.php
+    - model/base/detallePqrsfBaseTableClass.php
+    - model/detallePqrsTableClass.php
+    - model/base/estadoPqrsfTableBaseClass.php
+    - model/estadoPqrsTableClass.php
+    
+userPQRS_create:
+  url: /MisPQRSCreate
+  param:  { module: userPQRS, action: create, format: html }
+  load:
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php
+    - model/base/pqrsBaseTableClass.php
+    - model/pqrsTableClass.php
+    - model/base/tipoPqrsBaseTableClass.php
+    - model/tipoPqrsTableClass.php
+    - model/base/detallePqrsfBaseTableClass.php
+    - model/detallePqrsTableClass.php
+    - model/base/estadoPqrsfTableBaseClass.php
+    - model/estadoPqrsTableClass.php  
     
 report_index:
   url:    /report
@@ -155,6 +176,10 @@ admin_index:
   load:
     - model/base/usuarioBaseTableClass.php
     - model/usuarioTableClass.php
+    - model/base/eventoBaseTableClass.php
+    - model/eventoTableClass.php
+    - model/base/pqrsBaseTableClass.php
+    - model/pqrsTableClass.php
 ##-------------------------- end admin panel --------------------------##
 profile_index:
   url:    /profile/index
@@ -1292,8 +1317,31 @@ pqrs_index:
   url:    /pqrs/index
   param:  { module: pqrs, action: index, format: html }
   load:
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php
     - model/base/pqrsBaseTableClass.php
     - model/pqrsTableClass.php
+    - model/base/tipoPqrsBaseTableClass.php
+    - model/tipoPqrsTableClass.php
+    - model/base/detallePqrsfBaseTableClass.php
+    - model/detallePqrsTableClass.php
+    - model/base/estadoPqrsfTableBaseClass.php
+    - model/estadoPqrsTableClass.php 
+    
+pqrs_answer:
+  url:    /pqrs/answer
+  param:  { module: pqrs, action: answer, format: html }
+  load:
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php
+    - model/base/pqrsBaseTableClass.php
+    - model/pqrsTableClass.php
+    - model/base/tipoPqrsBaseTableClass.php
+    - model/tipoPqrsTableClass.php
+    - model/base/detallePqrsfBaseTableClass.php
+    - model/detallePqrsTableClass.php
+    - model/base/estadoPqrsfTableBaseClass.php
+    - model/estadoPqrsTableClass.php     
 
 pqrs_insert:
   url:    /pqrs/insertar
