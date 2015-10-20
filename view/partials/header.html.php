@@ -98,7 +98,9 @@ use mvc\i18n\i18nClass as i18n ?>
                     </li>
                     <?php if (session::getInstance()->isUserAuthenticated() == true) { ?>
                         <?php if (usuarioTableClass::getVerifyUser(mvc\session\sessionClass::getInstance()->getUserId()) == 0) { ?>
-
+                        
+                    <?php } elseif(usuarioTableClass::getVerifyUser(mvc\session\sessionClass::getInstance()->getUserId()) == 2) { ?>
+                    
                         <?php } else { ?>
                             <li>                        
                                 <a class="btn btn-info btn-medium btn-bordered <?php echo (session::getInstance()->hasFlash('eventos')) ? 'active' : '' ?>" style="color: #2b2b2b; font-weight: bold;" href="<?php echo \mvc\routing\routingClass::getInstance()->getUrlWeb('eventos', 'insert') ?>"><?php echo i18n::__('Crear') ?></a>                     
@@ -150,7 +152,7 @@ use mvc\i18n\i18nClass as i18n ?>
                         <li>
                             <a href="#"><i class="fa fa-user"></i> <?php echo session::getInstance()->getUserName() ?><span class="caret"></span></a>
                             <ul class="dropdown" role="menu">
-                                    <li><a href="<?php echo routing::getInstance()->getUrlWeb('profile', 'index') ?>"><i class="fa fa-user"></i><?php echo i18n::__('Perfiles') ?></a></li>
+                                <li><a href="<?php echo routing::getInstance()->getUrlWeb('profile', 'index') ?>"><i class="fa fa-user"></i><?php echo i18n::__('Perfiles') ?></a></li>
     <!--                                <li><a href="#"><i class="fa fa-cogs"></i> <?php echo i18n::__('Cambiar') ?></a></li>-->
                                 <li class="divider"></li>
                                 <li><a data-toggle="modal" data-target="#myModal"><i class="fa fa-sign-out"></i><?php echo i18n::__('Cerrar') ?></a></li>
@@ -224,28 +226,33 @@ use mvc\i18n\i18nClass as i18n ?>
 </div>
 <!-- end Modal logout -->
 <!-- Modal verificacion -->
-<div class="modal fade" id="userVerify" style="margin-top: 150px;" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="userVerify" style="margin-top: 150px;" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-user"></i>Verificar Registro de La Cuenta</h4>
+                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-user"></i>Solicitud De Activacion De La Cuenta</h4>
             </div>
             <div class="modal-body">
                 <div class="text-left">
                     <form role="form" method="post" action="<?php echo routing::getInstance()->getUrlWeb('usuario', 'verificar') ?>">
                         <input name="<?php echo usuarioTableClass::getNameField(usuarioTableClass::ID, true) ?>" value="<?php echo session::getInstance()->getUserId() ?>" type="hidden">
-                        <div class="form-group">  
-                            <label for="statuskey" class="control-label">Codigo De Verificacion:</label>	  
-                            <input class="form-control" 
-                                   type="text" id="<?php echo usuarioTableClass::getNameField(usuarioTableClass::CODIGOKEY, true) ?>" name="<?php echo usuarioTableClass::getNameField(usuarioTableClass::CODIGOKEY, true) ?>" placeholder="Ingrese el Codigo De Verificacion" required autofocus>
+                        <div class="alert alert-info alert-dismissible" role="alert">
+                            <strong>info!</strong> Ingrese su contraseña de usuario para enviar la solucitud de activacion al administrador del Portal Cult Excel
                         </div>
-                        <button class="btn btn-success" type="submit"> Verificar Cuenta</button>
+                        <div class="form-group">  
+                            <label for="password" class="control-label">Contraseña Del Usuario:</label>	  
+                            <input class="form-control" 
+                                   type="password" id="<?php echo usuarioTableClass::getNameField(usuarioTableClass::PASSWORD, true) ?>" name="<?php echo usuarioTableClass::getNameField(usuarioTableClass::PASSWORD, true) ?>" placeholder="Ingrese La Contraseña de Usuario" required autofocus>
+                        </div>
+                        <button class="btn btn-success" type="submit"> Enviar solicitud De Activacion</button>
                     </form>
 
                 </div>
             </div>
-
+            <div class="modal-footer">
+                
+            </div>
         </div>
     </div>
 </div>

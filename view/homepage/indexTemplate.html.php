@@ -17,7 +17,13 @@ use mvc\session\sessionClass as session;
             <?php if (usuarioTableClass::getVerifyUser(mvc\session\sessionClass::getInstance()->getUserId()) == 0) { ?>
                 <div class="alert alert-warning alert-dismissible" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <strong>Warning!</strong> Bienvenido! Te has registrado en El Portal Cult Excel Enterprise. Porfavor Ingrese a Su Correo electronico Para Verificar su Cuenta! <a data-toggle="modal" data-target="#userVerify"><i class="fa fa-link"></i> Verificar!</a>
+                    <strong>Warning!</strong> Bienvenido! Te has registrado en El Portal Cult Excel Enterprise. Si Desea Activar La Cuenta Para Crear Eventos. Dar Click En ! <a data-toggle="modal" data-target="#userVerify"><i class="fa fa-link"></i> Activar Cuenta!</a>
+                </div>
+            <?php } ?>
+         <?php if (usuarioTableClass::getVerifyUser(mvc\session\sessionClass::getInstance()->getUserId()) == 2) { ?>
+                <div class="alert alert-info alert-dismissible" role="alert">
+                    
+                    <strong><i class="fa fa-info-circle"></i> Info!</strong> Tu Solicitud De La Activacion de La Cuenta Esta en Proceso.
                 </div>
             <?php } ?>
             <?php if (datoUsuarioTableClass::getVerifyUpdateUserData(mvc\session\sessionClass::getInstance()->getUserId()) == 0) { ?>

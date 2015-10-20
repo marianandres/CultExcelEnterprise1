@@ -23,47 +23,16 @@ class activeActionClass extends controllerClass implements controllerActionInter
                 $id = request::getInstance()->getPost(usuarioTableClass::getNameField(usuarioTableClass::ID, true));
                 $password = request::getInstance()->getPost(usuarioTableClass::getNameField(usuarioTableClass::PASSWORD, true));
                 $estadokey = 1;
+                $userId = session::getInstance()->getUserId();
                 $password1 = md5($password);
-                $ids = array(
-                    usuarioTableClass::ID => $id
-                );
-                $data = array(
-                    usuarioTableClass::ESTADOKEY => $estadokey
-                );
-                $verificacion = usuarioTableClass::getVerifyUserPass($id);
-
+                $verificacion = usuarioTableClass::getVerifyUserPass($userId);
                 if ($verificacion == $password1) {
-                    // email de destino
-                    $email = $correo;
-                    // asunto del email
-                    $subject = "Activa tu cuenta Cult Excel.";
-                    // Cuerpo del mensaje
-                    $mensaje = "---------------------------------- \n";
-                    $mensaje.= " Sistema De Registro De Usuarios   \n";
-                    $mensaje.= "---------------------------------- \n";
-                    $mensaje.= "NOMBRE:   " . $usuario . "\n";
-                    $mensaje.= "EMAIL:    " . $correo . "\n";
-                    $mensaje.= "FECHA:    " . date("d-m-Y") . "\n";
-                    $mensaje.= "HORA:    " . date("H-i-s") . "\n";
-                    $mensaje.= "---------------------------------- \n\n";
-                    $mensaje.= "Hola $usuario, Bienvenido tu te as registrado en "
-                            . "http://$web y para activar tu cuenta necesitas meterte en esta url. "
-                            . "http://$web/validacion.php?email=$correo&key=$key \n";
-                    $mensaje.= "---------------------------------- \n";
-                    $mensaje.= "Enviado desde Cult Excel Enterprise \n";
-
-                    // headers del email
-                    $headers = "From: andy_93421@hotmail.com \r\n";
-
-                    // Enviamos el mensaje 
-                    if (mail($email, $subject, $mensaje, $headers)) {
-                        echo "<script language='javascript'>
-alert('Mensaje enviado, muchas gracias.');
-window.location.href = 'index.php';
-</script>";
-                    } else {
-                        echo "Error de envío.";
-                    }
+                    $ids = array(
+                        usuarioTableClass::ID => $id
+                    );
+                    $data = array(
+                        usuarioTableClass::ESTADOKEY => $estadokey
+                    );
                     usuarioTableClass::update($ids, $data);
                     session::getInstance()->setSuccess("La Cuenta A Sido Activada!");
                     log::register('Actualizar', usuarioTableClass::getNameTable(), null, session::getInstance()->getUserId());

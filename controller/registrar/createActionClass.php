@@ -67,8 +67,7 @@ class createActionClass extends controllerClass implements controllerActionInter
                     $mensaje.= "HORA:    " . date("H-i-s") . "\n";
                     $mensaje.= "---------------------------------- \n\n";
                     $mensaje.= "Hola $usuario, Bienvenido al Portal Web  tu te as registrado en "
-                            . " Cult excel Enterprise, para activar tu cuenta necesitas Validar el Registro Con el Siquiente Codigo:. "
-                            . "Codigo De Registro = $key \n";
+                            . " Cult excel Enterprise. \n";
                     $mensaje.= "---------------------------------- \n";
                     $mensaje.= "Enviado desde Cult Excel Enterprise \n";
 

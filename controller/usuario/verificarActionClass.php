@@ -21,26 +21,27 @@ class verificarActionClass extends controllerClass implements controllerActionIn
             if (request::getInstance()->isMethod('POST')) {
 
                 $id = request::getInstance()->getPost(usuarioTableClass::getNameField(usuarioTableClass::ID, true));
-                $codigokey = request::getInstance()->getPost(usuarioTableClass::getNameField(usuarioTableClass::CODIGOKEY, true));
-                $estadokey = 1;
-                $ids = array(
-                    usuarioTableClass::ID => $id
-                );
-                $data = array(
-                    usuarioTableClass::CODIGOKEY => $codigokey,
-                    usuarioTableClass::ESTADOKEY => $estadokey
-                );
-                $verificacion = usuarioTableClass::getVerifyUserKey($id);
+                $password = request::getInstance()->getPost(usuarioTableClass::getNameField(usuarioTableClass::PASSWORD, true));
+                $passwordMd5 = md5($password);
+                $verificarPass = usuarioTableClass::getVerifyUserPass($id);
+                if ($verificarPass == $passwordMd5) {
 
-                if ($verificacion == $codigokey) {
+                    $estadokey = 2;
+                    $ids = array(
+                        usuarioTableClass::ID => $id
+                    );
+                    $data = array(
+                        usuarioTableClass::ESTADOKEY => $estadokey
+                    );
+//                    $verificacion = usuarioTableClass::getVerifyUserKey($id);
+
                     usuarioTableClass::update($ids, $data);
-                    session::getInstance()->setSuccess("Bienvenido A El Portal WEb Cult Excel. Su Cuenta a Sido Verificada!");
+                    session::getInstance()->setSuccess("Bienvenido A El Portal WEb Cult Excel.Tu Solicitud de La Activacion De Su Cuenta Ha Sido Enviada!.");
                     log::register('Actualizar', usuarioTableClass::getNameTable(), null, session::getInstance()->getUserId());
                 } else {
-                    session::getInstance()->setError("El Codigo De Verificacion No Es Correcto y/o Valido!. Verifique");
+                    session::getInstance()->setError("La contraseña Ingresada Es Incorrecta!. Verifique");
                 }
             }
-
             routing::getInstance()->redirect('homepage', 'index');
         } catch (PDOException $exc) {
             session::getInstance()->setFlash('exc', $exc);

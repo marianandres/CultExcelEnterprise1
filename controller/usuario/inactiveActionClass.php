@@ -14,34 +14,34 @@ use hook\log\logHookClass as log;
  *
  * @author Mariana Lopez <lopezmariana1990@gmail.com>
  */
-class verificarActionClass extends controllerClass implements controllerActionInterface {
+class inactiveActionClass extends controllerClass implements controllerActionInterface {
 
     public function execute() {
         try {
             if (request::getInstance()->isMethod('POST')) {
 
                 $id = request::getInstance()->getPost(usuarioTableClass::getNameField(usuarioTableClass::ID, true));
-                $codigokey = request::getInstance()->getPost(usuarioTableClass::getNameField(usuarioTableClass::CODIGOKEY, true));
-                $estadokey = 1;
-                $ids = array(
-                    usuarioTableClass::ID => $id
-                );
-                $data = array(
-                    usuarioTableClass::CODIGOKEY => $codigokey,
-                    usuarioTableClass::ESTADOKEY => $estadokey
-                );
-                $verificacion = usuarioTableClass::getVerifyUserKey($id);
-
-                if ($verificacion == $codigokey) {
+                $password = request::getInstance()->getPost(usuarioTableClass::getNameField(usuarioTableClass::PASSWORD, true));
+                $estadokey = 0;
+                $userId = session::getInstance()->getUserId();
+                $password1 = md5($password);
+                $verificacion = usuarioTableClass::getVerifyUserPass($userId);
+                if ($verificacion == $password1) {
+                    $ids = array(
+                        usuarioTableClass::ID => $id
+                    );
+                    $data = array(
+                        usuarioTableClass::ESTADOKEY => $estadokey
+                    );
                     usuarioTableClass::update($ids, $data);
-                    session::getInstance()->setSuccess("Bienvenido A El Portal WEb Cult Excel. Su Cuenta a Sido Verificada!");
+                    session::getInstance()->setSuccess("La Cuenta A Sido Desactivada!");
                     log::register('Actualizar', usuarioTableClass::getNameTable(), null, session::getInstance()->getUserId());
                 } else {
-                    session::getInstance()->setError("El Codigo De Verificacion No Es Correcto y/o Valido!. Verifique");
+                    session::getInstance()->setError("La Constraseña Del Administrador No Es Correcta!. Verifique");
                 }
             }
 
-            routing::getInstance()->redirect('homepage', 'index');
+            routing::getInstance()->redirect('usuario', 'index');
         } catch (PDOException $exc) {
             session::getInstance()->setFlash('exc', $exc);
             routing::getInstance()->forward('shfSecurity', 'exception');

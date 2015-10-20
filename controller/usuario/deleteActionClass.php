@@ -27,7 +27,7 @@ class deleteActionClass extends controllerClass implements controllerActionInter
                 );
                 datoUsuarioTableClass::delete($ids, true);
                 usuarioTableClass::delete($ids, true);
-                session::getInstance()->setSuccess(i18n::__(20004, null, 'default'));
+                session::getInstance()->setSuccess("La Cuenta Ha Sido Eliminada Con Exito");
                 log::register('Eliminacion', usuarioTableClass::getNameTable(), null, session::getInstance()->getUserId());
                 routing::getInstance()->redirect('usuario', 'index');
             } else {

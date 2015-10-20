@@ -136,7 +136,7 @@ use \mvc\request\requestClass as request ?>
                                                     <th><?php echo i18n::__('usuario') ?></th>
                                                     <th><?php echo i18n::__('fechaCreacion') ?></th>
                                                     <th>Estado </th>
-                                                    <th>Codigo Verificacion</th>
+<!--                                                    <th>Codigo Verificacion</th>-->
                                                     <th><?php echo i18n::__('actions') ?></th>
                                                 </tr>
                                             </thead>
@@ -146,7 +146,7 @@ use \mvc\request\requestClass as request ?>
                                                     <th><?php echo i18n::__('usuario') ?></th>
                                                     <th><?php echo i18n::__('fechaCreacion') ?></th>
                                                     <th>Estado </th>
-                                                    <th>Codigo Verificacion</th>
+<!--                                                    <th>Codigo Verificacion</th>-->
                                                     <th><?php echo i18n::__('actions') ?></th>
                                                 </tr>
                                             </tfoot>
@@ -158,10 +158,12 @@ use \mvc\request\requestClass as request ?>
                                                         <td><?php echo $usuario->$created ?></td>
                                                         <td><?php if ($usuario->$estadokey == 0) { ?>
                                                                 <span class="label label-danger" >Inactivo</span>
+                                                            <?php } elseif ($usuario->$estadokey == 2) { ?>
+                                                                <span class="label label-warning" > Solicitud De Activacion</span>
                                                             <?php } else { ?>
                                                                 <span class="label label-success" >Activo</span>
                                                             <?php } ?></td>
-                                                        <td><?php echo $usuario->$codigokey ?></td>
+<!--                                                        <td><?php echo $usuario->$codigokey ?></td>-->
                                                         <td>
                                                             <!--                    <a href="#" class="btn btn-warning btn-xs">Ver</a>-->
                                                             <a href="<?php echo routing::getInstance()->getUrlWeb('usuario', 'edit', array(usuarioTableClass::ID => $usuario->$id)) ?>" class="btn btn-primary btn-xs"> <?php echo i18n::__('Editar') ?></a>
@@ -169,8 +171,10 @@ use \mvc\request\requestClass as request ?>
                                                             <a href="<?php echo routing::getInstance()->getUrlWeb('usuarioCredencial', 'index', array(usuarioCredencialTableClass::getNameField(usuarioCredencialTableClass::USUARIO_ID, true) => $usuario->$id)) ?>" class="btn btn-success btn-xs"><i class="fa fa-external-link-square"></i> <?php echo i18n::__('Detalles') ?></a>
                                                             <?php if ($usuario->$estadokey == 0) { ?>
                                                                 <button type="button" class="open-Modal btn  btn-success btn-xs" data-toggle="modal" data-id="<?php echo $usuario->$id ?>" data-key="<?php echo $usuario->$codigokey ?>" data-target="#active" ><i class="fa fa-plus-square-o"></i> Activar </button>
+                                                            <?php } elseif ($usuario->$estadokey == 2) { ?>
+                                                                <button type="button" class="open-Modal btn  btn-success btn-xs" data-toggle="modal" data-id="<?php echo $usuario->$id ?>" data-key="<?php echo $usuario->$codigokey ?>" data-target="#active" ><i class="fa fa-plus-square-o"></i> Activar </button>
                                                             <?php } else { ?>
-                                                                <button type="button" class="btn  btn-danger btn-xs" data-toggle="modal" data-target="#inactive" ><i class="fa fa-remove"></i> Desactivar </button>
+                                                                <button type="button" class="open-Modal btn  btn-danger btn-xs" data-toggle="modal" data-id="<?php echo $usuario->$id ?>" data-target="#inactive" ><i class="fa fa-remove"></i> Desactivar </button>
                                                             <?php } ?>
                                                         </td>
                                                     </tr>

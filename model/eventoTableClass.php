@@ -33,7 +33,7 @@ class eventoTableClass extends eventoBaseTableClass {
                     . eventoTableClass::getNameTable() . '.' . eventoTableClass::FECHA_FINAL_PUBLICACION . ' , '
                     . eventoTableClass::getNameTable() . '.' . eventoTableClass::FECHA_FINAL_EVENTO .
                     ' FROM ' . eventoTableClass::getNameTable() .
-                    ' WHERE ' . eventoTableClass::ESTADOPUBLICACION . ' =  ' . $id;
+                    ' WHERE ' .eventoTableClass::getNameTable() .'.'. eventoTableClass::ESTADOPUBLICACION . ' = ' . $id;
 
             if ($limit !== null and $offset === null) {
                 $sql = $sql . ' LIMIT ' . $limit;
@@ -84,7 +84,7 @@ class eventoTableClass extends eventoBaseTableClass {
                     . eventoTableClass::getNameTable() . '.' . eventoTableClass::FECHA_FINAL_PUBLICACION . ' , '
                     . eventoTableClass::getNameTable() . '.' . eventoTableClass::FECHA_FINAL_EVENTO .
                     ' FROM ' . eventoTableClass::getNameTable() .
-                    ' WHERE ' . eventoTableClass::getNameTable() . '.' . eventoTableClass::ESTADOPUBLICACION . ' =  ' . $id;
+                    ' WHERE ' . eventoTableClass::getNameTable().'.' . eventoTableClass::ESTADOPUBLICACION . ' =  ' . $id;
 
             if ($limit !== null and $offset === null) {
                 $sql = $sql . ' LIMIT ' . $limit;
@@ -135,7 +135,7 @@ class eventoTableClass extends eventoBaseTableClass {
                     . eventoTableClass::getNameTable() . '.' . eventoTableClass::FECHA_FINAL_PUBLICACION . ' , '
                     . eventoTableClass::getNameTable() . '.' . eventoTableClass::FECHA_FINAL_EVENTO .
                     ' FROM ' . eventoTableClass::getNameTable() .
-                    ' WHERE ' . eventoTableClass::getNameTable() . '.' . eventoTableClass::ESTADOPUBLICACION . ' =  ' . $id;
+                    ' WHERE ' . eventoTableClass::getNameTable() . '.'. eventoTableClass::ESTADOPUBLICACION . ' = ' . $id;
 
             if ($limit !== null and $offset === null) {
                 $sql = $sql . ' LIMIT ' . $limit;

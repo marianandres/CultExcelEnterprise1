@@ -67,13 +67,13 @@ class indexActionClass extends controllerClass implements controllerActionInterf
             );
             $this->objCategoria = categoriaTableClass::getAll($fields2, true, $orderBy2, 'ASC');
             session::getInstance()->setFlash('evento', 'evento');
-            $idestado = 0;
+            $idestado = "0";
             $this->cntPagesValidating = eventoTableClass::getTotalPagesValidating(config::getRowGrid(), $where);
             $this->objValidateEvents = eventoTableClass::getValidateEvents($idestado, config::getRowGrid(), null, $where);
-            $idPublished = 1;
+            $idPublished = "1";
             $this->cntPagesPublished = eventoTableClass::getTotalPagesPubished(config::getRowGrid(), $where);
             $this->objPublishedEvents = eventoTableClass::getPublishedEvents($idPublished, config::getRowGrid(), null, $where);
-            $idRevoked = 2;
+            $idRevoked = "2";
             $this->cntPagesRevoked = eventoTableClass::getTotalPagesRevoked(config::getRowGrid(), $where);
             $this->objRevokedEvents = eventoTableClass::getRevokeddEvents($idRevoked, config::getRowGrid(), null, $where);
             

@@ -13,18 +13,28 @@ use mvc\request\requestClass as request ?>
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-user"></i>Verificar Registro de La Cuenta</h4>
+                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-user"></i>Desactivar Registro de La Cuenta</h4>
             </div>
             <div class="modal-body">
                 <div class="text-left">
-                    <form role="form" method="post" action="<?php echo routing::getInstance()->getUrlWeb('usuario', 'verificar') ?>">
-                        <input name="<?php echo usuarioTableClass::getNameField(usuarioTableClass::ID, true) ?>" value="<?php echo session::getInstance()->getUserId() ?>" type="hidden">
-                        <div class="form-group">  
-                            <label for="statuskey" class="control-label">Codigo De Verificacion:</label>	  
-                            <input class="form-control" 
-                                   type="text" id="<?php echo usuarioTableClass::getNameField(usuarioTableClass::CODIGOKEY, true) ?>" name="<?php echo usuarioTableClass::getNameField(usuarioTableClass::CODIGOKEY, true) ?>" placeholder="Ingrese el Codigo De Verificacion" required autofocus>
+                    <form role="form" method="post" action="<?php echo routing::getInstance()->getUrlWeb('usuario', 'inactive') ?>">
+                        <input name="<?php echo usuarioTableClass::getNameField(usuarioTableClass::ID, true) ?>" id="<?php echo usuarioTableClass::getNameField(usuarioTableClass::ID, true) ?>" type="text">
+                        <div class="form-group"> 
+                            <div class="alert alert-danger alert-dismissible" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <strong><i class="fa fa-info-circle"></i>Info!</strong> Por Favor Ingresar La contraseña Del Administrador Si Esta Seguro Desactivar Esta Cuenta. Perdera Los Beneficios Del Portal Web.
+                            </div>
+                            <!--                            <label for="statuskey" class="control-label">Codigo De Activacion:</label>	  
+                                                        <input class="form-control" 
+                                                               type="text" id="<?php echo usuarioTableClass::getNameField(usuarioTableClass::CODIGOKEY, true) ?>" name="<?php echo usuarioTableClass::getNameField(usuarioTableClass::CODIGOKEY, true) ?>" required autofocus>-->
                         </div>
-                        <button class="btn btn-success" type="submit"> Verificar Cuenta</button>
+                        <div class="form-group">  
+                            <label for="statuskey" class="control-label">Contraseña Del Administrador</label>	  
+                            <input class="form-control" 
+                                   type="password" id="<?php echo usuarioTableClass::getNameField(usuarioTableClass::PASSWORD, true) ?>" name="<?php echo usuarioTableClass::getNameField(usuarioTableClass::PASSWORD, true) ?>" placeholder="Ingresar Contraseña de Administrador
+                                   " required autofocus>
+                        </div>
+                        <button class="btn btn-success" type="submit"> Desactivar Cuenta</button>
                     </form>
 
                 </div>
@@ -46,10 +56,14 @@ use mvc\request\requestClass as request ?>
                 <div class="text-left">
                     <form role="form" method="post" action="<?php echo routing::getInstance()->getUrlWeb('usuario', 'active') ?>">
                         <input name="<?php echo usuarioTableClass::getNameField(usuarioTableClass::ID, true) ?>" id="<?php echo usuarioTableClass::getNameField(usuarioTableClass::ID, true) ?>" type="text">
-                        <div class="form-group">  
-                            <label for="statuskey" class="control-label">Codigo De Activacion:</label>	  
-                            <input class="form-control" 
-                                   type="text" id="<?php echo usuarioTableClass::getNameField(usuarioTableClass::CODIGOKEY, true) ?>" name="<?php echo usuarioTableClass::getNameField(usuarioTableClass::CODIGOKEY, true) ?>" required autofocus>
+                        <div class="form-group"> 
+                            <div class="alert alert-info alert-dismissible" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <strong><i class="fa fa-info-circle"></i>Info!</strong> Por Favor Ingresar La contraseña Del Administrador Si Esta Seguro Activar Esta Cuenta.
+                            </div>
+                            <!--                            <label for="statuskey" class="control-label">Codigo De Activacion:</label>	  
+                                                        <input class="form-control" 
+                                                               type="text" id="<?php echo usuarioTableClass::getNameField(usuarioTableClass::CODIGOKEY, true) ?>" name="<?php echo usuarioTableClass::getNameField(usuarioTableClass::CODIGOKEY, true) ?>" required autofocus>-->
                         </div>
                         <div class="form-group">  
                             <label for="statuskey" class="control-label">Contraseña Del Administrador</label>	  
