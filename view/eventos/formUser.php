@@ -10,6 +10,12 @@ use mvc\i18n\i18nClass as i18n ?>
     <div class="mainbox  col-sm-8 col-sm-offset-2 ">
         <h1 class="page-header"><span class="bg-steps">1 </span> <span> <?php echo i18n::__('DetalleEvento') ?></span> <a data-toggle="modal" data-target="#consejos" style="padding-left: 300px;"><i class="fa fa-question-circle"></i><?php ?> Consejos</a> </h1>
         <div class="col-xs-12 ">
+            <div class="alert alert-info alert-dismissible" role="alert">
+    <!--                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+                <center>
+                    <strong></strong><i class="fa fa-info-circle fa-2x"></i><h3> Para la publicacion del nuevo evento a registrar, sera verificado por el Administrador del <i class="fa fa-building-o"></i> Portal Web Cult Excel Enterprise</h3> 
+                </center>
+            </div>
             <div class="form-group">
                 <label for="<?php echo eventoTableClass::getNameField(eventoTableClass::NOMBRE, true) ?>"><?php echo i18n::__('Nombre') ?> <span>*</span></label>		
                 <input class="form-control" type="text" name="<?php echo eventoTableClass::getNameField(eventoTableClass::NOMBRE, true) ?>" placeholder="<?php echo i18n::__('Inconfundible') ?>" required autofocus>
@@ -100,7 +106,7 @@ use mvc\i18n\i18nClass as i18n ?>
                         <input class="form-control" type="text"  placeholder="<?php echo i18n::__('DireccionLugarEvento') ?>" required>
                     </div>
                 </div>-->
-         <div class="col-xs-12 col-sm-6 col-md-12">
+        <div class="col-xs-12 col-sm-6 col-md-12">
             <div class="form-group">
                 <h1 class="page-header"><span class="bg-steps"> <?php echo i18n::__('2') ?> </span><span> Descripcion Del Evento  </span></h1>
             </div>

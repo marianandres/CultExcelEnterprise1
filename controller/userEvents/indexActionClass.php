@@ -18,19 +18,30 @@ class indexActionClass extends controllerClass implements controllerActionInterf
     public function execute() {
         try {
             if (session::getInstance()->isUserAuthenticated()) {
-                
                 $where = null;
                 if (request::getInstance()->hasPost('filter')) {
                     $filter = request::getInstance()->getPost('filter');
 
-                    //Validaciones
-                    if (isset($filter['evento']) and $filter['evento'] !== null and $filter['evento'] !== '') {
+                    //AQUI VAN LAS VALIDACIONES
+                    if (isset($filter['fechaCreacion1']) and $filter['fechaCreacion1'] !== null and $filter['fechaCreacion1'] !== "") {
+                        $where[eventoTableClass::FECHA_INICIAL_EVENTO] = array(
+                            $filter['fechaCreacion1'],
+                            $filter['fechaCreacion2']
+                        );
+                    }
+                    if (isset($filter['evento']) and $filter['evento'] !== null and $filter['evento'] !== "") {
                         $where[eventoTableClass::NOMBRE] = $filter['evento'];
                     }
-
-                    session::getInstance()->setAttribute('eventoIndexFilter', $where);
-                } else if (session::getInstance()->hasAttribute('eventoIndexFilter')) {
-                    $where = session::getInstance()->getAttribute('eventoIndexFilter');
+                    if (isset($filter['categoria']) and $filter['categoria'] !== null and $filter['categoria'] !== "") {
+                        $where[eventoTableClass::CATEGORIA_ID] = $filter['categoria'];
+                    }
+                    if (isset($filter['costo1']) and $filter['costo1'] !== null and $filter['costo1'] !== "") {
+                        $where[eventoTableClass::COSTO] = array(
+                            $filter['costo1'],
+                            $filter['costo2']
+                        );
+                    }
+//        session::getInstance()->setAttribute('usuarioIndexFilters', $where);
                 }
                 $page = 0;
                 if (request::getInstance()->hasGet('page')) {
@@ -38,10 +49,18 @@ class indexActionClass extends controllerClass implements controllerActionInterf
                     $page = request::getInstance()->getGet('page') - 1;
                     $page = $page * config::getRowGrid();
                 }
+                $fields2 = array(
+                    categoriaTableClass::ID,
+                    categoriaTableClass::NOMBRE
+                );
+                $orderBy2 = array(
+                    categoriaTableClass::NOMBRE
+                );
+                $this->objCategoria = categoriaTableClass::getAll($fields2, true, $orderBy2, 'ASC');
                 $id = session::getInstance()->getUserId();
                 session::getInstance()->setFlash('userEvents', true);
                 $this->cntPages = eventoTableClass::getTotalPagesUserEvents(config::getRowGrid(), $where);
-                $this->objUserEvents = eventoTableClass::getUserEvents($id, config::getRowGrid(), $page);
+                $this->objUserEvents = eventoTableClass::getUserEvents($id, config::getRowGrid(), $page, $where);
                 $this->defineView('index', 'userEvents', session::getInstance()->getFormatOutput());
             } else {
                 routing::getInstance()->redirect('shfSecurity', 'index');

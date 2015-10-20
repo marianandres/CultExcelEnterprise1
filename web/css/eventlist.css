@@ -126,7 +126,7 @@
         position: relative;
         display: block;
         width: 100%;
-        height: 120px;
+        height: 220px;
         padding: 0px;
     }
     .event-list > li > time,
@@ -135,7 +135,7 @@
     }
     .event-list > li > time,
     .event-list > li > img {
-        width: 120px;
+        width: 140px;
         float: left;
     }
     .event-list > li > .info {
@@ -144,14 +144,14 @@
     }
     .event-list > li > time,
     .event-list > li > img {
-        width: 120px;
-        height: 120px;
+        width: 170px;
+        height: 220px;
         padding: 0px;
         margin: 0px;
     }
     .event-list > li > .info {
         position: relative;
-        height: 120px;
+        height: 220px;
         text-align: left;
         padding-right: 40px;
     }	

@@ -474,6 +474,26 @@ evento_index:
   load:
     - model/base/eventoBaseTableClass.php
     - model/eventoTableClass.php
+    - model/base/categoriaBaseTableClass.php
+    - model/categoriaTableClass.php
+    
+evento_validateEvent:
+  url:    /evento/validate
+  param:  { module: evento, action: validateEvent, format: html }
+  load:
+    - model/base/eventoBaseTableClass.php
+    - model/eventoTableClass.php
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php
+    
+evento_reyectedEvent:
+  url:    /evento/rejected
+  param:  { module: evento, action: rejectedEvent, format: html }
+  load:
+    - model/base/eventoBaseTableClass.php
+    - model/eventoTableClass.php
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php    
     
 evento_insert:
   url:    /evento/insert
@@ -518,7 +538,7 @@ evento_deleteSelect:
     - model/eventoTableClass.php
 
 evento_deleteFilters:
-  url:    /Borrar_Filtros
+  url:    /Borrar_AdminFilter
   param:  { module: evento, action: deleteFilters, format: html }   
 
 evento_reporte:
@@ -1579,6 +1599,10 @@ eventosBlog_index:
     - model/eventoTableClass.php
     - model/base/categoriaBaseTableClass.php
     - model/categoriaTableClass.php
+
+eventosBlog_deleteFilters:
+  url:    /Borrar_FiltrosBlog
+  param:  { module: eventosBlog, action: deleteFilters, format: html }
   
 userEvents_index:
   url:    /MisEventos
@@ -1588,6 +1612,13 @@ userEvents_index:
     - model/usuarioTableClass.php
     - model/base/eventoBaseTableClass.php
     - model/eventoTableClass.php
+    - model/base/categoriaBaseTableClass.php
+    - model/categoriaTableClass.php
+    
+userEvents_deleteFilters:
+  url:    /Borrar_FiltrosUserBlog
+  param:  { module: userEvents, action: deleteFilters, format: html }    
+    
     
 userProfile_index:
   url:    /MiPerfil

@@ -39,6 +39,7 @@ class eventoBaseTableClass extends tableBaseClass {
     const GOOGLEPLUS = 'googleplus';
     const USUARIO_ID = 'usuario_id';
     const CATEGORIA_ID = 'categoria_id';
+    const ACTIVATIONKEY = 'activationkey';
     const FECHA_INICIAL_PUBLICACION = 'fecha_inicial_publicacion';
     const FECHA_FINAL_PUBLICACION = 'fecha_final_publicacion';
 

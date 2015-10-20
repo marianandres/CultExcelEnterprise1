@@ -818,6 +818,7 @@ evento:
       - panel/assets/css/style.css
       #<!-- Extra CSS Libraries End -->
       - panel/assets/css/style-responsive.css
+      - eventlist.css
     javascript:
       #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
       - panel/assets/libs/jquery/jquery-1.11.1.min.js

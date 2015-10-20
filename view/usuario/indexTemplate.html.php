@@ -209,6 +209,7 @@ use \mvc\request\requestClass as request ?>
             var myId = $(this).data('id');
             $(".modal-body #usuario_id").val(myId);
             var mykey = $(this).data('key');
+            //alert(mykey);
             $(".modal-body #usuario_codigokey").val(mykey);
         });
     </script>
